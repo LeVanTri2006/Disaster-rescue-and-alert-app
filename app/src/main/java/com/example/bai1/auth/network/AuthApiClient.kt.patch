@@ -1,0 +1,12 @@
+--- /home/vantri/AndroidStudioProjects/bai1/app/src/main/java/com/example/bai1/auth/network/AuthApiClient.kt
++++ /home/vantri/AndroidStudioProjects/bai1/app/src/main/java/com/example/bai1/auth/network/AuthApiClient.kt
+@@ -147,9 +147,7 @@
+         )
+ 
+-    override suspend fun updateRole(accessToken: String, role: String): AuthApiResult<AuthUser>
+-    suspend fun forgotPassword(identifier: String): AuthApiResult<Unit>
+-    suspend fun resetPassword(identifier: String, otp: String, newPassword: String): AuthApiResult<Unit> =
++    override suspend fun updateRole(accessToken: String, role: String): AuthApiResult<AuthUser> =
+         executeJson(
+             method = "PATCH",
+             path = "/users/me/role",

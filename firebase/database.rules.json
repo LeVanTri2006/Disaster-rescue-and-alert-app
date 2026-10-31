@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "sos-events": {
+      ".read": "auth != null && (auth.token.role == 'RESCUER' || auth.token.role == 'ADMIN' || auth.token.role == 'MODERATOR')",
+      ".write": false
+    },
+    "sos-owner-events": {
+      "$userId": {
+        ".read": "auth != null && auth.uid == $userId",
+        ".write": false
+      }
+    }
+  }
+}
