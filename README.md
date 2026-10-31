@@ -1,1 +1,0 @@
-# Disaster-rescue-and-alert-app
