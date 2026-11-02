@@ -47,4 +47,14 @@ data class SosRescueInfo(
 ) {
     /** Derived total: adults + children + elderly. */
     val totalPeople: Int get() = adults + children + elderly
+
+    /** Returns true if this SOS event is older than 3 days (72 hours). */
+    val isExpired: Boolean get() = isExpiredAt(System.currentTimeMillis())
+
+    fun isExpiredAt(now: Long): Boolean = now - createdAt > MAX_SOS_AGE_MS
+
+    companion object {
+        /** 3 days in milliseconds (72 hours). */
+        const val MAX_SOS_AGE_MS: Long = 3 * 24 * 60 * 60 * 1000L
+    }
 }

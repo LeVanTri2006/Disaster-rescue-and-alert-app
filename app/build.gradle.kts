@@ -47,7 +47,7 @@ android {
     }
     buildTypes {
         debug {
-            val sosApiBaseUrl = project.findProperty("sosApiBaseUrl")?.toString() ?: "http://192.168.88.113:3000"
+            val sosApiBaseUrl = project.findProperty("sosApiBaseUrl")?.toString() ?: "http://192.168.2.228:3000"
             buildConfigField("String", "SOS_API_BASE_URL", "\"$sosApiBaseUrl\"")
             buildConfigField("String", "FIREBASE_DATABASE_URL", "\"https://canhbao-34075-default-rtdb.asia-southeast1.firebasedatabase.app\"")
         }

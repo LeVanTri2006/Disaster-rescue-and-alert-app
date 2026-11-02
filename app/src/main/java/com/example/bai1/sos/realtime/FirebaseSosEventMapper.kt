@@ -61,7 +61,11 @@ object FirebaseSosEventMapper {
         )
     }
 
-    private fun Map<*, *>.number(key: String): Number? = this[key] as? Number
+    private fun Map<*, *>.number(key: String): Number? = when (val v = this[key]) {
+        is Number -> v
+        is String -> v.toDoubleOrNull()
+        else -> null
+    }
 
     private fun Map<*, *>.timestamp(key: String): Long? = when (val value = this[key]) {
         is Number -> value.toLong()

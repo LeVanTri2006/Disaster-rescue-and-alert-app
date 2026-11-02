@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.bai1.sos.SosAppDependencies
 import com.example.bai1.sos.domain.SosRescueInfo
+import com.example.bai1.sos.domain.SosUrgency
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -192,6 +193,13 @@ fun CardHeader(icon: ImageVector, title: String, iconTint: Color = PrimaryBlue, 
 
 @Composable
 fun EmergencyStatusCard(sos: SosRescueInfo) {
+    val (urgencyText, urgencyColor) = when (sos.urgency) {
+        SosUrgency.CRITICAL -> "NGUY CẤP" to EmergencyRed
+        SosUrgency.HIGH -> "CAO" to EmergencyRed
+        SosUrgency.MEDIUM -> "TRUNG BÌNH" to WarningOrange
+        SosUrgency.LOW -> "THẤP" to PrimaryBlue
+    }
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(12.dp),
@@ -220,12 +228,12 @@ fun EmergencyStatusCard(sos: SosRescueInfo) {
                         color = EmergencyRed
                     )
                     Surface(
-                        color = EmergencyRed,
+                        color = urgencyColor,
                         shape = RoundedCornerShape(4.dp),
                         modifier = Modifier.padding(start = 4.dp)
                     ) {
                         Text(
-                            text = if (sos.urgency.name.isNotBlank()) sos.urgency.name.uppercase() else "CHƯA RÕ",
+                            text = urgencyText,
                             color = Color.White,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
@@ -234,8 +242,14 @@ fun EmergencyStatusCard(sos: SosRescueInfo) {
                     }
                 }
                 Spacer(modifier = Modifier.height(6.dp))
+                val subText = when (sos.urgency) {
+                    SosUrgency.CRITICAL -> "Tình trạng đặc biệt nguy cấp! Cần ưu tiên cứu hộ khẩn cấp ngay lập tức."
+                    SosUrgency.HIGH -> "Cần hỗ trợ khẩn cấp. Vui lòng liên hệ và đến hiện trường sớm nhất."
+                    SosUrgency.MEDIUM -> "Cần hỗ trợ vận chuyển hoặc nhu yếu phẩm. Hãy chuẩn bị phương tiện phù hợp."
+                    SosUrgency.LOW -> "Cần hỗ trợ cơ bản. Theo dõi và liên hệ khi có phương án tiếp cận."
+                }
                 Text(
-                    "Cần hỗ trợ khẩn cấp. Vui lòng liên hệ và đến hiện trường sớm nhất.",
+                    subText,
                     fontSize = 12.sp,
                     color = SecondaryColor
                 )

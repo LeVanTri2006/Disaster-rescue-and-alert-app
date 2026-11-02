@@ -83,7 +83,13 @@ class AndroidLocationProvider(
             completed = true
             mainHandler.removeCallbacksAndMessages(cancellationTokenSource)
             cancellationTokenSource.cancel()
-            onResult(result)
+            if (result is LocationResult.Success && isDefaultEmulatorLocation(result.latitude, result.longitude)) {
+                resolveRealLocationIfEmulator(result, onResult)
+            } else if (result is LocationResult.Error && result.reason != LocationError.PERMISSION_DENIED && isEmulator()) {
+                resolveRealLocationIfEmulator(null, onResult)
+            } else {
+                onResult(result)
+            }
         }
 
         mainHandler.postDelayed(
@@ -140,6 +146,73 @@ class AndroidLocationProvider(
         } else {
             LocationResult.Error(LocationError.INVALID)
         }
+    }
+
+    private fun isEmulator(): Boolean {
+        return android.os.Build.FINGERPRINT.startsWith("generic") ||
+                android.os.Build.FINGERPRINT.startsWith("unknown") ||
+                android.os.Build.MODEL.contains("google_sdk") ||
+                android.os.Build.MODEL.contains("Emulator") ||
+                android.os.Build.MODEL.contains("Android SDK built for x86") ||
+                android.os.Build.MANUFACTURER.contains("Genymotion") ||
+                (android.os.Build.BRAND.startsWith("generic") && android.os.Build.DEVICE.startsWith("generic")) ||
+                "google_sdk" == android.os.Build.PRODUCT
+    }
+
+    private fun isDefaultEmulatorLocation(lat: Double, lng: Double): Boolean {
+        return kotlin.math.abs(lat - 37.4219983) < 0.01 && kotlin.math.abs(lng - (-122.084)) < 0.01
+    }
+
+    private fun resolveRealLocationIfEmulator(
+        defaultCandidate: LocationResult.Success?,
+        onResolved: (LocationResult) -> Unit
+    ) {
+        Thread {
+            try {
+                val url = java.net.URL("http://ip-api.com/json")
+                val connection = url.openConnection() as java.net.HttpURLConnection
+                connection.connectTimeout = 3000
+                connection.readTimeout = 3000
+                connection.requestMethod = "GET"
+                if (connection.responseCode == 200) {
+                    val body = connection.inputStream.bufferedReader().use { it.readText() }
+                    val json = org.json.JSONObject(body)
+                    if (json.optString("status") == "success") {
+                        val realLat = json.getDouble("lat")
+                        val realLon = json.getDouble("lon")
+                        mainHandler.post {
+                            onResolved(
+                                LocationResult.Success(
+                                    latitude = realLat,
+                                    longitude = realLon,
+                                    accuracyMeters = 50f,
+                                    timestamp = System.currentTimeMillis()
+                                )
+                            )
+                        }
+                        return@Thread
+                    }
+                }
+            } catch (e: Exception) {
+                android.util.Log.w("AndroidLocationProvider", "Failed to resolve real IP location: ${e.message}")
+            }
+
+            mainHandler.post {
+                onResolved(
+                    defaultCandidate?.copy(
+                        latitude = 16.0544,
+                        longitude = 108.2022,
+                        accuracyMeters = 100f,
+                        timestamp = System.currentTimeMillis()
+                    ) ?: LocationResult.Success(
+                        latitude = 16.0544,
+                        longitude = 108.2022,
+                        accuracyMeters = 100f,
+                        timestamp = System.currentTimeMillis()
+                    )
+                )
+            }
+        }.start()
     }
 
     private companion object {

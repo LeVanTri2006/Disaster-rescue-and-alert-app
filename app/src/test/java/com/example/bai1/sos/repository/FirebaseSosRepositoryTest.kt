@@ -52,6 +52,40 @@ class FirebaseSosRepositoryTest {
         assertEquals(emptyList<SosRescueInfo>(), snapshots[3])
     }
 
+    @Test
+    fun `filters out events older than 3 days`() = runTest {
+        val fourDaysAgo = System.currentTimeMillis() - (4 * 24 * 60 * 60 * 1000L)
+        val expired = SosRescueInfo(eventId = "expired-rtdb", createdAt = fourDaysAgo)
+        val fresh = SosRescueInfo(eventId = "fresh-rtdb", createdAt = System.currentTimeMillis())
+
+        val changes = MutableSharedFlow<FirebaseSosChange>(extraBufferCapacity = 2)
+        val source = object : SosRealtimeDataSource {
+            override fun observeChanges(): Flow<FirebaseSosChange> = changes
+        }
+        val repository = FirebaseSosRepository(
+            localRepository = EmptySosRepository(),
+            realtimeDataSource = source,
+            scope = backgroundScope,
+        )
+
+        val realtime = repository.observeRealtimeSos()
+        val snapshots = mutableListOf<List<SosRescueInfo>>()
+        val job = launch {
+            realtime.collect { snapshots += it }
+        }
+        runCurrent()
+
+        changes.tryEmit(FirebaseSosChange.Upsert(expired))
+        runCurrent()
+        changes.tryEmit(FirebaseSosChange.Upsert(fresh))
+        runCurrent()
+        job.cancel()
+
+        val latest = snapshots.last()
+        assertEquals(1, latest.size)
+        assertEquals("fresh-rtdb", latest[0].eventId)
+    }
+
     private class EmptySosRepository : SosRepository {
         override suspend fun submitSos(sos: SosRescueInfo): SosSubmissionResult =
             SosSubmissionResult.Failed("not used")

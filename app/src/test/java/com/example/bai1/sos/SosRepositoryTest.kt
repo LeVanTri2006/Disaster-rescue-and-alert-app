@@ -56,4 +56,38 @@ class SosRepositoryTest {
         assertEquals(sos.eventId, activeEvents[0].eventId)
         assertEquals(SosStatus.SUBMITTED, activeEvents[0].status)
     }
+
+    @Test
+    fun `test expired events older than 3 days are filtered out`() = runBlocking {
+        val networkProvider = FakeNetworkAvailabilityProvider(online = true)
+        val internetTransport = FakeInternetSosTransport(delayMs = 0, shouldFail = false)
+        val meshTransport = FakeMeshSosTransport(delayMs = 0, shouldFail = false)
+        val transportManager = SosTransportManager(networkProvider, internetTransport, meshTransport)
+        val repository = InMemorySosRepository(transportManager)
+
+        val fourDaysAgo = System.currentTimeMillis() - (4 * 24 * 60 * 60 * 1000L)
+        val expiredSos = SosRescueInfo(
+            eventId = "expired-1",
+            condition = "Lũ lụt cũ",
+            createdAt = fourDaysAgo,
+            status = SosStatus.PENDING
+        )
+        val freshSos = SosRescueInfo(
+            eventId = "fresh-1",
+            condition = "Cần cứu gấp",
+            createdAt = System.currentTimeMillis(),
+            status = SosStatus.PENDING
+        )
+
+        repository.submitSos(expiredSos)
+        repository.submitSos(freshSos)
+
+        val activeEvents = repository.getActiveSos()
+        assertEquals(1, activeEvents.size)
+        assertEquals("fresh-1", activeEvents[0].eventId)
+
+        val observed = repository.observeSos().first()
+        assertEquals(1, observed.size)
+        assertEquals("fresh-1", observed[0].eventId)
+    }
 }

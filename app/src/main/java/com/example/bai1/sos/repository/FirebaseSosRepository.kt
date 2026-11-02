@@ -28,7 +28,10 @@ class FirebaseSosRepository(
     override suspend fun submitSos(sos: SosRescueInfo): SosSubmissionResult =
         localRepository.submitSos(sos)
 
-    override suspend fun getMySos(): List<SosRescueInfo> = localRepository.getMySos()
+    override suspend fun getMySos(): List<SosRescueInfo> {
+        val now = System.currentTimeMillis()
+        return localRepository.getMySos().filter { !it.isExpiredAt(now) }
+    }
 
     override suspend fun getActiveSos(): List<SosRescueInfo> {
         android.util.Log.d("MAP_DEBUG", "FirebaseSosRepository.getActiveSos() called")
@@ -47,12 +50,17 @@ class FirebaseSosRepository(
 
     override fun observeRealtimeSos(): Flow<List<SosRescueInfo>> {
         ensureRealtimeStarted()
-        return realtimeEvents.asStateFlow().map { it.values.toList() }
+        return realtimeEvents.asStateFlow().map { map ->
+            val now = System.currentTimeMillis()
+            map.values.filter { !it.isExpiredAt(now) }
+        }
     }
 
     override suspend fun getSosById(eventId: String): SosRescueInfo? {
         ensureRealtimeStarted()
-        return localRepository.getSosById(eventId) ?: realtimeEvents.value[eventId]
+        val now = System.currentTimeMillis()
+        val event = localRepository.getSosById(eventId) ?: realtimeEvents.value[eventId]
+        return event?.takeUnless { it.isExpiredAt(now) }
     }
 
     private fun ensureRealtimeStarted() {
@@ -60,9 +68,16 @@ class FirebaseSosRepository(
         realtimeStarted = true
         scope.launch {
             realtimeDataSource.observeChanges().collect { change ->
+                val now = System.currentTimeMillis()
                 realtimeEvents.update { current ->
                     val newState = when (change) {
-                        is FirebaseSosChange.Upsert -> current + (change.event.eventId to change.event)
+                        is FirebaseSosChange.Upsert -> {
+                            if (!change.event.isExpiredAt(now)) {
+                                current + (change.event.eventId to change.event)
+                            } else {
+                                current - change.event.eventId
+                            }
+                        }
                         is FirebaseSosChange.Removed -> current - change.eventId
                     }
                     android.util.Log.d("FirebaseRealtime", "RTDB_EVENT_COUNT=${newState.size}")
@@ -77,7 +92,12 @@ class FirebaseSosRepository(
 
     private fun merge(local: List<SosRescueInfo>, realtime: List<SosRescueInfo>): List<SosRescueInfo> {
         android.util.Log.d("MAP_DEBUG", "MERGE_BEFORE_DEDUPE=${local.size + realtime.size}")
-        val merged = (local + realtime).associateBy { it.eventId }.values.toList()
+        val now = System.currentTimeMillis()
+        val merged = (local + realtime)
+            .filter { !it.isExpiredAt(now) }
+            .associateBy { it.eventId }
+            .values
+            .toList()
         android.util.Log.d("MAP_DEBUG", "MERGE_AFTER_DEDUPE=${merged.size}")
         return merged
     }

@@ -46,7 +46,7 @@ class SosRescueRequestViewModel(
     private val repository: SosRepository,
     private val locationProvider: LocationProvider,
     private val batteryProvider: BatteryInfoProvider,
-    private val photoUploader: com.example.bai1.sos.repository.R2SosPhotoUploader
+    private val photoUploader: com.example.bai1.sos.repository.R2SosPhotoUploader? = null
 ) : ViewModel() {
 
     // ── Form data ─────────────────────────────────────────────────────────────
@@ -162,6 +162,15 @@ class SosRescueRequestViewModel(
     private val _selectedConditions = kotlinx.coroutines.flow.MutableStateFlow<Set<String>>(emptySet())
     val selectedConditions: kotlinx.coroutines.flow.StateFlow<Set<String>> = _selectedConditions.asStateFlow()
 
+    fun updateCondition(condition: String) {
+        _selectedConditions.value = if (condition.isNotBlank()) setOf(condition) else emptySet()
+        clearValidationError()
+    }
+
+    fun updatePhoto(uri: Uri?) {
+        _formData.update { it.copy(photoUris = if (uri != null) listOf(uri) else emptyList()) }
+    }
+
     fun toggleCondition(condition: String) {
         _selectedConditions.update { current ->
             if (current.contains(condition)) current - condition else current + condition
@@ -264,16 +273,16 @@ class SosRescueRequestViewModel(
             
             if (form.photoUris.isNotEmpty()) {
                 android.util.Log.d("SosRescueRequestViewModel", "Uploading ${form.photoUris.size} photos")
-                val uploadResult = photoUploader.uploadSosPhotos(form.photoUris, eventId)
-                if (uploadResult.isSuccess) {
-                    val objectKeys = uploadResult.getOrThrow()
+                val uploadResult = photoUploader?.uploadSosPhotos(form.photoUris, eventId)
+                if (uploadResult?.isSuccess == true) {
+                    val objectKeys = uploadResult?.getOrThrow() ?: emptyList()
                     if (objectKeys.isNotEmpty()) {
                         finalPhotoUrl = objectKeys.first()
                         finalPhotos = objectKeys
                     }
                     android.util.Log.d("SosRescueRequestViewModel", "Upload success! Keys: $finalPhotos")
                 } else {
-                    android.util.Log.e("SosRescueRequestViewModel", "Upload failed!", uploadResult.exceptionOrNull())
+                    android.util.Log.e("SosRescueRequestViewModel", "Upload failed!", uploadResult?.exceptionOrNull())
                     setValidationError("Lỗi tải ảnh. Vui lòng thử lại.")
                     return@launch
                 }

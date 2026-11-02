@@ -129,15 +129,25 @@ class OkHttpRescueMissionApiClient(
         val json = JSONObject().apply { put("status", status) }
         val body = json.toString().toRequestBody("application/json".toMediaType())
         val httpRequest = Request.Builder()
-            .url("${baseUrl.trimEnd('/')}/rescue-missions/$id/status")
+            .url("${baseUrl.trimEnd('/')}/rescue-missions/$id")
             .header("Authorization", "Bearer $token")
-            .put(body)
+            .patch(body)
             .build()
         try {
             client.newCall(httpRequest).execute().use { response ->
                 val responseText = response.body?.string().orEmpty()
+                android.util.Log.d("RESCUE_DEBUG", "updateMissionStatus HTTP ${response.code} Response: $responseText")
                 if (!response.isSuccessful) {
-                    return@withContext RescueMissionApiResult.Failure(RescueMissionApiError(errorKind(response.code), "HTTP ${response.code}"))
+                    val errMsg = runCatching {
+                        val obj = JSONObject(responseText)
+                        if (obj.has("message")) {
+                            val msg = obj.get("message")
+                            if (msg is JSONArray) msg.join(", ") else msg.toString()
+                        } else if (obj.has("error") && obj.get("error") is JSONObject) {
+                            obj.getJSONObject("error").optString("message", "HTTP ${response.code}")
+                        } else "HTTP ${response.code}"
+                    }.getOrDefault("HTTP ${response.code}")
+                    return@withContext RescueMissionApiResult.Failure(RescueMissionApiError(errorKind(response.code), errMsg))
                 }
                 val jsonObject = org.json.JSONObject(if(responseText.isEmpty()) "{}" else responseText)
                 val dataObj = if (jsonObject.has("data")) jsonObject.getJSONObject("data") else jsonObject
@@ -197,8 +207,18 @@ class OkHttpRescueMissionApiClient(
             client.newCall(httpRequest).execute().use { response ->
                 val responseText = response.body?.string().orEmpty()
                 android.util.Log.d("RESCUE_DEBUG", "HTTP ${response.code} Response: $responseText")
+                android.util.Log.d("RESCUE_DEBUG", "updateMissionStatus HTTP ${response.code} Response: $responseText")
                 if (!response.isSuccessful) {
-                    return@withContext RescueMissionApiResult.Failure(RescueMissionApiError(errorKind(response.code), "HTTP ${response.code}"))
+                    val errMsg = runCatching {
+                        val obj = JSONObject(responseText)
+                        if (obj.has("message")) {
+                            val msg = obj.get("message")
+                            if (msg is JSONArray) msg.join(", ") else msg.toString()
+                        } else if (obj.has("error") && obj.get("error") is JSONObject) {
+                            obj.getJSONObject("error").optString("message", "HTTP ${response.code}")
+                        } else "HTTP ${response.code}"
+                    }.getOrDefault("HTTP ${response.code}")
+                    return@withContext RescueMissionApiResult.Failure(RescueMissionApiError(errorKind(response.code), errMsg))
                 }
                 runCatching {
                     val dataArray = JSONObject(responseText).getJSONArray("data")
@@ -221,9 +241,11 @@ class OkHttpRescueMissionApiClient(
                             RescueMissionRequestInfo(
                                 id = reqObj.getString("id"),
                                 requesterId = reqObj.getString("requesterId"),
+                                requesterName = if (reqObj.has("requesterName") && !reqObj.isNull("requesterName")) reqObj.getString("requesterName") else null,
+                                requesterPhone = if (reqObj.has("requesterPhone") && !reqObj.isNull("requesterPhone")) reqObj.getString("requesterPhone") else null,
                                 peopleCount = reqObj.optInt("peopleCount", 1),
                                 urgency = reqObj.getString("urgency"),
-                                description = reqObj.optString("description", null),
+                                description = if (reqObj.has("description") && !reqObj.isNull("description")) reqObj.getString("description") else null,
                                 status = reqObj.getString("status"),
                                 latitude = rLat,
                                 longitude = rLon,
@@ -231,6 +253,12 @@ class OkHttpRescueMissionApiClient(
                                 createdAt = if (reqObj.has("createdAt") && !reqObj.isNull("createdAt")) reqObj.getString("createdAt") else null,
                                 updatedAt = if (reqObj.has("updatedAt") && !reqObj.isNull("updatedAt")) reqObj.getString("updatedAt") else null,
                                 sosEventId = if (reqObj.has("sosEventId") && !reqObj.isNull("sosEventId")) reqObj.getString("sosEventId") else null,
+                                adults = reqObj.optInt("adults", 0),
+                                children = reqObj.optInt("children", 0),
+                                elderly = reqObj.optInt("elderly", 0),
+                                photoUrl = if (reqObj.has("photoUrl") && !reqObj.isNull("photoUrl")) reqObj.getString("photoUrl") else null,
+                                emergencyType = if (reqObj.has("emergencyType") && !reqObj.isNull("emergencyType")) reqObj.getString("emergencyType") else null,
+                                neededItems = parseNeededItems(reqObj)
                             )
                         )
                     }
@@ -261,8 +289,18 @@ class OkHttpRescueMissionApiClient(
             client.newCall(httpRequest).execute().use { response ->
                 val responseText = response.body?.string().orEmpty()
                 android.util.Log.d("RESCUE_DEBUG", "HTTP ${response.code} Response: $responseText")
+                android.util.Log.d("RESCUE_DEBUG", "updateMissionStatus HTTP ${response.code} Response: $responseText")
                 if (!response.isSuccessful) {
-                    return@withContext RescueMissionApiResult.Failure(RescueMissionApiError(errorKind(response.code), "HTTP ${response.code}"))
+                    val errMsg = runCatching {
+                        val obj = JSONObject(responseText)
+                        if (obj.has("message")) {
+                            val msg = obj.get("message")
+                            if (msg is JSONArray) msg.join(", ") else msg.toString()
+                        } else if (obj.has("error") && obj.get("error") is JSONObject) {
+                            obj.getJSONObject("error").optString("message", "HTTP ${response.code}")
+                        } else "HTTP ${response.code}"
+                    }.getOrDefault("HTTP ${response.code}")
+                    return@withContext RescueMissionApiResult.Failure(RescueMissionApiError(errorKind(response.code), errMsg))
                 }
                 runCatching {
                     val reqObj = JSONObject(responseText).getJSONObject("data")
@@ -281,16 +319,24 @@ class OkHttpRescueMissionApiClient(
                     RescueMissionRequestInfo(
                         id = reqObj.getString("id"),
                         requesterId = reqObj.getString("requesterId"),
+                        requesterName = if (reqObj.has("requesterName") && !reqObj.isNull("requesterName")) reqObj.getString("requesterName") else null,
+                        requesterPhone = if (reqObj.has("requesterPhone") && !reqObj.isNull("requesterPhone")) reqObj.getString("requesterPhone") else null,
                         peopleCount = reqObj.optInt("peopleCount", 1),
                         urgency = reqObj.getString("urgency"),
-                        description = reqObj.optString("description", null),
+                        description = if (reqObj.has("description") && !reqObj.isNull("description")) reqObj.getString("description") else null,
                         status = reqObj.getString("status"),
                         latitude = rLat,
                         longitude = rLon,
                         distance = if (reqObj.has("distance") && !reqObj.isNull("distance")) reqObj.getDouble("distance") else null,
                         createdAt = if (reqObj.has("createdAt") && !reqObj.isNull("createdAt")) reqObj.getString("createdAt") else null,
                         updatedAt = if (reqObj.has("updatedAt") && !reqObj.isNull("updatedAt")) reqObj.getString("updatedAt") else null,
-                                sosEventId = if (reqObj.has("sosEventId") && !reqObj.isNull("sosEventId")) reqObj.getString("sosEventId") else null,
+                        sosEventId = if (reqObj.has("sosEventId") && !reqObj.isNull("sosEventId")) reqObj.getString("sosEventId") else null,
+                        adults = reqObj.optInt("adults", 0),
+                        children = reqObj.optInt("children", 0),
+                        elderly = reqObj.optInt("elderly", 0),
+                        photoUrl = if (reqObj.has("photoUrl") && !reqObj.isNull("photoUrl")) reqObj.getString("photoUrl") else null,
+                        emergencyType = if (reqObj.has("emergencyType") && !reqObj.isNull("emergencyType")) reqObj.getString("emergencyType") else null,
+                        neededItems = parseNeededItems(reqObj)
                     )
                 }.fold(
                     onSuccess = { RescueMissionApiResult.Success(it) },
@@ -300,6 +346,17 @@ class OkHttpRescueMissionApiClient(
         } catch (_: Exception) {
             RescueMissionApiResult.Failure(RescueMissionApiError(RescueMissionApiErrorKind.UNKNOWN, "Request failed"))
         }
+    }
+
+    private fun parseNeededItems(obj: JSONObject): List<String> {
+        if (!obj.has("neededItems") || obj.isNull("neededItems")) return emptyList()
+        val arr = obj.getJSONArray("neededItems")
+        val list = mutableListOf<String>()
+        for (i in 0 until arr.length()) {
+            val s = arr.optString(i)
+            if (!s.isNullOrBlank()) list.add(s)
+        }
+        return list
     }
 
     private fun parseMission(data: JSONObject): RescueMissionResponse {
@@ -321,16 +378,24 @@ class OkHttpRescueMissionApiClient(
             requestInfo = RescueMissionRequestInfo(
                 id = reqObj.getString("id"),
                 requesterId = reqObj.getString("requesterId"),
+                requesterName = if (reqObj.has("requesterName") && !reqObj.isNull("requesterName")) reqObj.getString("requesterName") else null,
+                requesterPhone = if (reqObj.has("requesterPhone") && !reqObj.isNull("requesterPhone")) reqObj.getString("requesterPhone") else null,
                 peopleCount = reqObj.optInt("peopleCount", 1),
                 urgency = reqObj.getString("urgency"),
-                description = reqObj.optString("description", null),
+                description = if (reqObj.has("description") && !reqObj.isNull("description")) reqObj.getString("description") else null,
                 status = reqObj.getString("status"),
                 latitude = lat,
                 longitude = lon,
                 distance = if (reqObj.has("distance") && !reqObj.isNull("distance")) reqObj.getDouble("distance") else null,
                 createdAt = if (reqObj.has("createdAt") && !reqObj.isNull("createdAt")) reqObj.getString("createdAt") else null,
                 updatedAt = if (reqObj.has("updatedAt") && !reqObj.isNull("updatedAt")) reqObj.getString("updatedAt") else null,
-                                sosEventId = if (reqObj.has("sosEventId") && !reqObj.isNull("sosEventId")) reqObj.getString("sosEventId") else null,
+                sosEventId = if (reqObj.has("sosEventId") && !reqObj.isNull("sosEventId")) reqObj.getString("sosEventId") else null,
+                adults = reqObj.optInt("adults", 0),
+                children = reqObj.optInt("children", 0),
+                elderly = reqObj.optInt("elderly", 0),
+                photoUrl = if (reqObj.has("photoUrl") && !reqObj.isNull("photoUrl")) reqObj.getString("photoUrl") else null,
+                emergencyType = if (reqObj.has("emergencyType") && !reqObj.isNull("emergencyType")) reqObj.getString("emergencyType") else null,
+                neededItems = parseNeededItems(reqObj)
             )
         }
 
@@ -338,6 +403,8 @@ class OkHttpRescueMissionApiClient(
             id = data.getString("id"),
             requestId = data.getString("requestId"),
             rescuerId = if (data.has("rescuerId") && !data.isNull("rescuerId")) data.getString("rescuerId") else null,
+            rescuerName = if (data.has("rescuerName") && !data.isNull("rescuerName")) data.getString("rescuerName") else null,
+            rescuerPhone = if (data.has("rescuerPhone") && !data.isNull("rescuerPhone")) data.getString("rescuerPhone") else null,
             teamId = if (data.has("teamId") && !data.isNull("teamId")) data.getString("teamId") else null,
             status = data.getString("status"),
             notes = if (data.has("notes") && !data.isNull("notes")) data.getString("notes") else null,

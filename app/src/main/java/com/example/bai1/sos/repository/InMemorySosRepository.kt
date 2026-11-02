@@ -11,6 +11,7 @@ import com.example.bai1.sos.transport.SosTransportManager
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
 
 /**
@@ -34,7 +35,20 @@ class InMemorySosRepository(
     /** In-memory store; observed by the Disaster Map. */
     private val _sosEvents = MutableStateFlow<List<SosRescueInfo>>(emptyList())
 
-    override fun observeSos(): Flow<List<SosRescueInfo>> = _sosEvents.asStateFlow()
+    private fun removeExpiredSosEvents() {
+        val now = System.currentTimeMillis()
+        _sosEvents.update { current ->
+            current.filter { !it.isExpiredAt(now) }
+        }
+    }
+
+    override fun observeSos(): Flow<List<SosRescueInfo>> {
+        removeExpiredSosEvents()
+        return _sosEvents.asStateFlow().map { list ->
+            val now = System.currentTimeMillis()
+            list.filter { !it.isExpiredAt(now) }
+        }
+    }
 
     override fun observeRealtimeSos(): Flow<List<SosRescueInfo>> = kotlinx.coroutines.flow.flowOf(emptyList())
 
@@ -72,21 +86,19 @@ class InMemorySosRepository(
         return result
     }
 
-    override suspend fun getMySos(): List<SosRescueInfo> {
-        // Phase 7A: all stored events are "mine" (no user auth yet)
-        return _sosEvents.value
-    }
-
     override suspend fun getActiveSos(): List<SosRescueInfo> {
+        removeExpiredSosEvents()
         if (apiClient != null) {
             when (val result = apiClient.getActiveSos()) {
                 is SosApiResultList.Success -> {
                     val events = result.events.map { it.toDomain() }
                     Log.d("MAP_DEBUG", "REST_API_RAW_COUNT=${result.events.size}, MAPPED_COUNT=${events.size}")
                     events.forEach { Log.d("MAP_DEBUG", "  REST_EVENT: id=${it.eventId} status=${it.status} lat=${it.latitude} lng=${it.longitude}") }
+                    val now = System.currentTimeMillis()
+                    val validEvents = events.filter { !it.isExpiredAt(now) }
                     _sosEvents.update { current -> 
                         val map = current.associateBy { it.eventId }.toMutableMap()
-                        events.forEach { map[it.eventId] = it }
+                        validEvents.forEach { map[it.eventId] = it }
                         map.values.toList()
                     }
                 }
@@ -95,6 +107,7 @@ class InMemorySosRepository(
                 }
             }
         }
+        removeExpiredSosEvents()
         val all = _sosEvents.value
         val filtered = all.filter {
             it.status == SosStatus.PENDING || it.status == SosStatus.QUEUED || it.status == SosStatus.SUBMITTED || it.status == SosStatus.ACTIVE
@@ -103,7 +116,13 @@ class InMemorySosRepository(
         return filtered
     }
 
+    override suspend fun getMySos(): List<SosRescueInfo> {
+        removeExpiredSosEvents()
+        return _sosEvents.value
+    }
+
     override suspend fun getSosById(eventId: String): SosRescueInfo? {
+        removeExpiredSosEvents()
         return _sosEvents.value.find { it.eventId == eventId }
     }
 }

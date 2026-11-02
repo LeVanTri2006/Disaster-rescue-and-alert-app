@@ -3,6 +3,7 @@ package com.example.bai1.rescue.network
 enum class MissionStatus {
     ASSIGNED,
     IN_ROUTE,
+    ARRIVED,
     IN_PROGRESS,
     COMPLETED,
     CANCELLED,
@@ -13,6 +14,8 @@ data class RescueMissionResponse(
     val id: String,
     val requestId: String,
     val rescuerId: String?,
+    val rescuerName: String? = null,
+    val rescuerPhone: String? = null,
     val teamId: String?,
     val status: String,
     val notes: String?,
@@ -25,6 +28,8 @@ data class RescueMissionResponse(
 data class RescueMissionRequestInfo(
     val id: String,
     val requesterId: String,
+    val requesterName: String? = null,
+    val requesterPhone: String? = null,
     val peopleCount: Int,
     val urgency: String,
     val description: String?,
@@ -34,7 +39,13 @@ data class RescueMissionRequestInfo(
     val distance: Double? = null,
     val createdAt: String? = null,
     val updatedAt: String? = null,
-    val sosEventId: String? = null
+    val sosEventId: String? = null,
+    val adults: Int = 0,
+    val children: Int = 0,
+    val elderly: Int = 0,
+    val photoUrl: String? = null,
+    val emergencyType: String? = null,
+    val neededItems: List<String> = emptyList()
 )
 
 enum class RescueMissionApiErrorKind {

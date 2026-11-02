@@ -30,7 +30,45 @@ enum class SosUrgency(val label: String) {
     CRITICAL("Nguy hiểm tính mạng"),
     HIGH("Cần cứu trợ ngay"),
     MEDIUM("Cần hỗ trợ"),
-    LOW("Theo dõi")
+    LOW("Theo dõi");
+
+    val vietnameseName: String
+        get() = when (this) {
+            CRITICAL -> "NGUY CẤP"
+            HIGH -> "CAO"
+            MEDIUM -> "TRUNG BÌNH"
+            LOW -> "THẤP"
+        }
+
+    val displayTitle: String
+        get() = when (this) {
+            CRITICAL -> "Nguy cấp"
+            HIGH -> "Cao"
+            MEDIUM -> "Trung bình"
+            LOW -> "Thấp"
+        }
+
+    companion object {
+        fun toVietnamese(value: String?): String {
+            return when (value?.trim()?.uppercase()) {
+                "CRITICAL" -> "NGUY CẤP"
+                "HIGH" -> "CAO"
+                "MEDIUM" -> "TRUNG BÌNH"
+                "LOW" -> "THẤP"
+                else -> value?.ifBlank { "CHƯA RÕ" } ?: "CHƯA RÕ"
+            }
+        }
+
+        fun toDisplayTitle(value: String?): String {
+            return when (value?.trim()?.uppercase()) {
+                "CRITICAL" -> "Nguy cấp"
+                "HIGH" -> "Cao"
+                "MEDIUM" -> "Trung bình"
+                "LOW" -> "Thấp"
+                else -> value?.ifBlank { "Chưa rõ" } ?: "Chưa rõ"
+            }
+        }
+    }
 }
 
 /** Lifecycle status of an SOS event. */

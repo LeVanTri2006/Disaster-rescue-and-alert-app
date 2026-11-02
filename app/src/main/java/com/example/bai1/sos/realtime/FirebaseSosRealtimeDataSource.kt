@@ -50,6 +50,10 @@ class FirebaseSosRealtimeDataSource(
         val ownerListener = listener("sos-owner-events")
         var currentUid: String? = null
 
+        // Immediately attach listener to public operational sos-events
+        android.util.Log.d("FirebaseRealtime", "RTDB_LISTENER_START: path=sos-events (immediate)")
+        operationalReference.addChildEventListener(operationalListener)
+
         val authStateListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
             val newUid = firebaseAuth.uid
             android.util.Log.d("FirebaseRealtime", "RTDB_AUTH_STATE: firebaseUid=$newUid")
@@ -58,14 +62,12 @@ class FirebaseSosRealtimeDataSource(
             if (currentUid != null) {
                 database.getReference("sos-owner-events").child(currentUid!!).removeEventListener(ownerListener)
             }
-            operationalReference.removeEventListener(operationalListener)
             
             currentUid = newUid
 
             if (newUid != null) {
+                android.util.Log.d("FirebaseRealtime", "RTDB_LISTENER_START: path=sos-owner-events/$newUid")
                 database.getReference("sos-owner-events").child(newUid).addChildEventListener(ownerListener)
-                android.util.Log.d("FirebaseRealtime", "RTDB_LISTENER_START: path=sos-events")
-                operationalReference.addChildEventListener(operationalListener)
             }
         }
 

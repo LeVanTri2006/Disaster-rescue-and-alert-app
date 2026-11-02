@@ -12,6 +12,9 @@ import androidx.compose.material.icons.filled.MedicalServices
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.AccessTime
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -102,15 +105,23 @@ fun RescueRequestDetailScreen(
             ) {
                 // Header
                 Column(modifier = Modifier.fillMaxWidth()) {
+                    val urgencyStr = request?.urgency ?: "HIGH"
+                    val (urgencyText, urgencyColor, urgencyBg) = when (urgencyStr.uppercase()) {
+                        "CRITICAL" -> Triple("Đặc biệt nguy cấp", EmergencyRed, EmergencyRedLight)
+                        "HIGH" -> Triple("Mức độ: Cao", EmergencyRed, EmergencyRedLight)
+                        "MEDIUM" -> Triple("Mức độ: Trung bình", WarningOrange, WarningOrangeLight)
+                        "LOW" -> Triple("Mức độ: Thấp", PrimaryBlue, PrimaryLightBlue)
+                        else -> Triple("Mức độ: " + com.example.bai1.sos.domain.SosUrgency.toDisplayTitle(urgencyStr), EmergencyRed, EmergencyRedLight)
+                    }
                     Box(
                         modifier = Modifier
                             .clip(RoundedCornerShape(8.dp))
-                            .background(EmergencyRedLight)
+                            .background(urgencyBg)
                             .padding(horizontal = 10.dp, vertical = 6.dp)
                     ) {
                         Text(
-                            request?.urgency ?: "Khẩn cấp",
-                            color = EmergencyRed,
+                            urgencyText,
+                            color = urgencyColor,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold
                         )
@@ -143,11 +154,14 @@ fun RescueRequestDetailScreen(
                         } catch (e: Exception) { "Vừa xong" }
                     } ?: "Vừa xong"
                     
+                    DetailRow(icon = Icons.Default.Person, label = "Người cần cứu hộ", value = request?.requesterName?.takeIf { it.isNotBlank() } ?: "Người gặp nạn")
+                    DetailRow(icon = Icons.Default.Phone, label = "Số điện thoại", value = request?.requesterPhone?.takeIf { it.isNotBlank() } ?: "Chưa cập nhật")
                     DetailRow(icon = Icons.Default.AccessTime, label = "Thời gian", value = timeText)
                     DetailRow(icon = Icons.Default.LocationOn, label = "Khoảng cách tới bạn", value = distanceText)
                     DetailRow(icon = Icons.Default.Groups, label = "Số người cần cứu", value = "${request?.peopleCount ?: 0} người")
-                    DetailRow(icon = Icons.Default.Warning, label = "Tình trạng", value = request?.status ?: "")
-                    DetailRow(icon = Icons.Default.MedicalServices, label = "Nhu cầu / Mô tả", value = request?.description ?: "Không có mô tả")
+                    DetailRow(icon = Icons.Default.Warning, label = "Tình trạng hiện tại", value = request?.emergencyType?.takeIf { it.isNotBlank() } ?: (request?.status ?: "Cần cứu hộ khẩn cấp"))
+                    DetailRow(icon = Icons.Default.MedicalServices, label = "Vật dụng cần thiết", value = if (!request?.neededItems.isNullOrEmpty()) request!!.neededItems.joinToString(", ") else "Không có yêu cầu đặc biệt")
+                    DetailRow(icon = Icons.Default.Info, label = "Mô tả thêm (nếu có)", value = request?.description?.takeIf { it.isNotBlank() } ?: "Không có mô tả thêm")
                     
                     Spacer(modifier = Modifier.height(8.dp))
                     Text("Hình ảnh đính kèm", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = TextPrimary)

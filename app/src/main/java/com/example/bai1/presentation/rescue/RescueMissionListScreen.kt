@@ -161,9 +161,17 @@ fun RescueMissionListScreen(
                                 } catch (e: Exception) { "Vừa xong" }
                             } ?: "Vừa xong"
 
+                            val (urgencyLabel, urgencyColor) = when (req.urgency.uppercase()) {
+                                "CRITICAL" -> "Nguy cấp" to EmergencyRed
+                                "HIGH" -> "Khẩn cấp" to EmergencyRed
+                                "MEDIUM" -> "Trung bình" to WarningOrange
+                                "LOW" -> "Thấp" to PrimaryBlue
+                                else -> "Cần cứu hộ" to EmergencyRed
+                            }
+
                             MissionCard(
-                                statusText = "Cần cứu hộ",
-                                statusColor = EmergencyRed,
+                                statusText = urgencyLabel,
+                                statusColor = urgencyColor,
                                 title = req.description ?: "Yêu cầu cứu hộ",
                                 location = if (req.latitude != null) "Lat: ${req.latitude}, Lng: ${req.longitude}" else "Không rõ vị trí",
                                 people = "${req.peopleCount} người",

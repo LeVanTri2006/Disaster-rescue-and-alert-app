@@ -45,6 +45,7 @@ class ApiSosTransportTest {
     fun `successful request uses server event id and response snapshot`() = runTest {
         var sent: CreateSosRequest? = null
         val transport = ApiSosTransport(object : SosApiClient {
+            override suspend fun getPhotoUploadUrl(request: GetPhotoUploadUrlRequest): SosPhotoUploadUrlResult = SosPhotoUploadUrlResult.Failure(SosApiError(SosApiErrorKind.UNKNOWN, "not implemented"))
             override suspend fun getActiveSos(): SosApiResultList = SosApiResultList.Failure(SosApiError(SosApiErrorKind.UNKNOWN, "not implemented")) 
 
             override suspend fun createSos(request: CreateSosRequest): SosApiResult {
@@ -89,6 +90,7 @@ class ApiSosTransportTest {
 
     private suspend fun assertFailure(kind: SosApiErrorKind, message: String) {
         val transport = ApiSosTransport(object : SosApiClient {
+            override suspend fun getPhotoUploadUrl(request: GetPhotoUploadUrlRequest): SosPhotoUploadUrlResult = SosPhotoUploadUrlResult.Failure(SosApiError(SosApiErrorKind.UNKNOWN, "not implemented"))
             override suspend fun getActiveSos(): SosApiResultList = SosApiResultList.Failure(SosApiError(SosApiErrorKind.UNKNOWN, "not implemented")) 
 
             override suspend fun createSos(request: CreateSosRequest) =
