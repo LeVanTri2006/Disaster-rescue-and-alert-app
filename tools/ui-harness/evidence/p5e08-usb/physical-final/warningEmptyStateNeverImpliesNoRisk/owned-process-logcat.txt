@@ -1,0 +1,139 @@
+--------- beginning of main
+11-09 09:53:48.984 10250 10250 I 5e02.uiisolated: Late-enabling -Xcheck:jni
+11-09 09:53:49.004 10250 10250 E 5e02.uiisolated: Unknown bits set in runtime_flags: 0x40000000
+11-09 09:53:49.004 10250 10250 I 5e02.uiisolated: Using generational CollectorTypeCC GC.
+11-09 09:53:49.016 10250 10250 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-09 09:53:49.020 10250 10250 I OneTrace: Mark active for pid=10250? true
+11-09 09:53:49.021 10250 10250 D cutils-dev: otrace_set_tracing_enabled? true
+11-09 09:53:49.021 10250 10261 D cutils-dev: properties changed in otrace_seq_number_changed!
+11-09 09:53:49.042 10250 10250 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10413; state: ENABLED
+11-09 09:53:49.042 10250 10250 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusAutoResolutionFeature
+11-09 09:53:49.042 10250 10250 I oplus.android.OplusFrameworkFactoryImpl: getOplusAutoResolutionFeature
+11-09 09:53:49.080 10250 10250 I OplusFeatureCache: Milliseconds spent on init(): 37
+11-09 09:53:49.081 10250 10250 D CompactWindowAppManager: initCompactApplicationInfo 
+11-09 09:53:49.092 10250 10250 W libc    : Access denied finding property "ro.odm.prev.product.name"
+--------- beginning of system
+11-09 09:53:49.094 10250 10250 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.example.bai1.p5e02.uiisolated]: arm64-v8a, null instrumentation[com.example.bai1.p5e02.uiisolated.test]: null, null
+11-09 09:53:49.095 10250 10250 D LoadedApk: mApplicationInfo overrideDisplayId:null
+11-09 09:53:49.100 10250 10250 D nativeloader: Configuring clns-4 for other apk /system_ext/framework/androidx.window.extensions.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~C_oc-kWaD9O5ULkm4EZarA==/com.example.bai1.p5e02.uiisolated.test-JGfb997oOSWh4Qs9n4m-7Q==/lib/arm64:/data/app/~~Aoe0gyK-KSuKGnP4j-N13g==/com.example.bai1.p5e02.uiisolated-oJMa6sCBwMmyoGrZWZAMug==/lib/arm64:/data/app/~~C_oc-kWaD9O5ULkm4EZarA==/com.example.bai1.p5e02.uiisolated.test-JGfb997oOSWh4Qs9n4m-7Q==/base.apk!/lib/arm64-v8a:/data/app/~~Aoe0gyK-KSuKGnP4j-N13g==/com.example.bai1.p5e02.uiisolated-oJMa6sCBwMmyoGrZWZAMug==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e02.uiisolated
+11-09 09:53:49.100 10250 10250 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libupdateprof.qti.so:libQOC.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:liblistenjni.qti.so
+11-09 09:53:49.104 10250 10250 D nativeloader: Configuring clns-5 for other apk /system_ext/framework/androidx.window.sidecar.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~C_oc-kWaD9O5ULkm4EZarA==/com.example.bai1.p5e02.uiisolated.test-JGfb997oOSWh4Qs9n4m-7Q==/lib/arm64:/data/app/~~Aoe0gyK-KSuKGnP4j-N13g==/com.example.bai1.p5e02.uiisolated-oJMa6sCBwMmyoGrZWZAMug==/lib/arm64:/data/app/~~C_oc-kWaD9O5ULkm4EZarA==/com.example.bai1.p5e02.uiisolated.test-JGfb997oOSWh4Qs9n4m-7Q==/base.apk!/lib/arm64-v8a:/data/app/~~Aoe0gyK-KSuKGnP4j-N13g==/com.example.bai1.p5e02.uiisolated-oJMa6sCBwMmyoGrZWZAMug==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e02.uiisolated
+11-09 09:53:49.104 10250 10250 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libupdateprof.qti.so:libQOC.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:liblistenjni.qti.so
+11-09 09:53:49.396 10250 10250 D nativeloader: Configuring clns-6 for other apk /data/app/~~C_oc-kWaD9O5ULkm4EZarA==/com.example.bai1.p5e02.uiisolated.test-JGfb997oOSWh4Qs9n4m-7Q==/base.apk:/data/app/~~Aoe0gyK-KSuKGnP4j-N13g==/com.example.bai1.p5e02.uiisolated-oJMa6sCBwMmyoGrZWZAMug==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~C_oc-kWaD9O5ULkm4EZarA==/com.example.bai1.p5e02.uiisolated.test-JGfb997oOSWh4Qs9n4m-7Q==/lib/arm64:/data/app/~~Aoe0gyK-KSuKGnP4j-N13g==/com.example.bai1.p5e02.uiisolated-oJMa6sCBwMmyoGrZWZAMug==/lib/arm64:/data/app/~~C_oc-kWaD9O5ULkm4EZarA==/com.example.bai1.p5e02.uiisolated.test-JGfb997oOSWh4Qs9n4m-7Q==/base.apk!/lib/arm64-v8a:/data/app/~~Aoe0gyK-KSuKGnP4j-N13g==/com.example.bai1.p5e02.uiisolated-oJMa6sCBwMmyoGrZWZAMug==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e02.uiisolated
+11-09 09:53:49.400 10250 10250 I Quality : ActivityThread: createOrUpdateClassLoaderLocked delay 304 com.example.bai1.p5e02.uiisolated 10250
+11-09 09:53:49.406 10250 10250 D nativeloader: Load libframework-connectivity-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity.jar: ok
+11-09 09:53:49.411 10250 10250 V GraphicsEnvironment: ANGLE Developer option for 'com.example.bai1.p5e02.uiisolated' set to: 'default'
+11-09 09:53:49.412 10250 10250 V GraphicsEnvironment: ANGLE GameManagerService for com.example.bai1.p5e02.uiisolated: false
+11-09 09:53:49.412 10250 10250 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-09 09:53:49.415 10250 10250 D LoadedApk: mApplicationInfo overrideDisplayId:null
+11-09 09:53:49.678 10250 10250 D NetworkSecurityConfig: Using Network Security Config from resource routing_network_security_config debugBuild: true
+11-09 09:53:49.680 10250 10250 D NetworkSecurityConfig: Using Network Security Config from resource routing_network_security_config debugBuild: true
+11-09 09:53:49.680 10250 10250 I MonitoringInstr: newApplication called!
+11-09 09:53:49.717 10250 10250 I MonitoringInstr: Instrumentation started!
+11-09 09:53:49.726 10250 10250 I AndroidJUnitRunner: onCreate Bundle[{physicalUsb=true, hostFixturePort=46163, expectedGraphSha256=1725e96b213afd7be6c3ad5a44629c05c994674fc2bf7e9c01aab8fe69bb3d9d, class=com.example.bai1.fixture.ProductionWarningUiTest#warningEmptyStateNeverImpliesNoRisk, listener=com.example.bai1.fixture.DeviceXmlListener, preserveAuthSession=false}]
+11-09 09:53:49.727 10250 10250 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-09 09:53:49.729 10250 10250 D OplusActivityManager: get AMS extension: android.os.BinderProxy@a92d5e1
+11-09 09:53:51.230 10250 10283 D AndroidJUnitRunner: onStart is called.
+11-09 09:53:51.236 10250 10250 I MonitoringInstr: No JSBridge.
+11-09 09:53:51.290 10250 10283 D TestRequestBuilder: Skipping class path scanning and directly running [com.example.bai1.fixture.ProductionWarningUiTest]
+11-09 09:53:51.320 10250 10283 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-09 09:53:51.324 10250 10283 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+11-09 09:53:51.325 10250 10283 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+11-09 09:53:51.325 10250 10283 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+11-09 09:53:51.325 10250 10283 D TestExecutor: Adding listener androidx.test.internal.runner.listener.TraceRunListener
+11-09 09:53:51.325 10250 10283 D TestExecutor: Adding listener com.example.bai1.fixture.DeviceXmlListener
+11-09 09:53:51.334 10250 10283 I TestRunner: run started: 1 tests
+11-09 09:53:51.336 10250 10283 I TestRunner: started: warningEmptyStateNeverImpliesNoRisk(com.example.bai1.fixture.ProductionWarningUiTest)
+11-09 09:53:51.350 10250 10283 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-09 09:53:51.438 10250 10314 D OplusGraphicsEvent: OplusGraphicsEventListener create now!
+11-09 09:53:51.439 10250 10314 D OplusGraphicsEvent: addEventListener success!
+11-09 09:53:51.446 10250 10317 E 5e02.uiisolated: Loaded layer handle (6411308404731556421) for layer /my_product/lib64/libcolorx-loader.so
+11-09 09:53:51.446 10250 10317 E 5e02.uiisolated: Looking for entrypoint ColorX_Check
+11-09 09:53:51.446 10250 10317 E 5e02.uiisolated: Found ColorX_Check for /my_product/lib64/libcolorx-loader.so
+11-09 09:53:51.446 10250 10317 E 5e02.uiisolated: Check failed
+11-09 09:53:51.451 10250 10250 D LifecycleMonitor: Lifecycle status change: com.example.bai1.MainActivity@78d3ffd in: PRE_ON_CREATE
+11-09 09:53:51.451 10250 10250 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-09 09:53:51.545 10250 10250 I oplus.android.OplusFrameworkFactoryImpl: Unknow feature:IOplusTextViewRTLUtilForUG
+11-09 09:53:51.558 10250 10250 D OplusWindowManager: get WMS extension: android.os.BinderProxy@f1c7431
+11-09 09:53:51.592 10250 10250 D LifecycleMonitor: Lifecycle status change: com.example.bai1.MainActivity@78d3ffd in: CREATED
+11-09 09:53:51.592 10250 10250 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.bai1.MainActivity@78d3ffd
+11-09 09:53:51.593 10250 10250 D LifecycleMonitor: Lifecycle status change: com.example.bai1.MainActivity@78d3ffd in: STARTED
+11-09 09:53:51.593 10250 10250 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.bai1.MainActivity@78d3ffd
+11-09 09:53:51.595 10250 10250 D LifecycleMonitor: Lifecycle status change: com.example.bai1.MainActivity@78d3ffd in: RESUMED
+11-09 09:53:51.595 10250 10250 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.bai1.MainActivity@78d3ffd
+11-09 09:53:51.597 10250 10250 D nativeloader: Load libSchedAssistJni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+11-09 09:53:51.597 10250 10250 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+11-09 09:53:51.598 10250 10250 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+11-09 09:53:51.598 10250 10250 E 5e02.uiisolated: ofbOpen failed with error=No such file or directory
+11-09 09:53:51.598 10250 10250 E 5e02.uiisolated: sysOpen failed with error=No such file or directory
+11-09 09:53:51.601 10250 10250 D OplusInputMethodUtil: init sDebug to false, init sDebugIme to false, init sAlwaysOn to false
+11-09 09:53:51.601 10250 10250 D OplusInputMethodUtil: updateDebugToClass InputMethodManager.DEBUG = false
+11-09 09:53:51.601 10250 10250 D OplusInputMethodUtil: updateDebugToClass ImeFocusController.DEBUG = false
+11-09 09:53:51.601 10250 10250 D OplusInputMethodUtil: updateDebugToClass BaseInputConnection.DEBUG = false
+11-09 09:53:51.601 10250 10250 D OplusInputMethodUtil: updateDebugToClass ImeFocusController.sDebugIme = false
+11-09 09:53:51.608 10250 10250 D WindowManager: Add to mViews: DecorView@1c4ce77[MainActivity],pkg= com.example.bai1.p5e02.uiisolated
+11-09 09:53:51.611 10250 10321 I OplusSlideAnimOptHelper: checkListMode: is blacklist mode = true
+11-09 09:53:51.611 10250 10314 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+11-09 09:53:51.615 10250 10314 D ExtensionsLoader: Opened libhwuiextimpl.so
+11-09 09:53:51.615 10250 10321 D OplusSlideAnimOptHelper: com.example.bai1.p5e02.uiisolated scrollEffectOpt enable = true
+11-09 09:53:51.615 10250 10250 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+11-09 09:53:51.616 10250 10250 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+11-09 09:53:51.626 10250 10250 D ViewRootImplExtImpl: onDisplayChanged -1 for VRI android.view.ViewRootImpl@d11156f
+11-09 09:53:51.627 10250 10250 D InputEventReceiver: Input log is disabled
+11-09 09:53:51.839 10250 10250 I 5e02.uiisolated: hiddenapi: Accessing hidden method Landroid/os/SystemProperties;->addChangeCallback(Ljava/lang/Runnable;)V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/compose/ui/platform/AndroidComposeView$Companion; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-09 09:53:51.839 10250 10250 D CompatibilityChangeReporter: Compat change id reported: 193247900; UID 10413; state: ENABLED
+11-09 09:53:52.107 10250 10261 I 5e02.uiisolated: Compiler allocated 4871KB to compile void android.view.ViewRootImpl.performTraversals()
+11-09 09:53:52.210 10250 10250 D BufferQueueConsumer: [](id:280a00000000,api:0,p:-1,c:10250) connect: controlledByApp=false
+11-09 09:53:52.210 10250 10250 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+11-09 09:53:52.211 10250 10250 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+11-09 09:53:52.212 10250 10250 V ZoomWindowDecorView: setLastReportedMergedConfiguration mZoomDisplayHeight: 2400 getDecorView.29675127
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: QUALCOMM build                   : c5f0e23, I9972db7aac
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: Build Date                       : 04/28/21
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: EV031.32.02.10
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: Local Branch                     : 
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: Remote Branch                    : 
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: Remote Branch                    : 
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: Reconstruct Branch               : 
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: Build Config                     : S P 10.0.7 AArch64
+11-09 09:53:52.218 10250 10314 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+11-09 09:53:52.228 10250 10314 I AdrenoGLES-0: PFP: 0x016ee190, ME: 0x00000000
+11-09 09:53:52.239 10250 10250 D VRI[MainActivity]: registerCallbacksForSync syncBuffer=false
+11-09 09:53:52.240 10250 10314 D BufferQueueProducer: [VRI[MainActivity]#0(BLAST Consumer)0](id:280a00000000,api:1,p:10250,c:10250) connect: api=1 producerControlledByApp=true
+11-09 09:53:52.278 10250 10314 D VRI[MainActivity]: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
+11-09 09:53:52.280 10250 10314 W Parcel  : Expecting binder but got null!
+11-09 09:53:52.280 10250 10250 D VRI[MainActivity]: draw finished.
+11-09 09:53:52.281 10250 10250 I Quality : ActivityThread: doFrame delay 650 com.example.bai1.p5e02.uiisolated 10250
+11-09 09:53:52.301 10250 10250 I Choreographer: Skipped 34 frames!  The application may be doing too much work on its main thread.
+11-09 09:53:52.301 10250 10250 I Quality : Skipped: false 34 cost 589.142 refreshRate 16832873 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:52.322 10250 10250 D VRI[MainActivity]: onFocusEvent true
+11-09 09:53:53.372 10250 10250 I Quality : Skipped: false 8 cost 145.35075 refreshRate 16839670 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:54.485 10250 10250 I Quality : Skipped: false 22 cost 382.10895 refreshRate 16849346 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:54.540 10250 10250 I Quality : Skipped: true 1 cost 33.414978 refreshRate 16850502 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:54.860 10250 10250 I Quality : Skipped: true 3 cost 50.554768 refreshRate 16842866 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:55.006 10250 10250 I Quality : Skipped: false 1 cost 28.163675 refreshRate 16838567 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:55.440 10250 10250 I Quality : Skipped: false 20 cost 344.7651 refreshRate 16838046 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:55.468 10250 10250 I Quality : Skipped: false 1 cost 18.787687 refreshRate 16836989 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:55.521 10250 10250 I Quality : Skipped: true 2 cost 38.068996 refreshRate 16836989 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:55.876 10250 10250 I Quality : Skipped: false 2 cost 39.46306 refreshRate 16863144 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:56.355 10250 10250 W OnBackInvokedCallback: OnBackInvokedCallback is not enabled for the application.
+11-09 09:53:56.355 10250 10250 W OnBackInvokedCallback: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-09 09:53:56.477 10250 10250 I Quality : Skipped: false 5 cost 100.856255 refreshRate 16850472 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:57.152 10250 10250 I Quality : Skipped: true 2 cost 35.418457 refreshRate 16837315 bit true processName com.example.bai1.p5e02.uiisolated
+11-09 09:53:57.338 10250 10250 D LifecycleMonitor: Lifecycle status change: com.example.bai1.MainActivity@78d3ffd in: PAUSED
+11-09 09:53:57.338 10250 10250 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.bai1.MainActivity@78d3ffd
+11-09 09:53:57.373 10250 10250 D VRI[MainActivity]: onFocusEvent false
+11-09 09:53:57.382 10250 10267 D VRI[MainActivity]: dispatchAppVisibility visible:false
+11-09 09:53:57.388 10250 10314 D BufferQueueProducer: [VRI[MainActivity]#0(BLAST Consumer)0](id:280a00000000,api:1,p:10250,c:10250) disconnect: api 1
+11-09 09:53:57.419 10250 10250 D BufferQueueConsumer: [VRI[MainActivity]#0(BLAST Consumer)0](id:280a00000000,api:0,p:-1,c:10250) disconnect
+11-09 09:53:57.432 10250 10250 D VRI[MainActivity]: setWindowStopped stopped:true
+11-09 09:53:57.434 10250 10250 D LifecycleMonitor: Lifecycle status change: com.example.bai1.MainActivity@78d3ffd in: STOPPED
+11-09 09:53:57.434 10250 10250 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.bai1.MainActivity@78d3ffd
+11-09 09:53:57.497 10250 10250 D LifecycleMonitor: Lifecycle status change: com.example.bai1.MainActivity@78d3ffd in: DESTROYED
+11-09 09:53:57.497 10250 10250 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-09 09:53:57.499 10250 10250 D OplusScrollToTopManager: unregisterGuidePopupDismissReceiverInSystemUI
+11-09 09:53:57.499 10250 10250 D OplusScrollToTopManager: Receiver not registered: android.view.OplusScrollToTopManager$1@ef63765
+11-09 09:53:57.499 10250 10250 D OplusScrollToTopManager: unregisterSystemUIBroadcastReceiver 
+11-09 09:53:57.499 10250 10250 D OplusScrollToTopManager: java.lang.IllegalArgumentException: Receiver not registered: android.view.OplusScrollToTopManager$2@d48c3a
+11-09 09:53:57.499 10250 10283 I TestRunner: finished: warningEmptyStateNeverImpliesNoRisk(com.example.bai1.fixture.ProductionWarningUiTest)
+11-09 09:53:57.539 10250 10250 V ZoomWindowDecorView: removeZoomView
+11-09 09:53:57.609 10250 10283 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored

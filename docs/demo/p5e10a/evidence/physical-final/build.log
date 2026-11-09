@@ -1,0 +1,93 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :exactSource
+> Task :preBuild
+> Task :preDebugBuild
+> Task :mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :generateDebugBuildConfig
+> Task :generateDebugResources
+> Task :packageDebugResources
+> Task :processDebugNavigationResources
+> Task :generateDebugAssets UP-TO-DATE
+> Task :javaPreCompileDebug
+> Task :mergeDebugAssets
+> Task :compressDebugAssets
+> Task :parseDebugLocalResources
+> Task :generateDebugGlobalSynthetics
+> Task :generateDebugRFile
+> Task :checkDebugDuplicateClasses
+> Task :desugarDebugFileDependencies
+> Task :mergeLibDexDebug
+> Task :mapDebugSourceSetPaths
+> Task :checkDebugAarMetadata
+> Task :compileDebugNavigationResources
+> Task :createDebugCompatibleScreenManifests
+> Task :extractDeepLinksDebug
+> Task :mergeDebugResources
+> Task :processDebugMainManifest
+> Task :processDebugManifest
+> Task :mergeDebugJniLibFolders
+> Task :mergeDebugNativeLibs
+> Task :validateSigningDebug
+> Task :writeDebugAppMetadata
+
+> Task :stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :writeDebugSigningConfigVersions
+> Task :preDebugAndroidTestBuild SKIPPED
+> Task :mergeDebugAndroidTestManifest
+> Task :processDebugAndroidTestManifest
+> Task :generateDebugAndroidTestBuildConfig
+> Task :processDebugManifestForPackage
+> Task :generateDebugAndroidTestResources
+> Task :packageDebugAndroidTestResources
+> Task :processDebugAndroidTestNavigationResources
+> Task :generateDebugAndroidTestAssets UP-TO-DATE
+> Task :javaPreCompileDebugAndroidTest
+> Task :parseDebugAndroidTestLocalResources
+> Task :mergeDebugAndroidTestAssets
+> Task :compressDebugAndroidTestAssets
+> Task :generateDebugAndroidTestRFile
+> Task :processDebugResources
+> Task :generateDebugAndroidTestGlobalSynthetics
+> Task :checkDebugAndroidTestDuplicateClasses
+> Task :desugarDebugAndroidTestFileDependencies
+> Task :mergeLibDexDebugAndroidTest
+> Task :checkDebugAndroidTestAarMetadata
+> Task :mapDebugAndroidTestSourceSetPaths
+> Task :compileDebugAndroidTestNavigationResources
+> Task :mergeDebugAndroidTestResources
+> Task :mergeDebugAndroidTestJniLibFolders
+> Task :mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :validateSigningDebugAndroidTest
+> Task :writeDebugAndroidTestSigningConfigVersions
+> Task :processDebugAndroidTestResources
+> Task :mergeExtDexDebugAndroidTest
+> Task :mergeExtDexDebug
+
+> Task :compileDebugKotlin FAILED
+e: file:///home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/java/com/example/bai1/demo/DemoActivity.kt:181:80 None of the following candidates is applicable:
+fun times(other: Byte): Int
+fun times(other: Short): Int
+fun times(other: Int): Int
+fun times(other: Long): Long
+fun times(other: Float): Float
+fun times(other: Double): Double
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileDebugKotlin' (registered by plugin 'com.android.internal.application').
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 30s
+56 actionable tasks: 56 executed

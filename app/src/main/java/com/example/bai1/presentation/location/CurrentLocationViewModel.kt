@@ -1,8 +1,6 @@
 package com.example.bai1.presentation.location
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.example.bai1.sos.presentation.LocationUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -21,6 +19,10 @@ class CurrentLocationViewModel(
         _state.value = LocationUiState.Loading
         locationProvider.getCurrentLocation { result ->
             if (version != requestVersion) return@getCurrentLocation
+            if (result is LocationResult.Success) {
+                com.example.bai1.presentation.map.DisasterMapSharedState.lastKnownRescuerLocation =
+                    com.google.android.gms.maps.model.LatLng(result.latitude, result.longitude)
+            }
             _state.value = when (result) {
                 is LocationResult.Success -> LocationUiState.Success(
                     latitude = result.latitude,
@@ -47,11 +49,4 @@ class CurrentLocationViewModel(
         LocationError.UNKNOWN -> "Có lỗi khi lấy vị trí. Hãy thử lại."
     }
 
-    companion object {
-        fun factory(context: Context): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
-            @Suppress("UNCHECKED_CAST")
-            override fun <T : ViewModel> create(modelClass: Class<T>): T =
-                CurrentLocationViewModel(AndroidLocationProvider(context.applicationContext)) as T
-        }
-    }
 }

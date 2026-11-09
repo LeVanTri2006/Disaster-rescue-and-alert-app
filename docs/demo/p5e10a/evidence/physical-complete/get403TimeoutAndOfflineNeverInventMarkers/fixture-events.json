@@ -1,0 +1,35 @@
+[
+  {
+    "method": "GET",
+    "path": "/demo/info",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": null,
+    "actor": null
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "rescuer"
+  },
+  {
+    "method": "GET",
+    "path": "/sos/active",
+    "host": "127.0.0.1:44897",
+    "fault": "403",
+    "role": "rescuer",
+    "actor": "rescuer"
+  },
+  {
+    "method": "GET",
+    "path": "/sos/active",
+    "host": "127.0.0.1:44897",
+    "fault": "timeout",
+    "role": "rescuer",
+    "actor": "rescuer"
+  }
+]

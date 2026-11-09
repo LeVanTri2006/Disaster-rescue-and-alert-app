@@ -1,0 +1,89 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :exactSource
+> Task :preBuild
+> Task :preDebugBuild
+> Task :mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :generateDebugResources
+> Task :packageDebugResources
+> Task :processDebugNavigationResources
+> Task :generateDebugAssets UP-TO-DATE
+> Task :javaPreCompileDebug
+> Task :mergeDebugAssets
+> Task :compressDebugAssets
+> Task :parseDebugLocalResources
+> Task :generateDebugGlobalSynthetics
+> Task :generateDebugRFile
+> Task :checkDebugDuplicateClasses
+> Task :desugarDebugFileDependencies
+> Task :mergeLibDexDebug
+> Task :mapDebugSourceSetPaths
+> Task :checkDebugAarMetadata
+> Task :compileDebugNavigationResources
+> Task :createDebugCompatibleScreenManifests
+> Task :extractDeepLinksDebug
+> Task :mergeDebugResources
+> Task :processDebugMainManifest
+> Task :processDebugManifest
+> Task :mergeDebugJniLibFolders
+> Task :mergeDebugNativeLibs
+> Task :validateSigningDebug
+> Task :writeDebugAppMetadata
+
+> Task :stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :writeDebugSigningConfigVersions
+> Task :preDebugAndroidTestBuild SKIPPED
+> Task :generateDebugAndroidTestResources
+> Task :packageDebugAndroidTestResources
+> Task :processDebugAndroidTestNavigationResources
+> Task :processDebugManifestForPackage
+> Task :javaPreCompileDebugAndroidTest
+> Task :parseDebugAndroidTestLocalResources
+> Task :generateDebugAndroidTestAssets UP-TO-DATE
+> Task :generateDebugAndroidTestRFile
+> Task :mergeDebugAndroidTestAssets
+> Task :compressDebugAndroidTestAssets
+> Task :processDebugResources
+> Task :generateDebugAndroidTestGlobalSynthetics
+> Task :checkDebugAndroidTestDuplicateClasses
+> Task :desugarDebugAndroidTestFileDependencies
+> Task :mergeLibDexDebugAndroidTest
+> Task :checkDebugAndroidTestAarMetadata
+> Task :mapDebugAndroidTestSourceSetPaths
+> Task :compileDebugAndroidTestNavigationResources
+> Task :mergeDebugAndroidTestResources
+> Task :mergeDebugAndroidTestManifest
+> Task :processDebugAndroidTestManifest
+> Task :mergeDebugAndroidTestJniLibFolders
+> Task :mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :validateSigningDebugAndroidTest
+> Task :writeDebugAndroidTestSigningConfigVersions
+> Task :processDebugAndroidTestResources
+> Task :mergeExtDexDebugAndroidTest
+> Task :mergeExtDexDebug
+> Task :compileDebugKotlin
+> Task :compileDebugJavaWithJavac NO-SOURCE
+> Task :processDebugJavaRes
+> Task :dexBuilderDebug
+> Task :bundleDebugClassesToCompileJar
+> Task :mergeProjectDexDebug
+> Task :mergeDebugJavaResource
+> Task :packageDebug
+> Task :createDebugApkListingFileRedirect
+> Task :assembleDebug
+> Task :compileDebugAndroidTestKotlin
+> Task :compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :processDebugAndroidTestJavaRes
+> Task :mergeDebugAndroidTestJavaResource
+> Task :dexBuilderDebugAndroidTest
+> Task :mergeProjectDexDebugAndroidTest
+> Task :packageDebugAndroidTest
+> Task :createDebugAndroidTestApkListingFileRedirect
+> Task :assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 33s
+68 actionable tasks: 68 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.7.1/userguide/configuration_cache_enabling.html

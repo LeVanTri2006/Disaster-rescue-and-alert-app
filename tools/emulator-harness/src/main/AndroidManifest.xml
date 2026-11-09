@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK" />
+    <application android:name="android.app.Application" android:allowBackup="false"
+        android:label="P5-E01 isolated fixture" android:usesCleartextTraffic="false"
+        android:networkSecurityConfig="@xml/routing_network_security_config">
+        <activity android:name="com.example.bai1.fixture.FixtureActivity" android:exported="false" />
+    </application>
+</manifest>

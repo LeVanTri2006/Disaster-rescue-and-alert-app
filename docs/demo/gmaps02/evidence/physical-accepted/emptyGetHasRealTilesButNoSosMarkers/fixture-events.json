@@ -1,0 +1,29 @@
+[
+  {
+    "method": "GET",
+    "path": "/demo/info",
+    "host": "127.0.0.1:39473",
+    "fault": "ok",
+    "role": null,
+    "actor": null
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:39473",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "rescuer"
+  },
+  {
+    "method": "GET",
+    "path": "/sos/active",
+    "host": "127.0.0.1:39473",
+    "fault": "ok",
+    "role": "rescuer",
+    "actor": "rescuer",
+    "response_ids": [],
+    "response": []
+  }
+]

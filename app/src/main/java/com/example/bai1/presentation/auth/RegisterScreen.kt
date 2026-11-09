@@ -36,6 +36,8 @@ fun RegisterScreen(
     var password by remember { mutableStateOf("") }
     var confirmPassword by remember { mutableStateOf("") }
     var agreeTerms by remember { mutableStateOf(true) }
+    var validationError by remember { mutableStateOf<String?>(null) }
+    val displayedError = validationError ?: errorMessage
 
     val scrollState = rememberScrollState()
 
@@ -166,9 +168,9 @@ fun RegisterScreen(
 
         Spacer(modifier = Modifier.height(28.dp))
 
-        if (errorMessage != null) {
+        if (displayedError != null) {
             Text(
-                text = errorMessage,
+                text = displayedError,
                 color = MaterialTheme.colorScheme.error,
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(bottom = 16.dp)
@@ -181,7 +183,10 @@ fun RegisterScreen(
             // Register Button
             PrimaryButton(
                 text = "Đăng ký",
-                onClick = { onRegisterSubmit(fullName, email, phone, password) }
+                onClick = {
+                    validationError = registrationValidationError(fullName, email, phone, password, confirmPassword, agreeTerms)
+                    if (validationError == null) onRegisterSubmit(fullName.trim(), email.trim(), phone.trim(), password)
+                }
             )
         }
 

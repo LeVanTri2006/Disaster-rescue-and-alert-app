@@ -18,10 +18,42 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.time.Instant
 import java.util.Locale
+import com.example.bai1.rescue.routing.algorithm.DfaBuildResult
+import com.example.bai1.rescue.routing.algorithm.TurnRestrictionIndex
+import com.example.bai1.rescue.routing.algorithm.UniformCostSearchRouter
+import com.example.bai1.rescue.routing.algorithm.ViaWayTurnRestrictionDfa
+import com.example.bai1.rescue.routing.diagnostic.DiagnosticGraphProvider
+import com.example.bai1.rescue.routing.model.GeoPoint
+import com.example.bai1.rescue.routing.model.RoadGraph
+import com.example.bai1.rescue.routing.model.UcsRouteResult
+import com.example.bai1.rescue.routing.model.UcsRouteStatus
+import com.google.android.gms.maps.model.LatLng
+
+data class RouteUiState(
+    val isLoading: Boolean = false,
+    val routeResult: UcsRouteResult? = null,
+    val polylinePoints: List<LatLng> = emptyList(),
+    val pathGeometry: List<GeoPoint> = emptyList(),
+    val startPoint: LatLng? = null,
+    val destinationPoint: LatLng? = null,
+    val startNodeId: String? = null,
+    val goalNodeId: String? = null,
+    val totalCost: Double? = null,
+    val totalDistanceMeters: Double? = null,
+    val statusMessage: String? = null,
+    val isDiagnosticSimulation: Boolean = true,
+    val isSimulatedRescuerLocation: Boolean = false,
+    val errorMessage: String? = null
+)
 
 class DisasterMapViewModel(
     private val sosRepository: SosRepository,
-    private val rescueMissionRepository: RescueMissionRepository
+    private val rescueMissionRepository: RescueMissionRepository,
+    private val pollingEnabled: Boolean = true,
+    private val nearbyRequestsEnabled: Boolean = true,
+    private val router: UniformCostSearchRouter = UniformCostSearchRouter(),
+    private var roadGraph: RoadGraph = DiagnosticGraphProvider.getDaNangGraph(),
+    private val context: android.content.Context? = null
 ) : ViewModel() {
 
     private var currentSosList = emptyList<SosRescueInfo>()
@@ -29,11 +61,34 @@ class DisasterMapViewModel(
     private val _markers = MutableStateFlow<List<MapRescueMarker>>(emptyList())
     val markers: StateFlow<List<MapRescueMarker>> = _markers.asStateFlow()
 
+    private val _routeState = MutableStateFlow<RouteUiState?>(null)
+    val routeState: StateFlow<RouteUiState?> = _routeState.asStateFlow()
+
+    private val _refreshError = MutableStateFlow<String?>(null)
+    val refreshError: StateFlow<String?> = _refreshError.asStateFlow()
     private var lastLat: Double = 16.0544
     private var lastLon: Double = 108.2022
     private var lastRadius: Int = 50000
 
     init {
+        // Gán đồ thị OSM ngay lập tức nếu đã được nạp sẵn dưới nền từ khi mở ứng dụng
+        val preloadedGraph = DiagnosticGraphProvider.getCachedGraph()
+        if (preloadedGraph != null && preloadedGraph.nodes.size > roadGraph.nodes.size) {
+            roadGraph = preloadedGraph
+            Log.i("DisasterMapViewModel", "Pre-warmed RoadGraph attached immediately: ${preloadedGraph.graphVersion}, nodes=${preloadedGraph.nodes.size}")
+        } else if (context != null) {
+            viewModelScope.launch(kotlinx.coroutines.Dispatchers.IO) {
+                try {
+                    val fullGraph = DiagnosticGraphProvider.getRealOrDiagnosticGraph(context)
+                    if (fullGraph.nodes.size > roadGraph.nodes.size) {
+                        roadGraph = fullGraph
+                        Log.i("DisasterMapViewModel", "Loaded expanded RoadGraph: ${fullGraph.graphVersion}, nodes=${fullGraph.nodes.size}, edges=${fullGraph.directedEdges.size}")
+                    }
+                } catch (e: Exception) {
+                    Log.w("DisasterMapViewModel", "Async load of real graph fallback: ${e.message}")
+                }
+            }
+        }
         // 1. Observe real-time SOS events continuously
         viewModelScope.launch {
             sosRepository.observeSos().collect { sosList ->
@@ -46,26 +101,38 @@ class DisasterMapViewModel(
             }
         }
 
-        // 2. Periodic background refresh (every 4 seconds) to guarantee real-time sync with backend REST
-        viewModelScope.launch {
+        if (pollingEnabled) viewModelScope.launch {
             while (isActive) {
                 kotlinx.coroutines.delay(4000)
-                try {
-                    val activeSos = sosRepository.getActiveSos()
-                    if (activeSos.isNotEmpty() && activeSos != currentSosList) {
-                        currentSosList = activeSos
-                        updateMarkers(currentSosList, currentRequests)
-                    }
-                    val reqResult = rescueMissionRepository.getNearbyRequests(lastLat, lastLon, lastRadius)
-                    if (reqResult is RescueMissionApiResult.Success) {
-                        val newReqs = reqResult.data?.filter { it.status == "PENDING" } ?: emptyList()
-                        if (newReqs != currentRequests) {
-                            currentRequests = newReqs
-                            updateMarkers(currentSosList, currentRequests)
-                        }
-                    }
-                } catch (_: Exception) {}
+                refreshSos()
+                if (nearbyRequestsEnabled) refreshNearby()
             }
+        }
+    }
+
+    private suspend fun refreshSos() {
+        try {
+            val activeSos = sosRepository.getActiveSos()
+            if (activeSos.isNotEmpty() && activeSos != currentSosList) {
+                currentSosList = activeSos
+                updateMarkers(currentSosList, currentRequests)
+            }
+            _refreshError.value = null
+        } catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled }
+        catch (_: Exception) {
+            _refreshError.value = "Không thể tải SOS. Vui lòng thử lại."
+        }
+    }
+    private suspend fun refreshNearby() {
+        when (val result = rescueMissionRepository.getNearbyRequests(lastLat,lastLon,lastRadius)) {
+            is RescueMissionApiResult.Success -> {
+                val newReqs = result.data.filter { it.status == "PENDING" }
+                if (newReqs != currentRequests) {
+                    currentRequests = newReqs
+                    updateMarkers(currentSosList, currentRequests)
+                }
+            }
+            is RescueMissionApiResult.Failure -> Unit
         }
     }
 
@@ -74,31 +141,255 @@ class DisasterMapViewModel(
         lastLon = lon
         lastRadius = radius
 
-        // Fetch SOS via REST
-        viewModelScope.launch {
-            try {
-                Log.d("MAP_DEBUG", "SOS_REST_REQUEST_START")
-                val activeSos = sosRepository.getActiveSos()
-                Log.d("MAP_DEBUG", "SOS_REST_RESPONSE_CODE=200, count=${activeSos.size}")
-                currentSosList = activeSos
-                updateMarkers(currentSosList, currentRequests)
-            } catch (e: Exception) {
-                Log.e("MAP_DEBUG", "SOS_REST_ERROR: ${e.message}", e)
-            }
+        viewModelScope.launch { refreshSos() }
+        if (nearbyRequestsEnabled) viewModelScope.launch { refreshNearby() }
+    }
+
+    fun setRoadGraphForTesting(graph: RoadGraph) {
+        this.roadGraph = graph
+    }
+
+    fun computeRouteToMarker(
+        marker: MapRescueMarker,
+        rescuerLocation: LatLng? = null,
+        isSimulatedRescuerLocation: Boolean = false
+    ) {
+        val destLatLng = LatLng(marker.latitude, marker.longitude)
+
+        // 1. Kiểm tra vị trí của cứu hộ viên: TUYỆT ĐỐI KHÔNG âm thầm dùng N_BASE!
+        if (rescuerLocation == null ||
+            !rescuerLocation.latitude.isFinite() || !rescuerLocation.longitude.isFinite() ||
+            (rescuerLocation.latitude == 0.0 && rescuerLocation.longitude == 0.0)
+        ) {
+            _routeState.value = RouteUiState(
+                isLoading = false,
+                destinationPoint = destLatLng,
+                isDiagnosticSimulation = true,
+                isSimulatedRescuerLocation = false,
+                errorMessage = "Chưa xác định được vị trí của cứu hộ viên. Vui lòng bật GPS hoặc chọn vị trí mô phỏng."
+            )
+            return
         }
 
-        // Fetch Rescue Requests
+        computeRouteBetweenPoints(
+            startPoint = rescuerLocation,
+            destinationPoint = destLatLng,
+            isSimulatedRescuerLocation = isSimulatedRescuerLocation
+        )
+    }
+
+    fun computeRouteBetweenPoints(
+        startPoint: LatLng,
+        destinationPoint: LatLng,
+        isSimulatedRescuerLocation: Boolean = false
+    ) {
         viewModelScope.launch {
-            Log.d("MAP_DEBUG", "NEARBY_REQUEST: lat=$lat, lng=$lon, radius=$radius")
-            val result = rescueMissionRepository.getNearbyRequests(lat, lon, radius)
-            if (result is RescueMissionApiResult.Success) {
-                Log.d("MAP_DEBUG", "NEARBY_RESPONSE: count=${result.data?.size}")
-                currentRequests = result.data?.filter { it.status == "PENDING" } ?: emptyList()
-                updateMarkers(currentSosList, currentRequests)
-            } else if (result is RescueMissionApiResult.Failure) {
-                Log.d("MAP_DEBUG", "NEARBY_ERROR: ${result.error.message}")
-            }
+            computeRouteInternal(startPoint, destinationPoint, isSimulatedRescuerLocation)
         }
+    }
+
+    private suspend fun computeRouteInternal(
+        startLatLng: LatLng,
+        destLatLng: LatLng,
+        isSimulatedRescuerLocation: Boolean
+    ) {
+        _routeState.value = RouteUiState(
+            isLoading = true,
+            startPoint = startLatLng,
+            destinationPoint = destLatLng,
+            isDiagnosticSimulation = true,
+            isSimulatedRescuerLocation = isSimulatedRescuerLocation
+        )
+
+        fun doCompute(): RouteUiState {
+                // 0. Đảm bảo nạp xong đồ thị thực tế trước khi tính toán nếu đang dùng đồ thị fixture
+                if (roadGraph.nodes.size <= 8) {
+                    val cached = DiagnosticGraphProvider.getCachedGraph()
+                    if (cached != null && cached.nodes.size > roadGraph.nodes.size) {
+                        roadGraph = cached
+                    } else if (context != null) {
+                        try {
+                            val fullGraph = DiagnosticGraphProvider.getRealOrDiagnosticGraph(context)
+                            if (fullGraph.nodes.size > roadGraph.nodes.size) {
+                                roadGraph = fullGraph
+                            }
+                        } catch (_: Exception) {}
+                    }
+                }
+
+                val startGeo = GeoPoint(startLatLng.latitude, startLatLng.longitude)
+                val destGeo = GeoPoint(destLatLng.latitude, destLatLng.longitude)
+
+                // 2. Kiểm tra độ bao phủ của đồ thị (Graph Coverage Check) với buffer 5000m
+                if (!router.isPointWithinCoverage(roadGraph, startGeo, bufferMeters = 5000.0)) {
+                    return RouteUiState(
+                        isLoading = false,
+                        startPoint = startLatLng,
+                        destinationPoint = destLatLng,
+                        isDiagnosticSimulation = true,
+                        isSimulatedRescuerLocation = isSimulatedRescuerLocation,
+                        errorMessage = "Vị trí cứu hộ viên nằm ngoài phạm vi đồ thị đường bộ (GRAPH_COVERAGE_MISSING)."
+                    )
+                }
+
+                if (!router.isPointWithinCoverage(roadGraph, destGeo, bufferMeters = 5000.0)) {
+                    return RouteUiState(
+                        isLoading = false,
+                        startPoint = startLatLng,
+                        destinationPoint = destLatLng,
+                        isDiagnosticSimulation = true,
+                        isSimulatedRescuerLocation = isSimulatedRescuerLocation,
+                        errorMessage = "Vị trí người gửi SOS nằm ngoài phạm vi đồ thị đường bộ (GRAPH_COVERAGE_MISSING)."
+                    )
+                }
+
+                // 3. Snapping với bán kính hợp lý (2500m)
+                val maxSnapRadius = 2500.0
+                val startNode = router.findNearestNode(roadGraph, startGeo, maxRadiusMeters = maxSnapRadius)
+                val goalNode = router.findNearestNode(roadGraph, destGeo, maxRadiusMeters = maxSnapRadius)
+
+                if (startNode == null) {
+                    return RouteUiState(
+                        isLoading = false,
+                        startPoint = startLatLng,
+                        destinationPoint = destLatLng,
+                        isDiagnosticSimulation = true,
+                        isSimulatedRescuerLocation = isSimulatedRescuerLocation,
+                        errorMessage = "Không tìm thấy nút giao thông gần vị trí cứu hộ viên trong bán kính ${maxSnapRadius.toInt()}m (START_NOT_SNAPPED)."
+                    )
+                }
+
+                if (goalNode == null) {
+                    return RouteUiState(
+                        isLoading = false,
+                        startPoint = startLatLng,
+                        destinationPoint = destLatLng,
+                        startNodeId = startNode.id,
+                        isDiagnosticSimulation = true,
+                        isSimulatedRescuerLocation = isSimulatedRescuerLocation,
+                        errorMessage = "Không tìm thấy nút giao thông gần vị trí SOS trong bán kính ${maxSnapRadius.toInt()}m (GOAL_NOT_SNAPPED)."
+                    )
+                }
+
+                // 4. Nếu cứu hộ viên và người gửi SOS cùng ở tại một nút
+                if (startNode.id == goalNode.id) {
+                    val directDist = router.distanceMeters(startGeo, destGeo)
+                    return RouteUiState(
+                        isLoading = false,
+                        polylinePoints = listOf(startLatLng, destLatLng),
+                        pathGeometry = listOf(startGeo, destGeo),
+                        startPoint = startLatLng,
+                        destinationPoint = destLatLng,
+                        startNodeId = startNode.id,
+                        goalNodeId = goalNode.id,
+                        totalCost = directDist,
+                        totalDistanceMeters = directDist,
+                        statusMessage = "Cứu hộ viên đã ở ngay tại khu vực người gửi SOS (cùng nút giao thông).",
+                        isDiagnosticSimulation = true,
+                        isSimulatedRescuerLocation = isSimulatedRescuerLocation
+                    )
+                }
+
+                // 5. Thực thi UCS (Tận dụng assets đã tiền tính toán để chạy trong <15ms)
+                val (precomputedDfa, precomputedTurnIndex) = DiagnosticGraphProvider.getPrecomputedRoutingAssets()
+                val dfa = if (precomputedDfa != null && roadGraph == DiagnosticGraphProvider.getCachedGraph()) {
+                    precomputedDfa
+                } else {
+                    when (val res = ViaWayTurnRestrictionDfa.build(roadGraph.turnRestrictions, roadGraph)) {
+                        is DfaBuildResult.Success -> res.dfa
+                        else -> ViaWayTurnRestrictionDfa.empty()
+                    }
+                }
+                val turnIndex = if (precomputedTurnIndex != null && roadGraph == DiagnosticGraphProvider.getCachedGraph()) {
+                    precomputedTurnIndex
+                } else {
+                    TurnRestrictionIndex.build(roadGraph, dfa.acceptedRestrictionIds)
+                }
+
+                val result = router.computeDiagnosticRoute(
+                    roadGraph = roadGraph,
+                    startNodeId = startNode.id,
+                    goalNodeId = goalNode.id,
+                    turnRestrictionIndex = turnIndex,
+                    viaWayDfa = dfa,
+                    allowUnverifiedForDiagnostic = true
+                )
+
+                return if (result.status == UcsRouteStatus.SUCCESS) {
+                    // Tạo danh sách điểm Polyline nối thông suốt: Điểm cứu hộ -> Tuyến đường đồ thị -> Điểm SOS
+                    val polyPoints = mutableListOf<LatLng>()
+                    polyPoints.add(startLatLng)
+                    result.pathGeometry.forEach { pt ->
+                        polyPoints.add(LatLng(pt.latitude, pt.longitude))
+                    }
+                    polyPoints.add(destLatLng)
+
+                    RouteUiState(
+                        isLoading = false,
+                        routeResult = result,
+                        polylinePoints = polyPoints,
+                        pathGeometry = result.pathGeometry,
+                        startPoint = startLatLng,
+                        destinationPoint = destLatLng,
+                        startNodeId = startNode.id,
+                        goalNodeId = goalNode.id,
+                        totalCost = result.totalCost,
+                        totalDistanceMeters = result.totalDistanceMeters,
+                        statusMessage = "Tìm thấy tuyến đường UCS (${result.pathNodeIds.size} nút, ${result.pathEdges.size} đoạn đường)",
+                        isDiagnosticSimulation = true,
+                        isSimulatedRescuerLocation = isSimulatedRescuerLocation,
+                        errorMessage = null
+                    )
+                } else if (result.status == UcsRouteStatus.NO_PATH) {
+                    RouteUiState(
+                        isLoading = false,
+                        routeResult = result,
+                        polylinePoints = emptyList(),
+                        pathGeometry = emptyList(),
+                        startPoint = startLatLng,
+                        destinationPoint = destLatLng,
+                        startNodeId = startNode.id,
+                        goalNodeId = goalNode.id,
+                        totalCost = null,
+                        totalDistanceMeters = null,
+                        statusMessage = "Không có tuyến đường khả dụng đến vị trí SOS này",
+                        isDiagnosticSimulation = true,
+                        isSimulatedRescuerLocation = isSimulatedRescuerLocation,
+                        errorMessage = "NO_PATH: Tuyến đường bị phong tỏa hoặc không có đường nối hợp lệ."
+                    )
+                } else {
+                    RouteUiState(
+                        isLoading = false,
+                        routeResult = result,
+                        polylinePoints = emptyList(),
+                        pathGeometry = emptyList(),
+                        startPoint = startLatLng,
+                        destinationPoint = destLatLng,
+                        startNodeId = startNode.id,
+                        goalNodeId = goalNode.id,
+                        totalCost = null,
+                        totalDistanceMeters = null,
+                        statusMessage = "Lỗi tìm đường: ${result.status}",
+                        isDiagnosticSimulation = true,
+                        isSimulatedRescuerLocation = isSimulatedRescuerLocation,
+                        errorMessage = "Lỗi tìm đường UCS: ${result.status}"
+                    )
+                }
+            }
+
+            val computedState = if (context != null) {
+                kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.Default) {
+                    doCompute()
+                }
+            } else {
+                doCompute()
+            }
+
+            _routeState.value = computedState
+    }
+
+    fun clearRoute() {
+        _routeState.value = null
     }
 
     private fun updateMarkers(
@@ -182,71 +473,9 @@ class DisasterMapViewModel(
             )
         }
 
-        Log.d("MAP_DEBUG", "RAW_MARKERS_COUNT=${rawMarkers.size}")
-        // 3. Offset multiple distinct markers if they share the exact identical GPS coordinate
-        val adjusted = adjustOverlappingMarkers(rawMarkers)
-        Log.d("MAP_DEBUG", "ADJUSTED_MARKERS_COUNT=${adjusted.size}")
-        return adjusted
-    }
-
-    private fun adjustOverlappingMarkers(markers: List<MapRescueMarker>): List<MapRescueMarker> {
-        if (markers.size <= 1) return markers
-
-        val clusters = mutableListOf<MutableList<MapRescueMarker>>()
-        for (marker in markers) {
-            var placed = false
-            for (cluster in clusters) {
-                val rep = cluster[0]
-                val dLat = (marker.latitude - rep.latitude) * 111139.0
-                val cosLat = Math.cos(Math.toRadians(rep.latitude)).coerceAtLeast(0.1)
-                val dLng = (marker.longitude - rep.longitude) * 111139.0 * cosLat
-                val distMeters = Math.hypot(dLat, dLng)
-                if (distMeters < 12.0) { // Cùng tọa độ hoặc trong phạm vi trùng nhau (< 12m)
-                    cluster.add(marker)
-                    placed = true
-                    break
-                }
-            }
-            if (!placed) {
-                clusters.add(mutableListOf(marker))
-            }
-        }
-
-        val result = mutableListOf<MapRescueMarker>()
-        for (cluster in clusters) {
-            if (cluster.size == 1) {
-                result.add(cluster[0])
-            } else {
-                val count = cluster.size
-                val centerLat = cluster.map { it.latitude }.average()
-                val centerLng = cluster.map { it.longitude }.average()
-                val cosLat = Math.cos(Math.toRadians(centerLat)).coerceAtLeast(0.1)
-
-                // Tách các icon cách nhau ~10 mét (tránh xa quá 20m)
-                val targetDistanceMeters = 10.0
-                val radiusMeters = if (count == 2) {
-                    targetDistanceMeters / 2.0 // 5.0m => 2 marker đối diện cách nhau đúng 10m
-                } else {
-                    (targetDistanceMeters / (2.0 * Math.sin(Math.PI / count))).coerceIn(5.0, 15.0)
-                }
-
-                val radiusLat = radiusMeters / 111139.0
-                val radiusLng = radiusMeters / (111139.0 * cosLat)
-
-                cluster.forEachIndexed { index, marker ->
-                    val angle = 2.0 * Math.PI * index / count
-                    val offsetLat = radiusLat * Math.cos(angle)
-                    val offsetLng = radiusLng * Math.sin(angle)
-                    result.add(
-                        marker.copy(
-                            latitude = centerLat + offsetLat,
-                            longitude = centerLng + offsetLng
-                        )
-                    )
-                }
-            }
-        }
-        return result
+        // Native marker geography stays equal to the server. Never move LatLng to spread icons.
+        return rawMarkers.filter { it.latitude.isFinite() && it.longitude.isFinite() &&
+            it.latitude in -90.0..90.0 && it.longitude in -180.0..180.0 }
     }
 
     private fun parseIsoTimestamp(isoString: String?): Long {

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "method": "Assistant visually inspected unedited screenshots captured by UiAutomation on authorized physical OPPO; coupled with actual SDK callback/JUnit results",
+  "source": "physical-final-namespace",
+  "images": [
+    {
+      "file": "docs/demo/gmaps01/evidence/runtime/physical-final-namespace/actualGoogleMapLoadsTilesAtSyntheticCamera/tiles-loaded.png",
+      "sha256": "d05e68d9cb5d6eab97e387c31bc21be65c5811aaee356953fd83c2a19b5c1071",
+      "review": "PASS",
+      "observed": "Google tiles visible across viewport: roads, Duy Tan label, Da Nang airport POI, Google attribution; blue and red TEST pins; SDK LOADED_CALLBACK"
+    },
+    {
+      "file": "docs/demo/gmaps01/evidence/runtime/physical-final-namespace/actualRescuerMarkerTapShowsCorrectInfo/rescuer-info.png",
+      "sha256": "68fab76bdf4e28454500e98a03e036eae0dd6d1d7298e47c51e399cf15b775ba",
+      "review": "PASS",
+      "observed": "Native RESCUER TEST info window, 16.0500 / 108.2020; real tiles; external toolbar absent"
+    },
+    {
+      "file": "docs/demo/gmaps01/evidence/runtime/physical-final-namespace/actualSosMarkerTapShowsCorrectInfo/sos-info.png",
+      "sha256": "eb0cb66c841ffde70dfb65227bfdec76864d8d71fed5bb602a9ced752013d8f0",
+      "review": "PASS",
+      "observed": "Native SOS TEST info window, 16.0510 / 108.2030; real tiles; external toolbar absent"
+    },
+    {
+      "file": "docs/demo/gmaps01/evidence/runtime/physical-final-namespace/invalidApiKeyCannotProduceLoadedSuccess/invalid-key-no-tiles.png",
+      "sha256": "77c21ac80fdc24bf7d4d7dc2ba530669d4896891e348d6d831a9d05b0500264b",
+      "review": "PASS",
+      "observed": "Blank SDK viewport without road tiles/pins; ERROR_OR_TIMEOUT visible; no loaded-success state"
+    }
+  ]
+}

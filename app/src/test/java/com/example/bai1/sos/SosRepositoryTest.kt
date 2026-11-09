@@ -60,7 +60,15 @@ class SosRepositoryTest {
     @Test
     fun `test expired events older than 3 days are filtered out`() = runBlocking {
         val networkProvider = FakeNetworkAvailabilityProvider(online = true)
-        val internetTransport = FakeInternetSosTransport(delayMs = 0, shouldFail = false)
+        // Supply a server snapshot with the original event time, as the real API transport does.
+        // The generic fake otherwise acknowledges a NEW submission with today's timestamp.
+        val internetTransport = object : com.example.bai1.sos.transport.InternetSosTransport {
+            override suspend fun send(sos: SosRescueInfo): SosSubmissionResult = SosSubmissionResult.Success(
+                eventId = sos.eventId,
+                transportMode = com.example.bai1.sos.domain.SosTransportMode.ONLINE,
+                serverSos = sos
+            )
+        }
         val meshTransport = FakeMeshSosTransport(delayMs = 0, shouldFail = false)
         val transportManager = SosTransportManager(networkProvider, internetTransport, meshTransport)
         val repository = InMemorySosRepository(transportManager)
@@ -90,4 +98,13 @@ class SosRepositoryTest {
         assertEquals(1, observed.size)
         assertEquals("fresh-1", observed[0].eventId)
     }
+    @Test
+    fun `expiry retains exactly 72 hours and expires one millisecond later`() {
+        val now = 1_800_000_000_000L
+        val boundary = SosRescueInfo(createdAt = now - SosRescueInfo.MAX_SOS_AGE_MS)
+        org.junit.Assert.assertFalse(boundary.isExpiredAt(now))
+        assertTrue(boundary.isExpiredAt(now + 1))
+        org.junit.Assert.assertFalse(boundary.copy(createdAt = now).isExpiredAt(now))
+    }
+
 }

@@ -1,0 +1,104 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Calculating task graph as no cached configuration is available for tasks: :app:testDebugUnitTest --tests *AuthLifecycleSafetyTest --tests *AuthViewModelLifecycleTest
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:processDebugGoogleServices UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :app:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :app:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :app:testDebugUnitTest FAILED
+
+AuthLifecycleSafetyTest > refreshRejectedCleansAdapterAndStorage FAILED
+    java.lang.AssertionError at AuthLifecycleSafetyTest.kt:100
+
+AuthLifecycleSafetyTest > nonCooperativeCancelledLoginCannotCommit FAILED
+    java.lang.AssertionError at Assert.java:87
+        Caused by: java.lang.AssertionError at AuthLifecycleSafetyTest.kt:88
+
+AuthLifecycleSafetyTest > staleFailureCannotOverwriteNewLoginSuccess FAILED
+    java.lang.AssertionError at Assert.java:89
+        Caused by: java.lang.AssertionError at AuthLifecycleSafetyTest.kt:79
+
+AuthLifecycleSafetyTest > accountSwitchRevokesPriorAdapterBeforeNewCredentials FAILED
+    java.lang.AssertionError at AuthLifecycleSafetyTest.kt:119
+
+AuthLifecycleSafetyTest > missingSavedTokenCleansOldAdapterSession FAILED
+    java.lang.AssertionError at AuthLifecycleSafetyTest.kt:103
+
+AuthLifecycleSafetyTest > refreshErrorsNeverRetainAdapterSession FAILED
+    java.lang.AssertionError at AuthLifecycleSafetyTest.kt:122
+
+AuthLifecycleSafetyTest > lateRestoreAfterLogoutCannotPublishUser FAILED
+    java.lang.AssertionError at Assert.java:87
+        Caused by: java.lang.AssertionError at AuthLifecycleSafetyTest.kt:71
+
+AuthLifecycleSafetyTest > pendingAdapterSignInCannotSurviveLogout FAILED
+    java.lang.AssertionError at Assert.java:87
+        Caused by: java.lang.AssertionError at AuthLifecycleSafetyTest.kt:109
+
+AuthLifecycleSafetyTest > cancelledOldRequestCannotClearNewSession FAILED
+    org.junit.ComparisonFailure at AuthLifecycleSafetyTest.kt:92
+
+AuthLifecycleSafetyTest > oldRefreshCannotOverwriteNewLogin FAILED
+    org.junit.ComparisonFailure at AuthLifecycleSafetyTest.kt:83
+
+AuthLifecycleSafetyTest > lateLoginAfterLogoutCannotSaveOrAuthenticate FAILED
+    java.lang.AssertionError at Assert.java:87
+        Caused by: java.lang.AssertionError at AuthLifecycleSafetyTest.kt:61
+
+AuthLifecycleSafetyTest > newestLoginWinsReverseCompletionOrder FAILED
+    org.junit.ComparisonFailure at AuthLifecycleSafetyTest.kt:75
+
+AuthLifecycleSafetyTest > lateRefreshAfterLogoutCannotSave FAILED
+    java.lang.AssertionError at Assert.java:87
+        Caused by: java.lang.AssertionError at AuthLifecycleSafetyTest.kt:66
+
+AuthLifecycleSafetyTest > logoutPublishesUnauthenticatedEvenWhenAdapterThrows FAILED
+    java.lang.AssertionError at AuthLifecycleSafetyTest.kt:96
+
+AuthViewModelLifecycleTest > viewModelLogoutWinsItsPendingLogin FAILED
+    java.lang.AssertionError at AuthViewModelLifecycleTest.kt:47
+
+AuthViewModelLifecycleTest > clearedViewModelRevokesPendingNonCooperativeRequest FAILED
+    java.lang.AssertionError at AuthViewModelLifecycleTest.kt:35
+
+18 tests completed, 16 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///home/vantri/AndroidStudioProjects/bai1/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 20s
+27 actionable tasks: 2 executed, 25 up-to-date
+Configuration cache entry stored.

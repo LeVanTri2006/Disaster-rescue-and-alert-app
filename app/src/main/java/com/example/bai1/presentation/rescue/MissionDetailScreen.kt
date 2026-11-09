@@ -59,6 +59,7 @@ fun MissionDetailScreen(
     missionId: String,
     onNavigateBack: () -> Unit,
     onNavigateToChat: () -> Unit,
+    onNavigateToMap: (() -> Unit)? = null,
     viewModel: RescueMissionViewModel = viewModel(factory = com.example.bai1.rescue.presentation.RescueMissionViewModelFactory())
 ) {
     val context = LocalContext.current
@@ -441,7 +442,27 @@ fun MissionDetailScreen(
                             latitude = selectedMission?.request?.latitude,
                             longitude = selectedMission?.request?.longitude,
                             urgency = selectedMission?.request?.urgency,
-                            description = selectedMission?.request?.description
+                            description = selectedMission?.request?.description,
+                            onDirectionsClick = {
+                                val lat = selectedMission?.request?.latitude
+                                val lon = selectedMission?.request?.longitude
+                                if (lat != null && lon != null) {
+                                    com.example.bai1.presentation.map.DisasterMapSharedState.targetDestination =
+                                        com.example.bai1.presentation.map.DisasterMapSharedState.TargetDestination(
+                                            latitude = lat,
+                                            longitude = lon,
+                                            title = selectedMission?.request?.description ?: "Hiện trường cứu hộ",
+                                            urgency = selectedMission?.request?.urgency ?: "KHẨN CẤP",
+                                            requestId = selectedMission?.request?.id,
+                                            eventId = selectedMission?.request?.id
+                                        )
+                                    if (onNavigateToMap != null) {
+                                        onNavigateToMap()
+                                    } else {
+                                        onNavigateBack()
+                                    }
+                                }
+                            }
                         )
 
                         // 2. Thông tin người cần cứu hộ
@@ -896,6 +917,7 @@ fun RealMapCard(
     longitude: Double?,
     urgency: String?,
     description: String?,
+    onDirectionsClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -984,17 +1006,20 @@ fun RealMapCard(
                     }
                 }
 
-                // Nút chỉ đường nhanh qua Google Maps
+                // Nút chỉ đường chuyển sang bản đồ cứu hộ và tìm đường UCS
                 Button(
                     onClick = {
                         if (latitude != null && longitude != null) {
-                            val uri = Uri.parse("google.navigation:q=$latitude,$longitude")
-                            val mapIntent = Intent(Intent.ACTION_VIEW, uri)
-                            mapIntent.setPackage("com.google.android.apps.maps")
-                            try {
-                                context.startActivity(mapIntent)
-                            } catch (e: Exception) {
-                                context.startActivity(Intent(Intent.ACTION_VIEW, uri))
+                            if (onDirectionsClick != null) {
+                                onDirectionsClick()
+                            } else {
+                                com.example.bai1.presentation.map.DisasterMapSharedState.targetDestination =
+                                    com.example.bai1.presentation.map.DisasterMapSharedState.TargetDestination(
+                                        latitude = latitude,
+                                        longitude = longitude,
+                                        title = description ?: "Hiện trường cứu hộ",
+                                        urgency = urgency ?: "KHẨN CẤP"
+                                    )
                             }
                         } else {
                             Toast.makeText(context, "Chưa có tọa độ nạn nhân để chỉ đường", Toast.LENGTH_SHORT).show()

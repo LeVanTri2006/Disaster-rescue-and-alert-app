@@ -1,0 +1,88 @@
+{
+  "groups": {
+    "old129": 129,
+    "new-warning-notification33": 33
+  },
+  "unique_final": 162,
+  "historical_xml": "tools/ui-harness/evidence/p5e07-usb/physical-final/TEST-production-ui.xml",
+  "historical_xml_sha256": "cc1341ab8b5ae574778690902f329d04ee31635b8d08b74f8166ba8b76095e41",
+  "old129_set_equality": true,
+  "repetitions_excluded": true,
+  "class_counts": {
+    "com.example.bai1.fixture.ProductionSubsetUiTest": 56,
+    "com.example.bai1.fixture.ProductionAccountUiTest": 30,
+    "com.example.bai1.auth.AuthLifecycleSafetyTest": 20,
+    "com.example.bai1.fixture.ProductionGraphUiTest": 23,
+    "com.example.bai1.fixture.ProductionWarningUiTest": 33
+  },
+  "restart_pairs": [
+    {
+      "prepare": "authPrepareSavedSessionForProcessRestart",
+      "restart": "authSavedSessionSurvivesProcessRestart",
+      "distinct_pids": true,
+      "restart_events": 2
+    },
+    {
+      "prepare": "lifecyclePrepareExpiredSessionForRestart",
+      "restart": "lifecycleRestartAfterExpiryRemainsUnauthenticated",
+      "distinct_pids": true,
+      "restart_events": 0
+    },
+    {
+      "prepare": "graphPrepareSavedSessionForProcessRestart",
+      "restart": "graphSavedSessionSurvivesProcessRestartThroughActualSplashGraph",
+      "distinct_pids": true,
+      "restart_events": 2
+    },
+    {
+      "prepare": "graphPrepareExpiredSessionForProcessRestart",
+      "restart": "graphRestartAfterExpiryNeverRestoresProtectedRoute",
+      "distinct_pids": true,
+      "restart_events": 0
+    },
+    {
+      "prepare": "accountPrepareProfileSessionForProcessRestart",
+      "restart": "accountProfileAfterProcessRestartUsesIsolatedRestore",
+      "distinct_pids": true,
+      "restart_events": 3
+    },
+    {
+      "prepare": "accountPrepareSettingsSessionForProcessRestart",
+      "restart": "accountSettingsAfterProcessRestartUsesIsolatedRestore",
+      "distinct_pids": true,
+      "restart_events": 3
+    },
+    {
+      "prepare": "accountPrepareRoleSessionForProcessRestart",
+      "restart": "accountRoleAfterProcessRestartUsesExistingHomeRestoreSemantics",
+      "distinct_pids": true,
+      "restart_events": 3
+    },
+    {
+      "prepare": "accountPrepareExpiredSessionForProcessRestart",
+      "restart": "accountRestartAfterExpiryCannotShowProfileOrSettings",
+      "distinct_pids": true,
+      "restart_events": 0
+    },
+    {
+      "prepare": "warningPrepareSessionForProcessRestart",
+      "restart": "warningAfterProcessRestartUsesExistingHomeRestore",
+      "distinct_pids": true,
+      "restart_events": 2
+    },
+    {
+      "prepare": "notificationPrepareExpiredSessionForProcessRestart",
+      "restart": "notificationAfterExpiredProcessRestartCannotRestoreRows",
+      "distinct_pids": true,
+      "restart_events": 0
+    }
+  ],
+  "new_scope_http_paths": [
+    "/auth/firebase-token",
+    "/auth/login",
+    "/auth/me",
+    "/auth/refresh",
+    "/routing/current"
+  ],
+  "warning_notification_http_endpoints": []
+}

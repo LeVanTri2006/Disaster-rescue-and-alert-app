@@ -1,0 +1,44 @@
+{
+  "routing": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest",
+      "--rerun-tasks",
+      "--tests",
+      "com.example.bai1.rescue.routing.*"
+    ],
+    "exit_code": 0,
+    "suites": 13,
+    "tests": 462,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "full": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest"
+    ],
+    "exit_code": 0,
+    "suites": 27,
+    "tests": 513,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "apk": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:assembleDebug"
+    ],
+    "exit_code": 0,
+    "sha256": "fe1b6de40836b692b25c1d76ec8f5d3f401b75636910575a36e1d59b1af04d79",
+    "size": 95389966
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "groups": {
+    "old76": {
+      "tests": 76,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "new-graph23": {
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "unique_final_tests": 99,
+  "focused_overlap_not_added": 6,
+  "restart_pairs": [
+    {
+      "prepare": "authPrepareSavedSessionForProcessRestart",
+      "restart": "authSavedSessionSurvivesProcessRestart",
+      "distinct_pids": true,
+      "restart_http_requests": 2
+    },
+    {
+      "prepare": "lifecyclePrepareExpiredSessionForRestart",
+      "restart": "lifecycleRestartAfterExpiryRemainsUnauthenticated",
+      "distinct_pids": true,
+      "restart_http_requests": 0
+    },
+    {
+      "prepare": "graphPrepareSavedSessionForProcessRestart",
+      "restart": "graphSavedSessionSurvivesProcessRestartThroughActualSplashGraph",
+      "distinct_pids": true,
+      "restart_http_requests": 2
+    },
+    {
+      "prepare": "graphPrepareExpiredSessionForProcessRestart",
+      "restart": "graphRestartAfterExpiryNeverRestoresProtectedRoute",
+      "distinct_pids": true,
+      "restart_http_requests": 0
+    }
+  ],
+  "all_final_instrumentation_exit_codes_zero": true,
+  "counts_from_actual_junit_xml": true
+}

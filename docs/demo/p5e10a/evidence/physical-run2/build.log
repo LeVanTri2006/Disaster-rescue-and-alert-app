@@ -1,0 +1,91 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :exactSource UP-TO-DATE
+> Task :preBuild UP-TO-DATE
+> Task :preDebugBuild UP-TO-DATE
+> Task :mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :generateDebugBuildConfig UP-TO-DATE
+> Task :generateDebugResources UP-TO-DATE
+> Task :packageDebugResources UP-TO-DATE
+> Task :processDebugNavigationResources UP-TO-DATE
+> Task :parseDebugLocalResources UP-TO-DATE
+> Task :generateDebugRFile UP-TO-DATE
+> Task :javaPreCompileDebug UP-TO-DATE
+> Task :generateDebugAssets UP-TO-DATE
+> Task :mergeDebugAssets UP-TO-DATE
+> Task :compressDebugAssets UP-TO-DATE
+> Task :generateDebugGlobalSynthetics UP-TO-DATE
+> Task :checkDebugDuplicateClasses UP-TO-DATE
+> Task :desugarDebugFileDependencies UP-TO-DATE
+> Task :mergeExtDexDebug UP-TO-DATE
+> Task :mergeLibDexDebug UP-TO-DATE
+> Task :checkDebugAarMetadata UP-TO-DATE
+> Task :mapDebugSourceSetPaths UP-TO-DATE
+> Task :compileDebugNavigationResources UP-TO-DATE
+> Task :mergeDebugResources UP-TO-DATE
+> Task :createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :extractDeepLinksDebug UP-TO-DATE
+> Task :processDebugMainManifest UP-TO-DATE
+> Task :processDebugManifest UP-TO-DATE
+> Task :processDebugManifestForPackage UP-TO-DATE
+> Task :processDebugResources UP-TO-DATE
+> Task :mergeDebugJniLibFolders UP-TO-DATE
+> Task :mergeDebugNativeLibs UP-TO-DATE
+> Task :stripDebugDebugSymbols UP-TO-DATE
+> Task :validateSigningDebug UP-TO-DATE
+> Task :writeDebugAppMetadata UP-TO-DATE
+> Task :writeDebugSigningConfigVersions UP-TO-DATE
+> Task :preDebugAndroidTestBuild SKIPPED
+> Task :mergeDebugAndroidTestManifest UP-TO-DATE
+> Task :processDebugAndroidTestManifest UP-TO-DATE
+> Task :generateDebugAndroidTestBuildConfig UP-TO-DATE
+> Task :generateDebugAndroidTestResources UP-TO-DATE
+> Task :packageDebugAndroidTestResources UP-TO-DATE
+> Task :processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :parseDebugAndroidTestLocalResources UP-TO-DATE
+> Task :generateDebugAndroidTestRFile UP-TO-DATE
+> Task :javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :generateDebugAndroidTestAssets UP-TO-DATE
+> Task :mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :compressDebugAndroidTestAssets UP-TO-DATE
+> Task :generateDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :mergeDebugAndroidTestResources UP-TO-DATE
+> Task :processDebugAndroidTestResources UP-TO-DATE
+> Task :mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :validateSigningDebugAndroidTest UP-TO-DATE
+> Task :writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+
+> Task :compileDebugKotlin
+w: file:///home/vantri/AndroidStudioProjects/bai1/app/src/main/java/com/example/bai1/rescue/routing/loader/RoutingGraphLoader.kt:76:5 This class or interface requires opt-in to be implemented: Inheriting from this kotlinx.coroutines API is unstable. Either new methods may be added in the future, which would break the inheritance, or correctly inheriting from it requires fulfilling contracts that may change in the future.
+
+> Task :compileDebugJavaWithJavac
+> Task :processDebugJavaRes
+> Task :mergeDebugJavaResource
+> Task :dexBuilderDebug
+> Task :bundleDebugClassesToCompileJar
+> Task :mergeProjectDexDebug
+> Task :packageDebug
+> Task :createDebugApkListingFileRedirect
+> Task :assembleDebug
+> Task :compileDebugAndroidTestKotlin
+> Task :compileDebugAndroidTestJavaWithJavac
+> Task :processDebugAndroidTestJavaRes
+> Task :mergeDebugAndroidTestJavaResource
+> Task :dexBuilderDebugAndroidTest
+> Task :mergeProjectDexDebugAndroidTest
+> Task :packageDebugAndroidTest
+> Task :createDebugAndroidTestApkListingFileRedirect
+> Task :assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 34s
+72 actionable tasks: 17 executed, 55 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.7.1/userguide/configuration_cache_enabling.html

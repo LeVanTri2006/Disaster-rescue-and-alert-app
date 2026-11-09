@@ -20,7 +20,11 @@ object FirebaseSosEventMapper {
         val id = eventId?.takeIf { it.isNotBlank() } ?: return null
         values ?: return null
 
-
+        // Terminal projections need only an ID: remove stale markers even without coordinates.
+        val status = values["status"]?.toString()
+        if (status == "RESOLVED" || status == "FALSE_ALARM") {
+            return FirebaseSosChange.Removed(id)
+        }
 
         val latitude = values.number("latitude")?.toDouble()
         val longitude = values.number("longitude")?.toDouble()

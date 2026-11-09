@@ -1,0 +1,48 @@
+--------- beginning of main
+11-08 22:18:24.802 15434 15434 I 5e02.uiisolated: Late-enabling -Xcheck:jni
+11-08 22:18:24.820 15434 15434 E 5e02.uiisolated: Unknown bits set in runtime_flags: 0x40000000
+11-08 22:18:24.820 15434 15434 I 5e02.uiisolated: Using generational CollectorTypeCC GC.
+11-08 22:18:24.835 15434 15434 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-08 22:18:24.841 15434 15434 I OneTrace: Mark active for pid=15434? true
+11-08 22:18:24.841 15434 15434 D cutils-dev: otrace_set_tracing_enabled? true
+11-08 22:18:24.842 15434 15443 D cutils-dev: properties changed in otrace_seq_number_changed!
+11-08 22:18:24.876 15434 15434 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10372; state: ENABLED
+11-08 22:18:24.877 15434 15434 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusAutoResolutionFeature
+11-08 22:18:24.877 15434 15434 I oplus.android.OplusFrameworkFactoryImpl: getOplusAutoResolutionFeature
+11-08 22:18:24.922 15434 15434 I OplusFeatureCache: Milliseconds spent on init(): 44
+11-08 22:18:24.924 15434 15434 D CompactWindowAppManager: initCompactApplicationInfo 
+11-08 22:18:24.936 15434 15434 W libc    : Access denied finding property "ro.odm.prev.product.name"
+--------- beginning of system
+11-08 22:18:24.938 15434 15434 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.example.bai1.p5e02.uiisolated]: arm64-v8a, null instrumentation[com.example.bai1.p5e02.uiisolated.test]: null, null
+11-08 22:18:24.939 15434 15434 D LoadedApk: mApplicationInfo overrideDisplayId:null
+11-08 22:18:24.944 15434 15434 D nativeloader: Configuring clns-4 for other apk /system_ext/framework/androidx.window.extensions.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~bCvkk0BclJ_BLXIPWKBlGA==/com.example.bai1.p5e02.uiisolated.test-GoMaJBrZp5uDBIiOU3B0wA==/lib/arm64:/data/app/~~BPyw_21g-mZJXCtC9hMDtw==/com.example.bai1.p5e02.uiisolated-ZFpAIsR8cQ2iDfz1UoxZCg==/lib/arm64:/data/app/~~bCvkk0BclJ_BLXIPWKBlGA==/com.example.bai1.p5e02.uiisolated.test-GoMaJBrZp5uDBIiOU3B0wA==/base.apk!/lib/arm64-v8a:/data/app/~~BPyw_21g-mZJXCtC9hMDtw==/com.example.bai1.p5e02.uiisolated-ZFpAIsR8cQ2iDfz1UoxZCg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e02.uiisolated
+11-08 22:18:24.944 15434 15434 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libupdateprof.qti.so:libQOC.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:liblistenjni.qti.so
+11-08 22:18:24.951 15434 15434 D nativeloader: Configuring clns-5 for other apk /system_ext/framework/androidx.window.sidecar.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~bCvkk0BclJ_BLXIPWKBlGA==/com.example.bai1.p5e02.uiisolated.test-GoMaJBrZp5uDBIiOU3B0wA==/lib/arm64:/data/app/~~BPyw_21g-mZJXCtC9hMDtw==/com.example.bai1.p5e02.uiisolated-ZFpAIsR8cQ2iDfz1UoxZCg==/lib/arm64:/data/app/~~bCvkk0BclJ_BLXIPWKBlGA==/com.example.bai1.p5e02.uiisolated.test-GoMaJBrZp5uDBIiOU3B0wA==/base.apk!/lib/arm64-v8a:/data/app/~~BPyw_21g-mZJXCtC9hMDtw==/com.example.bai1.p5e02.uiisolated-ZFpAIsR8cQ2iDfz1UoxZCg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e02.uiisolated
+11-08 22:18:24.951 15434 15434 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libupdateprof.qti.so:libQOC.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:liblistenjni.qti.so
+11-08 22:18:25.237 15434 15434 D nativeloader: Configuring clns-6 for other apk /data/app/~~bCvkk0BclJ_BLXIPWKBlGA==/com.example.bai1.p5e02.uiisolated.test-GoMaJBrZp5uDBIiOU3B0wA==/base.apk:/data/app/~~BPyw_21g-mZJXCtC9hMDtw==/com.example.bai1.p5e02.uiisolated-ZFpAIsR8cQ2iDfz1UoxZCg==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~bCvkk0BclJ_BLXIPWKBlGA==/com.example.bai1.p5e02.uiisolated.test-GoMaJBrZp5uDBIiOU3B0wA==/lib/arm64:/data/app/~~BPyw_21g-mZJXCtC9hMDtw==/com.example.bai1.p5e02.uiisolated-ZFpAIsR8cQ2iDfz1UoxZCg==/lib/arm64:/data/app/~~bCvkk0BclJ_BLXIPWKBlGA==/com.example.bai1.p5e02.uiisolated.test-GoMaJBrZp5uDBIiOU3B0wA==/base.apk!/lib/arm64-v8a:/data/app/~~BPyw_21g-mZJXCtC9hMDtw==/com.example.bai1.p5e02.uiisolated-ZFpAIsR8cQ2iDfz1UoxZCg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e02.uiisolated
+11-08 22:18:25.241 15434 15434 I Quality : ActivityThread: createOrUpdateClassLoaderLocked delay 302 com.example.bai1.p5e02.uiisolated 15434
+11-08 22:18:25.248 15434 15434 D nativeloader: Load libframework-connectivity-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity.jar: ok
+11-08 22:18:25.253 15434 15434 V GraphicsEnvironment: ANGLE Developer option for 'com.example.bai1.p5e02.uiisolated' set to: 'default'
+11-08 22:18:25.254 15434 15434 V GraphicsEnvironment: ANGLE GameManagerService for com.example.bai1.p5e02.uiisolated: false
+11-08 22:18:25.254 15434 15434 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-08 22:18:25.257 15434 15434 D LoadedApk: mApplicationInfo overrideDisplayId:null
+11-08 22:18:25.535 15434 15434 D NetworkSecurityConfig: Using Network Security Config from resource routing_network_security_config debugBuild: true
+11-08 22:18:25.536 15434 15434 D NetworkSecurityConfig: Using Network Security Config from resource routing_network_security_config debugBuild: true
+11-08 22:18:25.537 15434 15434 I MonitoringInstr: newApplication called!
+11-08 22:18:25.538 15434 15434 I MonitoringInstr: Instrumentation started!
+11-08 22:18:25.549 15434 15434 I AndroidJUnitRunner: onCreate Bundle[{physicalUsb=true, hostFixturePort=34973, expectedGraphSha256=1725e96b213afd7be6c3ad5a44629c05c994674fc2bf7e9c01aab8fe69bb3d9d, class=com.example.bai1.auth.AuthLifecycleSafetyTest#logoutPublishesUnauthenticatedEvenWhenAdapterThrows, listener=com.example.bai1.fixture.DeviceXmlListener, preserveAuthSession=false}]
+11-08 22:18:25.550 15434 15434 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-08 22:18:25.552 15434 15434 D OplusActivityManager: get AMS extension: android.os.BinderProxy@a92d5e1
+11-08 22:18:27.055 15434 15468 D AndroidJUnitRunner: onStart is called.
+11-08 22:18:27.064 15434 15434 I MonitoringInstr: No JSBridge.
+11-08 22:18:27.106 15434 15468 D TestRequestBuilder: Skipping class path scanning and directly running [com.example.bai1.auth.AuthLifecycleSafetyTest]
+11-08 22:18:27.120 15434 15468 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-08 22:18:27.124 15434 15468 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+11-08 22:18:27.124 15434 15468 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+11-08 22:18:27.124 15434 15468 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+11-08 22:18:27.124 15434 15468 D TestExecutor: Adding listener androidx.test.internal.runner.listener.TraceRunListener
+11-08 22:18:27.124 15434 15468 D TestExecutor: Adding listener com.example.bai1.fixture.DeviceXmlListener
+11-08 22:18:27.129 15434 15468 I TestRunner: run started: 1 tests
+11-08 22:18:27.130 15434 15468 I TestRunner: started: logoutPublishesUnauthenticatedEvenWhenAdapterThrows(com.example.bai1.auth.AuthLifecycleSafetyTest)
+11-08 22:18:27.179 15434 15468 I TestRunner: finished: logoutPublishesUnauthenticatedEvenWhenAdapterThrows(com.example.bai1.auth.AuthLifecycleSafetyTest)
+11-08 22:18:27.185 15434 15468 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored

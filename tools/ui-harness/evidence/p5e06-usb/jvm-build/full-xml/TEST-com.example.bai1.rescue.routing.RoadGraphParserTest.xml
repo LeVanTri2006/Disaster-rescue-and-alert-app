@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.rescue.routing.RoadGraphParserTest" tests="36" skipped="0" failures="0" errors="0" timestamp="2026-11-08T15:41:10.045Z" hostname="Dell-Latitude-5511" time="0.303">
+  <properties/>
+  <testcase name="31_safety_compiled via-way sequence does not bypass TurnRestrictionIndex" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.002"/>
+  <testcase name="18_unverified metadata graph is preserved and not altered into strict-ready" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="35_safety_foreign via edge osmWayId fails closed" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="6_preserves unsupported turn restrictions for fail-closed handling" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="11_rejects duplicate node ID" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="25_COMPILED with empty sequence becomes unresolved" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="24_missing compilation status does not imply COMPILED" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="30_streaming parser regression with graph containing the new fields" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="13_rejects edge referencing non-existent node" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="20_parse valid COMPILED restriction" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="22_preserve ordered edge IDs" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="9_rejects graph version mismatch against expected manifest" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="17_rejects malformed and truncated JSON syntax" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="33_safety_invalid edge reference fails closed" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="28_missing diagnostic handled safely" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="14_rejects out of range WGS84 coordinates in nodes" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.002"/>
+  <testcase name="12_rejects duplicate edge ID" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="3_parses multiple directed edges correctly" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="32_safety_strict routing remains disabled while via-way DFA is not implemented" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="4_parses edge geometry with multiple intermediate waypoints" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="8_preserves graph readiness flags exactly" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="7_preserves edge compatibility status without mapping to clear or unknown" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="27_null or malformed edge sequence becomes unresolved" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="29_existing via-node restrictions remain compatible" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="36_safety_via osmWayId sequence mismatch fails closed" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="16_rejects JSON missing required nodes array" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="23_parse legacy graph without new fields" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="5_parses turn restrictions completely" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="21_parse valid UNRESOLVED restriction" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="2_parses multiple nodes with coordinates and osm metadata" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="15_rejects geometry with fewer than two points" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="10_rejects unsupported contract version" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="19_parse actual 33MB production Da Nang graph file if present on disk" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.277"/>
+  <testcase name="1_parses valid graph completely preserving root metadata" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <testcase name="26_unknown compilation status becomes unresolved" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.0"/>
+  <testcase name="34_safety_discontinuous compiled sequence fails closed" classname="com.example.bai1.rescue.routing.RoadGraphParserTest" time="0.001"/>
+  <system-out><![CDATA[Parsed 33MB production graph in 276ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

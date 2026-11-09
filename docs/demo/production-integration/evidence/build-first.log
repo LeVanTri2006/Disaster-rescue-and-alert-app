@@ -1,0 +1,59 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :exactSource
+> Task :productionImages
+> Task :preBuild
+> Task :preDebugBuild
+> Task :mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :generateDebugBuildConfig
+> Task :generateDebugResources
+> Task :packageDebugResources
+> Task :processDebugNavigationResources
+> Task :generateDebugAssets UP-TO-DATE
+> Task :javaPreCompileDebug
+> Task :mergeDebugAssets
+> Task :compressDebugAssets
+> Task :parseDebugLocalResources
+> Task :generateDebugGlobalSynthetics
+> Task :generateDebugRFile
+> Task :checkDebugDuplicateClasses
+> Task :desugarDebugFileDependencies
+> Task :mergeLibDexDebug
+> Task :mapDebugSourceSetPaths
+> Task :checkDebugAarMetadata
+> Task :compileDebugNavigationResources
+> Task :createDebugCompatibleScreenManifests
+> Task :extractDeepLinksDebug
+> Task :mergeDebugResources
+> Task :processDebugMainManifest
+> Task :processDebugManifest
+> Task :mergeDebugJniLibFolders
+> Task :mergeDebugNativeLibs
+> Task :validateSigningDebug
+> Task :writeDebugAppMetadata
+
+> Task :stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :writeDebugSigningConfigVersions
+> Task :processDebugManifestForPackage
+> Task :processDebugResources
+> Task :mergeExtDexDebug
+
+> Task :compileDebugKotlin
+w: file:///home/vantri/AndroidStudioProjects/bai1/tools/production-integration-harness/build/generated/exact-source/com/example/bai1/presentation/home/HomeScreen.kt:306:59 'val Icons.Filled.Assignment: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.Assignment.
+w: file:///home/vantri/AndroidStudioProjects/bai1/tools/production-integration-harness/build/generated/exact-source/com/example/bai1/presentation/sos/SosRescueRequestScreen.kt:159:40 'val Icons.Filled.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.ArrowBack.
+w: file:///home/vantri/AndroidStudioProjects/bai1/tools/production-integration-harness/build/generated/exact-source/com/example/bai1/presentation/sos/SosRescueRequestScreen.kt:461:40 'val Icons.Filled.Send: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.Send.
+
+> Task :compileDebugJavaWithJavac
+> Task :processDebugJavaRes
+> Task :mergeDebugJavaResource
+> Task :dexBuilderDebug
+> Task :mergeProjectDexDebug
+> Task :packageDebug
+> Task :createDebugApkListingFileRedirect
+> Task :assembleDebug
+
+BUILD SUCCESSFUL in 45s
+40 actionable tasks: 40 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.7.1/userguide/configuration_cache_enabling.html

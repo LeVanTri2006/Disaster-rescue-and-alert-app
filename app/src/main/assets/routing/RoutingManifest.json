@@ -1,0 +1,54 @@
+{
+  "$schema": "https://emergency-rescue.vn/schemas/v2/routing-manifest.json",
+  "manifestVersion": "2.1.0",
+  "generatedAt": "2026-11-04T11:32:52.080Z",
+  "graphVersion": "dn_central_real_v1",
+  "osmSnapshotTimestamp": "2026-11-03T21:24:23Z",
+  "importerVersion": "osm-importer-v2.3-prototype",
+  "vehicleProfile": "RESCUE_TRUCK_4X4",
+  "boundingBoxType": "PRODUCTION",
+  "boundingBox": {
+    "minLon": 108.19,
+    "minLat": 16.035,
+    "maxLon": 108.235,
+    "maxLat": 16.075,
+    "bufferedMeters": 500
+  },
+  "targetProductionBoundingBox": {
+    "minLon": 108.19,
+    "minLat": 16.035,
+    "maxLon": 108.235,
+    "maxLat": 16.075,
+    "bufferedMeters": 500
+  },
+  "bundle": {
+    "fileName": "BaseRoadGraph.json.gz",
+    "compressedSizeBytes": 1173315,
+    "uncompressedSizeBytes": 33000193,
+    "sha256": "9c0166f9d1fa0ad45aef4163a258d5d3d9310d3d2eb0c99e169669e77537ac5d"
+  },
+  "activeHazardSnapshotVersion": null,
+  "hazardSnapshotStatus": "NOT_INCLUDED",
+  "hazardAssessmentPolicy": "HAZARD_DATA_REQUIRED_FOR_LIVE_CONDITIONS",
+  "isRestrictionStrictRoutingEligible": false,
+  "restrictionStrictRoutingReadiness": "NOT_READY_UNRESOLVED_RESTRICTIONS",
+  "unsupportedRestrictionsSummary": {
+    "totalCount": 14,
+    "enforcementPolicy": "FAIL_CLOSED_IN_STRICT_MODE"
+  },
+  "canAttemptStrictRouting": false,
+  "isStrictRoutingEligible": false,
+  "strictRoutingReadiness": "NOT_READY_UNRESOLVED_RESTRICTIONS",
+  "overallStrictRoutingReadiness": "NOT_READY_UNRESOLVED_RESTRICTIONS",
+  "edgeSafetySummary": {
+    "totalEdges": 16651,
+    "verifiedCompatibleEdges": 0,
+    "unverifiedEdges": 16651,
+    "blockedEdges": 0,
+    "conflictedEdges": 0,
+    "strictSafeEdgesPercent": 0,
+    "blockedWays": 1425,
+    "excludedBlockedWays": 1425,
+    "retainedBlockedWays": 0
+  }
+}

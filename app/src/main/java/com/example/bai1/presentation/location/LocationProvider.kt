@@ -13,31 +13,6 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.google.android.gms.tasks.CancellationTokenSource
 
-sealed interface LocationResult {
-    data class Success(
-        val latitude: Double,
-        val longitude: Double,
-        val accuracyMeters: Float,
-        val timestamp: Long
-    ) : LocationResult
-
-    data class Error(val reason: LocationError) : LocationResult
-}
-
-enum class LocationError {
-    PERMISSION_DENIED,
-    SERVICES_DISABLED,
-    UNAVAILABLE,
-    TIMEOUT,
-    INVALID,
-    UNKNOWN
-}
-
-/** Platform-independent contract used by the SOS ViewModel. */
-interface LocationProvider {
-    fun getCurrentLocation(onResult: (LocationResult) -> Unit)
-}
-
 /** Real Android location implementation using the modern framework API. */
 class AndroidLocationProvider(
     context: Context,
@@ -75,6 +50,22 @@ class AndroidLocationProvider(
             .filterIsInstance<LocationResult.Success>()
             .firstOrNull()
 
+        // Fast-path: Trả về ngay nếu đã có vị trí trong cache hoặc từ hệ thống để mở bản đồ và tìm đường tức thì
+        // Tuy nhiên, nếu tọa độ đó nằm ngoài Việt Nam (ví dụ tọa độ mặc định emulator ở California),
+        // thì KHÔNG fast-path mà để logic emulator fallback xử lý
+        val fastCandidate = cachedLocation ?: lastKnown
+        if (fastCandidate != null && !isEmulator() && isInsideVietnam(fastCandidate.latitude, fastCandidate.longitude)) {
+            com.example.bai1.presentation.map.DisasterMapSharedState.lastKnownRescuerLocation =
+                com.google.android.gms.maps.model.LatLng(fastCandidate.latitude, fastCandidate.longitude)
+            onResult(fastCandidate)
+            return
+        }
+        // Nếu fast candidate tồn tại nhưng ngoài Việt Nam trên emulator → redirect về Đà Nẵng
+        if (fastCandidate != null && !isInsideVietnam(fastCandidate.latitude, fastCandidate.longitude)) {
+            resolveRealLocationIfEmulator(fastCandidate, onResult)
+            return
+        }
+
         val cancellationTokenSource = CancellationTokenSource()
         var completed = false
 
@@ -83,7 +74,12 @@ class AndroidLocationProvider(
             completed = true
             mainHandler.removeCallbacksAndMessages(cancellationTokenSource)
             cancellationTokenSource.cancel()
-            if (result is LocationResult.Success && isDefaultEmulatorLocation(result.latitude, result.longitude)) {
+            if (result is LocationResult.Success) {
+                cachedLocation = result
+                com.example.bai1.presentation.map.DisasterMapSharedState.lastKnownRescuerLocation =
+                    com.google.android.gms.maps.model.LatLng(result.latitude, result.longitude)
+            }
+            if (result is LocationResult.Success && !isInsideVietnam(result.latitude, result.longitude)) {
                 resolveRealLocationIfEmulator(result, onResult)
             } else if (result is LocationResult.Error && result.reason != LocationError.PERMISSION_DENIED && isEmulator()) {
                 resolveRealLocationIfEmulator(null, onResult)
@@ -91,6 +87,19 @@ class AndroidLocationProvider(
                 onResult(result)
             }
         }
+
+        // Thử lấy nhanh vị trí cuối cùng được Google Play Services ghi nhận
+        try {
+            fusedLocationClient.lastLocation
+                .addOnSuccessListener { loc ->
+                    if (!completed && loc != null) {
+                        val res = loc.toResult()
+                        if (res is LocationResult.Success) {
+                            finish(res)
+                        }
+                    }
+                }
+        } catch (_: SecurityException) {}
 
         mainHandler.postDelayed(
             { finish(LocationResult.Error(LocationError.TIMEOUT)) },
@@ -125,6 +134,53 @@ class AndroidLocationProvider(
         }
     }
 
+    override fun requestLocationUpdates(
+        intervalMs: Long,
+        onLocationUpdate: (LocationResult) -> Unit
+    ): () -> Unit {
+        if (!hasLocationPermission()) {
+            onLocationUpdate(LocationResult.Error(LocationError.PERMISSION_DENIED))
+            return {}
+        }
+        val request = com.google.android.gms.location.LocationRequest.Builder(
+            Priority.PRIORITY_HIGH_ACCURACY,
+            intervalMs
+        ).setMinUpdateIntervalMillis(intervalMs / 2)
+            .setMaxUpdateDelayMillis(intervalMs)
+            .build()
+
+        val callback = object : com.google.android.gms.location.LocationCallback() {
+            override fun onLocationResult(locationResult: com.google.android.gms.location.LocationResult) {
+                val loc = locationResult.lastLocation ?: return
+                val res = loc.toResult()
+                if (res is LocationResult.Success) {
+                    // Nếu tọa độ nằm ngoài Việt Nam (ví dụ emulator mặc định trả về Mountain View)
+                    // → bỏ qua, không cập nhật cache cũng không thông báo location update sai
+                    if (!isInsideVietnam(res.latitude, res.longitude)) {
+                        return
+                    }
+                    cachedLocation = res
+                    com.example.bai1.presentation.map.DisasterMapSharedState.lastKnownRescuerLocation =
+                        com.google.android.gms.maps.model.LatLng(res.latitude, res.longitude)
+                }
+                onLocationUpdate(res)
+            }
+        }
+
+        try {
+            fusedLocationClient.requestLocationUpdates(request, callback, Looper.getMainLooper())
+        } catch (_: SecurityException) {
+            onLocationUpdate(LocationResult.Error(LocationError.PERMISSION_DENIED))
+            return {}
+        }
+
+        return {
+            try {
+                fusedLocationClient.removeLocationUpdates(callback)
+            } catch (_: Exception) {}
+        }
+    }
+
     private fun hasLocationPermission(): Boolean {
         val fine = ContextCompat.checkSelfPermission(appContext, Manifest.permission.ACCESS_FINE_LOCATION)
         val coarse = ContextCompat.checkSelfPermission(appContext, Manifest.permission.ACCESS_COARSE_LOCATION)
@@ -141,7 +197,9 @@ class AndroidLocationProvider(
                 latitude = latitude,
                 longitude = longitude,
                 accuracyMeters = locationAccuracy,
-                timestamp = time.takeIf { it > 0L } ?: System.currentTimeMillis()
+                timestamp = time.takeIf { it > 0L } ?: System.currentTimeMillis(),
+                bearing = if (hasBearing()) bearing else 0f,
+                speedMps = if (hasSpeed()) speed else 0f
             )
         } else {
             LocationResult.Error(LocationError.INVALID)
@@ -161,6 +219,15 @@ class AndroidLocationProvider(
 
     private fun isDefaultEmulatorLocation(lat: Double, lng: Double): Boolean {
         return kotlin.math.abs(lat - 37.4219983) < 0.01 && kotlin.math.abs(lng - (-122.084)) < 0.01
+    }
+
+    /**
+     * Kiểm tra tọa độ có nằm trong phạm vi lãnh thổ Việt Nam không.
+     * Bounding box xấp xỉ: lat 8.18 – 23.39, lng 102.14 – 109.46
+     * (Mở rộng nhẹ để bao gồm vùng biển gần bờ và đảo)
+     */
+    private fun isInsideVietnam(lat: Double, lng: Double): Boolean {
+        return lat in 7.5..24.0 && lng in 101.0..115.0
     }
 
     private fun resolveRealLocationIfEmulator(
@@ -215,28 +282,9 @@ class AndroidLocationProvider(
         }.start()
     }
 
-    private companion object {
+    companion object {
         const val DEFAULT_TIMEOUT_MS = 10_000L
+        @Volatile
+        var cachedLocation: LocationResult.Success? = null
     }
 }
-
-/** Deterministic fake for unit tests and previews only. */
-class FakeLocationProvider(
-    private val result: LocationResult = LocationResult.Success(
-        latitude = 10.0,
-        longitude = 20.0,
-        accuracyMeters = 10f,
-        timestamp = 1_700_000_000_000L
-    )
-) : LocationProvider {
-    override fun getCurrentLocation(onResult: (LocationResult) -> Unit) = onResult(result)
-}
-
-/** Deterministic unavailable fake for unit tests. */
-class FakeUnavailableLocationProvider : LocationProvider {
-    override fun getCurrentLocation(onResult: (LocationResult) -> Unit) =
-        onResult(LocationResult.Error(LocationError.UNAVAILABLE))
-}
-
-@Deprecated("Renamed to FakeLocationProvider.")
-typealias MockLocationProvider = FakeLocationProvider

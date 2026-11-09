@@ -1,0 +1,33 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :preBuild UP-TO-DATE
+> Task :preDebugBuild UP-TO-DATE
+> Task :mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :generateDebugResources UP-TO-DATE
+> Task :packageDebugResources UP-TO-DATE
+> Task :processDebugNavigationResources
+> Task :generateDebugAssets UP-TO-DATE
+> Task :javaPreCompileDebug
+> Task :mergeDebugAssets
+> Task :compressDebugAssets
+> Task :parseDebugLocalResources
+> Task :generateDebugGlobalSynthetics
+> Task :generateDebugRFile
+> Task :checkDebugDuplicateClasses FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':checkDebugDuplicateClasses' (registered by plugin 'com.android.internal.application').
+> Could not resolve all files for configuration ':debugRuntimeClasspath'.
+   > Failed to transform listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) to match attributes {artifactType=enumerated-runtime-classes, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Could not download listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0): No cached version available for offline mode
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 21s
+10 actionable tasks: 8 executed, 2 up-to-date

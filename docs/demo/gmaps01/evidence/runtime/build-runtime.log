@@ -1,0 +1,129 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.7.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :preBuild UP-TO-DATE
+> Task :preDebugBuild UP-TO-DATE
+> Task :mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :generateDebugResources UP-TO-DATE
+> Task :packageDebugResources UP-TO-DATE
+> Task :processDebugNavigationResources
+> Task :parseDebugLocalResources UP-TO-DATE
+> Task :generateDebugRFile UP-TO-DATE
+> Task :javaPreCompileDebug UP-TO-DATE
+> Task :generateDebugAssets UP-TO-DATE
+> Task :mergeDebugAssets UP-TO-DATE
+> Task :compressDebugAssets UP-TO-DATE
+> Task :generateDebugGlobalSynthetics UP-TO-DATE
+> Task :checkDebugDuplicateClasses UP-TO-DATE
+> Task :desugarDebugFileDependencies UP-TO-DATE
+> Task :mergeExtDexDebug UP-TO-DATE
+> Task :mergeLibDexDebug UP-TO-DATE
+> Task :checkDebugAarMetadata UP-TO-DATE
+> Task :mapDebugSourceSetPaths UP-TO-DATE
+> Task :compileDebugNavigationResources UP-TO-DATE
+> Task :mergeDebugResources UP-TO-DATE
+> Task :createDebugCompatibleScreenManifests
+> Task :extractDeepLinksDebug
+> Task :processDebugMainManifest
+> Task :processDebugManifest
+> Task :mergeDebugJniLibFolders UP-TO-DATE
+> Task :mergeDebugNativeLibs UP-TO-DATE
+> Task :stripDebugDebugSymbols UP-TO-DATE
+> Task :validateSigningDebug UP-TO-DATE
+> Task :writeDebugAppMetadata UP-TO-DATE
+> Task :writeDebugSigningConfigVersions UP-TO-DATE
+> Task :preDebugAndroidTestBuild SKIPPED
+> Task :generateDebugAndroidTestResources
+> Task :packageDebugAndroidTestResources
+> Task :processDebugAndroidTestNavigationResources
+> Task :generateDebugAndroidTestAssets UP-TO-DATE
+> Task :javaPreCompileDebugAndroidTest
+> Task :mergeDebugAndroidTestAssets
+> Task :compressDebugAndroidTestAssets
+> Task :parseDebugAndroidTestLocalResources
+> Task :generateDebugAndroidTestGlobalSynthetics
+> Task :desugarDebugAndroidTestFileDependencies
+> Task :checkDebugAndroidTestDuplicateClasses
+> Task :checkDebugAndroidTestAarMetadata
+> Task :generateDebugAndroidTestRFile
+> Task :mapDebugAndroidTestSourceSetPaths
+> Task :mergeLibDexDebugAndroidTest
+> Task :compileDebugAndroidTestNavigationResources
+> Task :mergeDebugAndroidTestManifest
+> Task :processDebugAndroidTestManifest
+> Task :mergeDebugAndroidTestJniLibFolders
+> Task :mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :validateSigningDebugAndroidTest
+> Task :writeDebugAndroidTestSigningConfigVersions
+> Task :preNegativeBuild UP-TO-DATE
+> Task :mergeNegativeNativeDebugMetadata NO-SOURCE
+> Task :generateNegativeResources
+> Task :packageNegativeResources
+> Task :mergeDebugAndroidTestResources
+> Task :processNegativeNavigationResources
+> Task :processDebugManifestForPackage
+> Task :generateNegativeAssets UP-TO-DATE
+> Task :javaPreCompileNegative
+> Task :mergeNegativeAssets
+> Task :compressNegativeAssets
+> Task :mergeExtDexDebugAndroidTest
+> Task :parseNegativeLocalResources
+> Task :processDebugAndroidTestResources
+> Task :processDebugResources
+> Task :generateNegativeGlobalSynthetics
+> Task :generateNegativeRFile
+> Task :checkNegativeDuplicateClasses
+> Task :desugarNegativeFileDependencies
+> Task :mergeLibDexNegative
+> Task :mapNegativeSourceSetPaths
+> Task :compileNegativeNavigationResources
+> Task :checkNegativeAarMetadata
+> Task :createNegativeCompatibleScreenManifests
+> Task :extractDeepLinksNegative
+> Task :processNegativeMainManifest
+> Task :processNegativeManifest
+> Task :processNegativeManifestForPackage
+> Task :mergeNegativeJniLibFolders
+> Task :validateSigningNegative
+> Task :writeNegativeAppMetadata
+> Task :mergeNegativeNativeLibs
+> Task :writeNegativeSigningConfigVersions
+
+> Task :stripNegativeDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :mergeNegativeResources
+> Task :processNegativeResources
+> Task :compileNegativeKotlin
+> Task :compileDebugKotlin
+> Task :compileNegativeJavaWithJavac
+> Task :compileDebugJavaWithJavac UP-TO-DATE
+> Task :processDebugJavaRes
+> Task :dexBuilderDebug
+> Task :processNegativeJavaRes
+> Task :mergeProjectDexDebug
+> Task :bundleDebugClassesToCompileJar
+> Task :dexBuilderNegative
+> Task :mergeProjectDexNegative
+> Task :mergeDebugJavaResource
+> Task :mergeExtDexNegative
+> Task :mergeNegativeJavaResource
+> Task :packageNegative
+> Task :createNegativeApkListingFileRedirect
+> Task :assembleNegative
+> Task :packageDebug
+> Task :createDebugApkListingFileRedirect
+> Task :assembleDebug
+> Task :compileDebugAndroidTestKotlin
+> Task :compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :processDebugAndroidTestJavaRes
+> Task :mergeDebugAndroidTestJavaResource
+> Task :dexBuilderDebugAndroidTest
+> Task :mergeProjectDexDebugAndroidTest
+> Task :packageDebugAndroidTest
+> Task :createDebugAndroidTestApkListingFileRedirect
+> Task :assembleDebugAndroidTest
+
+BUILD SUCCESSFUL in 29s
+105 actionable tasks: 82 executed, 23 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.7.1/userguide/configuration_cache_enabling.html

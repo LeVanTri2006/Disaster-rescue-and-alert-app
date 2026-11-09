@@ -1,0 +1,22 @@
+{
+  "debug": {
+    "manifest": "/home/vantri/AndroidStudioProjects/bai1/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml",
+    "target_sdk": "37",
+    "usesCleartextTraffic": false,
+    "networkSecurityConfig": "@xml/routing_network_security_config",
+    "debuggable": "true",
+    "ACCESS_LOCAL_NETWORK": false,
+    "compiled_entry": "res/xml/routing_network_security_config.xml",
+    "compiled_policy": "E: network-security-config (line=2)\n    E: base-config (line=3)\n      A: cleartextTrafficPermitted=false\n    E: domain-config (line=4)\n      A: cleartextTrafficPermitted=true\n        E: domain (line=5)\n          A: includeSubdomains=false\n            T: '10.0.2.2'\n        E: domain (line=6)\n          A: includeSubdomains=false\n            T: '127.0.0.1'\n        E: domain (line=7)\n          A: includeSubdomains=false\n            T: 'localhost'\n"
+  },
+  "release": {
+    "manifest": "/home/vantri/AndroidStudioProjects/bai1/app/build/intermediates/merged_manifests/release/processReleaseManifest/AndroidManifest.xml",
+    "target_sdk": "37",
+    "usesCleartextTraffic": false,
+    "networkSecurityConfig": "@xml/routing_network_security_config",
+    "debuggable": "false",
+    "ACCESS_LOCAL_NETWORK": false,
+    "compiled_entry": "res/xml/routing_network_security_config.xml",
+    "compiled_policy": "E: network-security-config (line=2)\n    E: base-config (line=3)\n      A: cleartextTrafficPermitted=false\n    E: domain-config (line=6)\n      A: cleartextTrafficPermitted=false\n        E: domain (line=7)\n          A: includeSubdomains=false\n            T: 'localhost'\n"
+  }
+}

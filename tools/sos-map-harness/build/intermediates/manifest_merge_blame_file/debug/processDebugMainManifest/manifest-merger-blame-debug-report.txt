@@ -1,0 +1,78 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.bai1.p5e10a.demo"
+4    android:versionCode="1"
+5    android:versionName="P5-E10A-DEMO" >
+6
+7    <uses-sdk
+7-->INJECTED
+8        android:minSdkVersion="30"
+8-->INJECTED
+9        android:targetSdkVersion="37" />
+9-->INJECTED
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:2:2-63
+11-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:2:19-61
+12
+13    <permission
+13-->[androidx.core:core:1.18.0] /home/vantri/.gradle/caches/9.7.1/transforms/5dae00594d497f11eecd7b48248677b1/transformed/core-1.18.0/AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.bai1.p5e10a.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.18.0] /home/vantri/.gradle/caches/9.7.1/transforms/5dae00594d497f11eecd7b48248677b1/transformed/core-1.18.0/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.18.0] /home/vantri/.gradle/caches/9.7.1/transforms/5dae00594d497f11eecd7b48248677b1/transformed/core-1.18.0/AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.bai1.p5e10a.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.18.0] /home/vantri/.gradle/caches/9.7.1/transforms/5dae00594d497f11eecd7b48248677b1/transformed/core-1.18.0/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.18.0] /home/vantri/.gradle/caches/9.7.1/transforms/5dae00594d497f11eecd7b48248677b1/transformed/core-1.18.0/AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:3:2-9:16
+20        android:allowBackup="false"
+20-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:3:15-42
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.18.0] /home/vantri/.gradle/caches/9.7.1/transforms/5dae00594d497f11eecd7b48248677b1/transformed/core-1.18.0/AndroidManifest.xml:28:18-86
+22        android:debuggable="true"
+23        android:extractNativeLibs="false"
+23-->INJECTED
+24        android:label="P5-E10A SOS Shared Map"
+24-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:3:43-81
+25        android:networkSecurityConfig="@xml/demo_network_security"
+25-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:3:119-177
+26        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+26-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:3:178-241
+27        android:usesCleartextTraffic="false" >
+27-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:3:82-118
+28        <activity
+28-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:6:3-8:14
+29            android:name="com.example.bai1.demo.DemoActivity"
+29-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:6:13-62
+30            android:exported="true" >
+30-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:6:63-86
+31            <intent-filter>
+31-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:7:4-145
+32                <action android:name="android.intent.action.MAIN" />
+32-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:7:19-70
+32-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:7:27-68
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:7:70-129
+34-->/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/src/main/AndroidManifest.xml:7:80-127
+35            </intent-filter>
+36        </activity>
+37
+38        <uses-library
+38-->[androidx.window:window:1.5.0] /home/vantri/.gradle/caches/9.7.1/transforms/415aebe11a249e4c00f73e92a5c9a432/transformed/window-1.5.0/AndroidManifest.xml:23:9-25:40
+39            android:name="androidx.window.extensions"
+39-->[androidx.window:window:1.5.0] /home/vantri/.gradle/caches/9.7.1/transforms/415aebe11a249e4c00f73e92a5c9a432/transformed/window-1.5.0/AndroidManifest.xml:24:13-54
+40            android:required="false" />
+40-->[androidx.window:window:1.5.0] /home/vantri/.gradle/caches/9.7.1/transforms/415aebe11a249e4c00f73e92a5c9a432/transformed/window-1.5.0/AndroidManifest.xml:25:13-37
+41        <uses-library
+41-->[androidx.window:window:1.5.0] /home/vantri/.gradle/caches/9.7.1/transforms/415aebe11a249e4c00f73e92a5c9a432/transformed/window-1.5.0/AndroidManifest.xml:26:9-28:40
+42            android:name="androidx.window.sidecar"
+42-->[androidx.window:window:1.5.0] /home/vantri/.gradle/caches/9.7.1/transforms/415aebe11a249e4c00f73e92a5c9a432/transformed/window-1.5.0/AndroidManifest.xml:27:13-51
+43            android:required="false" />
+43-->[androidx.window:window:1.5.0] /home/vantri/.gradle/caches/9.7.1/transforms/415aebe11a249e4c00f73e92a5c9a432/transformed/window-1.5.0/AndroidManifest.xml:28:13-37
+44    </application>
+45
+46</manifest>

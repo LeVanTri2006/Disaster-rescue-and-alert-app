@@ -47,13 +47,12 @@ import kotlinx.coroutines.delay
 fun SOSScreen(
     onNavigateBack: () -> Unit,
     onBottomNavNavigate: (String) -> Unit,
-    onHoldSosSuccess: () -> Unit = {}
+    onHoldSosSuccess: () -> Unit = {},
+    locationViewModel: CurrentLocationViewModel,
+    requestDeviceLocation: Boolean = true
 ) {
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
-    val locationViewModel: CurrentLocationViewModel = viewModel(
-        factory = CurrentLocationViewModel.factory(context.applicationContext)
-    )
     val locationState by locationViewModel.state.collectAsState()
 
     val locationPermissionLauncher = rememberLauncherForActivityResult(
@@ -69,7 +68,9 @@ fun SOSScreen(
     }
 
     LaunchedEffect(Unit) {
-        if (hasLocationPermission(context)) {
+        if (!requestDeviceLocation) {
+            locationViewModel.refresh()
+        } else if (hasLocationPermission(context)) {
             locationViewModel.refresh()
         } else {
             locationPermissionLauncher.launch(locationPermissions)
@@ -78,7 +79,7 @@ fun SOSScreen(
 
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_RESUME && hasLocationPermission(context)) {
+            if (requestDeviceLocation && event == Lifecycle.Event.ON_RESUME && hasLocationPermission(context)) {
                 locationViewModel.refresh()
             }
         }
@@ -361,7 +362,7 @@ fun SOSScreen(
                         if (locationState is LocationUiState.Error) {
                             OutlinedButton(
                                 onClick = {
-                                    if (hasLocationPermission(context)) locationViewModel.refresh()
+                                    if (!requestDeviceLocation || hasLocationPermission(context)) locationViewModel.refresh()
                                     else {
                                         locationPermissionLauncher.launch(locationPermissions)
                                     }

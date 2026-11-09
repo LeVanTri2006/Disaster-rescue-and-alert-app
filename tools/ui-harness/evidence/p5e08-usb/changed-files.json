@@ -1,0 +1,4890 @@
+{
+  "baseline_provenance": "reconstructed E07 final inventory after interrupted /tmp evidence loss",
+  "baseline_files": 2475,
+  "unchanged_baseline_files": 2471,
+  "edited_baseline_files": [
+    {
+      "path": "tools/ui-harness/build.gradle.kts",
+      "before": {
+        "sha256": "bd3f56cf694998f1683d5a78acd718b4d489362c7e0637ed86496993359b079f",
+        "mtime_ns": "1794153599180292056"
+      },
+      "after": {
+        "sha256": "b1ab735e4056d208e908f9a33329497f19b38dde2eed264c2d13fc2263ce236f",
+        "mtime_ns": "1794156821185236192"
+      }
+    },
+    {
+      "path": "tools/ui-harness/run_ui_tests.py",
+      "before": {
+        "sha256": "a36c570af5ddd561362db0e964e7a2aaf992827e4319e4b900fd454e23ac3081",
+        "mtime_ns": "1794154090002977715"
+      },
+      "after": {
+        "sha256": "f6f17a070252ab7eb3e2a0ccb526a358f556caaf6aa2015ab7d461a83a5821f1",
+        "mtime_ns": "1794159149054756173"
+      }
+    },
+    {
+      "path": "tools/ui-harness/src/main/java/com/example/bai1/uiisolated/GraphFixtureApplication.kt",
+      "before": {
+        "sha256": "aacc0dcb6ff5f33d170fb0322446f37339c9c3eea194112e8443c9c7cef81928",
+        "mtime_ns": "1794153975091719222"
+      },
+      "after": {
+        "sha256": "79b473cda12cbe4ae3d133e9db4079af8bd85ef9bf4d0f590404296ae94a650b",
+        "mtime_ns": "1794156821186432600"
+      }
+    },
+    {
+      "path": "app/src/main/java/com/example/bai1/presentation/warning/WarningListScreen.kt",
+      "before": {
+        "sha256": "d455f69be6eb8a5560428c2125a655dde85387452b5edf1efed4b4effb24d23d",
+        "mtime_ns": "1789742519284205914"
+      },
+      "after": {
+        "sha256": "2c6c8205c855df87277cbb2ce4bee82beee4a0841090ad5357102009297a07b8",
+        "mtime_ns": "1794156821185071249"
+      }
+    }
+  ],
+  "new_files": [
+    {
+      "path": "docs/PHASE5_P5E08_USB_READONLY_WARNING_NOTIFICATION_REPORT.md",
+      "before": null,
+      "after": {
+        "sha256": "594fccd34500b104797396dec25fb66cabd77f8665ef94cd571b80869f1dc731",
+        "mtime_ns": "1794193121485111135"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/TEST-new-warning-notification33.xml",
+      "before": null,
+      "after": {
+        "sha256": "2580802c62c85ce9c82343c81eda69cb68d101d204362dd6c9b5efc07cc91b4b",
+        "mtime_ns": "1794193116955407081"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/TEST-old129.xml",
+      "before": null,
+      "after": {
+        "sha256": "d2b69c800d4e00a2b2bc067e000ab85f22ca81be480825593cba60fb65bd57a9",
+        "mtime_ns": "1794193116955189023"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/android-baseline.json",
+      "before": null,
+      "after": {
+        "sha256": "87adfc9f016632fac29c2fd578510243bc03c8f74b462da573ae597122148596",
+        "mtime_ns": "1794191650200237874"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/android-preservation.json",
+      "before": null,
+      "after": {
+        "sha256": "1d1d160f5632eedbdca9c6736cfaabad097e799e07ebac00bdec34b561e72232",
+        "mtime_ns": "1794193119251276413"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/android-status-after.txt",
+      "before": null,
+      "after": {
+        "sha256": "45db6490418343c923237b0ac84ac5993b355c62712f63473d519723fd61f864",
+        "mtime_ns": "1794193121471026059"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/android-status-before.txt",
+      "before": null,
+      "after": {
+        "sha256": "45db6490418343c923237b0ac84ac5993b355c62712f63473d519723fd61f864",
+        "mtime_ns": "1794191656593870385"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/backend-baseline.json",
+      "before": null,
+      "after": {
+        "sha256": "82a74ddb68636fad165bfdf0c0c75a35d6429c5192325ef3306ed4ef926e358c",
+        "mtime_ns": "1794191652426127346"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/backend-preservation.json",
+      "before": null,
+      "after": {
+        "sha256": "948a8869866ae7888670d9ecc7b7c194865347f8e0d7c168bca536a6daec359f",
+        "mtime_ns": "1794193121460179483"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/backend-status-after.txt",
+      "before": null,
+      "after": {
+        "sha256": "57d6fe60cd3729478e65cb955d5236197c5fafb06d83c5c37806c78b0b877478",
+        "mtime_ns": "1794193121484891196"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/backend-status-before.txt",
+      "before": null,
+      "after": {
+        "sha256": "57d6fe60cd3729478e65cb955d5236197c5fafb06d83c5c37806c78b0b877478",
+        "mtime_ns": "1794191656608913808"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/coverage-groups.json",
+      "before": null,
+      "after": {
+        "sha256": "b9b2df22ad429393e4741bb507b390cb23e332f3aad753f6c2f9fd428ca31014",
+        "mtime_ns": "1794193116958394692"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/device-and-cleanup.json",
+      "before": null,
+      "after": {
+        "sha256": "fa7a55d4150d26faa8d710a9798c7886450c477d03302f7aa831037cd95c274b",
+        "mtime_ns": "1794193118632297266"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/disk-after.txt",
+      "before": null,
+      "after": {
+        "sha256": "74892c4cd36523b6444fc612779415fd1173590312e369ede1c579ec19f4b6a7",
+        "mtime_ns": "1794193118633674149"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/disk-before.txt",
+      "before": null,
+      "after": {
+        "sha256": "74892c4cd36523b6444fc612779415fd1173590312e369ede1c579ec19f4b6a7",
+        "mtime_ns": "1794191656580099007"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/environment-before.json",
+      "before": null,
+      "after": {
+        "sha256": "e038dd21b8c2c5a562ba288f1100bcf1227777174ba6dc3a30701448a34a2932",
+        "mtime_ns": "1794191656578843275"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused-driver.log",
+      "before": null,
+      "after": {
+        "sha256": "cb761b5f9df56267007a55b54bdc1d3a87bd316a5b379f975efba9b8745b7893",
+        "mtime_ns": "1794191780253259628"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/TEST-production-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "6f1fbdd3a6ccff7df38d45baa9221ab9cc164304de0a1f3fe7d9ff49fa2f5949",
+        "mtime_ns": "1794191777599783550"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/authLoginCancellationCannotRestoreSessionAfterClose/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "6e4bec6e14344562905206bda3884cace8b41ad4cd6ca01d558568daad108fd8",
+        "mtime_ns": "1794191752904812636"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/authLoginCancellationCannotRestoreSessionAfterClose/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "d1114ee6475cd457957ed6bce75d19139ee830149d3fd4ecb74b89849a247d2d",
+        "mtime_ns": "1794191752640453122"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/authLoginCancellationCannotRestoreSessionAfterClose/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "9d5e7be4ebc30f77769f57c3dc01edd8550fb527d54ffce4b147832ab64b5962",
+        "mtime_ns": "1794191752581453119"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/authNavigationUsesActualScreensInSubsetHost/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "0f0ae5356c992c53c6fc5307d7244f8e3e995ee69f069eaa98fcb4bd085f19d6",
+        "mtime_ns": "1794191765678562187"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/authNavigationUsesActualScreensInSubsetHost/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "5339aa8264fb42ee032b23182d033fffdf551d9dfeef7b1a458e7d34910da1fe",
+        "mtime_ns": "1794191765529453758"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/authNavigationUsesActualScreensInSubsetHost/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "24c743b3bd2a888be80ba888900a0df8587ce876fdc78f32d514bc2a94fe1dd1",
+        "mtime_ns": "1794191765496453757"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/build.log",
+      "before": null,
+      "after": {
+        "sha256": "deb335a941b1056057511cd2e409572080f575f47a50b7b123c70970d2845e46",
+        "mtime_ns": "1794191726871449881"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/compiled-policy.txt",
+      "before": null,
+      "after": {
+        "sha256": "144a411901dddbd7b87e5f89c16f84ab7018ddf14aa8ff8ed5696fb4797d5733",
+        "mtime_ns": "1794191727791450016"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/lifecycle-test-copy-hash.json",
+      "before": null,
+      "after": {
+        "sha256": "6ceff65357061dafef8c5194ef1eae5f0333439194cc676f0b740b695d7db446",
+        "mtime_ns": "1794191727765050276"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/owned-package-uid-proof.json",
+      "before": null,
+      "after": {
+        "sha256": "974778e92b725f431a18ced4e2a2a320b9efcfebe775d920bd160abd43ea9499",
+        "mtime_ns": "1794191742775064165"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/results.json",
+      "before": null,
+      "after": {
+        "sha256": "46e10f43f82e2103e0910946ff4220d1fa6921197375e3575c7d2def5e3eabe8",
+        "mtime_ns": "1794191780253259628"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/source-copy-hashes.json",
+      "before": null,
+      "after": {
+        "sha256": "656c1366e4089a960f6560c5741605dd84c5a90275133d52119b342511d28d32",
+        "mtime_ns": "1794191727791820697"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/startup-origin-audit.json",
+      "before": null,
+      "after": {
+        "sha256": "3b62e46bb294c6f741ebe2c6da42f7f8030ed5f3eed43e052d7ebd584c82059a",
+        "mtime_ns": "1794191727754171408"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/warningFloodSelectedTemplateAndBackUseActualCallbacks/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a50e9c2f757bd6425c4ee2b80e2687d15f5e742249dfbc1c70455e984b5a97ca",
+        "mtime_ns": "1794191777598972640"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/warningFloodSelectedTemplateAndBackUseActualCallbacks/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "866be6342f4ef35f6d083576ebfb3b9e2e86943c7a054ab5209bd2608f5de487",
+        "mtime_ns": "1794191777530454351"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/focused/warningFloodSelectedTemplateAndBackUseActualCallbacks/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "894c2017e0071370320f6ee66850875b5b70ab090fba6fc8e17b2479985a9862",
+        "mtime_ns": "1794191777480454349"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/historical-old129-junit-names.json",
+      "before": null,
+      "after": {
+        "sha256": "74fb7b7f3ecc0c59f34c2397c5a1b18d805268185acb94f37b14f8fd1a5d9f64",
+        "mtime_ns": "1794193116955632112"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/isolated-target-manifest.xml",
+      "before": null,
+      "after": {
+        "sha256": "d6ffcb75370c707397e161d7bd698d1e96c37e0c407f767b6ce5102b5513659e",
+        "mtime_ns": "1794152205292823752"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/isolated-test-manifest.xml",
+      "before": null,
+      "after": {
+        "sha256": "3f34e41f61dac5a4f1f880a0fba44189d4c4acb7f40dd13622946b672b751a29",
+        "mtime_ns": "1793990441656741239"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/apk.log",
+      "before": null,
+      "after": {
+        "sha256": "c2e0edbaad4abdac22280da64bf0087d835fca78d32e8b77b7ebbbcc7b2fe993",
+        "mtime_ns": "1794191808908455901"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation-xml/TEST-com.example.bai1.auth.AuthLifecycleSafetyTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "156684f7418bcd8617cfc09ceb0bf8c5c8df42858f378cb35a78993da2cdff43",
+        "mtime_ns": "1794191723519449390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation-xml/TEST-com.example.bai1.auth.AuthRepositoryTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "089c0cd953acb3b2001d4f0dd2e2b01c011a23ebcf2efd7bcf59738ec2a60fd8",
+        "mtime_ns": "1794191723519449390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation-xml/TEST-com.example.bai1.auth.AuthViewModelLifecycleTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "eb4ee552b6ff3d41e13a1ac5647fe50e811cb9d5264481a42754ffbd48d0701f",
+        "mtime_ns": "1794191723520449390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation-xml/TEST-com.example.bai1.auth.RoleSelectionViewModelTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "51dede7fb7e04069d02078224621a97d4ecc5ffc0d5fcf4a9f3f64388316d670",
+        "mtime_ns": "1794191723520449390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation-xml/TEST-com.example.bai1.auth.TokenStorageTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "294caa9c3d13ca778d54f515109f25cc685724dea49b19bc323b43c11665e7a2",
+        "mtime_ns": "1794191723519449390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation-xml/TEST-com.example.bai1.auth.network.AuthApiClientTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "c6a7210f86ae5f130165ca602be0e88731010f5d756d7e6db72668d9849903a8",
+        "mtime_ns": "1794191723519449390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation-xml/TEST-com.example.bai1.auth.network.AuthUserNullableFieldsTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "e7905622787f3732ec031e7773b5c4fa2999cfa2d9c70c7e939d50bfd9a37aac",
+        "mtime_ns": "1794191723519449390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation-xml/TEST-com.example.bai1.presentation.navigation.AuthNavigationPolicyTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "799af8cadb69891ecae7e7c9f4b8326b41d9ecbbb34674415384354086c13a01",
+        "mtime_ns": "1794191723519449390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/auth-navigation.log",
+      "before": null,
+      "after": {
+        "sha256": "17a94d994309c01ad06b3044e54db23b7012a4a55314403b6f60069233795e2b",
+        "mtime_ns": "1794191723779449428"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.ExampleUnitTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "4622c56eab00ce9ab7a8076460095b1b717c1d99a3e4f5ee65f7b05ef723a99d",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.auth.AuthLifecycleSafetyTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "35656aa807413d1963de23f710406b1c858bc70c92043ed00197d01ee47511a1",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.auth.AuthRepositoryTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "4d2f10cc295aededc4f76302a52140f561245d4339544ec1942dfc72c40c300e",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.auth.AuthViewModelLifecycleTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "6b926a8b34b30cafe8295c1f00630e382011b30ade8c56b5f8f578aef2e1fc29",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.auth.RoleSelectionViewModelTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "8d4fdef49623ad40fb5db4186fe5624fa335cdc6243b772516d60aafb21e3450",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.auth.TokenStorageTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "eef147af5df3e76ba61e95b88465d6ea40fe43a74544fa93131828bb7ffdf5a8",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.auth.network.AuthApiClientTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "09d6e4ce7d804dd16539864497fa44ec15b4e8412d1196c4ce3440d40a081d2b",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.auth.network.AuthUserNullableFieldsTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "2e9ab649f9b10a2b73baef8d6a39ffcc78717aeb3adc3717f85910cf010af73b",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.presentation.auth.RegistrationValidationTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "de9a35219b838151c137e1a14e1c51d86632375d62913f6eddc897812eca0586",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.presentation.location.CurrentLocationViewModelTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "8cdbbc71b0d9bd0d16f6ff5991c41d2a50a9b9cb1438f069a6427488b5bc4297",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.presentation.location.LocationProviderTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "3f2aa1ea4ded641de28361da407e05849bc418333d04e61bfa87060d7a7cce36",
+        "mtime_ns": "1794191802427455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.presentation.navigation.AuthNavigationPolicyTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "32110446a5b885ec2ddccdc3f3077dc1d4c8faa009cd4bac41b7301a35462994",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "00647fe021a8cdc300233cd2161d040e0c73cb1213654ebbd6c323763b489160",
+        "mtime_ns": "1794191802429455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.GraphCacheSecurityTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "606b250ff997f546d0ee8c1eee764450241582ed974095d57518af569ed82df5",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.GraphDownloaderTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "fb524854c64eba299b1d08b5283ee05d07ace893d863cea5c04ea707767bb494",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.P5A01ConsumerAuditTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "5b17b7bd9f30c67c1d14e54a47b8d24b305ed3cadc168b2d4fabb7674ee3ae02",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.RoadGraphParserTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "21d6d00c768da12a069d170af5185964e35ac9764643cbb500707aa38e1b1da4",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.RoutingApiClientTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "8d8b449ee40911b85c065f31cc1be79931cd9cf12ac2f1ad7ace5697db3162ad",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.RoutingGraphLoaderTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "c1c4ac0d665cd797ffa1d7d2c87d8ab7dcf81ccb247a1f0a954c6b965fc1e9c6",
+        "mtime_ns": "1794191802429455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.RoutingJsonParserTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "9676bd289d01f38d02a85b950de431802c924e3d8bd18c297f4bebcea485b68c",
+        "mtime_ns": "1794191802428456273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.RoutingNetworkSecurityTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "6a2bc0e0d305a9b0f1d8bb29e60b70508bf267cd1b54630751dec607d421f298",
+        "mtime_ns": "1794191802439257484"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.RoutingRepositoryTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "a9d107a6a04e00797fb097d3c47b992df88fb3dfca452e87426c569aa44b9a53",
+        "mtime_ns": "1794191802438455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.TurnRestrictionIndexTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "57c387d263c432b871e37ec70d86949e6f3cc24e07c4f31418837b9d4df98565",
+        "mtime_ns": "1794191802439257484"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.UniformCostSearchRouterTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "9eade25254c593559152bb0042c02adbe364b9b4ae0db4de5d53360ede52de3f",
+        "mtime_ns": "1794191802439455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.rescue.routing.ViaWayTurnRestrictionDfaTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "993636118232a797d404fc45af36c19a804f5d43acc718223da09f5c4b18e91f",
+        "mtime_ns": "1794191802439455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.sos.BatteryInfoProviderTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "27428e3f754058653253566c38e775456cbfcac58e25e17939cbededa0d4b8dd",
+        "mtime_ns": "1794191802438455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.sos.SosRepositoryTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "323d241adaadb66e7d12dd3be3a755262a2995660e132741695f685625bf5bbe",
+        "mtime_ns": "1794191802439257484"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.sos.SosRescueRequestViewModelTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "1175354e085716c21a9084aecfdbc98f7e74541e6ca682f16b452c129631648a",
+        "mtime_ns": "1794191802438455581"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.sos.SosTransportManagerTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "165aadb60a65ab96912a89abfa596287ebaa655ff013d95447a527cd08c36be1",
+        "mtime_ns": "1794191802439257484"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.sos.network.ApiSosTransportTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "0a30b442e7ca43046ca2ad07f760d1ec4d7cdfd6860b36641a50641fdbbc650b",
+        "mtime_ns": "1794191802439257484"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.sos.realtime.FirebaseSosEventMapperTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "754f75cefd6d0d2cf79ae56254d6f70142af14db204e228c7beeb0214f7f0cb5",
+        "mtime_ns": "1794191802439257484"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full-xml/TEST-com.example.bai1.sos.repository.FirebaseSosRepositoryTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "1c161294ebf9c75ff652927764a818ab7d8d5fac65e6e4317a5e9796bf49211d",
+        "mtime_ns": "1794191802439257484"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/full.log",
+      "before": null,
+      "after": {
+        "sha256": "5c3a3c32f084fa7621e69477a03afb9e095e746cb611994cad805a251c735c50",
+        "mtime_ns": "1794191802618455590"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/results.json",
+      "before": null,
+      "after": {
+        "sha256": "1f26b0a91f2a954dc362eafa0be5003cdc62dcf6e49ad991e054a51c098a7238",
+        "mtime_ns": "1794191809541825290"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "984faeb8ca853f2619f3c832d1082153d40b63282dfe8b1285ea6f15d23f4e4c",
+        "mtime_ns": "1794191787479454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.GraphCacheSecurityTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "3429e89895e2cd38c437953daf3f38bf0670fbab9ca0161711d87358046fac75",
+        "mtime_ns": "1794191787476454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.GraphDownloaderTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "0dbb3ad53c5abfd69fca4cf59f8a542ae327844165dc416267ca0202ff98d210",
+        "mtime_ns": "1794191787477454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.P5A01ConsumerAuditTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "46fe0c33839fd2806a3512d8b35bc5d9f95ac032292295f135eda874be192874",
+        "mtime_ns": "1794191787476454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.RoadGraphParserTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "d34f0f4d49f0f9f159d56cce11e8f21bdfe599b1062604c091c3b1de9be8b2f2",
+        "mtime_ns": "1794191787478454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.RoutingApiClientTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "3498a16ad5141264787c6939861e59f4a2dcaee6a0f0d8a9b21149565ea74b7e",
+        "mtime_ns": "1794191787476454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.RoutingGraphLoaderTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "1b898f5bbfb9216db1e3427545cb6fff2d8aa84c3dbbb05663be20dd7f0f3756",
+        "mtime_ns": "1794191787479454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.RoutingJsonParserTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "415e9735e7eefaecfc2ba430c7a126852917164c75e76f7563990d0134408a42",
+        "mtime_ns": "1794191787477454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.RoutingNetworkSecurityTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "a1a4a78dceaccdeb3ebf361b4eb7315a7866104d9a36e78c74b2e01b7054269d",
+        "mtime_ns": "1794191787476454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.RoutingRepositoryTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "a988c6c6d7eeed0bafdc1300dc0c5abd441f2946b7bb95e3ed5eca09a13728b8",
+        "mtime_ns": "1794191787479454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.TurnRestrictionIndexTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "bc9ebcb107b3463b63c142cab30fb838eb83efdb454dfd22c13ffa035c0b3484",
+        "mtime_ns": "1794191787478454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.UniformCostSearchRouterTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "ea4bafe6bb10ace4468d1e9765c34b30bde49918b159a940198083e40fe48905",
+        "mtime_ns": "1794191787480454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing-xml/TEST-com.example.bai1.rescue.routing.ViaWayTurnRestrictionDfaTest.xml",
+      "before": null,
+      "after": {
+        "sha256": "12a67ce85dfdd8656f2d36962ae726b7c8918ee24274f9e38684494621b230c4",
+        "mtime_ns": "1794191787479454842"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/jvm-build/routing.log",
+      "before": null,
+      "after": {
+        "sha256": "9ef7cc6d3581a33fc1e3b26d797f171c6f7edaf51cfb10af33f8cc144cfd7b79",
+        "mtime_ns": "1794191787711454854"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/log-review.json",
+      "before": null,
+      "after": {
+        "sha256": "e5f7e7fd48854f4e16c0f3ba1c92e501cca09b8559333816f4b336dde0a596b3",
+        "mtime_ns": "1794193117770709919"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/main-apk-boundary.json",
+      "before": null,
+      "after": {
+        "sha256": "5e51b4bf102a08a126d0c84ec12cee5520e0fbf41527ca517a8dc27a10b319c2",
+        "mtime_ns": "1794193117461956394"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-driver-exits.json",
+      "before": null,
+      "after": {
+        "sha256": "d6ec15f51d3eee5fb650eaea5a40292e6b10dfecbf3f16251be6d5fa6466da87",
+        "mtime_ns": "1794193115972528190"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final-driver.log",
+      "before": null,
+      "after": {
+        "sha256": "eda4e6b2411a99d51c5767c783c0158c91c7ed614ca2772af8f3d828963c3ada",
+        "mtime_ns": "1794193115951004757"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/TEST-production-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "86d4a80ad5e5f6d9505041b02ef9758716f4ebe70a75998acf01727e23006eaf",
+        "mtime_ns": "1794193113463673642"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountHomeActualUiHasNoCloudOnProfileRoundTrip/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "2182bf3200f6e056d6b2a97b6f1b533a2d6f62943bffdeeaabde689d3919b651",
+        "mtime_ns": "1794192750736570740"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountHomeActualUiHasNoCloudOnProfileRoundTrip/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "bf9fb53196b03542aac7e5bdd73f74c27e8d956ea0261897dc51eb7bcb453b8b",
+        "mtime_ns": "1794192750574755561"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountHomeActualUiHasNoCloudOnProfileRoundTrip/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "0c93c92938c5d9d367ba0d60d61a48708ec60ec449e1a0cf91dbc1f8ef79a960",
+        "mtime_ns": "1794192750553755570"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareExpiredSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e9fcf2adb33b7a9bc430c31e4fad9a224375ef152089f0489090e9271cba19fa",
+        "mtime_ns": "1794192736928850988"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareExpiredSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "d6ee3b5bfece9e68c8b242decd6dbbc90a907fba8cbcb2daafbc167f1a48958e",
+        "mtime_ns": "1794192736861761459"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareExpiredSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "b6ae1a9c0494c192d0fc47a20c4872a19d1469c7424b79c6fa623bbc55b5955a",
+        "mtime_ns": "1794192736835761470"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareProfileSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "7c72e6d3d86b5583ca58dca2b7004b35f14e27aa47cc8f9d48fa0da3c6726cd0",
+        "mtime_ns": "1794192651158952715"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareProfileSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a2a09bfb0b40084f42a05d458ce70166ed27ab42630b8f66d2533a0535f72bf0",
+        "mtime_ns": "1794192651052800343"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareProfileSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "6e15e98252bfc64a10e3989ef1443f0c395ca5043330274d00563984de57e765",
+        "mtime_ns": "1794192651031800367"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareRoleSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "c2bb09f531869b2d3cc039a9dae205771e8288cbec7d49faa66ab729283d6939",
+        "mtime_ns": "1794192722814323746"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareRoleSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "51800c83fb795ede8035a1753c236bfe6f00ef322bc822f64f43b0c3c8164fa6",
+        "mtime_ns": "1794192722601767592"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareRoleSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "772d2cbea1d7330fe36d3aafede678259c89cdf5b77513ee2c4e1ab731b8109d",
+        "mtime_ns": "1794192722575767604"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareSettingsSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "59a251370336435560e5530aa0e8f682867d12801a87cce79385cc5d7dd7fb64",
+        "mtime_ns": "1794192706954774322"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareSettingsSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "3b90b751f5d2a3b02f4e9be0e6b5d1529dc848bb10ff895ac5e6cd587a3d0866",
+        "mtime_ns": "1794192706870774359"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountPrepareSettingsSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "0376ba76930141c7dcd22cb6e5d9b2ebda9b3b64b6a012b31562d52863fa1fcc",
+        "mtime_ns": "1794192706855774365"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileActualSettingsAndHomeNavigation/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d65cd5560dcdd92e2146cece39e241c655f5d2afde348891b9a0ad217c5250a9",
+        "mtime_ns": "1794192611426258364"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileActualSettingsAndHomeNavigation/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "e414847cc345ab33839dde878ad2717dd4352d8368486825a89388ea6f4a7cef",
+        "mtime_ns": "1794192611200846948"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileActualSettingsAndHomeNavigation/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "e0965ff05be4c5d06a16c82bfce621648e96efb53b897fb1e86eeef30c04d158",
+        "mtime_ns": "1794192611182846970"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileAfterProcessRestartUsesIsolatedRestore/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "3ad000379316250f4b61bac432c9e39f0c75c3acf9ef0ec1a935f15139e3bc7a",
+        "mtime_ns": "1794192661254279030"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileAfterProcessRestartUsesIsolatedRestore/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "40a7462dde555243c57b9d697a7be4c3f6ad724b72923b70571fa029301a6bfd",
+        "mtime_ns": "1794192661108794041"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileAfterProcessRestartUsesIsolatedRestore/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "9f4db63704f350fd6cb2caba5e70477973a52196b37ed385f6fa80bc3439a2d6",
+        "mtime_ns": "1794192661048794067"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileEmptyNameUsesProductionFallback/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "2e11ac89e0e7fe33e93e48fed28314f5d9eca8e3e97e575b39f26bf8b6a344a7",
+        "mtime_ns": "1794192603031981165"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileEmptyNameUsesProductionFallback/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "874e9272deaff37659973ecc7ec6eea64de0bebc51e8f0928e4b73d8ca8759df",
+        "mtime_ns": "1794192602916856637"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileEmptyNameUsesProductionFallback/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "00e483e6e44277792fab609d4ea54779bda858dd8c4a234f6e1970c60e52e693",
+        "mtime_ns": "1794192602885856673"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRecreateRetainsActualUiAndViewModel/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "f477212a15e88446a0f5df74e335bb5934ae84a0968b176857f7ebc14291c412",
+        "mtime_ns": "1794192643624904204"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRecreateRetainsActualUiAndViewModel/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "d13e68ab185ccf9b21ad9d3fcf391ee09b66f625fd9e1aa5b57d04adbcf98162",
+        "mtime_ns": "1794192643491809185"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRecreateRetainsActualUiAndViewModel/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "976b5d8adb198bc158a424693608874229cce7239b20c929df643e11d9d738f9",
+        "mtime_ns": "1794192643457809225"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRefreshRejectedReturnsLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "830e95ed75acb87c33be2664b2074199117510d6086dfa8120ffbaf9f7b43827",
+        "mtime_ns": "1794192627921755156"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRefreshRejectedReturnsLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "bead43a0861d4b15debf708ea063959ccb0194296deb02fb53c7f93c6256886a",
+        "mtime_ns": "1794192627725827623"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRefreshRejectedReturnsLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "2b7af96f32c878e79a123f839806529dcdf0684d5bd8501b01e99b71ee6ccfe6",
+        "mtime_ns": "1794192627700827652"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRendersSyntheticUserAndUserRole/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "97a80bece95310782d1f677543261fb2b24d94f45ee08c7f6fee43b53a71b38e",
+        "mtime_ns": "1794192594468973465"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRendersSyntheticUserAndUserRole/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "080d5ff7563573e5b5eeb808c9856bef6374542ced2ce78b35df34fa51b2a883",
+        "mtime_ns": "1794192594288866726"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRendersSyntheticUserAndUserRole/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "fb152f73671dae693609cda1388c3d4f7e97cca414228a67566796060632a4c3",
+        "mtime_ns": "1794192594240866783"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRestoreErrorReturnsLoginWithoutStaleUser/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d943f3dd376f42aae0af4c3b8876ef583589dcf05302d48966f3e993fcdd9a00",
+        "mtime_ns": "1794192635679756946"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRestoreErrorReturnsLoginWithoutStaleUser/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "cbcc7ccb80998da6d4d907cd5b8da6147c67cac7b156611feb511e6de71e1b02",
+        "mtime_ns": "1794192635583818433"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileRestoreErrorReturnsLoginWithoutStaleUser/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "fd424a65a1b27fd6ebadbb2a58dd5a8bb039ddee4660d550f04268ca0e7991d9",
+        "mtime_ns": "1794192635546818476"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileSessionExpiryClearsProtectedHistory/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "426ff0557e9efa17b09bcbb5f82db972b04638244203c49cf8485f643bf01863",
+        "mtime_ns": "1794192619938835678"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileSessionExpiryClearsProtectedHistory/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "3caeedbb0f774c11bd7ea33d5f3997717d26e2455cc706a13f0bcca0324f9d94",
+        "mtime_ns": "1794192619825836862"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountProfileSessionExpiryClearsProtectedHistory/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "0897724e2d74d61b0687ac037d12bff10bd455f7a072dcb9822ec6645231ff15",
+        "mtime_ns": "1794192619798836893"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRestartAfterExpiryCannotShowProfileOrSettings/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "37d08725256cb0d5f0dde0a45f4cb3da9b9abe98742271280938e9cba618af2c",
+        "mtime_ns": "1794192743173297986"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRestartAfterExpiryCannotShowProfileOrSettings/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "aea2462e5b0429bb7ce2f7fe028274e4ef2ee663274219993fcb2c502dfcbb32",
+        "mtime_ns": "1794192743017758811"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRestartAfterExpiryCannotShowProfileOrSettings/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "c5177e9d7db3749022c6e900c477e9206b8898fdfd241c18905d1f5786aa291b",
+        "mtime_ns": "1794192742988758824"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleAfterProcessRestartUsesExistingHomeRestoreSemantics/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "5e7198b05276e83f73673d300d7f54d21551548ba80233cf53fccb8e8137f523",
+        "mtime_ns": "1794192728562223700"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleAfterProcessRestartUsesExistingHomeRestoreSemantics/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "73d9e07961009d24afbd30ab4acadd6cf467816e1efc6dd6ad05af85d08d4d46",
+        "mtime_ns": "1794192728315765135"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleAfterProcessRestartUsesExistingHomeRestoreSemantics/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "73c54cdbe9c3ce4af6e899c4a8e66525600ca217429eab87a9884c7fdb5a08f8",
+        "mtime_ns": "1794192728305765139"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp401ShowsProductionError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "93837044ed99780b9576c337ac8bd38aeaaf6bf17bb3c67f30c603ad5f5b8ac6",
+        "mtime_ns": "1794192530074870566"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp401ShowsProductionError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "7ccc08149624d98c51151c75ea5e0cd1e17f09428fe1cfd49f39a599872de028",
+        "mtime_ns": "1794192529857942077"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp401ShowsProductionError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "60bff4a961b090f949ff3eeb0424bba47b90f9ac21d8d3280660fbcb7b0ab745",
+        "mtime_ns": "1794192529826942113"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp403ShowsProductionError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "7e0d2d8d5bfbf8ce61c25be3d43787e0051aaf8a9388b963c499784c8a80ddb8",
+        "mtime_ns": "1794192542012715790"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp403ShowsProductionError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a86662a342224b5309035fb6da1536a40c57243839f317879588a06021ce9761",
+        "mtime_ns": "1794192541915927975"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp403ShowsProductionError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "92dfcf24593d87f9b05083097528bf14067073db6867f48fb07b506dcfa88e4c",
+        "mtime_ns": "1794192541829928076"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp500ShowsProductionError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "610b2530f5fac7e9b06fce866053240cba7230fdd7d31f7fe1bea5e6a94da99a",
+        "mtime_ns": "1794192553157318033"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp500ShowsProductionError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "f7dcbab6594d478e485d55622b59c2733fb64c3f2bf4f199224d57dcb4a03d2d",
+        "mtime_ns": "1794192552953915066"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleHttp500ShowsProductionError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "c8d75e09667ce8f140fca97e64d1e54e65d89f35091cee8116d8f38a6c93896d",
+        "mtime_ns": "1794192552892915138"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleLateResponseAfterExpiryCannotRestoreProtectedUi/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "7f856e48d057ea616f4995d3436332f705d1a1ed9b4041f1dd534799d0fca112",
+        "mtime_ns": "1794192586502214776"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleLateResponseAfterExpiryCannotRestoreProtectedUi/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "cd79fba602895a4a820cc5e1ee15a6e4e564c6115620daa1fdeb46336b819bc5",
+        "mtime_ns": "1794192586298876071"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleLateResponseAfterExpiryCannotRestoreProtectedUi/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "48ef04d8f64a12310cadb187b0ccb3bac67179d2c6ece2bd384fca61dfcd9761",
+        "mtime_ns": "1794192586269876104"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleLoadingAndRecreateDuringHttpRetainSubmittedRole/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "66a1e8d5b134611fbdb73635b559f1c4fd39a88559c770ccc9cd174ab118ad4f",
+        "mtime_ns": "1794192518224203971"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleLoadingAndRecreateDuringHttpRetainSubmittedRole/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "ab4a7a9e121d61e18c35eececb67c844de0a22e6bce1407696b23876de465ea5",
+        "mtime_ns": "1794192518135963690"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleLoadingAndRecreateDuringHttpRetainSubmittedRole/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1bac53b926d65ba06d22cf24afd0c3a7339f3ce5880e8237d84c60b5fac8fe73",
+        "mtime_ns": "1794192518100963775"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleOfflineShowsProductionError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "2e47b4d31fca342d1330448376e417c44c9f19ca1b9ef1bfed3d2d3b9332df09",
+        "mtime_ns": "1794192576399828678"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleOfflineShowsProductionError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a4e23463d22fbf5a99f3e4cb8982eb862275c661f773889c7418233467d70a93",
+        "mtime_ns": "1794192576295887769"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleOfflineShowsProductionError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "2bb996d684d7d9396ed7f9d00730235596a50a08b72e77d7bd117e8bc08a09ae",
+        "mtime_ns": "1794192576221887855"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleRecreateRetainsUserSelection/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d3cc9c807f25a9c90b5549743bcaee3c5090b13c9205927a63893a5dc864eb88",
+        "mtime_ns": "1794192507915363004"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleRecreateRetainsUserSelection/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "b087734cb4e8cf705f8d460c812c95eece68fdab0dba3952aef96ec8a073b5ed",
+        "mtime_ns": "1794192507661989153"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleRecreateRetainsUserSelection/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "57c116b0df0fe61bf60d2f8156c8a1049d6637f579d7d2246079b4c721dcb3e5",
+        "mtime_ns": "1794192507614989267"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleTimeoutShowsProductionError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ae8eca2746a92b0516540dfe7c3dd61cbc77dd9ff21c9b5dbe82a9ea692900f0",
+        "mtime_ns": "1794192565905303382"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleTimeoutShowsProductionError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "89f1ec3bfdf0922b0f9a08c2b759fb85299aa1c683a96825226ad7b6914db200",
+        "mtime_ns": "1794192565662900204"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleTimeoutShowsProductionError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1ec79dfa15fdec6dfd6cc351446e5b232fdda5bb1ee8e0cab566efbe9778f81a",
+        "mtime_ns": "1794192565601900275"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleUiDisplaysExistingChoicesAndRejectsElevatedRole/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ec0a3c0c792536913be439ef9c5559d940f608bd280bb2c90034accae044b69e",
+        "mtime_ns": "1794192486885802633"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleUiDisplaysExistingChoicesAndRejectsElevatedRole/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "ec1ebcb41ef2f5bad328b69696dd6de138665a280bc7a683767f0df3e96b1507",
+        "mtime_ns": "1794192486649040237"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleUiDisplaysExistingChoicesAndRejectsElevatedRole/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "a6466270716c43212db86ce58666313120f43078f64fda60d3bd29359643728d",
+        "mtime_ns": "1794192486545040489"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleUserSuccessClearsRoleHistory/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "3c9e6fbfa672a1da810cb5b7ded3e1e82e86ae725277052445905d2affb9629f",
+        "mtime_ns": "1794192498421011618"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleUserSuccessClearsRoleHistory/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "0fb8dd5f8b13349b9e921dde2333d3e4a8f5fc8196043b70bb596187014f53ea",
+        "mtime_ns": "1794192498215012119"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountRoleUserSuccessClearsRoleHistory/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "ba7c2667d08e0efff2559731889e3ed7ea8be741befeed9eefa4f22587c537a2",
+        "mtime_ns": "1794192498184012194"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsAboutBackAndActualLogout/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "0d5e1190287b74cafc9bb158ad995ec66b5be2b3b55255fb3bb16236ad13679f",
+        "mtime_ns": "1794192681624864321"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsAboutBackAndActualLogout/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "4464dbf8c87b49661fc9a536bbac9775e8f7d6111a4d473bf04ea56bb04dfbd0",
+        "mtime_ns": "1794192681333785342"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsAboutBackAndActualLogout/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "5c9746da593837a0a0a9c96e3a354ff497b5e0569205c8587eebf0ec4baefd80",
+        "mtime_ns": "1794192681303785355"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsAfterProcessRestartUsesIsolatedRestore/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "43846c1b155a84c95ec0b436a66fe01776670ca3eaad97da39d235cabfbd62c2",
+        "mtime_ns": "1794192714233851385"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsAfterProcessRestartUsesIsolatedRestore/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "5be814782867e94d810cb0e8bbd9016dd6bba077e5484523cbea07c34e114992",
+        "mtime_ns": "1794192714045771273"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsAfterProcessRestartUsesIsolatedRestore/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "f61a3c68bdb053d44a75a0ef279e1e648b79c7f6ed894dfc41da96c7f44b21b5",
+        "mtime_ns": "1794192713996771294"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsExpiryLeavesLoginAcrossRecreate/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "4d92acc60938c4f26c78400c86fbf836c4ad7f2f082f91bb655af3096df261d8",
+        "mtime_ns": "1794192690393011548"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsExpiryLeavesLoginAcrossRecreate/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "c03acaf929a4e9c55a13fe852870f7a11b3f8071d3ba0dcc4a70e46d2b23ffc5",
+        "mtime_ns": "1794192690148781550"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsExpiryLeavesLoginAcrossRecreate/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "73f677de4a011841ea9235b5669f731f04948d95040cd01f2bdab2b6b8c35b61",
+        "mtime_ns": "1794192690104781570"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsRecreateKeepsRouteAndExistingEphemeralDefaults/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e38694f561813e1f5474e6286c80328b7fadf336f93039dbffb3c0458bfab773",
+        "mtime_ns": "1794192698967440118"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsRecreateKeepsRouteAndExistingEphemeralDefaults/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "973a4a9104bf74fe0dc7dd65d7c2a6fda4f663ec15332c6938910c7777355232",
+        "mtime_ns": "1794192698763777845"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsRecreateKeepsRouteAndExistingEphemeralDefaults/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "917ed74f42764d7431106c8fadcdc3dbbe8a358111eb4f418d0980c473adecda",
+        "mtime_ns": "1794192698743777854"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsRendersLocalStateAndSafeToggles/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e98d4ffb67855531d9d7692c2f6ceaf20a3984fa53953a892e81b45d536597ba",
+        "mtime_ns": "1794192669719208918"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsRendersLocalStateAndSafeToggles/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "dca53a30212a8802b4850337cb80f33106f6a687dfa331f08510743d127ee371",
+        "mtime_ns": "1794192669468790445"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSettingsRendersLocalStateAndSafeToggles/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "83a94a49b5ce2bf36e59d8739acaa15767b4d99247f55136910597f14b8e4aac",
+        "mtime_ns": "1794192669409790470"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSwitchRevokesPriorAdapterBeforeNewCredentials/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d07ab81ed7e30f94556d88ce3b2b1eac4eb6ed3ddf4ee4cce961007bab60fb8f",
+        "mtime_ns": "1794192292202694765"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSwitchRevokesPriorAdapterBeforeNewCredentials/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "d4b325490abaa06f865f66b122e5a2b08a90c6f069fbc004ee6ff4bfdedd45d4",
+        "mtime_ns": "1794192291938707904"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/accountSwitchRevokesPriorAdapterBeforeNewCredentials/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "54c3e027ec934c1138263e6a10536f25498cd3f120e9f804081ed445065d53be",
+        "mtime_ns": "1794192291938707904"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualProductionOnboardingAndAboutNavigationRenderWithoutCloud/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "90e14b5ca98a0c7bbd843708b639b3681bf0d01d43ba691130243950952145ea",
+        "mtime_ns": "1794191816347433015"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualProductionOnboardingAndAboutNavigationRenderWithoutCloud/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "62f2e92ae6e54ca079e8ba5720e51d5f1dc691deab14b7bc3e71377c63d622d5",
+        "mtime_ns": "1794191816183456260"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualProductionOnboardingAndAboutNavigationRenderWithoutCloud/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1004713ed824b16cf6d719e6318d8b677bf83978a9d7b78d8673153e19255e62",
+        "mtime_ns": "1794191816124456257"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterLoadingStateAndProductionFeedbackComponentsRender/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "9fa89f3fe2c91527dd81ebbcad18c86b3c53ad662dcf89849612e81f489f3e72",
+        "mtime_ns": "1794191888099437256"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterLoadingStateAndProductionFeedbackComponentsRender/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "8e362d474ba659c7db321087c2b202a5d71c9604bba6a81020c67d560c43ac79",
+        "mtime_ns": "1794191887877437684"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterLoadingStateAndProductionFeedbackComponentsRender/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "c34fb715ade37589ff019c47fa6aa8f177340c1926d258b83c06ca3b119b7903",
+        "mtime_ns": "1794191887845437746"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders401FixtureError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d10b53f66164a6bd433a799e04d7032d717544d658745238681846f05a4508d2",
+        "mtime_ns": "1794191843575441057"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders401FixtureError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "6de7d48561e8d72abd69868a35f4ae9fe537765135de0f0003d7badec14fa1db",
+        "mtime_ns": "1794191843345457602"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders401FixtureError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1c6a7b064d0db6ca6fed5245923ef59168a6473cb6d69957a85d73e2c04fc877",
+        "mtime_ns": "1794191843318457600"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders403FixtureError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "851b7c2688c61aeb75dbc50d3dbbfb6a9c9cc5e5cc981a7205c165162c3230a3",
+        "mtime_ns": "1794191852620487522"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders403FixtureError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "512aafc456edf9896c55ed8bbd4be1211ef90c96a782f78c608f84e2cec0e2d8",
+        "mtime_ns": "1794191852404458049"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders403FixtureError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "daa55f5e026e44fc06f77ad27530421fc4faa005f22b0c4e3eef5992a65fe6d1",
+        "mtime_ns": "1794191852356458047"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders500FixtureError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "695a266f6ac59cd26665c96c0ed31526edb227a2b31544b9606378f88013e4e1",
+        "mtime_ns": "1794191861172463623"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders500FixtureError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "20bd8dd93ea732e5f0c016d0b15d1b3909934e310051182460aaaee3cd08f797",
+        "mtime_ns": "1794191861077458477"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRenders500FixtureError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "0442cc8da87c37463579436e2c62274a8b2f681684c73d5dfe2b8f116a924185",
+        "mtime_ns": "1794191861054458476"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRendersActualSocketTimeout/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "919d96c3ad48813b0d977d60b0b6b29a599acfe9f27432562a3daa3d3e8c1d85",
+        "mtime_ns": "1794191879150350441"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRendersActualSocketTimeout/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "9fbff69d1b162a186f9e59f8ab0c9c31834f7e789c8bdab358e30ea4e392c223",
+        "mtime_ns": "1794191879004454807"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRendersActualSocketTimeout/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "b137e74a324e305089da4d3acd078f69b253c95daaf9f9c000dfdc41fb24fd8b",
+        "mtime_ns": "1794191878970454872"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRendersOfflineFixtureError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "1b2c433ca44977eade9bc575430c4c37814c2d64b324c46ad55b127be2056dd2",
+        "mtime_ns": "1794191869636782549"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRendersOfflineFixtureError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "1516554f1053989cfd06065a024390a7be73e7ac58060e4684692fb81920b14e",
+        "mtime_ns": "1794191869562458896"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/actualRegisterRendersOfflineFixtureError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "6dd42b05239711cf79558a89d8a8f6a4d8f41e5db2a876cebf6dda0f2350359c",
+        "mtime_ns": "1794191869543458896"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/adapterSignInRejectionKeepsHttpSemanticsButCleansAdapter/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "0e1b0bb8b9c212333087248f8d3fb35a0c6c43188e812e73c4257290708c7907",
+        "mtime_ns": "1794192303980106977"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/adapterSignInRejectionKeepsHttpSemanticsButCleansAdapter/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "6fe8e88e079c94e3c6fbfdd048e579f862841e3bf2994fd304debb96afe5afff",
+        "mtime_ns": "1794192303743645576"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/adapterSignInRejectionKeepsHttpSemanticsButCleansAdapter/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "3b87d52eec8fd5612172856ca94e7a51bb68dbcc031e3d6d38e68e2225a140d7",
+        "mtime_ns": "1794192303725645671"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authActivityRecreationRestoresOwnedSavedSession/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "89c33b448333c07f1706091e9c9bfeb33209ff995b01a738c61ecd38f371c8d6",
+        "mtime_ns": "1794192081345425750"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authActivityRecreationRestoresOwnedSavedSession/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "b19b29508ddf651f2dd1419704a71a45fc0e4e996f855d55bae6e519cb98896a",
+        "mtime_ns": "1794192081235942109"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authActivityRecreationRestoresOwnedSavedSession/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "708e46c8cd7f57f2bf423605364ea7797d16255b58024bc6fe25e6853d3f05b8",
+        "mtime_ns": "1794192081204942105"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authExpiredSessionRefreshRejectionClearsStorageAndRouting/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "5fb129be1f29b1e456610b14aa16789cb23b51726595be8dafe9557cdfd6f66f",
+        "mtime_ns": "1794192087866766813"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authExpiredSessionRefreshRejectionClearsStorageAndRouting/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "6f7e4dfdbca0e6b73017b764c7b53bdc2d58fa350eaa4fd6bfa7a6d471e95e35",
+        "mtime_ns": "1794192087752942964"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authExpiredSessionRefreshRejectionClearsStorageAndRouting/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "9b46ec287abed98227750d7c8b6c72f7c716d768d06a3b2c7727e1943401ba98",
+        "mtime_ns": "1794192087734942962"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authExpiredSessionRefreshSuccessStillDeniesRouting/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ff7355b3203e8d51ad36f6639475b9c9f2852b540b8489ba70a4ae7397cc04ae",
+        "mtime_ns": "1794192094209844928"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authExpiredSessionRefreshSuccessStillDeniesRouting/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a9c2b1438353d6ebc97932140bcd257fb902bc7ea27d3235b13beff92303e4ff",
+        "mtime_ns": "1794192094068943794"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authExpiredSessionRefreshSuccessStillDeniesRouting/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "d47267f8f2b8306319638626e3a9f94cb009343d75fd26405f41e50575de9507",
+        "mtime_ns": "1794192094047943791"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin401InvalidCredentials/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "57959e100525656b5a52cb5d19174e0947405e1ea309b7d6f91b104992e4b2ff",
+        "mtime_ns": "1794191993697442272"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin401InvalidCredentials/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "b534d4ca34326daec9c83042bc7d1e0eddc5c70526b69a94b844dc86471d2ac8",
+        "mtime_ns": "1794191993521177067"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin401InvalidCredentials/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "dbb384469d9943414c7df05571fe1b4edef04fa28cecf121c81ebf61c528c7f5",
+        "mtime_ns": "1794191993500177130"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin403Forbidden/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "0e26d1b766a304cc13c92bacc5a6597950bc4c27b8d959c5ec1c4eb90bd75ae7",
+        "mtime_ns": "1794192001050508864"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin403Forbidden/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "348f0ee4925434164ccf8b36deadc5057f0f712d6e3a2dc863ee442eefee490c",
+        "mtime_ns": "1794192000818155079"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin403Forbidden/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "c8a5fcd9d0f024a09e21f4c3b2d40c711b6bac02945269fd705ab91c2f03e728",
+        "mtime_ns": "1794192000800155133"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin500ServerError/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "34a3759ed6005ce705dd15f4fb49b72bf15553bdb8d88da5c9416f1f0c0ad73f",
+        "mtime_ns": "1794192008195211603"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin500ServerError/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "81eb739fcc21445ac1e6e7d3e6bb9df1145d4cb661b30c48519a961490352cc1",
+        "mtime_ns": "1794192008010133407"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLogin500ServerError/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "fed93f4295078b90489326f517154938ab475c660cc96c63890ce82c233292e7",
+        "mtime_ns": "1794192007991133464"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginActualUiSuccessLogoutInvalidatesRouting/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "bb60616350c5b05ef6fddc3b8e29b58a59e9a3424c478a965938d5a3f70a3fce",
+        "mtime_ns": "1794191979655114572"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginActualUiSuccessLogoutInvalidatesRouting/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "b8ffb76d911b0508febc7f7756272f62357cba4928a62c536b6f24b47439dc01",
+        "mtime_ns": "1794191979470219406"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginActualUiSuccessLogoutInvalidatesRouting/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "3e583062a0a6d86d7c1ba1becae319e445ecedd58d86388951acf04e973fe7d7",
+        "mtime_ns": "1794191979441219494"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginBlankValidationBlocksHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "4deb3d1664e08a89770f88e74bf431a6f97efc2480da63bdf5929c49e1489de5",
+        "mtime_ns": "1794191985534515618"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginBlankValidationBlocksHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "21b359a08ba543ff0ef09909e17c67d2454d828e8737995a3b1034b5d845835d",
+        "mtime_ns": "1794191985464201345"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginBlankValidationBlocksHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "72bc07980156980eb98929f6118ccc9b91793b4781676510b317f4c44e2fe7e8",
+        "mtime_ns": "1794191985427201456"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginCancellationCannotRestoreSessionAfterClose/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "6e4bec6e14344562905206bda3884cace8b41ad4cd6ca01d558568daad108fd8",
+        "mtime_ns": "1794192044311757992"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginCancellationCannotRestoreSessionAfterClose/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "e5f0668991e7be0e27b718ac1e21e4853f010b02716cf597ca25db6ca528a05e",
+        "mtime_ns": "1794192044234024254"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginCancellationCannotRestoreSessionAfterClose/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "99bf726455685b5602a178c1dcb853364aa82210f9785f4ecc75a34f9f154ea9",
+        "mtime_ns": "1794192044208024332"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginLoadingUsesProductionUi/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ad0553c83e141f47356ad42c071661594fd51314ce34a6856c3229fc140cc8a1",
+        "mtime_ns": "1794192037202672891"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginLoadingUsesProductionUi/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "1152c97722f00e86a3e92f0fa50d27f69c05f77a94c2f5bb4281a6633e5799c5",
+        "mtime_ns": "1794192037091045778"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginLoadingUsesProductionUi/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "502c526f673bde3f6ce92b134f485de19a553336b960e6c11365d09bf44ce1b1",
+        "mtime_ns": "1794192037072045835"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginMissingReverseFailsClosed/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "4b5755dccfc1564122cdcb80fff76fa9e106c6c081723444e385ecc899d262cc",
+        "mtime_ns": "1794192030825432339"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginMissingReverseFailsClosed/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "add0850446efa75869b121a729e92a7ea2f64c7d97ec4fab205aa87b25570405",
+        "mtime_ns": "1794192030603065328"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginMissingReverseFailsClosed/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "cc2539a4a5e3d44ef295cce5af45e3256664fd746ffdfdac0f250946b1476129",
+        "mtime_ns": "1794192030586065379"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginOffline/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a0b32a7f13eee4ddaa9e3be2892c413fb47319d47d741d3013f1bab4db141c0f",
+        "mtime_ns": "1794192023332789986"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginOffline/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "2adeb3450bae7e46d600601cd5130b66a990cb05442b4454a5ff1ccdd47a9c8c",
+        "mtime_ns": "1794192023234087533"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginOffline/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "18690385d90635e0b5258740bc8d6d5784d03fb8198a636ea9f1efc835c7ffe2",
+        "mtime_ns": "1794192023213087596"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginSocketTimeout/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "55b77fdb1588b32345408063ad019b7f2b4a932bb74908cbdf63b573c31e77c0",
+        "mtime_ns": "1794192016254692429"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginSocketTimeout/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "7594dd82ccb1c1882588e32454275ce22031991aeb9912b8de780f855cf0a5a5",
+        "mtime_ns": "1794192016117108979"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authLoginSocketTimeout/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "aef420d4931a0cde5d2ed07b1d9c7684e0ea25932b22a9ba8d3b641c1c1df9f1",
+        "mtime_ns": "1794192016092109054"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authNavigationUsesActualScreensInSubsetHost/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "0f0ae5356c992c53c6fc5307d7244f8e3e995ee69f069eaa98fcb4bd085f19d6",
+        "mtime_ns": "1794192074759905956"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authNavigationUsesActualScreensInSubsetHost/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "5efbb955634260a98cd0498d239636d93837d2f048e42d717e549de4d93e476c",
+        "mtime_ns": "1794192074537941229"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authNavigationUsesActualScreensInSubsetHost/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "fc020514a5961e60b9e33100237792ad5c3cc7230db00b05522801bbda8e62da",
+        "mtime_ns": "1794192074500941224"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authPrepareSavedSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "550bbea24b4d5efaa2a6af319dcaf628c22a7cc08a088dc5acd209a5752d7e34",
+        "mtime_ns": "1794192100363774545"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authPrepareSavedSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "f51ea36a430aacb347e94d1c317e2e6ae8a82c80d918a5f35094ebb4965ab86d",
+        "mtime_ns": "1794192100116944588"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authPrepareSavedSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "6cf66b6a88718b441e9f2106be35a1e5c951cc7535653f41ac9acf06e2ae1af2",
+        "mtime_ns": "1794192100091944585"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterBlankFieldsBlockHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e9defeb500eae40d11103c7435575d2bd24dfca5037dc9dd95baf431a9dfbe42",
+        "mtime_ns": "1794191913729217846"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterBlankFieldsBlockHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "196b59842ccece371b02e21903bffd925a388c6d98a2c77f7ecee32218ccb050",
+        "mtime_ns": "1794191913514388210"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterBlankFieldsBlockHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1490ac44a09ce2dc770e292bcd82c894a4863f1f0d5f80446ff58809b42d3c1b",
+        "mtime_ns": "1794191913497388243"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterBlankPasswordBlocksHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "4ee281cb48383bd5e539d79b900f88c1dd0e78ad7abe6bddb0781a6946961153",
+        "mtime_ns": "1794191947529061253"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterBlankPasswordBlocksHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "010288786ffb98be931a5e212f94abff5a5f58fe9fceb0e0927b33eda6f87498",
+        "mtime_ns": "1794191947408316018"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterBlankPasswordBlocksHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "da6d1015bf85050bd8d284cfc1df30a36ca35cdb5894e1cda94780e77ae9dc67",
+        "mtime_ns": "1794191947382316096"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterEmailOnlyIsAccepted/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "74b384772541975c1db0fb94315ea713759e015ee1c75012b358f7156e3d946b",
+        "mtime_ns": "1794191964662315375"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterEmailOnlyIsAccepted/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "3a0702d18adb1831ff7752d26cf5d0676eb3a911ec40e3859005bb75fafcc1cc",
+        "mtime_ns": "1794191964516264467"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterEmailOnlyIsAccepted/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "e199f3e2cb04583b55f888cd5a84c8b89038da0b122c8c8c9e083e8028a22ce8",
+        "mtime_ns": "1794191964479264578"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterInvalidEmailBlocksHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "0a94468aecf85f9587ad10b1850e33c544895aa8d28830610e945fc8f4cc8853",
+        "mtime_ns": "1794191922104430640"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterInvalidEmailBlocksHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "02f3685d9ab880537b9c3feb741d4e527c869b6511ed5c09804203a2238e1fa3",
+        "mtime_ns": "1794191921984371865"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterInvalidEmailBlocksHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "2031d36d8556caef0b51f05ea483f5cbca95a220f6232f06cc70f19c22461834",
+        "mtime_ns": "1794191921944371943"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterInvalidPhoneBlocksHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e9fbd2a9ce2ebb06e64704e4441051cb1054a45043132ed64f3f9c0b4c0cc7f5",
+        "mtime_ns": "1794191930598970248"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterInvalidPhoneBlocksHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a25eaf3f6f2556ee2db6d4a998c8ffe6da9d830ace8b351e03790212bcc957e9",
+        "mtime_ns": "1794191930525355383"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterInvalidPhoneBlocksHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "4ed6545363824c355e3d6056e73d44183d6f80bbe5859b5faf4ebbc28c1239fa",
+        "mtime_ns": "1794191930508355416"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterMismatchBlocksHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "9ce62a4666870f34e03f744edc50e7c340b371577e49aa82552da9075e179c51",
+        "mtime_ns": "1794191896654538053"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterMismatchBlocksHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "6c73699bc5f1001978cd734bc650a15708306fabfd94b10cae05e7fe995d32c1",
+        "mtime_ns": "1794191896471421100"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterMismatchBlocksHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "f1d461b5d5365be3b3e9400ecbab9b78d93a35470ec5f9985146d5ef6b93f775",
+        "mtime_ns": "1794191896420421198"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterMissingContactBlocksHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "7eb1849a2a9c43eb12fad64fc956556c2fa294f25832e7c73050ca9115c12f5e",
+        "mtime_ns": "1794191939120412282"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterMissingContactBlocksHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "6361e85ce674a426752df9543c78744d338fa88ee274aad47ba2150f18113489",
+        "mtime_ns": "1794191938969339088"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterMissingContactBlocksHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "08f7ab628236da573336351c65a7f67a2826ee83304b29638156ce3818567ccb",
+        "mtime_ns": "1794191938937339150"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterPhoneOnlyIsAccepted/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "2b4b986a5b2b9e5473d71b75f0e0b78a7f80e1297a0b0f85a54df16d88ab61ab",
+        "mtime_ns": "1794191973117638186"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterPhoneOnlyIsAccepted/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "5aa160989cff937f672f489069ea5acd7123ca6d71458ebab9cc10b0a718327e",
+        "mtime_ns": "1794191973044238769"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterPhoneOnlyIsAccepted/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "08631e67566040ea3793880f8ffbf1157a4ba47e89fbf3ed0080563bbe92a0a2",
+        "mtime_ns": "1794191972990238932"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterTooLongNameBlocksHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fb28e02b624b979c393f306c502cb97ac57c9511799fa105c7ba9b4faf239ae6",
+        "mtime_ns": "1794191956080289887"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterTooLongNameBlocksHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "5c22192b01b81f48458d669f08c9902067fd75008ffd1ec1384f7c29203b23de",
+        "mtime_ns": "1794191955949290281"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterTooLongNameBlocksHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "a1a63b8ff5932bab314e1f635d392adb13713f25d7c733b51dc2a675f0b801b0",
+        "mtime_ns": "1794191955897290438"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterUncheckedTermsBlocksHttp/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "bb210275207e78f3086681c8a11347634ca14194bd938a0174fb6ca01c47745b",
+        "mtime_ns": "1794191905400986221"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterUncheckedTermsBlocksHttp/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "d15a0f731e1e156f5b7e865359d2e160c048c94fe994dc1192033f7a40321405",
+        "mtime_ns": "1794191905281404098"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRegisterUncheckedTermsBlocksHttp/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1657de0f316d8ace7a18301b652f47abce80febb878417fe682de3c665d018e8",
+        "mtime_ns": "1794191905261404137"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRepositoryRegistrationUsesProductionLifecycle/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "b45171be291aa1343638037e5d331d8b47f38f2d974ee106fa906d7f1290a414",
+        "mtime_ns": "1794192062582519637"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRepositoryRegistrationUsesProductionLifecycle/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "c1a77a120c4cfd33f4f2e1d92a31e8a7ba218cbd398c94201c14add683b52a44",
+        "mtime_ns": "1794192062444969379"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authRepositoryRegistrationUsesProductionLifecycle/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "e4bd9c77fee21c174e9d6ae41871b9a2ccb6639c15007c6945cbaa32d4a6709c",
+        "mtime_ns": "1794192062406969494"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authSavedSessionSurvivesProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "c7c104b5dff4d53bf0d394640d614430481fd2ba703ce535e163fc9177f9abe5",
+        "mtime_ns": "1794192106355939315"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authSavedSessionSurvivesProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "18a57f1862e4391f954ab045242e08859a113c18be12289730cb95afe11e4824",
+        "mtime_ns": "1794192106251945394"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authSavedSessionSurvivesProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "69c2982b89d5ae2c51465d765c3ec31db63fd3ed5979cd6cf37c912019b0ea77",
+        "mtime_ns": "1794192106215945389"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authSyntheticCredentialCallbackHasNoCloud/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "90ccadf01907bb13fc1a6644e99f7b9c548cf24b58a4c6c3a1f3b6bcbef0ea26",
+        "mtime_ns": "1794192053631378356"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authSyntheticCredentialCallbackHasNoCloud/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "b401b7ff8c805008d98461addf09c1e7c90026168f0326f167aaabbd74bf835d",
+        "mtime_ns": "1794192053438996517"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/authSyntheticCredentialCallbackHasNoCloud/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "7348754bf4eee3fa952668b63b35e0b00d2cbdd4a9b7ad21f022b746d18f5e30",
+        "mtime_ns": "1794192053415996586"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/build.log",
+      "before": null,
+      "after": {
+        "sha256": "deb335a941b1056057511cd2e409572080f575f47a50b7b123c70970d2845e46",
+        "mtime_ns": "1794191793821455156"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/cancelledOldRequestCannotClearNewSession/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "0776b0cdf4715044ac6604bf3fca417a56d344dee8e2a60d85597eb02538d176",
+        "mtime_ns": "1794192263756746358"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/cancelledOldRequestCannotClearNewSession/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "9bcc0512e671c51a7066d7231d06c673c9653a9fda10d32241c488d985958d22",
+        "mtime_ns": "1794192263516849193"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/cancelledOldRequestCannotClearNewSession/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "6ea79f4ac9fdcc42a9322614ba6d6884a2df9f880537c0c180a46a87cc038c37",
+        "mtime_ns": "1794192263498849231"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/cleanupFailureIsObservableAndPreventsAnotherAdapterSignIn/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "1675c9f5871a23d23ce4f11e34f09932d913b89ee56713c8f24137c996403f78",
+        "mtime_ns": "1794192299900269833"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/cleanupFailureIsObservableAndPreventsAnotherAdapterSignIn/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "4c5ba92493f2e11825c296101d37687ae2961211119ad100a5e7840717e9a6a1",
+        "mtime_ns": "1794192299827666252"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/cleanupFailureIsObservableAndPreventsAnotherAdapterSignIn/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "7517b0f4e73a15098f991edea446c502443d2e5a1e0379075c75b7afb6e90716",
+        "mtime_ns": "1794192299822666278"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/compiled-policy.txt",
+      "before": null,
+      "after": {
+        "sha256": "144a411901dddbd7b87e5f89c16f84ab7018ddf14aa8ff8ed5696fb4797d5733",
+        "mtime_ns": "1794191794893068276"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/failedDurableStorageNeverExposesAuthenticated/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "10d94e70d75742041d5fb38d9c7ef2c83b61153bb7141b5ceb85a81b47c095f5",
+        "mtime_ns": "1794192288172077835"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/failedDurableStorageNeverExposesAuthenticated/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "b1da3270d2f00b1f5c9e0efecefaf1a0322bdc0c24fe4e0f1f18a0eec31ffc7c",
+        "mtime_ns": "1794192287963728892"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/failedDurableStorageNeverExposesAuthenticated/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1179520800c289200d77a3cbbf1d6f5c00fedea1e9624e4555902facb89c0e91",
+        "mtime_ns": "1794192287946728981"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActivityRecreatePreservesAuthenticatedRouteAndVm/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "8dbe93468f9d408f21fac31938ab637c39784469a416969c93ae27929b1fcdbb",
+        "mtime_ns": "1794192370613153409"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActivityRecreatePreservesAuthenticatedRouteAndVm/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "ec654f39e721ba1946105509d49fa57ed4ec2b18810f63b6e9368510910632ca",
+        "mtime_ns": "1794192370551354338"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActivityRecreatePreservesAuthenticatedRouteAndVm/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "0fd21cdfaccec9a402f284a5c5056dfd865184ea21a705a878177b1a4ee25d6b",
+        "mtime_ns": "1794192370510354491"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualLoginHomeProfileLogoutClearsProtectedHistory/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "977bb9ccb9cd0c60e2fcba3000ba169789601eefa1218baec8f32216d8856c89",
+        "mtime_ns": "1794192332601406798"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualLoginHomeProfileLogoutClearsProtectedHistory/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "ccfe829d6760815e39f8525c949fb5e835243ed26343862914b454c7084ca3a4",
+        "mtime_ns": "1794192332392496652"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualLoginHomeProfileLogoutClearsProtectedHistory/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "b57b12447f04764180f7dfb5eda7412f3ae0aa03edadc9c3f5874974484029eb",
+        "mtime_ns": "1794192332356496786"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualMainStartupAndManifestHaveNoCloud/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d002a57b18a00206bbb5a42de47a026147cdea7febb001915d0ae59c9a65e869",
+        "mtime_ns": "1794192318005626184"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualMainStartupAndManifestHaveNoCloud/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "4f22e7cb741a7674a6e56c3b04247e531da6c6651f3317e42b67ab05b88295c7",
+        "mtime_ns": "1794192317757571584"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualMainStartupAndManifestHaveNoCloud/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "2c0c69ddfaff20be4acc3f00f720543600e4dee838d7a3e103aa420f912c93ac",
+        "mtime_ns": "1794192317704571864"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualRegisterNewAccountSelectsRoleThenHome/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "8b737131adf038796b737d87d768a047fda6787d23ca363b01623d288c580a41",
+        "mtime_ns": "1794192340368951309"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualRegisterNewAccountSelectsRoleThenHome/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "7abbf526f64692a5fdf11755ebc67fc6adb6637e83fcf3a75e40531cf3f2772a",
+        "mtime_ns": "1794192340315467103"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphActualRegisterNewAccountSelectsRoleThenHome/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "5b1d06a9e161ca163780af447135c465d889fbeb8df58ee31f5b4622fb6107f0",
+        "mtime_ns": "1794192340279467237"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphCredentialButtonUsesOnlyInjectedNoCloudLauncher/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a030a461e07d5f03f9a3c65cc024066d3c15c4eace10075116dbe849fa2eeff9",
+        "mtime_ns": "1794192474973788351"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphCredentialButtonUsesOnlyInjectedNoCloudLauncher/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "cea6e457af18aa5401b8501083eccbaecbc3a34e1f6e06517ef98ccea16bbfe4",
+        "mtime_ns": "1794192474863068889"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphCredentialButtonUsesOnlyInjectedNoCloudLauncher/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "422d61e0d222983f7894a8bb7357c6f47cb8accd3d7ded1fa7947dcae69a287f",
+        "mtime_ns": "1794192474831068967"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp401KeepsLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fd1f55220437a55457402d96bfe0afc0e0f5b14406a42ce6987cc0481f828147",
+        "mtime_ns": "1794192411900342461"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp401KeepsLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "ba001bd6dfc42e91fc511151e381f795f500d7c9c04afcfffd4e7a1d7743213d",
+        "mtime_ns": "1794192411741222342"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp401KeepsLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "d08cfa2b24cc36bf9503e4cdf228245b7acb7015e986d6609b179022d87b05a9",
+        "mtime_ns": "1794192411672222510"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp403KeepsLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "9af15b7543a3a069ef3586d75115cd00d2ba7be520f76c20fa88b2b9cd304f41",
+        "mtime_ns": "1794192419093194734"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp403KeepsLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "30d594a979c604e8c44b2ecc45e68c2bf60639f6971761705ee3b8945f4a558a",
+        "mtime_ns": "1794192418897204945"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp403KeepsLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "643163d2f87297e8db6a10efd87e8a0bf732787d5c48733f44b777a9ad9cb8dd",
+        "mtime_ns": "1794192418863205028"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp500KeepsLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "25ee4a1bd851c862fbd12f42cbbf0b2c087de56fca52628f83f7abc8b542c632",
+        "mtime_ns": "1794192426040365089"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp500KeepsLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a7df2b4621321086910f719826f366b058c130a18dc1d01e8531bc6beaedeb03",
+        "mtime_ns": "1794192425897187928"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphHttp500KeepsLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "8781cb582343f6172dbf3e017865b9f55d7cc3612d04ab2ccfab28bd33277b1e",
+        "mtime_ns": "1794192425866188003"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphLateLoginAfterLogoutCannotNavigateHome/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "f5328ed8373d55e20db2053535d847e7357bfa19959fa7c24812da8043c3473f",
+        "mtime_ns": "1794192454734251575"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphLateLoginAfterLogoutCannotNavigateHome/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "84ad5a2d4c9caa34a279d8a10ecded80525d4db5703c84a4ffc5f6880049b5b8",
+        "mtime_ns": "1794192454552118266"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphLateLoginAfterLogoutCannotNavigateHome/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "6afacb0535e22c973efef01b9a629b66662574698bd64d712f92183fe265fe57",
+        "mtime_ns": "1794192454510118368"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphMissingReverseKeepsLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "2f76b0dcb7dd0a52cd37a932d92b094b78450df272ccb08d50efbc0dbabbed7c",
+        "mtime_ns": "1794192447794352126"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphMissingReverseKeepsLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "e8580ce8a3c39f7d1094f31495492367c17fba72ea1c8ea6c0848282b062d4bf",
+        "mtime_ns": "1794192447591135189"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphMissingReverseKeepsLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "4a910338e58558707487c2427a2b9bc8ad7bdf93899fdae152707279c2a86c8e",
+        "mtime_ns": "1794192447528135342"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphOfflineKeepsLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "12a98334ebdb64102115ab019026c250d045d7dcbecaed48584c1cef57c7c1f3",
+        "mtime_ns": "1794192440919331834"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphOfflineKeepsLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "5778a37948404f5f43f72861137da9f24a99f165d229617c20f6eed14ee96103",
+        "mtime_ns": "1794192440778151751"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphOfflineKeepsLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1132b259233c1f2dd8e7867d29480167e131eddfdae97e181eb01b4052fcfa3b",
+        "mtime_ns": "1794192440725151880"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphOnboardingLoginRegisterBackStackUsesActualCallbacks/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "cf7030f75d2c5d2c9cddcdf66cefb66db5932d52e5b0ce0a5c616da1582139d5",
+        "mtime_ns": "1794192324987758750"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphOnboardingLoginRegisterBackStackUsesActualCallbacks/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "473c73bc8cf84e378fd5a840c5fc5c0cc294e10bd3db2608c78432a0af66d317",
+        "mtime_ns": "1794192324773534541"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphOnboardingLoginRegisterBackStackUsesActualCallbacks/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "375e2c8ddbc7a77e7b35b13b88fee2887fd1ab0b55be0265e67da54f15908aa9",
+        "mtime_ns": "1794192324754534641"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphPrepareExpiredSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "58e4f593a76064a398c1fbb92185394effb0176d69f306c223ad87074b80c188",
+        "mtime_ns": "1794192398542254429"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphPrepareExpiredSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "4e305c8bd02ded9c6bec70ae437a700b30260f345220dbb4faa258f6e09fc22e",
+        "mtime_ns": "1794192398393254791"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphPrepareExpiredSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "44a06474e77e88c5353413039bb41227c1d47715090cfc117de8f71ddb1729eb",
+        "mtime_ns": "1794192398360254872"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphPrepareSavedSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "50579e4ec74500597e7622fc93a701c4f1b435b0d94ee22c05356f3c669ab309",
+        "mtime_ns": "1794192384576258956"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphPrepareSavedSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "f8cd94d1fbd89d1da0c26cc429790d31c3583b48a524297c3eede45020916f61",
+        "mtime_ns": "1794192384499302319"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphPrepareSavedSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "a77c89f0e00c51d0fdf808746a8874854ee074b106e63a7fc3d91347acfa7581",
+        "mtime_ns": "1794192384471302423"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphProtectedRouteCannotRenderWithoutSession/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "b663f2750a3bfb3401f7bcdbf39399447f655b5dee38352114ffba2ef80a5cdf",
+        "mtime_ns": "1794192461278868653"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphProtectedRouteCannotRenderWithoutSession/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "49dce80eb2a0ad20e9a2e874b411bdc48e2c29fba78bb38ff07bcd3942e47277",
+        "mtime_ns": "1794192461214102070"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphProtectedRouteCannotRenderWithoutSession/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "7b0c53575b1c61a66c1fb5aac27c29a77ed29954d1b7e12769d39b88847d7bae",
+        "mtime_ns": "1794192461180102153"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphRefreshRejectedReturnsLoginAndClearsRouting/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "b3a3a984630ae9996ba5cc1976cc2bbe833ec224ba63c781d8ffe8b726e793e6",
+        "mtime_ns": "1794192363173370758"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphRefreshRejectedReturnsLoginAndClearsRouting/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "305931b5fe5cdd3ccec59c3577148f1640d41fa222228eb742530c548cb7e8f0",
+        "mtime_ns": "1794192363083382190"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphRefreshRejectedReturnsLoginAndClearsRouting/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "fd26d9e48ba0c7f14a707b9ba95b4ea0a9a900fc356f56d3ec218fc71801e168",
+        "mtime_ns": "1794192363030382387"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphRestartAfterExpiryNeverRestoresProtectedRoute/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d0e977f95af2dacab9ce58c372f8062e691d7cbaa84512ee2bc1850a76e786df",
+        "mtime_ns": "1794192404717372764"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphRestartAfterExpiryNeverRestoresProtectedRoute/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "ae0c852f7d8e4515fee87c3257f1c7badf93751db19910cc2383f16d34a8214b",
+        "mtime_ns": "1794192404625239641"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphRestartAfterExpiryNeverRestoresProtectedRoute/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "d1917301b54a8481bd65479637faca7a48041156dfea31c66738bedb316f58de",
+        "mtime_ns": "1794192404591239724"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSavedSessionSurvivesProcessRestartThroughActualSplashGraph/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "447581a4660483511d79bf3ba6def31629df3fc249379952f68e27560b61b106",
+        "mtime_ns": "1794192390976313767"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSavedSessionSurvivesProcessRestartThroughActualSplashGraph/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "43485eeb148529a9f0e604089ce89453472b98f99ab2e01942cdbe7c959ea4cf",
+        "mtime_ns": "1794192390821278741"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSavedSessionSurvivesProcessRestartThroughActualSplashGraph/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "b750532989d0a6e698f9424fdb2876679ef4687039356290cfb54eb5d26f26c7",
+        "mtime_ns": "1794192390802278812"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSessionExpiryClearsNestedBackStackToLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "499fb1c81495d4e6ac28bbbcece9fe3eca35b57cb26acbbd677fd626ae0f5183",
+        "mtime_ns": "1794192356208240486"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSessionExpiryClearsNestedBackStackToLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "97d9ce85311d73bbf251474e15f0ef08e5152f6065048c769d43c81fb34887f8",
+        "mtime_ns": "1794192356052408412"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSessionExpiryClearsNestedBackStackToLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "b31d96e307cbc2efabe9dd38b1ed5e0fd162d6b204d9abee76b302cdce63e5ef",
+        "mtime_ns": "1794192356016408546"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSettingsAboutActualUiBackThenLogout/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d84194445efb7abc3062deba367b135f16749d8133f9003ad301e6ffe191a279",
+        "mtime_ns": "1794192348716747246"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSettingsAboutActualUiBackThenLogout/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "52933e2ab4c674106944e018cb0d61a0d644b316ac21f4c875a94a4fd054643f",
+        "mtime_ns": "1794192348655435999"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSettingsAboutActualUiBackThenLogout/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "7b5c9aaf0b7a2306900a5de6a5a246c5f9427691a6816eb0be0e4bb50e8411f2",
+        "mtime_ns": "1794192348638436062"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSocketTimeoutKeepsLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "6db765e4de6384a5775842080179fd0d0769370e85dd6943a4e1f4cda97f6dd2",
+        "mtime_ns": "1794192434139551347"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSocketTimeoutKeepsLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "b4bcfbca81f8221f9aba9ff3415188c77562fec1bdd6512acc7fc47722e6c593",
+        "mtime_ns": "1794192433930168399"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphSocketTimeoutKeepsLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "601a08abb2b8ef6359da504a641f2d5a82db78bb71802acf6a1b89ca3d4c0ee4",
+        "mtime_ns": "1794192433911168445"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphUnauthenticatedRecreateKeepsRegisterHistory/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "07e2f5ff49daf7b69f14c5e831894e3e689a9fa6e50eedf927146372ca1447e4",
+        "mtime_ns": "1794192377788377198"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphUnauthenticatedRecreateKeepsRegisterHistory/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "3ea477de1209c767ba04fed372b57ede4c1d29792f5f9423b27e8ae95908d202",
+        "mtime_ns": "1794192377730327564"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphUnauthenticatedRecreateKeepsRegisterHistory/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "2616472035de9858b691b6c765ad53c3b848df509083d73bad4cf11f09b3e8ae",
+        "mtime_ns": "1794192377713327627"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphUnavailableMapSosRescueAreOnlyGraphRoutingCoverage/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fa2c5edfaae6dd606e27af4767c1d0e28ada7929dac251d0d80144ef7466f75d",
+        "mtime_ns": "1794192468798943781"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphUnavailableMapSosRescueAreOnlyGraphRoutingCoverage/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "232045d9223402543a3d401ea10d94d12f4414875a34863150e3cab0a9b0490c",
+        "mtime_ns": "1794192468593084132"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/graphUnavailableMapSosRescueAreOnlyGraphRoutingCoverage/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "82ebab5c5560690f51628334872f357a04b2df05d249532f2f3fb9dcbfb8312a",
+        "mtime_ns": "1794192468550084236"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateLoginAfterLogoutCannotSaveOrAuthenticate/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ed802d159361c8399bf088ad5de2390bb414d1ed00f7c9336ed45231ea8f5765",
+        "mtime_ns": "1794192236108983389"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateLoginAfterLogoutCannotSaveOrAuthenticate/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "31767a9e9967cb836930a31c340d6f4be1f1f9b22807c515f9e69826e25b0354",
+        "mtime_ns": "1794192235947906884"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateLoginAfterLogoutCannotSaveOrAuthenticate/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "bf4d0bdc051696c47e23a78a0de2b2814d4028522ff1f7690bc0780ded6468d8",
+        "mtime_ns": "1794192235948906881"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRefreshAfterLogoutCannotSave/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fe6004a72aafea89f3fc12bc29fca95a637a4a863ae7479a89f9af6b5f2dc11a",
+        "mtime_ns": "1794192240023533377"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRefreshAfterLogoutCannotSave/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "c0f701420ebc9c8124a5bd55e802053140a4759b220b2afed4c83ee352018ecf",
+        "mtime_ns": "1794192239949898509"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRefreshAfterLogoutCannotSave/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "c8de10ffffa01ec15a2dc9aeb50a5dea4f9863f3ea7a0fccf2e76570fedb32d9",
+        "mtime_ns": "1794192239934898540"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRestoreAfterLogoutCannotPublishUser/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "df14686b825551067d384fd28668f06bd5401cace8dff40ecfc5d7e863e258a0",
+        "mtime_ns": "1794192244092214114"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRestoreAfterLogoutCannotPublishUser/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a910bd3fda413e63e10a15ef9f419c69feaf525f0180ca14c3f870f34202909c",
+        "mtime_ns": "1794192243849890348"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRestoreAfterLogoutCannotPublishUser/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "b5c8165275fb927c9387153db4c2ed1ac387037703f5fe71f9f0e531b1e7b806",
+        "mtime_ns": "1794192243833890381"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRoleUpdateCannotRestoreLoggedOutUser/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "2d8fd3b7748b327937372807865dac8bb2d8dfc4658245223cf85dabc9163fc6",
+        "mtime_ns": "1794192308021246443"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRoleUpdateCannotRestoreLoggedOutUser/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "cfc261fdb8910019e68aa184eb17cac8b82cec593a707ac51cb6eb7cfd311371",
+        "mtime_ns": "1794192307812624092"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lateRoleUpdateCannotRestoreLoggedOutUser/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "6d8e777e028309dbcde75f22779ca6275e79609625daf674422071a6a3368abc",
+        "mtime_ns": "1794192307795624182"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycle-test-copy-hash.json",
+      "before": null,
+      "after": {
+        "sha256": "6ceff65357061dafef8c5194ef1eae5f0333439194cc676f0b740b695d7db446",
+        "mtime_ns": "1794191794815658877"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleAdapterThrowIsLocalLogoutAndRetryableUncertainty/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "5d3ca87bf879c074da093d3de48474b3821ef7c8573f2f3d194ddfca93447364",
+        "mtime_ns": "1794192162917536930"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleAdapterThrowIsLocalLogoutAndRetryableUncertainty/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "c59c9550e3853bd7de3cfdc279659fdc600423922cc771179739f7a0cc686205",
+        "mtime_ns": "1794192162820960876"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleAdapterThrowIsLocalLogoutAndRetryableUncertainty/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "0a8a26bc29b387a53352d074bae5567464e0dba59edea02ce1f3ccd890ba2370",
+        "mtime_ns": "1794192162787960862"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpDuplicateLoginLatestWins/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "509aa13b59294d0bf8a628df9402021a9e8dbc47185d0a723addc550721116ea",
+        "mtime_ns": "1794192130953262361"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpDuplicateLoginLatestWins/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "3285a07ff7be25e16102f6e8841b1c6c086d6c806eff50dae10d8b95f83c3a9a",
+        "mtime_ns": "1794192130848948624"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpDuplicateLoginLatestWins/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "3c9adbed23e03d3f784bb9ece00307bb15d07dbe1979ed0770b881b505646541",
+        "mtime_ns": "1794192130825948621"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpLoginAfterLogoutIsStale/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ab6c345ba963ead93fc993ed8617193465e2cc06259f4753de18c1ade526cbc8",
+        "mtime_ns": "1794192112221305300"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpLoginAfterLogoutIsStale/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "9cde36bf7fd608587315c93b71fa6f3d25f69b64652d81859a845e307f423d0c",
+        "mtime_ns": "1794192112065946157"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpLoginAfterLogoutIsStale/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "73ced1a60ccf21df2d1ac86b001985ce6598788773a9fa71ec39e14d361169f1",
+        "mtime_ns": "1794192112043946155"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpOldRefreshCannotReplaceNewLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ec607c0759ad734713c9e07da65d2161f2e3466950664bcf3656453339210a6f",
+        "mtime_ns": "1794192143358487677"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpOldRefreshCannotReplaceNewLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "fa5301e61b63f1129c5ac35e852da50f8191eda75b6c5d44228cf2460e18c420",
+        "mtime_ns": "1794192143124952127"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpOldRefreshCannotReplaceNewLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "c8797ae4ea86c0c318aa33d40a57a3af0e71a624fe5bd2128f96faab50d3c6d1",
+        "mtime_ns": "1794192143101952117"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpRefreshAfterLogoutCannotWriteTokens/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "4499d9a2aed17383e9f61b2cc8c13791bfbe0a61457320095bdd79370795e886",
+        "mtime_ns": "1794192118756334128"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpRefreshAfterLogoutCannotWriteTokens/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "2e9b7bcad118f565df3eaa05cbf48142bbbf29e47f8f5b08e6145343882b9d52",
+        "mtime_ns": "1794192118670947025"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpRefreshAfterLogoutCannotWriteTokens/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "af90f7d3b7c3b71b1e903abdfa51c6c3275a7af698a1462ad0cb662cb5f641f6",
+        "mtime_ns": "1794192118629947019"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpRestoreAfterLogoutCannotPublishUser/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "7102eec58b426fac83259f29b0f03911ab9ac55db55142b2e824fd1d08232157",
+        "mtime_ns": "1794192125115727518"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpRestoreAfterLogoutCannotPublishUser/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "c55ef32805ef191bdb6185c430c01ebaa4a755349069dbaa4393b13de7b31a15",
+        "mtime_ns": "1794192125042947862"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpRestoreAfterLogoutCannotPublishUser/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "7da31f365c1f14a431bde8bfd8b31e08b6a25a084fff56640bf1df1c76d43c5c",
+        "mtime_ns": "1794192125011947858"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpStaleFailureCannotReplaceLatestSuccess/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "f233b600fb71187663c2e6531f4d673e4454722fcc190de76287cbc572ddcfad",
+        "mtime_ns": "1794192136878678920"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpStaleFailureCannotReplaceLatestSuccess/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "d481c92cd9535d489399d49a942305190c8a730e959678877c83914eee1607fa",
+        "mtime_ns": "1794192136733949397"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleHttpStaleFailureCannotReplaceLatestSuccess/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "163698f11c5e9a751cddd377b0138b560ad17e7ed2b2a7e0b60a54e8c80209fd",
+        "mtime_ns": "1794192136681949390"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecyclePrepareExpiredSessionForRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fdc764d48106fd5eae215bdb9a88b098fec8d17b529f6e24c7d2dd08be04d4f3",
+        "mtime_ns": "1794192175492803658"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecyclePrepareExpiredSessionForRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "e97cd33e620c2096073112a0f6766e3d4a6fdd4be8616b77d80b26666d1f2901",
+        "mtime_ns": "1794192175386966458"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecyclePrepareExpiredSessionForRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "85f8488c37f10da528df82cfbe54d89d4d2bf5053b04070b4680ae9007c63188",
+        "mtime_ns": "1794192175366966449"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleRefreshRejectionCleansNoCloudAdapter/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "8d5c4f4e8dc8d30682b69b5935bc8149c3bc5a57738ac9021ccb114bbcebaf3f",
+        "mtime_ns": "1794192169231560230"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleRefreshRejectionCleansNoCloudAdapter/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "7b07b737657a9990f27670624d3dda1dbca90992abb8632c6af89a419ae0b216",
+        "mtime_ns": "1794192169182963702"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleRefreshRejectionCleansNoCloudAdapter/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "f2d4afcdb9e1c5fe5dc8813d97f5cf128c914f3af68a002ee67a5c42e0cc689c",
+        "mtime_ns": "1794192169142963684"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleRestartAfterExpiryRemainsUnauthenticated/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e1282d5b2dda0a7212360b6c81070b9dae98ef4ba71ded834fead5caf7a02ce6",
+        "mtime_ns": "1794192181450285367"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleRestartAfterExpiryRemainsUnauthenticated/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "294f7ef374b6d93b20b07dc1146b4fbd6784de09a2c669511391048327aa2399",
+        "mtime_ns": "1794192181202969042"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleRestartAfterExpiryRemainsUnauthenticated/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "207266599eb29b83ed89961438782831d5abe89a17291bf65b6219f86ce8560a",
+        "mtime_ns": "1794192181162969024"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleViewModelClearRevokesActualPendingLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "4f2f89a43893630c17f9358fc15e6ccc48bec6ccd8591ec7076d08052a9eb55d",
+        "mtime_ns": "1794192156620030093"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleViewModelClearRevokesActualPendingLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "cf5673066b182390ad055839402a62aa17e1ffcf681953e3a34a59b94b9a64b9",
+        "mtime_ns": "1794192156458958050"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleViewModelClearRevokesActualPendingLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "4da632df004c66677d30d1d7a7048fead98e547f1588896a1520f75bc0b3b79e",
+        "mtime_ns": "1794192156410958029"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleViewModelLogoutWinsActualSlowNetworkLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ff27f4170183454fd76172284d19ddc1f6c63175f2392d28796721f348fd2e53",
+        "mtime_ns": "1794192149515194035"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleViewModelLogoutWinsActualSlowNetworkLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "5a631500ac467bed94a540cc6c6e5e09a82e3f8841fc8bbef7e36a1e45791237",
+        "mtime_ns": "1794192149420954924"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/lifecycleViewModelLogoutWinsActualSlowNetworkLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "6b3f3115c2377f8d179950ec8503825e3425e15cc4985c6e1201103ea7c1e524",
+        "mtime_ns": "1794192149383954908"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/logoutPublishesUnauthenticatedEvenWhenAdapterThrows/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "0518061a843cd11a27ee667f4e7da3e2232a1da7dba0bbecb624daae27d5cc8c",
+        "mtime_ns": "1794192267868770437"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/logoutPublishesUnauthenticatedEvenWhenAdapterThrows/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "f60112e23d35bf6a0b9b1be348025273ae7d56586174505c93b01792647340ff",
+        "mtime_ns": "1794192267668836046"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/logoutPublishesUnauthenticatedEvenWhenAdapterThrows/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "92b293a93a2b67a916ac984b7f301e3f8fb50b3220c4a1f380d8a970f7883b7f",
+        "mtime_ns": "1794192267660836088"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/missingSavedTokenCleansOldAdapterSession/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "3281854afba7de3c32db094a5da63384d61aab9b147a29389ddf0a9f4b1afc67",
+        "mtime_ns": "1794192275898752389"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/missingSavedTokenCleansOldAdapterSession/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "bfdba891f78dc8d137958e8af4467bdb59d3c42f10b682290c5a19a19638b130",
+        "mtime_ns": "1794192275767793285"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/missingSavedTokenCleansOldAdapterSession/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "dc99cfb0cb7b6a1620ea6e7713c7463326eb6d7398a324c793f757d730c396a5",
+        "mtime_ns": "1794192275760793321"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/newerAccountWaitsForStaleAdapterCompensation/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "b5a3346a62116d737c36a51428bc466203244018f8b7964515a701e86969505b",
+        "mtime_ns": "1794192312106001745"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/newerAccountWaitsForStaleAdapterCompensation/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "edc28e4915e38c96419639c3189bb43b63bcc7514c53826be26a3dd2a1364f2e",
+        "mtime_ns": "1794192311848602783"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/newerAccountWaitsForStaleAdapterCompensation/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "e8d101c8e3ea464019731cf42d5b275706f610e28ddc36e2f72d30f350c758ad",
+        "mtime_ns": "1794192311836602846"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/newestLoginWinsReverseCompletionOrder/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "63fe3def54f9d4761b4a3ef6cde3dc318298b778149f78973f0133b01e69742a",
+        "mtime_ns": "1794192248014700798"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/newestLoginWinsReverseCompletionOrder/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a2dc7c63aeba81a29ff0f511255b210893260e03015a0df7bc44035661ecf624",
+        "mtime_ns": "1794192247950881766"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/newestLoginWinsReverseCompletionOrder/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "15fa1dbf6aa2b9a1a414636b348f94bbad9e1e258c9a740c3fd0e4d9956f5e06",
+        "mtime_ns": "1794192247924881821"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/nonCooperativeCancelledLoginCannotCommit/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "283f958d202d6ae25c44648437b19293aedb748d010f4b28d92d284c14bf2e8f",
+        "mtime_ns": "1794192259768353310"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/nonCooperativeCancelledLoginCannotCommit/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "fb6e227691930fe70787e4c2c96036de9b2114af54fd2d76490d0fc5a331f2de",
+        "mtime_ns": "1794192259527857541"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/nonCooperativeCancelledLoginCannotCommit/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "e3cd503cf72d015adfb023e65aa561b981c0714a4ba6fd32bc2c18f50d9e1611",
+        "mtime_ns": "1794192259517857562"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationActivityRecreationStaysInActualGraph/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "d6759351175707a30ead71e80bd808f202930a25eb843db022a2b375ac54511a",
+        "mtime_ns": "1794193053578184785"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationActivityRecreationStaysInActualGraph/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a2960c5b881e5726ae7c636c95b6b79c8471e620e974581c48ace230b44e0302",
+        "mtime_ns": "1794193053461703938"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationActivityRecreationStaysInActualGraph/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "13e5ca73673b2fc2758249c4af1c571f4114444931cb9031f72604e704eddb86",
+        "mtime_ns": "1794193053427703954"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationActualHomeCallbackRendersStaticRows/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a1f6dc29e6f09a309a83dace7da803c9a17e846a4c3aeaccca8a4dbad1452ccf",
+        "mtime_ns": "1794193006577148767"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationActualHomeCallbackRendersStaticRows/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "21ca60d93813139dbc6f9196211196e298e77209ee45dc3102ddca055e0599a1",
+        "mtime_ns": "1794193006449695779"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationActualHomeCallbackRendersStaticRows/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "eaf74a56a22c39c4b6d071c26385ab99a9d2c39e7893e3cd560697149a40dfb4",
+        "mtime_ns": "1794193006414695764"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationAfterExpiredProcessRestartCannotRestoreRows/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "2c1451769991e8c528fca14cbc7c07200f124158d044a4d94dbf93ef67fa34f7",
+        "mtime_ns": "1794193113461475235"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationAfterExpiredProcessRestartCannotRestoreRows/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "c183bb2ede80b0ac76f842c0418a9c4a009222269e73a334ebaa3579e04b8d38",
+        "mtime_ns": "1794193113221676623"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationAfterExpiredProcessRestartCannotRestoreRows/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "3779f228eb33990abe3e99e46e6de8724edafe70d94db53e72d22f5fa8b11689",
+        "mtime_ns": "1794193113195676635"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationBackReturnsHomeAndBottomProfileUsesActualGraph/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "740595d8e16473f3bb0a578345ed9b5460fc5e777adcfe98df721ce03bb9927e",
+        "mtime_ns": "1794193042306140985"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationBackReturnsHomeAndBottomProfileUsesActualGraph/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "eba144b742698e74c52182074b0eef78adb55e0218790d0df983d27d0ded600f",
+        "mtime_ns": "1794193042062709148"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationBackReturnsHomeAndBottomProfileUsesActualGraph/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "76eb0d9ff741baecf9751e205e1564ac3ffa5b6d80e9137879e8cd52c1952e0a",
+        "mtime_ns": "1794193042005709175"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationLocalRowsRemainDemoWhileOffline/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a19dc6f21a9cd141c17111f7f02253fce13e74b82f54df68ff8e41cfa0224207",
+        "mtime_ns": "1794193063911165212"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationLocalRowsRemainDemoWhileOffline/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "3b248ca28f037911bd612954683dd10698ab998dda2d1b04358334fc62b71c04",
+        "mtime_ns": "1794193063749699236"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationLocalRowsRemainDemoWhileOffline/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "14ab299ee36ba761a3eb9f793687b65c8f65e7082f4b48de411f84b1397af4ab",
+        "mtime_ns": "1794193063723699248"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationPrepareExpiredSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fc3eecf863159196c3b65dbe502bab3138dfb64df63de25804d35db8f4b3e70b",
+        "mtime_ns": "1794193105547680131"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationPrepareExpiredSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "542edf9e5a9bf3faca88141912a623539016e9e9b863570a4d9d18305de41d09",
+        "mtime_ns": "1794193105375680209"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationPrepareExpiredSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "3506fe369c68bedd1144db2d598bf8a7b75f3a872a2aecd8bf07ebe1ebd529f3",
+        "mtime_ns": "1794193105345680223"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationScrollsToExistingLastStaticRecord/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "ba9c695c4c675d4a4b9073d2bd36e9ff11bbbeccc7eba99d508420fd59022568",
+        "mtime_ns": "1794193029210848611"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationScrollsToExistingLastStaticRecord/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "97c1af221128a33603c13382b8080a4b2c2d2c2a8746c6c46c283941e42f5dee",
+        "mtime_ns": "1794193029137705047"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationScrollsToExistingLastStaticRecord/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "04aae0980b9d62c4d87f7e8a5382a60e27da11223cdd2edd1daa06185bd900a2",
+        "mtime_ns": "1794193029112705037"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationSessionExpiryCannotRestoreProtectedRoute/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "99b1b98c02e10f935b1a3d780dded62890f21018097deeea49463066205a5155",
+        "mtime_ns": "1794193076002187604"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationSessionExpiryCannotRestoreProtectedRoute/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "054a43dd334877a33ecfbe747362d93eede2b4c4510212461c05e5c628164802",
+        "mtime_ns": "1794193075932693667"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationSessionExpiryCannotRestoreProtectedRoute/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "385830c19261ed99cfca6e8c963e46939379df9fd9e46b96088a248f4c08cbba",
+        "mtime_ns": "1794193075901693682"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationTabsOnlyChangeSelectionKnownLimitation/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "259961fb6e60fa449c835524e6bedf88d7f7b4b2d89ec1883c948a7790de5399",
+        "mtime_ns": "1794193017018221703"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationTabsOnlyChangeSelectionKnownLimitation/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "ce3aeff938f2cf4b006ff2850547cc8effb45f90eb5cae0f643948c9437332f0",
+        "mtime_ns": "1794193016835700022"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/notificationTabsOnlyChangeSelectionKnownLimitation/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "8988fc96da24ab17f26b7bc39d7aef5066c1128ad1de71b048eea39a7fde058c",
+        "mtime_ns": "1794193016813700013"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/oldRefreshCannotOverwriteNewLogin/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a6fdcfb339caa6a7a51e20cb45dcbb30e096a5f96ff2b8df01a17cdae271bf6a",
+        "mtime_ns": "1794192255721733719"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/oldRefreshCannotOverwriteNewLogin/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "bb5804eff5ab56920e5e1ab0d0b1af599aefe66a35c1211704eeed3e7f4a4145",
+        "mtime_ns": "1794192255667865618"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/oldRefreshCannotOverwriteNewLogin/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "fe21d93b4fe206706f4b14d9fec634c74de498024f9e1c9417a55888a3eecf35",
+        "mtime_ns": "1794192255652865649"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/owned-package-uid-proof.json",
+      "before": null,
+      "after": {
+        "sha256": "15c66afd5be557d0108c3793b9118d0fd5d4f8e1b20a1b2186689489eb2c2a11",
+        "mtime_ns": "1794191807122562202"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/pendingAdapterSignInCannotSurviveLogout/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fd8e91092e9871d983be60a3818bd1f1eec459fba82bb7a3a84c6d4a5514eb71",
+        "mtime_ns": "1794192284101456044"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/pendingAdapterSignInCannotSurviveLogout/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "0e7fd952816fc47c139884d38ef9717a3541a4fb6b2fdb45545509f4b81e9efc",
+        "mtime_ns": "1794192283838750671"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/pendingAdapterSignInCannotSurviveLogout/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "2c8fe4e427af90dc8a8353ae5b83296820de6bf8aa688ab9ed79fa3d0a7631d6",
+        "mtime_ns": "1794192283823750750"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/productionRegisterUsesActualApiClientAgainstSyntheticFixtureThenLogoutClearsRouting/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "3a62548d79ef49e4c7726569e2574a6a8f6f0605fad1aa5eb8fb766be8e56385",
+        "mtime_ns": "1794191825485965315"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/productionRegisterUsesActualApiClientAgainstSyntheticFixtureThenLogoutClearsRouting/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "a00c64ba0774caf2c7b33db64001aa614b4f414c4116f35dfb1e0e6ce7f11998",
+        "mtime_ns": "1794191825345456713"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/productionRegisterUsesActualApiClientAgainstSyntheticFixtureThenLogoutClearsRouting/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "501f9569b124901a912ba49d48d50d9b900086454dfd3ef624d39f04591f9cc3",
+        "mtime_ns": "1794191825316456711"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/refreshErrorsNeverRetainAdapterSession/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "6252d80bf5c1c2eddef1dd0a71ee5b5cc07e3f3e59253a85603816c4a50de81b",
+        "mtime_ns": "1794192296034488750"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/refreshErrorsNeverRetainAdapterSession/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "6a4cc3cd732a114c8541873165a7c82f61299725eea07eae554650eb46463dbf",
+        "mtime_ns": "1794192295923686864"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/refreshErrorsNeverRetainAdapterSession/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "1d28375ab401f239c44f8795c6739d7a995cf5f7075224b10bf10abe909696ec",
+        "mtime_ns": "1794192295915686906"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/refreshRejectedCleansAdapterAndStorage/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "27d06909f4b0568d84b9ad93348d2a29c51e06314e9c3418a72a8eb6fd90b90e",
+        "mtime_ns": "1794192272001268456"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/refreshRejectedCleansAdapterAndStorage/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "39bcb6360050d2f425ed25188197b7f5b85399c18a2e438dcdd3c7862fb69869",
+        "mtime_ns": "1794192271775814362"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/refreshRejectedCleansAdapterAndStorage/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "e6b01066e609a72ed840bd962c8a043fe0368aa811395b8cda92a4e272c1c9cf",
+        "mtime_ns": "1794192271764814420"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/repeatedLogoutIsSafeAndRetriesCleanup/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "87ffefad54fa6b3b7b242413702ff89e8c731f99c1b7807d68da270a81e0d100",
+        "mtime_ns": "1794192280018814500"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/repeatedLogoutIsSafeAndRetriesCleanup/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "34b76c80f21a064d38a61a7acad3809d819bd5c1ebf38252040885f39eb7fc55",
+        "mtime_ns": "1794192279793772028"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/repeatedLogoutIsSafeAndRetriesCleanup/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "82a08ec74fa93af241483c8cd3939693bc9f3855a977ed6be7436e80b2fb51f9",
+        "mtime_ns": "1794192279787772060"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/results.json",
+      "before": null,
+      "after": {
+        "sha256": "433ab52b535bc8863e849a4f4b5c5cc0aa1e5df05d145778347c59db1db44ef4",
+        "mtime_ns": "1794193115951004757"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/source-copy-hashes.json",
+      "before": null,
+      "after": {
+        "sha256": "656c1366e4089a960f6560c5741605dd84c5a90275133d52119b342511d28d32",
+        "mtime_ns": "1794191794893239255"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/staleFailureCannotOverwriteNewLoginSuccess/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "b2d41f2d4c124969ed854a256a2358093157167fa56be1ae8984c34ddf2956b0",
+        "mtime_ns": "1794192251855980205"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/staleFailureCannotOverwriteNewLoginSuccess/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "98603af8b04a24f95d5e5e94acd6001789654c982e462f6245bf9b061cdeb112",
+        "mtime_ns": "1794192251773873766"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/staleFailureCannotOverwriteNewLoginSuccess/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "229ec29df411663c6acbd2885a90e29c9b946a73594ec59d8e9a3e24f195702e",
+        "mtime_ns": "1794192251767873779"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/startup-origin-audit.json",
+      "before": null,
+      "after": {
+        "sha256": "3b62e46bb294c6f741ebe2c6da42f7f8030ed5f3eed43e052d7ebd584c82059a",
+        "mtime_ns": "1794191794813786649"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/syntheticSessionExpiryDoesNotRestoreRoutingOnRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "b4a9e8da9cbf34fc165242c233d41924754341d9a84b1fe503753a38eac3d538",
+        "mtime_ns": "1794191834808783614"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/syntheticSessionExpiryDoesNotRestoreRoutingOnRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "7d3bebee1539459f75853f7a7773cd42443a5aab185858f658640c7cf8a43a73",
+        "mtime_ns": "1794191834563457168"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/syntheticSessionExpiryDoesNotRestoreRoutingOnRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "bae70ccc9a88805361d26b5fd82bff129e472689da0932f691946d969bdc5e4b",
+        "mtime_ns": "1794191834540457167"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbActualPlatformNetworkPolicy/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "55803d74093233577ed8ae099de979a30c483263298a3a79005f845c2622f526",
+        "mtime_ns": "1794192187213141339"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbActualPlatformNetworkPolicy/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "2d0ea81d07bf8b22ed8a9462d33e912873c0d7d137681f25bdb512dbbd251060",
+        "mtime_ns": "1794192187096971660"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbActualPlatformNetworkPolicy/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "b5110d4aa28e1d59c4fe7b456a274fffd78b62f456962f95b0a73262ef7eb929",
+        "mtime_ns": "1794192187077971652"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbGraphCacheGenerationAndTamperDetection/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "89889f357136f6f920584dea8d607ed31f0f4d43f59d9ee6d1c196a7193693df",
+        "mtime_ns": "1794192202998133243"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbGraphCacheGenerationAndTamperDetection/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "4e8dbce321188c27458df0b2d0b25339fd52e12bbd9c45965750e615cfec1b24",
+        "mtime_ns": "1794192202838976167"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbGraphCacheGenerationAndTamperDetection/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "a420ce8dd2c30c747bdb0fe0ec01987dea44caea2cf99aa7f69c4941cf75d176",
+        "mtime_ns": "1794192202806976234"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbInvalidGraphRejected/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "28549fc16367c940540d009589d9f35d506e87c7eb72f3512f1c4056ced50ee5",
+        "mtime_ns": "1794192232315324843"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbInvalidGraphRejected/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "e36024cdd618c32b03224405a8050e006684101ef11c96a400f56c271636ee34",
+        "mtime_ns": "1794192232050915038"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbInvalidGraphRejected/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "174d96aa20f5dfe10cc1600068d023e089f2b411e025d81db9819762742130c0",
+        "mtime_ns": "1794192231964915218"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbLoopbackMarkerAndActivityRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e0607abd0755f467acd46b7343ba1043a4e891621a9fbc709c876efd5728494e",
+        "mtime_ns": "1794192209535872081"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbLoopbackMarkerAndActivityRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "54f7d9c5fc9690a7585d45b2cfc2b58b613f96c04b2ff19471b29e117d3d16bc",
+        "mtime_ns": "1794192209365962508"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbLoopbackMarkerAndActivityRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "35075caefe7333134411e60f6416aa0e6d8617ae80ccd36695ef1650c463f0f8",
+        "mtime_ns": "1794192209339962563"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbMissingReverseFailsClosed/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "73fce4327d594f95031609ebe6b91320f7fe8539c00a1fdaa27087882fa114d9",
+        "mtime_ns": "1794192215594572183"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbMissingReverseFailsClosed/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "0348cf0c54ea0730c392ab50968e8694acdfaacbd7952bdf13c2deebc53f0c3e",
+        "mtime_ns": "1794192215387949907"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbMissingReverseFailsClosed/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "68d9d0ad156375c62667039eecf615b81b58d7205b176e0af5722e47f070e6bc",
+        "mtime_ns": "1794192215359949966"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbResetConnectionFailsClosed/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "4c3c961bb985556531bfe2efa9a49f258e03ef095863aaa89f23f5be79616130",
+        "mtime_ns": "1794192223791803766"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbResetConnectionFailsClosed/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "b4fe07a5cd0acf6bc95a7959f33608a0d1b4ac70d032abeb62dd939793b14c9a",
+        "mtime_ns": "1794192223743932421"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbResetConnectionFailsClosed/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "8e5572aa2cae15dec10bd6131a01f185abc7813abf263ca29444dae224ff2677",
+        "mtime_ns": "1794192223716932478"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbSyntheticLoginApiSuccessAndFailure/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "23240a7e4a9de4b888542702be768d0a7763e6287f4764426beacd8463145c63",
+        "mtime_ns": "1794192194555441129"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbSyntheticLoginApiSuccessAndFailure/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "7c184b3f116e4b9c0d627edace334326854e3618363a7be98222d3822d991dfb",
+        "mtime_ns": "1794192194381974896"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/usbSyntheticLoginApiSuccessAndFailure/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "bdbc8220103ed430ef52b5194310e3ec619c679bbed01510424c1561d7aa72ed",
+        "mtime_ns": "1794192194351974883"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningAfterProcessRestartUsesExistingHomeRestore/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "eeaf348a75209ba0c7294c282cda962a5c1b6dda320672c4f8343dabb01fb529",
+        "mtime_ns": "1794193094376259716"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningAfterProcessRestartUsesExistingHomeRestore/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "f660bd827b18bcfece700f459499c52dcd3086a189fd536e0ec048454a3dce4a",
+        "mtime_ns": "1794193094284685279"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningAfterProcessRestartUsesExistingHomeRestore/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "a8f06707b7f18a8efb59338f8e5b4bbc3f0a09bcbfcee63d0f2dcb55fa3bde60",
+        "mtime_ns": "1794193094146685342"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningAllFilterRestoresList/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fa1cf57c86605ffe131d61ea71f919cbd870f8576c223b18b69ba0fc03a8e6f1",
+        "mtime_ns": "1794192792174567449"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningAllFilterRestoresList/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "6b4369cbb356903a3b07b6c386a7b7e9a49bfb79612df1eba17c3477ccfb1c25",
+        "mtime_ns": "1794192792014735471"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningAllFilterRestoresList/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "2ba84d3491525d9583a7219e9d170d7eb95d316e7c78cd539f6519961f6032f0",
+        "mtime_ns": "1794192791969735501"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDefaultStormDetailAndBackUseActualCallbacks/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "033c44ab12e4cf983ec4250a2f5005fa23a5ac3e4527a754b5f7f71513e5bcba",
+        "mtime_ns": "1794192805424286356"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDefaultStormDetailAndBackUseActualCallbacks/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "7d95fe1a6d523a5fdfe7845a789a8f5c1f2e3e1f9a653822eb1c32086d6da57b",
+        "mtime_ns": "1794192805315726633"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDefaultStormDetailAndBackUseActualCallbacks/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "0ba9f28235b28280e08764a6c39e31d126178bd1a13b3264ba4101ac1fb06d09",
+        "mtime_ns": "1794192805286726652"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDetailActivityRecreationPreservesTemplateRoute/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "93ead211bef6592c5894311a791b204d2cfb9227902291a83eb3f6e478fbad69",
+        "mtime_ns": "1794192971624541554"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDetailActivityRecreationPreservesTemplateRoute/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "9dee3871222a19ea098720381c1f7f86ae429d30913b976a83fadf2559eb4216",
+        "mtime_ns": "1794192971466681488"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDetailActivityRecreationPreservesTemplateRoute/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "3b4e96e1539a5be7457137487e27fc05681937da2619acc0a77d44ffd4f381d7",
+        "mtime_ns": "1794192971442681478"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDetailVideoPlaceholderRetainsSyntheticBanner/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "4e1e4158e0757f8cd2fec82b39a02c34f4253168b2030e75f24ab5d3e41be9cd",
+        "mtime_ns": "1794192936935132192"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDetailVideoPlaceholderRetainsSyntheticBanner/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "18ccaa83cbcf7a51b44716913c555c03d307f235ebceddc00ee432fce8a7fa74",
+        "mtime_ns": "1794192936689667280"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDetailVideoPlaceholderRetainsSyntheticBanner/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "a778d1988b0d31bf92d29580e4d74b0414186a2ce9a71d8cfeef51ded2a5ab30",
+        "mtime_ns": "1794192936669667272"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDuplicateIdsDisplayDistinctRecordsInInputOrder/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e0888c9048e8ce58ba498cc7f539b66eb08603e9a9a613d131d271dda422bc53",
+        "mtime_ns": "1794192901075055720"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDuplicateIdsDisplayDistinctRecordsInInputOrder/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "e4bc1d58f1218fbc2c0e7ce8a31a4c5c6f2d572b4f104f08ac9a6b7b47eb0ae7",
+        "mtime_ns": "1794192900805663181"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningDuplicateIdsDisplayDistinctRecordsInInputOrder/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "0859c33cdb58baaa83314786210906d209d86e8287e3276188d01f30ee30ab72",
+        "mtime_ns": "1794192900749663218"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningEmptyStateNeverImpliesNoRisk/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "efe3afed7104ea33380cc6a5ce696f89f46832d9f884d76f82f74dbc4bd58f61",
+        "mtime_ns": "1794192838616283373"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningEmptyStateNeverImpliesNoRisk/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "844253097c76027f973fe3d08acfa2c6d71d7ab295d48623226f9543b1dce7dd",
+        "mtime_ns": "1794192838360704675"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningEmptyStateNeverImpliesNoRisk/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "8e539155ebc842faf69df5146749ec5c4cf735fefac8f96aedb637e9e9a0aa88",
+        "mtime_ns": "1794192838317704703"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFilterWithNoMatchingRecordsHasNeutralEmptyState/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "cbdabaa0c96c860f8361296c9a36d0dbfa6283a9d67a5c90f5ba9b767c763c51",
+        "mtime_ns": "1794192849422629522"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFilterWithNoMatchingRecordsHasNeutralEmptyState/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "946421e25c102408bfd8df65cb8431ecd457fb94129bb80587461a277360c2cd",
+        "mtime_ns": "1794192849199697472"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFilterWithNoMatchingRecordsHasNeutralEmptyState/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "feeb7f5df589bccc65c9b4937440eda53c8b710dde480ba0c39b9c47ef24a339",
+        "mtime_ns": "1794192849169697492"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFloodFilterUsesExistingCategory/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "03b4a556cb94872e8a7007cf34cb22c4194d76cd93010970c0c8704c60d60994",
+        "mtime_ns": "1794192781798001808"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFloodFilterUsesExistingCategory/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "e3f82c666ca8223443866738dadcec8487a3fc7fd376840cf0872b62b1bdcd50",
+        "mtime_ns": "1794192781622742207"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFloodFilterUsesExistingCategory/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "91d8dd8c692cd34b1815f4b42220fdd25dfa0cea283bb66fa0484981b740c89b",
+        "mtime_ns": "1794192781581742225"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFloodSelectedTemplateAndBackUseActualCallbacks/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a50e9c2f757bd6425c4ee2b80e2687d15f5e742249dfbc1c70455e984b5a97ca",
+        "mtime_ns": "1794192817558524357"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFloodSelectedTemplateAndBackUseActualCallbacks/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "5e292a7b9e8d8efaa7f76dd8dfe77457fec11dce697b17fafc3c48af34622e4c",
+        "mtime_ns": "1794192817442718575"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningFloodSelectedTemplateAndBackUseActualCallbacks/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "4d3194ba9610fcd940775f964c469ac19235a745abbda273223071c79a52b288",
+        "mtime_ns": "1794192817406718599"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningHomeCategoryUsesActualGraphAndList/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "e0323bc770446990cff7f2bc46c3e5c22126aa174b72558ff0b31fff9b20b61c",
+        "mtime_ns": "1794192761073971263"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningHomeCategoryUsesActualGraphAndList/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "14662b1405ed200d825ffad42d6db11fbc497dd5c681f232c6fbd79899a5014e",
+        "mtime_ns": "1794192761004751075"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningHomeCategoryUsesActualGraphAndList/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "4acfc678450e91c297d3baf920a0a9861a746fa7ceb5f9f3352dbaf1b09478f6",
+        "mtime_ns": "1794192760972751089"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningInjectedListRecomposesWithoutRememberedStaleRecords/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "fc3e949b6e39e25252c18deae351ccfefcdf452c146fbae9fdcf140005f69ce5",
+        "mtime_ns": "1794192860135346522"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningInjectedListRecomposesWithoutRememberedStaleRecords/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "2e3e7d49e32974f3e6b6d55d8c3d6060832a9022b5d4599e2a9e1ff4b521c0e4",
+        "mtime_ns": "1794192860026690278"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningInjectedListRecomposesWithoutRememberedStaleRecords/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "551f34ad44749aca1e09e735d11660df9c3553b02b7333be2405ef6185d3de5f",
+        "mtime_ns": "1794192859971690314"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningInvalidDisplayTimeIsUnparsedAndNotFreshnessProof/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "9af0f925b44e4a4ee669fa0d991e667dd1c79fb9de473adbc324f020c9ffb40c",
+        "mtime_ns": "1794192880370060734"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningInvalidDisplayTimeIsUnparsedAndNotFreshnessProof/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "c2ea4ea92d066af16cc608eab7e8adf005c58ce683c8b66830204c05a96e2f67",
+        "mtime_ns": "1794192880177676888"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningInvalidDisplayTimeIsUnparsedAndNotFreshnessProof/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "d04fb800cd1ed492020f050b7791f2c70f3d7983e400c61f5b3b2d0e1e95b77a",
+        "mtime_ns": "1794192880016676995"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningListActivityRecreationPreservesProtectedRoute/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "c9a8040beee0af79050301581bc9ed34c76f4f5c1e6c83c13e61e4c48b2dba28",
+        "mtime_ns": "1794192959358217371"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningListActivityRecreationPreservesProtectedRoute/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "d819bb8eef900422729329cf13724ad00cbfb3e0d2025221d13d4cc99deb38b6",
+        "mtime_ns": "1794192959241676493"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningListActivityRecreationPreservesProtectedRoute/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "8fd904390bc53131bdcef075c8ec76a0e384ac5905fb45bbeabfd8ebd4beef44",
+        "mtime_ns": "1794192959216676483"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLocalListRemainsDemoWhileTransportOffline/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "c510f4b600dd0bccee23b39fbebd0f744008c8744d44415f4bc0e4893fe75549",
+        "mtime_ns": "1794192923232435593"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLocalListRemainsDemoWhileTransportOffline/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "0429f61144f80f2eb95e739a51c27975c535f2d25f8f2a02f56a99dabe3e0973",
+        "mtime_ns": "1794192923131661742"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLocalListRemainsDemoWhileTransportOffline/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "29e811e3c7844ea69089f2315a47558ef6a09bb43ed88117fe52b70aa5c41a23",
+        "mtime_ns": "1794192923095661727"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLogoutRemovesProtectedHistory/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "c7a8f6ebaa5beb7f58d745ae4c4b90a5093e93a71ca1987b6ed0c993b553bf74",
+        "mtime_ns": "1794192985177716400"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLogoutRemovesProtectedHistory/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "3444a4a4ede9ac61bcafae81e8637a92d9746985c3fa68a0ef75e3cb56bba6c2",
+        "mtime_ns": "1794192985063687042"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLogoutRemovesProtectedHistory/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "cf6c243f57b958344bdcffa4e424053bf0f736395db29b09d72592edc7aa8cf5",
+        "mtime_ns": "1794192985031687029"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLongTextIsBoundedAndBackRemainsUsable/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "2a63988bf7e452ecca66e53908046f810c45715193eb477a63e8c541482db092",
+        "mtime_ns": "1794192912046847378"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLongTextIsBoundedAndBackRemainsUsable/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "02a89f0a03cd00e427b8432a2a707c005e0a092154b97e2455f05f1e3a839cc9",
+        "mtime_ns": "1794192911846657131"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningLongTextIsBoundedAndBackRemainsUsable/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "450fd944fd697671f3d94bde4a182dcfd7bd7bce08aa2573e947e11f7d7b8f66",
+        "mtime_ns": "1794192911793657110"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningNonFloodIdStillUsesFixedStormTemplateLimitation/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "c4bbac4919cf00b4d1f48abacd7e7a9c91d3219aef117e41a0e725ad9595273a",
+        "mtime_ns": "1794192828460579052"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningNonFloodIdStillUsesFixedStormTemplateLimitation/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "30e451759b0be68399067759dd45c2922cc0fd150cdb77b4d1823e4c75f73c67",
+        "mtime_ns": "1794192828306711356"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningNonFloodIdStillUsesFixedStormTemplateLimitation/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "16a80451c30a00de61cd87fde561597e831c4937c30ca83e399b3161b86a868d",
+        "mtime_ns": "1794192828274711377"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningOldDisplayTimeDoesNotGrantCurrentAuthority/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "bf736a19538408c130a45459b3d494168e99a7c05ac8868a63971b7c1c4146bb",
+        "mtime_ns": "1794192890722266596"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningOldDisplayTimeDoesNotGrantCurrentAuthority/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "bfd945fc0cdbee49517c425e523396555087ff7c3e97137881a381ad82207707",
+        "mtime_ns": "1794192890539670002"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningOldDisplayTimeDoesNotGrantCurrentAuthority/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "e3430659522b6473731c1ca098decb3f342dec891e897bee8e63d5d6c52cfdc8",
+        "mtime_ns": "1794192890404670092"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningOptionalDefaultsRenderWithoutInventedAuthority/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a4b7c0043bcd9f73eb96d94e778d2910603442782c3673c92993ef2e44012c7e",
+        "mtime_ns": "1794192870057160603"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningOptionalDefaultsRenderWithoutInventedAuthority/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "ea2958cb4f68cd462ade7d025c81ba6f328caf7ee222a42d9139091f78afd218",
+        "mtime_ns": "1794192869872683735"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningOptionalDefaultsRenderWithoutInventedAuthority/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "eeae2efe00659cba1c5e969fab498ec7d6148f623d4cd0b8eabef72b987ec1fd",
+        "mtime_ns": "1794192869808683778"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningPrepareSessionForProcessRestart/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "f3e26ed3b3cea1858febc92a4c7c13522152994b613e24057c2c62cbe4f3ef74",
+        "mtime_ns": "1794193086861688672"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningPrepareSessionForProcessRestart/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "e9e60b6b4bab15e7450a6553779e10dced91479586915d4e33b4b800f713e45e",
+        "mtime_ns": "1794193086773688712"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningPrepareSessionForProcessRestart/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "731bbfccdcfa85dfb11f4b39e8174b049b9f3dc8816f693c3e8b43edb1f54d49",
+        "mtime_ns": "1794193086744688725"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningSessionExpiryRemovesProtectedHistory/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "3d83376b0a2e23cebfbb9f0fec55cec7773863c8bf2648d3229dc1e5e5ebecf8",
+        "mtime_ns": "1794192996716737235"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningSessionExpiryRemovesProtectedHistory/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "69c3151fb8b43dd9a8c38e20810b1294ef078e04099d77bf9f60370edf55f6a0",
+        "mtime_ns": "1794192996464691700"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningSessionExpiryRemovesProtectedHistory/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "ea012b820e23d9b139e9393ad2080c11fcebee4c58421dade8884f632501d743",
+        "mtime_ns": "1794192996443691691"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningStormFilterUsesExistingCategory/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "a13de28006a031af705ab0b260486803cc58e11475914ed6653759877f4619bc",
+        "mtime_ns": "1794192771334632564"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningStormFilterUsesExistingCategory/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "4cab8a4e2528b88657ae4234283dcaa564caaf87f6ab1c2f18e5f2d34d41b6b5",
+        "mtime_ns": "1794192771143746714"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningStormFilterUsesExistingCategory/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "6b3f991a274f3c1145371653c2be713cc09da7020439ffdb663d722646d02bef",
+        "mtime_ns": "1794192771112746728"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningStormFollowIsLocalToggleOnly/TEST-ui.xml",
+      "before": null,
+      "after": {
+        "sha256": "77576625342fb6f29293395297987e5b4091f0421147ef0831a0fceee06f60db",
+        "mtime_ns": "1794192948092052487"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningStormFollowIsLocalToggleOnly/instrumentation.txt",
+      "before": null,
+      "after": {
+        "sha256": "bda86183c1e634f886af46dbca58ffd1b57b893934fd4a7bfe9894848358d313",
+        "mtime_ns": "1794192947983671894"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/physical-final/warningStormFollowIsLocalToggleOnly/owned-process-logcat.txt",
+      "before": null,
+      "after": {
+        "sha256": "c9b8a5b6d93e7396bc085e2ee584732d91953376385618c2606a4d6bc96aa9bc",
+        "mtime_ns": "1794192947954671882"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/production-manifest-audit.json",
+      "before": null,
+      "after": {
+        "sha256": "d4ba7b0be873d813d124ddf723d6fcfebefc44036809abadb588b9711fa46a72",
+        "mtime_ns": "1794193116960887662"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/resume-owned-package-cleanup.json",
+      "before": null,
+      "after": {
+        "sha256": "55805a8fc060f94f81967d1675a12a3207f0edce33c405023fe4954b44fd753d",
+        "mtime_ns": "1794191656017867889"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/resume-state.json",
+      "before": null,
+      "after": {
+        "sha256": "a1a7f1362a5188b7dd6ccc8fca15e5ad8d44526a939f36be5600cc243a6e717b",
+        "mtime_ns": "1794191652852906199"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/route-preservation.json",
+      "before": null,
+      "after": {
+        "sha256": "2764e96b648e5ac2281d8e08ee0f05b1949be79d58fd300da082ffb55e234924",
+        "mtime_ns": "1794193119251177014"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/support/finalize.py",
+      "before": null,
+      "after": {
+        "sha256": "8479597977fa8364af75aed532d0a4686b6ebd61eccfc33da72a7a342e6fb95d",
+        "mtime_ns": "1794192739672159663"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/support/validate_jvm.py",
+      "before": null,
+      "after": {
+        "sha256": "cac19bee9b783ac4b10ad27690b2f597be9f536b2b558d5c6a4732148100d4b2",
+        "mtime_ns": "1794191692663444868"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/support/validate_phone.py",
+      "before": null,
+      "after": {
+        "sha256": "ce46d78a7f5e07df3647d8b1e181fbada830cdbed674bebc203b9cee5bd31ef6",
+        "mtime_ns": "1794191692666444869"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/tool-versions.txt",
+      "before": null,
+      "after": {
+        "sha256": "1974094bac8a2ec7d1fba2eb0a00b975d4c612d76ce3f6dcb78e75e5ecad60ac",
+        "mtime_ns": "1794192739671877259"
+      }
+    },
+    {
+      "path": "tools/ui-harness/src/androidTest/java/com/example/bai1/fixture/ProductionWarningUiTest.kt",
+      "before": null,
+      "after": {
+        "sha256": "b12e99e87501d2ce9007f5c71b77d7776afba42ae65946974e713adc8d59521f",
+        "mtime_ns": "1794158550606210885"
+      }
+    },
+    {
+      "path": "tools/ui-harness/src/main/java/com/example/bai1/uiisolated/ActualWarningFixtureScreens.kt",
+      "before": null,
+      "after": {
+        "sha256": "1acee2c82b566745cd761086bf791eeeb58c0c757f0d8e3667779ad284caae1b",
+        "mtime_ns": "1794156939236237751"
+      }
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/evidence-index.json",
+      "before": null,
+      "after": null,
+      "note": "Recursive inventory self-hash omitted"
+    },
+    {
+      "path": "tools/ui-harness/evidence/p5e08-usb/changed-files.json",
+      "before": null,
+      "after": null,
+      "note": "Recursive inventory self-hash omitted"
+    }
+  ],
+  "removed_files": []
+}

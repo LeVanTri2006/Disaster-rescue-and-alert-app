@@ -1,0 +1,541 @@
+--------- beginning of main
+11-09 15:06:36.025 24559 24559 I .p5e10maps.demo: Late-enabling -Xcheck:jni
+11-09 15:06:36.043 24559 24559 E .p5e10maps.demo: Unknown bits set in runtime_flags: 0x40000000
+11-09 15:06:36.043 24559 24559 I .p5e10maps.demo: Using generational CollectorTypeCC GC.
+11-09 15:06:36.053 24559 24559 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-09 15:06:36.059 24559 24559 I OneTrace: Mark active for pid=24559? true
+11-09 15:06:36.059 24559 24559 D cutils-dev: otrace_set_tracing_enabled? true
+11-09 15:06:36.059 24559 24569 D cutils-dev: properties changed in otrace_seq_number_changed!
+11-09 15:06:36.081 24559 24559 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10455; state: ENABLED
+11-09 15:06:36.081 24559 24559 I oplus.android.OplusFrameworkFactoryImpl: get feature:IOplusAutoResolutionFeature
+11-09 15:06:36.081 24559 24559 I oplus.android.OplusFrameworkFactoryImpl: getOplusAutoResolutionFeature
+11-09 15:06:36.117 24559 24559 I OplusFeatureCache: Milliseconds spent on init(): 35
+11-09 15:06:36.119 24559 24559 D CompactWindowAppManager: initCompactApplicationInfo 
+11-09 15:06:36.132 24559 24559 W libc    : Access denied finding property "ro.odm.prev.product.name"
+--------- beginning of system
+11-09 15:06:36.134 24559 24559 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.example.bai1.p5e10maps.demo]: arm64-v8a, null instrumentation[com.example.bai1.p5e10maps.demo.test]: null, null
+11-09 15:06:36.135 24559 24559 D LoadedApk: mApplicationInfo overrideDisplayId:null
+11-09 15:06:36.140 24559 24559 D nativeloader: Configuring clns-4 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/lib/arm64:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/lib/arm64:/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/base.apk!/lib/arm64-v8a:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e10maps.demo
+11-09 15:06:36.140 24559 24559 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libupdateprof.qti.so:libQOC.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:liblistenjni.qti.so
+11-09 15:06:36.144 24559 24559 D nativeloader: Configuring clns-5 for other apk /system_ext/framework/androidx.window.extensions.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/lib/arm64:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/lib/arm64:/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/base.apk!/lib/arm64-v8a:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e10maps.demo
+11-09 15:06:36.144 24559 24559 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libupdateprof.qti.so:libQOC.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:liblistenjni.qti.so
+11-09 15:06:36.149 24559 24559 D nativeloader: Configuring clns-6 for other apk /system_ext/framework/androidx.window.sidecar.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/lib/arm64:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/lib/arm64:/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/base.apk!/lib/arm64-v8a:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e10maps.demo
+11-09 15:06:36.149 24559 24559 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libupdateprof.qti.so:libQOC.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:liblistenjni.qti.so
+11-09 15:06:36.323 24559 24559 D nativeloader: Configuring clns-7 for other apk /data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/base.apk:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/lib/arm64:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/lib/arm64:/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/base.apk!/lib/arm64-v8a:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e10maps.demo
+11-09 15:06:36.333 24559 24559 D nativeloader: Load libframework-connectivity-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity.jar: ok
+11-09 15:06:36.340 24559 24559 V GraphicsEnvironment: ANGLE Developer option for 'com.example.bai1.p5e10maps.demo' set to: 'default'
+11-09 15:06:36.340 24559 24559 V GraphicsEnvironment: ANGLE GameManagerService for com.example.bai1.p5e10maps.demo: false
+11-09 15:06:36.340 24559 24559 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-09 15:06:36.344 24559 24559 D LoadedApk: mApplicationInfo overrideDisplayId:null
+11-09 15:06:36.521 24559 24559 D NetworkSecurityConfig: Using Network Security Config from resource maps_network_security debugBuild: true
+11-09 15:06:36.522 24559 24559 D NetworkSecurityConfig: Using Network Security Config from resource maps_network_security debugBuild: true
+11-09 15:06:36.523 24559 24559 I MonitoringInstr: newApplication called!
+11-09 15:06:36.524 24559 24559 I MonitoringInstr: Instrumentation started!
+11-09 15:06:36.536 24559 24559 I AndroidJUnitRunner: onCreate Bundle[{physicalUsb=true, class=com.example.bai1.fixture.MapsPhoneTest#noLocationPermissionsAndSdkMyLocationDisabled, listener=com.example.bai1.fixture.DeviceXmlListener}]
+11-09 15:06:36.537 24559 24559 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-09 15:06:36.540 24559 24559 D OplusActivityManager: get AMS extension: android.os.BinderProxy@ab5cf06
+11-09 15:06:38.039 24559 24589 D AndroidJUnitRunner: onStart is called.
+11-09 15:06:38.047 24559 24559 I MonitoringInstr: No JSBridge.
+11-09 15:06:38.091 24559 24589 D TestRequestBuilder: Skipping class path scanning and directly running [com.example.bai1.fixture.MapsPhoneTest]
+11-09 15:06:38.115 24559 24589 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-09 15:06:38.118 24559 24589 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+11-09 15:06:38.118 24559 24589 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+11-09 15:06:38.118 24559 24589 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+11-09 15:06:38.118 24559 24589 D TestExecutor: Adding listener androidx.test.internal.runner.listener.TraceRunListener
+11-09 15:06:38.118 24559 24589 D TestExecutor: Adding listener com.example.bai1.fixture.DeviceXmlListener
+11-09 15:06:38.122 24559 24589 I TestRunner: run started: 1 tests
+11-09 15:06:38.123 24559 24589 I TestRunner: started: noLocationPermissionsAndSdkMyLocationDisabled(com.example.bai1.fixture.MapsPhoneTest)
+11-09 15:06:38.139 24559 24589 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-09 15:06:38.225 24559 24609 D OplusGraphicsEvent: OplusGraphicsEventListener create now!
+11-09 15:06:38.226 24559 24609 D OplusGraphicsEvent: addEventListener success!
+11-09 15:06:38.238 24559 24610 E .p5e10maps.demo: Loaded layer handle (22284340846807817) for layer /my_product/lib64/libcolorx-loader.so
+11-09 15:06:38.238 24559 24610 E .p5e10maps.demo: Looking for entrypoint ColorX_Check
+11-09 15:06:38.238 24559 24610 E .p5e10maps.demo: Found ColorX_Check for /my_product/lib64/libcolorx-loader.so
+11-09 15:06:38.238 24559 24610 E .p5e10maps.demo: Check failed
+11-09 15:06:38.286 24559 24559 D LifecycleMonitor: Lifecycle status change: com.example.bai1.gmaps01.MapsDemoActivity@b5184f2 in: PRE_ON_CREATE
+11-09 15:06:38.286 24559 24559 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-09 15:06:38.292 24559 24559 I oplus.android.OplusFrameworkFactoryImpl: Unknow feature:IOplusTextViewRTLUtilForUG
+11-09 15:06:38.305 24559 24559 D OplusWindowManager: get WMS extension: android.os.BinderProxy@16efe3e
+11-09 15:06:38.330 24559 24559 D LifecycleMonitor: Lifecycle status change: com.example.bai1.gmaps01.MapsDemoActivity@b5184f2 in: CREATED
+11-09 15:06:38.330 24559 24559 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.bai1.gmaps01.MapsDemoActivity@b5184f2
+11-09 15:06:38.331 24559 24559 D LifecycleMonitor: Lifecycle status change: com.example.bai1.gmaps01.MapsDemoActivity@b5184f2 in: STARTED
+11-09 15:06:38.331 24559 24559 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.bai1.gmaps01.MapsDemoActivity@b5184f2
+11-09 15:06:38.336 24559 24559 D LifecycleMonitor: Lifecycle status change: com.example.bai1.gmaps01.MapsDemoActivity@b5184f2 in: RESUMED
+11-09 15:06:38.336 24559 24559 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.bai1.gmaps01.MapsDemoActivity@b5184f2
+11-09 15:06:38.337 24559 24559 D nativeloader: Load libSchedAssistJni.so using system ns (caller=/system/framework/oplus-framework.jar): ok
+11-09 15:06:38.337 24559 24559 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+11-09 15:06:38.338 24559 24559 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+11-09 15:06:38.338 24559 24559 E .p5e10maps.demo: ofbOpen failed with error=No such file or directory
+11-09 15:06:38.338 24559 24559 E .p5e10maps.demo: sysOpen failed with error=No such file or directory
+11-09 15:06:38.340 24559 24559 D OplusInputMethodUtil: init sDebug to false, init sDebugIme to false, init sAlwaysOn to false
+11-09 15:06:38.340 24559 24559 D OplusInputMethodUtil: updateDebugToClass InputMethodManager.DEBUG = false
+11-09 15:06:38.340 24559 24559 D OplusInputMethodUtil: updateDebugToClass ImeFocusController.DEBUG = false
+11-09 15:06:38.340 24559 24559 D OplusInputMethodUtil: updateDebugToClass BaseInputConnection.DEBUG = false
+11-09 15:06:38.341 24559 24559 D OplusInputMethodUtil: updateDebugToClass ImeFocusController.sDebugIme = false
+11-09 15:06:38.388 24559 24559 D WindowManager: Add to mViews: DecorView@eb18e7f[MapsDemoActivity],pkg= com.example.bai1.p5e10maps.demo
+11-09 15:06:38.390 24559 24613 I OplusSlideAnimOptHelper: checkListMode: is blacklist mode = true
+11-09 15:06:38.391 24559 24609 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+11-09 15:06:38.394 24559 24609 D ExtensionsLoader: Opened libhwuiextimpl.so
+11-09 15:06:38.395 24559 24559 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+11-09 15:06:38.395 24559 24559 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+11-09 15:06:38.399 24559 24613 D OplusSlideAnimOptHelper: com.example.bai1.p5e10maps.demo scrollEffectOpt enable = true
+11-09 15:06:38.406 24559 24559 D ViewRootImplExtImpl: onDisplayChanged -1 for VRI android.view.ViewRootImpl@1c4ce77
+11-09 15:06:38.406 24559 24559 D InputEventReceiver: Input log is disabled
+11-09 15:06:38.603 24559 24559 I .p5e10maps.demo: hiddenapi: Accessing hidden method Landroid/os/SystemProperties;->addChangeCallback(Ljava/lang/Runnable;)V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/compose/ui/platform/AndroidComposeView$Companion; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-09 15:06:38.603 24559 24559 D CompatibilityChangeReporter: Compat change id reported: 193247900; UID 10455; state: ENABLED
+11-09 15:06:38.725 24559 24559 D MapsInitializer: preferredRenderer: null
+11-09 15:06:38.726 24559 24559 D zzcc    : preferredRenderer: null
+11-09 15:06:38.740 24559 24559 I zzcc    : Making Creator dynamically
+11-09 15:06:38.755 24559 24559 W .p5e10maps.demo: ClassLoaderContext classpath size mismatch. expected=1, found=0 (DLC[];PCL[base.apk*1765237304]{PCL[/system/framework/org.apache.http.legacy.jar*437381499]#PCL[/system/framework/com.android.location.provider.jar*3868789109]#PCL[/system/framework/com.android.media.remotedisplay.jar*3886290638]#PCL[/system_ext/framework/androidx.window.extensions.jar*2647316047]#PCL[/system_ext/framework/androidx.window.sidecar.jar*2604584306]} | DLC[];PCL[])
+11-09 15:06:38.757 24559 24559 I DynamiteModule: Considering local module com.google.android.gms.maps_core_dynamite:0 and remote module com.google.android.gms.maps_core_dynamite:263020511
+11-09 15:06:38.757 24559 24559 I DynamiteModule: Selected remote version of com.google.android.gms.maps_core_dynamite, version >= 263020511
+11-09 15:06:38.758 24559 24559 V DynamiteModule: Dynamite loader version >= 2, using loadModule2NoCrashUtils
+11-09 15:06:38.770 24559 24559 W System  : ClassLoader referenced unknown path: 
+11-09 15:06:38.770 24559 24559 D nativeloader: Configuring clns-8 for other apk . target_sdk_version=37, uses_libraries=, library_path=/data/app/~~UO5Eh__TzFsbt3TMp_6qRw==/com.google.android.gms-cfz4KhZ_K6-sCta2mqo9wQ==/lib/arm64:/data/app/~~UO5Eh__TzFsbt3TMp_6qRw==/com.google.android.gms-cfz4KhZ_K6-sCta2mqo9wQ==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+11-09 15:06:38.832 24559 24559 I .p5e10maps.demo: hiddenapi: Accessing hidden method Ldalvik/system/VMStack;->getStackClass2()Ljava/lang/Class; (runtime_flags=0, domain=core-platform, api=unsupported) from Lm140/hfl; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-09 15:06:38.839 24559 24559 D nativeloader: Configuring clns-9 for other apk . target_sdk_version=37, uses_libraries=ALL, library_path=/data/user_de/0/com.google.android.gms/app_chimera/m/0000037c/dl-MapsCoreDynamite.integ_263020511100400.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+11-09 15:06:38.839 24559 24559 D nativeloader: Extending system_exposed_libraries: libbinauralrenderer_wrapper.qti.so:libhoaeffects.qti.so:libSloganJni.oplus.so:libsuperNight.oplus.so:libupdateprof.qti.so:libQOC.qti.so:libthermalclient.qti.so:libdiag_system.qti.so:libqape.qti.so:liblistenjni.qti.so
+11-09 15:06:38.842 24559 24559 D nativeloader: Load /data/user_de/0/com.google.android.gms/app_chimera/m/0000037c/dl-MapsCoreDynamite.integ_263020511100400.apk!/lib/arm64-v8a/libgmm-jni.so using isolated ns clns-9 (caller=/data/user_de/0/com.google.android.gms/app_chimera/m/0000037c/dl-MapsCoreDynamite.integ_263020511100400.apk!classes2.dex): ok
+11-09 15:06:38.843 24559 24559 I native  : I0000 00:00:1794211598.842979   24559 jni_init.cc:38] Initializing JNI...
+11-09 15:06:38.845 24559 24559 I Google Android Maps SDK: Google Play services client version: 19000000
+11-09 15:06:38.852 24559 24569 I .p5e10maps.demo: Compiler allocated 4871KB to compile void android.view.ViewRootImpl.performTraversals()
+11-09 15:06:38.868 24559 24559 D bp      : SDK type: 1, version: 263020511
+11-09 15:06:38.886 24559 24559 D hp      : maps_core_dynamite module version in use (0 represents standalone library): 263020511
+11-09 15:06:38.899 24559 24559 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10455; state: ENABLED
+11-09 15:06:38.904 24559 24559 D hp      : Added event: 109
+11-09 15:06:38.905 24559 24559 D hp      : Added event: 112
+11-09 15:06:38.905 24559 24559 D MapsInitializer: loadedRenderer: LATEST
+11-09 15:06:38.905 24559 24559 D zzcc    : preferredRenderer: null
+11-09 15:06:38.908 24559 24559 D bp      : SDK type: 1, version: 263020511
+11-09 15:06:38.909 24559 24559 I Google Android Maps SDK: Google Play services package version: 264330029
+11-09 15:06:38.909 24559 24559 I Google Android Maps SDK: Google Play services maps renderer version(maps_core): 263020511
+11-09 15:06:38.910 24559 24559 D bp      : SDK type: 1, version: 263020511
+11-09 15:06:38.911 24559 24559 D df      : about to start loading native library asynchronously
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: Failed to get service from broker. 
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3062)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.Parcel.createException(Parcel.java:3046)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:3029)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:2971)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at m140.crj.q(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:198)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at m140.cps.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:42)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.Handler.handleCallback(Handler.java:942)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.Looper.loopOnce(Looper.java:240)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.Looper.loop(Looper.java:351)
+11-09 15:06:38.918 24559 24617 E GoogleApiManager: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-09 15:06:38.918 24559 24617 W GoogleApiManager: Not showing notification since connectionResult is not user-facing: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:38.920 24559 24559 W x       : Suppressed StrictMode policy violation: StrictModeDiskReadViolation
+11-09 15:06:38.922 24559 24619 W FlagStore: Unable to update local snapshot for com.google.android.gms.maps#com.google.android.gms, may result in stale flags.
+11-09 15:06:38.922 24559 24619 W FlagStore: java.util.concurrent.ExecutionException: m140.gas: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hpu.h(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:21)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hpv.s(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:23)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hpu.get(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:395)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hsw.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:2)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hrp.i(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.gdh.c(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.gcs.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:5)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:323)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at java.lang.Thread.run(Thread.java:1571)
+11-09 15:06:38.922 24559 24619 W FlagStore: Caused by: m140.gas: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.gau.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:13)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hpr.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hpt.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:130)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hpu.g(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hpu.l(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:99)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hpu.p(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:14)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.fxe.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:35)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.daq.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.dar.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.dbc.b(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:34)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.dbi.k(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:20)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.daj.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:60)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.dak.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:8)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.dbc.b(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:34)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.dbe.c(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:25)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.coq.e(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:7)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.cpq.u(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:48)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.cpq.f(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.cpq.j(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:168)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.cps.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:74)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at android.os.Handler.handleCallback(Handler.java:942)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at android.os.Looper.loopOnce(Looper.java:240)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at android.os.Looper.loop(Looper.java:351)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-09 15:06:38.922 24559 24619 W FlagStore: Caused by: m140.cno: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.cra.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:13)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	at m140.coq.e(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:38.922 24559 24619 W FlagStore: 	... 9 more
+11-09 15:06:38.925 24559 24559 I o       : Using GMM server: https://clients4.google.com/glm/mmap
+11-09 15:06:38.925 24559 24559 W x       : Suppressed StrictMode policy violation: StrictModeDiskReadViolation
+11-09 15:06:38.925 24559 24559 W x       : Suppressed StrictMode policy violation: StrictModeDiskWriteViolation
+11-09 15:06:38.930 24559 24559 D o       : Using Non-null serverVersionMetadataManager to load previous metadata.
+11-09 15:06:38.934 24559 24559 D o       : Previous session server version metadata loaded: CggIBhDvqb/XBgoICAMQoqC/1wYKCggEEIK0tNcGGAEKCAgBEPjJvtcG
+11-09 15:06:38.934 24559 24621 W x       : Suppressed StrictMode policy violation: StrictModeDiskReadViolation
+11-09 15:06:38.978 24559 24559 E OplusCustomizeRestrictionManager: sInstance is null, start a new sInstance
+11-09 15:06:38.982 24559 24559 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10455; state: ENABLED
+11-09 15:06:38.989 24559 24559 D CompatibilityChangeReporter: Compat change id reported: 171228096; UID 10455; state: ENABLED
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: ClientParametersBlockingReference.blockedOnMainThread: ENABLE_FEATURES for 88 ms.
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: java.lang.Throwable
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.bje.e(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:163)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.bje.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.bhc.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.bks.b(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:9)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.egx.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:148)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:7)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.eer.<init>(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:47)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.ees.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:78)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:7)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.maps.api.android.lib6.phoenix.bb.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:5)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:7)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.maps.api.android.lib6.phoenix.az.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:7)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.maps.api.android.lib6.phoenix.be.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.jvb.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:7)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.maps.api.android.lib6.impl.ch.aY(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:67)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.maps.api.android.lib6.impl.em.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.maps.internal.t.br(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:158)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at m140.bba.onTransact(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:21)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.os.Binder.transact(Binder.java:1188)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.internal.maps.zza.zzc(com.google.android.gms:play-services-maps@@19.0.0:2)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.maps.internal.zzl.onCreate(com.google.android.gms:play-services-maps@@19.0.0:3)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.maps.zzah.onCreate(com.google.android.gms:play-services-maps@@19.0.0:3)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.dynamic.zac.zab(com.google.android.gms:play-services-base@@18.9.0:1)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.dynamic.zaa.onDelegateCreated(com.google.android.gms:play-services-base@@18.9.0:3)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.maps.zzai.zzb(com.google.android.gms:play-services-maps@@19.0.0:5)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.maps.zzai.createDelegate(com.google.android.gms:play-services-maps@@19.0.0:1)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.dynamic.DeferredLifecycleHelper.zaf(com.google.android.gms:play-services-base@@18.9.0:6)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.dynamic.DeferredLifecycleHelper.onCreate(com.google.android.gms:play-services-base@@18.9.0:1)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.android.gms.maps.MapView.onCreate(com.google.android.gms:play-services-maps@@19.0.0:4)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.maps.android.compose.GoogleMapKt.lifecycleObserver$lambda$12(GoogleMap.kt:210)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.google.maps.android.compose.GoogleMapKt$$ExternalSyntheticLambda0.onStateChanged(D8$$SyntheticClass:0)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.kt:394)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.lifecycle.LifecycleRegistry.forwardPass$lambda$0(LifecycleRegistry.kt:305)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.lifecycle.LifecycleRegistry$$ExternalSyntheticLambda1.invoke(D8$$SyntheticClass:0)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.lifecycle.FastSafeIterableMap.forEachWithAdditions(FastSafeIterableMap.kt:141)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.kt:298)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.kt:368)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.lifecycle.LifecycleRegistry.addObserver(LifecycleRegistry.kt:256)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.compose.ui.platform.WrappedComposition$setContent$1.invoke(Wrapper.android.kt:122)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.compose.ui.platform.WrappedComposition$setContent$1.invoke(Wrapper.android.kt:107)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at androidx.compose.ui.platform.AndroidComposeView.onAttachedToWindow(AndroidComposeView.android.kt:2378)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.View.dispatchAttachedToWindow(View.java:21475)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ViewGroup.dispatchAttachedToWindow(ViewGroup.java:3540)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ViewGroup.dispatchAttachedToWindow(ViewGroup.java:3547)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ViewGroup.dispatchAttachedToWindow(ViewGroup.java:3547)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ViewGroup.dispatchAttachedToWindow(ViewGroup.java:3547)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ViewGroup.dispatchAttachedToWindow(ViewGroup.java:3547)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:2973)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:2458)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:9415)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:1388)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:1396)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.Choreographer.doCallbacks(Choreographer.java:1033)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.ChoreographerExtImpl.checkScrollOptSceneEnable(ChoreographerExtImpl.java:420)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.Choreographer.doFrame(Choreographer.java:900)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:1371)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.os.Handler.handleCallback(Handler.java:942)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.os.Looper.loopOnce(Looper.java:240)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.os.Looper.loop(Looper.java:351)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at android.app.ActivityThread.main(ActivityThread.java:8377)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at java.lang.reflect.Method.invoke(Native Method)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:584)
+11-09 15:06:39.167 24559 24559 I ClientParamsBlocking: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1013)
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: QUALCOMM build                   : c5f0e23, I9972db7aac
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: Build Date                       : 04/28/21
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: EV031.32.02.10
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: Local Branch                     : 
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: Remote Branch                    : 
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: Remote Branch                    : 
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: Reconstruct Branch               : 
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: Build Config                     : S P 10.0.7 AArch64
+11-09 15:06:39.225 24559 24559 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+11-09 15:06:39.229 24559 24559 I AdrenoGLES-0: PFP: 0x016ee190, ME: 0x00000000
+11-09 15:06:39.235 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.285 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.304 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.340 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.343 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.345 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.351 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.352 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.352 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.352 24559 24640 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.355 24559 24640 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.355 24559 24640 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.359 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.364 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.364 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.367 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.404 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.507 24559 24559 D BufferQueueConsumer: [](id:5fef00000000,api:0,p:-1,c:24559) connect: controlledByApp=false
+11-09 15:06:39.508 24559 24559 D ExtensionsLoader: createInstance(64bit) : createExtendedFactory
+11-09 15:06:39.509 24559 24559 D ExtensionsLoader: Opened libSchedAssistExtImpl.so
+11-09 15:06:39.510 24559 24559 V ZoomWindowDecorView: setLastReportedMergedConfiguration mZoomDisplayHeight: 2400 getDecorView.246517375
+11-09 15:06:39.519 24559 24627 W FeatureFlagsImplExport: java.lang.NoClassDefFoundError: Class not found using the boot class loader; no stack trace available
+11-09 15:06:39.527 24559 24609 D BufferQueueProducer: [VRI[MapsDemoActivity]#0(BLAST Consumer)0](id:5fef00000000,api:1,p:24559,c:24559) connect: api=1 producerControlledByApp=true
+11-09 15:06:39.529 24559 24559 D VRI[MapsDemoActivity]: registerCallbacksForSync syncBuffer=false
+11-09 15:06:39.536 24559 24559 D TextureView: getHardwareLayer, createNewSurface:true
+11-09 15:06:39.536 24559 24559 D BufferQueueConsumer: [](id:5fef00000001,api:0,p:-1,c:24559) connect: controlledByApp=true
+11-09 15:06:39.543 24559 24652 D BufferQueueProducer: [SurfaceTexture-0-24559-0](id:5fef00000001,api:1,p:24559,c:24559) connect: api=1 producerControlledByApp=true
+11-09 15:06:39.552 24559 24609 D VRI[MapsDemoActivity]: Received frameCommittedCallback lastAttemptedDrawFrameNum=1 didProduceBuffer=true syncBuffer=false
+11-09 15:06:39.554 24559 24609 W Parcel  : Expecting binder but got null!
+11-09 15:06:39.554 24559 24559 D VRI[MapsDemoActivity]: draw finished.
+11-09 15:06:39.555 24559 24559 I Quality : ActivityThread: doFrame delay 1145 com.example.bai1.p5e10maps.demo 24559
+11-09 15:06:39.555 24559 24614 I Quality : Blocked msg = Package name: com.example.bai1.p5e10maps.demo [ schedGroup: 5 schedPolicy: 0 ] process the message: { when=-1s146ms what=0 target=android.view.Choreographer$FrameHandler callback=android.view.Choreographer$FrameDisplayEventReceiver } took 1145 ms
+11-09 15:06:39.560 24559 24576 I OpenGLRenderer: Davey! duration=1144ms; Flags=1, FrameTimelineVsyncId=68822705, IntendedVsync=237790230676937, Vsync=237790230676937, InputEventId=0, HandleInputStart=237790231657934, AnimationStart=237790231672413, PerformTraversalsStart=237790231677101, DrawStart=237791351855746, FrameDeadline=237790247343603, FrameInterval=237790231530694, FrameStartTime=16621802, SyncQueued=237791363940225, SyncStart=237791364103558, IssueDrawCommandsStart=237791365270798, SwapBuffers=237791373318975, FrameCompleted=237791375717517, DequeueBufferDuration=17552, QueueBufferDuration=303594, GpuCompleted=237791375717517, SwapBuffersCompleted=237791374074288, DisplayPresentTime=0, CommandSubmissionCompleted=237791373318975, 
+11-09 15:06:39.560 24559 24559 I Choreographer: Skipped 64 frames!  The application may be doing too much work on its main thread.
+11-09 15:06:39.560 24559 24559 I Quality : Skipped: false 64 cost 1068.5188 refreshRate 16623446 bit true processName com.example.bai1.p5e10maps.demo
+11-09 15:06:39.584 24559 24619 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: Failed to get service from broker. 
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3062)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.Parcel.createException(Parcel.java:3046)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:3029)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:2971)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at m140.crj.q(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:198)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at m140.cps.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:42)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.Handler.handleCallback(Handler.java:942)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.Looper.loopOnce(Looper.java:240)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.Looper.loop(Looper.java:351)
+11-09 15:06:39.588 24559 24617 E GoogleApiManager: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-09 15:06:39.589 24559 24617 W GoogleApiManager: Not showing notification since connectionResult is not user-facing: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:39.600 24559 24619 W FlagStore: Unable to update local snapshot for com.google.android.gms.clearcut_client#com.google.android.gms, may result in stale flags.
+11-09 15:06:39.600 24559 24619 W FlagStore: java.util.concurrent.ExecutionException: m140.gas: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hpu.h(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:21)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hpv.s(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:23)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hpu.get(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:395)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hsw.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:2)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hrp.i(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.gdh.c(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.gcs.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:5)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:323)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at java.lang.Thread.run(Thread.java:1571)
+11-09 15:06:39.600 24559 24619 W FlagStore: Caused by: m140.gas: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.gau.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:13)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hpr.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hpt.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:130)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hpu.g(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hpu.l(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:99)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hpu.p(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:14)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.fxe.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:35)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.daq.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.dar.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.dbc.b(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:34)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.dbi.k(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:20)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.daj.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:60)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.dak.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:8)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.dbc.b(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:34)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.dbe.c(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:25)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.coq.e(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:7)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.cpq.u(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:48)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.cpq.f(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.cpq.j(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:168)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.cps.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:74)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at android.os.Handler.handleCallback(Handler.java:942)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at android.os.Looper.loopOnce(Looper.java:240)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at android.os.Looper.loop(Looper.java:351)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-09 15:06:39.600 24559 24619 W FlagStore: Caused by: m140.cno: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.cra.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:13)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	at m140.coq.e(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:39.600 24559 24619 W FlagStore: 	... 9 more
+11-09 15:06:39.602 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.604 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.606 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.617 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.617 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.738 24559 24559 I M01_MAP : SDK_READY location=false
+11-09 15:06:39.740 24559 24559 D VRI[MapsDemoActivity]: onFocusEvent true
+11-09 15:06:39.740 24559 24559 I Quality : Skipped: false 10 cost 167.32755 refreshRate 16628314 bit true processName com.example.bai1.p5e10maps.demo
+11-09 15:06:39.788 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.788 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.874 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.874 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.923 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.924 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.924 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.925 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.945 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:39.945 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.029 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.029 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.058 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.059 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.094 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.094 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.211 24559 24655 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.212 24559 24655 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.275 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.275 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.346 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.346 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.352 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.352 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.353 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.353 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.353 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.385 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.385 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.411 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.411 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.451 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.452 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.476 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.476 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.527 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.527 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.536 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.536 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.551 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.551 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.556 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.556 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.564 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.564 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.597 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.597 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.676 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.676 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.680 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.680 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.898 24559 24569 I .p5e10maps.demo: Compiler allocated 10MB to compile void m140.erv.W(m140.ewl, m140.fqv, android.content.res.Resources, m140.eub, m140.ffi, boolean, m140.dme, java.util.Map, boolean, boolean, boolean, boolean, boolean)
+11-09 15:06:40.909 24559 24620 W DynamiteModule: Local module descriptor class for com.google.android.gms.googlecertificates not found.
+11-09 15:06:40.916 24559 24620 I DynamiteModule: Considering local module com.google.android.gms.googlecertificates:0 and remote module com.google.android.gms.googlecertificates:7
+11-09 15:06:40.919 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.919 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.919 24559 24620 I DynamiteModule: Selected remote version of com.google.android.gms.googlecertificates, version >= 7
+11-09 15:06:40.928 24559 24569 I .p5e10maps.demo: Compiler allocated 4844KB to compile void m140.elp.c(m140.dms, m140.ekj, m140.enp, m140.eum, boolean)
+11-09 15:06:40.933 24559 24620 W .p5e10maps.demo: ClassLoaderContext classpath size mismatch. expected=1, found=2 (DLC[];PCL[base.apk*1765237304]{PCL[/system/framework/org.apache.http.legacy.jar*437381499]#PCL[/system/framework/com.android.location.provider.jar*3868789109]#PCL[/system/framework/com.android.media.remotedisplay.jar*3886290638]#PCL[/system_ext/framework/androidx.window.extensions.jar*2647316047]#PCL[/system_ext/framework/androidx.window.sidecar.jar*2604584306]} | DLC[];PCL[/data/app/~~lSpu9ZLOHge7DBdnO_3fwQ==/com.example.bai1.p5e10maps.demo.test-WYFoSSNCwzbP4hTgKnVu_A==/base.apk*3103319351:/data/app/~~ZApAJ6ktKPiKxKjLYcvd2A==/com.example.bai1.p5e10maps.demo-hnJkjUEoAWaYZOk43oZQLA==/base.apk*1117181129]{PCL[/system/framework/org.apache.http.legacy.jar*437381499]#PCL[/system_ext/framework/androidx.window.extensions.jar*2647316047]#PCL[/system_ext/framework/androidx.window.sidecar.jar*2604584306]})
+11-09 15:06:40.944 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.944 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.964 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.964 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.973 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.973 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.974 24559 24619 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.984 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.984 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: Failed to get service from broker. 
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3062)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.Parcel.createException(Parcel.java:3046)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:3029)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:2971)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at m140.crj.q(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:198)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at m140.cps.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:42)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.Handler.handleCallback(Handler.java:942)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.Looper.loopOnce(Looper.java:240)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.Looper.loop(Looper.java:351)
+11-09 15:06:40.985 24559 24617 E GoogleApiManager: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-09 15:06:40.985 24559 24617 W GoogleApiManager: Not showing notification since connectionResult is not user-facing: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:40.987 24559 24619 W FlagStore: Unable to update local snapshot for com.google.android.libraries.consentverifier#com.google.android.gms, may result in stale flags.
+11-09 15:06:40.987 24559 24619 W FlagStore: java.util.concurrent.ExecutionException: m140.gas: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hpu.h(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:21)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hpv.s(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:23)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hpu.get(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:395)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hsw.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:2)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hrp.i(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.gdh.c(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.gcs.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:5)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:323)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at java.lang.Thread.run(Thread.java:1571)
+11-09 15:06:40.987 24559 24619 W FlagStore: Caused by: m140.gas: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.gau.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:13)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hpr.d(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hpt.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:130)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hpu.g(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hpu.l(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:99)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hpu.p(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:14)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.fxe.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:35)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.daq.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.dar.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:12)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.dbc.b(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:34)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.dbi.k(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:20)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.daj.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:60)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.hqu.execute(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:1)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.dak.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:8)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.dbc.b(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:34)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.dbe.c(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:25)
+11-09 15:06:40.987 24559 24619 W FlagStore: 	at m140.coq.e(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:7)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at m140.cpq.u(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:48)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at m140.cpq.f(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:10)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at m140.cpq.j(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:168)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at m140.cps.run(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:74)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at android.os.Handler.handleCallback(Handler.java:942)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at android.os.Looper.loopOnce(Looper.java:240)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at android.os.Looper.loop(Looper.java:351)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-09 15:06:40.988 24559 24619 W FlagStore: Caused by: m140.cno: 17: API: Phenotype.API is not available on this device. Connection failed with: cma{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at m140.cra.a(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:13)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	at m140.coq.e(:com.google.android.gms.policy_maps_core_dynamite@263020534@263020511025.989916351.989916351:3)
+11-09 15:06:40.988 24559 24619 W FlagStore: 	... 9 more
+11-09 15:06:41.002 24559 24653 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.009 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.010 24559 24649 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.016 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.017 24559 24650 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.023 24559 24559 I M01_MAP : onMapLoaded count=1
+11-09 15:06:41.034 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.034 24559 24651 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.133 24559 24559 D LifecycleMonitor: Lifecycle status change: com.example.bai1.gmaps01.MapsDemoActivity@b5184f2 in: PAUSED
+11-09 15:06:41.134 24559 24559 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.bai1.gmaps01.MapsDemoActivity@b5184f2
+11-09 15:06:41.173 24559 24559 D VRI[MapsDemoActivity]: onFocusEvent false
+11-09 15:06:41.178 24559 24576 D VRI[MapsDemoActivity]: dispatchAppVisibility visible:false
+11-09 15:06:41.190 24559 24609 D BufferQueueProducer: [VRI[MapsDemoActivity]#0(BLAST Consumer)0](id:5fef00000000,api:1,p:24559,c:24559) disconnect: api 1
+11-09 15:06:41.230 24559 24559 D BufferQueueConsumer: [VRI[MapsDemoActivity]#0(BLAST Consumer)0](id:5fef00000000,api:0,p:-1,c:24559) disconnect
+11-09 15:06:41.249 24559 24652 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.250 24559 24559 D VRI[MapsDemoActivity]: setWindowStopped stopped:true
+11-09 15:06:41.250 24559 24559 D LifecycleMonitor: Lifecycle status change: com.example.bai1.gmaps01.MapsDemoActivity@b5184f2 in: STOPPED
+11-09 15:06:41.251 24559 24559 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.bai1.gmaps01.MapsDemoActivity@b5184f2
+11-09 15:06:41.255 24559 24652 D BufferQueueProducer: [SurfaceTexture-0-24559-0](id:5fef00000001,api:1,p:24559,c:24559) disconnect: api 1
+11-09 15:06:41.255 24559 24559 D BufferQueueConsumer: [SurfaceTexture-0-24559-0](id:5fef00000001,api:0,p:-1,c:24559) disconnect
+11-09 15:06:41.260 24559 24559 D Google Android Maps SDK: For capability in capabilities, log:
+11-09 15:06:41.260 24559 24559 D Google Android Maps SDK: "AdvancedMarkers: false: Capabilities unavailable without a Map ID."Data-driven styling: false
+11-09 15:06:41.261 24559 24652 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.266 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.268 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.268 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.268 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.269 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.269 24559 24559 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+11-09 15:06:41.273 24559 24559 D LifecycleMonitor: Lifecycle status change: com.example.bai1.gmaps01.MapsDemoActivity@b5184f2 in: DESTROYED
+11-09 15:06:41.273 24559 24559 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-09 15:06:41.273 24559 24559 D OplusScrollToTopManager: unregisterGuidePopupDismissReceiverInSystemUI
+11-09 15:06:41.273 24559 24559 D OplusScrollToTopManager: Receiver not registered: android.view.OplusScrollToTopManager$1@5a34a47
+11-09 15:06:41.273 24559 24559 D OplusScrollToTopManager: unregisterSystemUIBroadcastReceiver 
+11-09 15:06:41.273 24559 24559 D OplusScrollToTopManager: java.lang.IllegalArgumentException: Receiver not registered: android.view.OplusScrollToTopManager$2@1127274
+11-09 15:06:41.278 24559 24559 V ZoomWindowDecorView: removeZoomView
+11-09 15:06:41.499 24559 24589 I TestRunner: finished: noLocationPermissionsAndSdkMyLocationDisabled(com.example.bai1.fixture.MapsPhoneTest)
+11-09 15:06:41.504 24559 24589 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored

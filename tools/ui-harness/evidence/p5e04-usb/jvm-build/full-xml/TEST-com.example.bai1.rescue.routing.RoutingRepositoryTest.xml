@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.rescue.routing.RoutingRepositoryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-08T14:27:45.099Z" hostname="Dell-Latitude-5511" time="0.014">
+  <properties/>
+  <testcase name="isCurrentGraphCached and getCachedGraphFile delegate properly to downloader" classname="com.example.bai1.rescue.routing.RoutingRepositoryTest" time="0.001"/>
+  <testcase name="legacy ready metadata is projected to download only" classname="com.example.bai1.rescue.routing.RoutingRepositoryTest" time="0.001"/>
+  <testcase name="successful routing fetch updates currentRoutingStatus StateFlow and clears errors" classname="com.example.bai1.rescue.routing.RoutingRepositoryTest" time="0.005"/>
+  <testcase name="network error updates lastError StateFlow with NO_INTERNET" classname="com.example.bai1.rescue.routing.RoutingRepositoryTest" time="0.002"/>
+  <testcase name="downloadAvailable true alone does NOT satisfy routing readiness" classname="com.example.bai1.rescue.routing.RoutingRepositoryTest" time="0.001"/>
+  <testcase name="http 401 unauthorized updates lastError StateFlow and leaves currentRoutingStatus null" classname="com.example.bai1.rescue.routing.RoutingRepositoryTest" time="0.001"/>
+  <testcase name="http 403 forbidden updates lastError StateFlow distinctly" classname="com.example.bai1.rescue.routing.RoutingRepositoryTest" time="0.001"/>
+  <testcase name="downloadGraphWithAutoRefresh retries with fresh presigned URL when initial attempt fails with URL_EXPIRED" classname="com.example.bai1.rescue.routing.RoutingRepositoryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

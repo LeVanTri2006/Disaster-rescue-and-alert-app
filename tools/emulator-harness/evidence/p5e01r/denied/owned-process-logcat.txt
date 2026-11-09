@@ -1,0 +1,42 @@
+--------- beginning of main
+11-07 01:07:08.192 23895 23895 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10251
+11-07 01:07:08.194 23895 23895 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10251/pid_23895
+11-07 01:07:08.203 23895 23895 I Zygote  : Process 23895 created for com.example.bai1.p5e01.isolated
+11-07 01:07:08.203 23895 23895 I .p5e01.isolated: Late-enabling -Xcheck:jni
+11-07 01:07:08.221 23895 23895 I .p5e01.isolated: Using generational CollectorTypeCMC GC.
+11-07 01:07:08.221 23895 23895 W .p5e01.isolated: Unexpected CPU variant for x86: x86_64.
+11-07 01:07:08.221 23895 23895 W .p5e01.isolated: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-07 01:07:08.227 23895 23895 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-07 01:07:08.255 23895 23895 D CompatChangeReporter: Compat change id reported: 333566037; UID 10251; state: ENABLED
+11-07 01:07:08.330 23895 23895 D nativeloader: Configuring clns-9 for other apk /data/app/~~SlkVl5IsbOoT05_LVYRH-g==/com.example.bai1.p5e01.isolated.test-8UKxKiY-mO2azsTqGfSCiQ==/base.apk:/data/app/~~7OAKJ2tDG9cXyuyiA-QFFA==/com.example.bai1.p5e01.isolated-1XNv_6cnTzPGSImGgpm35g==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~SlkVl5IsbOoT05_LVYRH-g==/com.example.bai1.p5e01.isolated.test-8UKxKiY-mO2azsTqGfSCiQ==/lib/x86_64:/data/app/~~7OAKJ2tDG9cXyuyiA-QFFA==/com.example.bai1.p5e01.isolated-1XNv_6cnTzPGSImGgpm35g==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e01.isolated
+--------- beginning of system
+11-07 01:07:08.338 23895 23895 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.example.bai1.p5e01.isolated/cache
+11-07 01:07:08.340 23895 23895 V GraphicsEnvironment: Currently set values for:
+11-07 01:07:08.340 23895 23895 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-07 01:07:08.340 23895 23895 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-07 01:07:08.340 23895 23895 V GraphicsEnvironment: com.example.bai1.p5e01.isolated is not listed in per-application setting
+11-07 01:07:08.340 23895 23895 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-07 01:07:08.341 23895 23895 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-07 01:07:08.396 23895 23895 D CompatChangeReporter: Compat change id reported: 407952621; UID 10251; state: ENABLED
+11-07 01:07:08.396 23895 23895 D CompatChangeReporter: Compat change id reported: 419020719; UID 10251; state: ENABLED
+11-07 01:07:08.398 23895 23895 I MonitoringInstr: newApplication called!
+11-07 01:07:08.399 23895 23895 I MonitoringInstr: Instrumentation started!
+11-07 01:07:08.408 23895 23895 I AndroidJUnitRunner: onCreate Bundle[{hostFixturePort=37601, class=com.example.bai1.fixture.LocalPermissionDeniedDeviceRuntimeTest, listener=com.example.bai1.fixture.DeviceXmlListener}]
+11-07 01:07:08.409 23895 23895 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-07 01:07:09.910 23895 23910 D AndroidJUnitRunner: onStart is called.
+11-07 01:07:09.911 23895 23895 I MonitoringInstr: No JSBridge.
+11-07 01:07:09.912 23895 23921 D CompatChangeReporter: Compat change id reported: 458413887; UID 10251; state: ENABLED
+11-07 01:07:09.915 23895 23910 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+11-07 01:07:09.917 23895 23910 D TestRequestBuilder: Skipping class path scanning and directly running [com.example.bai1.fixture.LocalPermissionDeniedDeviceRuntimeTest]
+11-07 01:07:09.924 23895 23910 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-07 01:07:09.925 23895 23910 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+11-07 01:07:09.925 23895 23910 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+11-07 01:07:09.925 23895 23910 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+11-07 01:07:09.925 23895 23910 D TestExecutor: Adding listener androidx.test.internal.runner.listener.TraceRunListener
+11-07 01:07:09.925 23895 23910 D TestExecutor: Adding listener com.example.bai1.fixture.DeviceXmlListener
+11-07 01:07:09.927 23895 23910 I TestRunner: run started: 2 tests
+11-07 01:07:09.928 23895 23910 I TestRunner: started: localPermissionIsDeniedWhileCleartextFixturePolicyRemainsAllowed(com.example.bai1.fixture.LocalPermissionDeniedDeviceRuntimeTest)
+11-07 01:07:09.934 23895 23910 I TestRunner: finished: localPermissionIsDeniedWhileCleartextFixturePolicyRemainsAllowed(com.example.bai1.fixture.LocalPermissionDeniedDeviceRuntimeTest)
+11-07 01:07:09.936 23895 23910 I TestRunner: started: bridgeSocketFailsClosedWhenLocalPermissionIsAbsent(com.example.bai1.fixture.LocalPermissionDeniedDeviceRuntimeTest)
+11-07 01:07:11.971 23895 23910 I TestRunner: finished: bridgeSocketFailsClosedWhenLocalPermissionIsAbsent(com.example.bai1.fixture.LocalPermissionDeniedDeviceRuntimeTest)
+11-07 01:07:11.973 23895 23910 I TestRunner: run finished: 2 tests, 0 failed, 0 ignored

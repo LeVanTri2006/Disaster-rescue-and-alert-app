@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.rescue.routing.GraphDownloaderTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2026-11-08T15:40:56.520Z" hostname="Dell-Latitude-5511" time="0.153">
+  <properties/>
+  <testcase name="18_cache metadata valid but gzip content does not match manifest - fails closed without returning verified artifact when network unavailable" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.038"/>
+  <testcase name="10_uncompressed size mismatch fails with DECOMPRESSED_SIZE_MISMATCH" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.005"/>
+  <testcase name="19_cache checksum mismatch rejects the generation and safely downloads anew" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.008"/>
+  <testcase name="6_no internet or IO failure maps to DOWNLOAD_FAILED and cleans up" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.004"/>
+  <testcase name="11_cache hit returns existing graph without calling network" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.009"/>
+  <testcase name="1_successful download, sha256 verification and gzip decompression" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.008"/>
+  <testcase name="20_network download checksum mismatch does not publish partial files or meta" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.004"/>
+  <testcase name="15_cache generation valid - rehashes and binds parsed content" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.006"/>
+  <testcase name="9_corrupted or invalid gzip stream fails with GZIP_INVALID" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.005"/>
+  <testcase name="13_never sends Authorization header or credentials to R2 presigned URL" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.005"/>
+  <testcase name="4_http 403 maps to URL_EXPIRED and deletes temp files" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.004"/>
+  <testcase name="12_deletes all temporary files on failure" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.004"/>
+  <testcase name="16_cache file tampered on disk but meta retains old hash - rejects cache" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.008"/>
+  <testcase name="7_compressed size mismatch fails with SIZE_MISMATCH and deletes temp file" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.003"/>
+  <testcase name="14_rejects payload that exceeds safe decompression bomb limit" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.021"/>
+  <testcase name="2_does not download when downloadAvailable is false" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.003"/>
+  <testcase name="8_sha256 mismatch fails with CHECKSUM_MISMATCH and deletes temp file" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.004"/>
+  <testcase name="5_download timeout maps to DOWNLOAD_TIMEOUT and cleans up" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.004"/>
+  <testcase name="3_missing or invalid download URL fails precondition" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.002"/>
+  <testcase name="17_cache file truncated but meta valid - rejects cache" classname="com.example.bai1.rescue.routing.GraphDownloaderTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

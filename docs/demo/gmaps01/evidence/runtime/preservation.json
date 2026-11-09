@@ -1,0 +1,40 @@
+{
+  "android": {
+    "status": "PASS",
+    "baseline_files": 3613,
+    "allowed_m01_changed_files": [
+      "tools/google-maps-harness/configuration_status.py",
+      "tools/google-maps-harness/build.gradle.kts",
+      "tools/google-maps-harness/src/main/AndroidManifest.xml",
+      "docs/demo/P5_E10_M01_GOOGLE_MAPS_REPORT.md",
+      "docs/demo/gmaps01/RUNBOOK_USB.md",
+      "docs/demo/gmaps01/artifacts/SHA256SUMS"
+    ],
+    "new_files": [
+      "docs/demo/gmaps01/artifacts/.gitignore",
+      "docs/demo/gmaps01/artifacts/gmaps01-debug-test.apk",
+      "docs/demo/gmaps01/artifacts/gmaps01-debug.apk",
+      "docs/demo/gmaps01/artifacts/gmaps01-negative-test.apk",
+      "docs/demo/gmaps01/artifacts/gmaps01-negative.apk",
+      "tools/google-maps-harness/demo_session.py",
+      "tools/google-maps-harness/finalize_runtime.py",
+      "tools/google-maps-harness/gate_runtime.py",
+      "tools/google-maps-harness/run_maps_tests.py",
+      "tools/google-maps-harness/runtime_common.py",
+      "tools/google-maps-harness/src/androidTest/java/com/example/bai1/fixture/DeviceXmlListener.kt",
+      "tools/google-maps-harness/src/androidTest/java/com/example/bai1/fixture/IsolatedInstrumentationRunner.kt",
+      "tools/google-maps-harness/src/androidTest/java/com/example/bai1/fixture/MapsPhoneTest.kt",
+      "tools/google-maps-harness/src/main/java/com/example/bai1/gmaps01/MapsDemoActivity.kt"
+    ],
+    "outside_scope_changes": 0,
+    "git_diff_check_exit": 0
+  },
+  "backend": {
+    "status": "PASS",
+    "baseline_files": 677,
+    "allowed_m01_changed_files": [],
+    "new_files": [],
+    "outside_scope_changes": 0,
+    "git_diff_check_exit": 0
+  }
+}

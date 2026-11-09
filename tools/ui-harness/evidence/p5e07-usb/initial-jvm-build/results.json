@@ -1,0 +1,63 @@
+{
+  "auth-navigation": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest",
+      "--tests",
+      "com.example.bai1.auth.*",
+      "--tests",
+      "com.example.bai1.presentation.navigation.*"
+    ],
+    "exit_code": 0,
+    "suites": 7,
+    "tests": 40,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "routing": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest",
+      "--rerun-tasks",
+      "--tests",
+      "com.example.bai1.rescue.routing.*"
+    ],
+    "exit_code": 0,
+    "suites": 13,
+    "tests": 462,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "full": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest"
+    ],
+    "exit_code": 0,
+    "suites": 31,
+    "tests": 543,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "apk": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:assembleDebug",
+      ":app:processReleaseMainManifest"
+    ],
+    "exit_code": 0,
+    "sha256": "f813bfc66ed5aa10f43c9a477f9c75db4edfe615ec419c00f9b3870b706d3b02",
+    "size": 95446518
+  }
+}

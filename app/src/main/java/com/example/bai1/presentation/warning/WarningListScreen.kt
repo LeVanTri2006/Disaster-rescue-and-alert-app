@@ -10,6 +10,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.bai1.data.model.WarningItem
+import com.example.bai1.presentation.components.EmptyState
 import com.example.bai1.data.model.DisasterCategory
 import com.example.bai1.data.repository.DisasterRepository
 import com.example.bai1.presentation.components.AppFilterChip
@@ -21,7 +23,8 @@ import com.example.bai1.ui.theme.BackgroundLight
 fun WarningListScreen(
     initialCategory: DisasterCategory? = null,
     onNavigateBack: () -> Unit,
-    onNavigateToDetail: (String) -> Unit
+    onNavigateToDetail: (String) -> Unit,
+    warnings: List<WarningItem> = DisasterRepository.warningList
 ) {
     var selectedFilter by remember {
         mutableStateOf(
@@ -36,12 +39,12 @@ fun WarningListScreen(
 
     val filters = listOf("Tất cả", "Bão", "Lũ lụt", "Sạt lở")
 
-    val filteredItems = remember(selectedFilter) {
+    val filteredItems = remember(selectedFilter, warnings) {
         when (selectedFilter) {
-            "Bão" -> DisasterRepository.warningList.filter { it.category == DisasterCategory.STORM }
-            "Lũ lụt" -> DisasterRepository.warningList.filter { it.category == DisasterCategory.FLOOD }
-            "Sạt lở" -> DisasterRepository.warningList.filter { it.category == DisasterCategory.LANDSLIDE }
-            else -> DisasterRepository.warningList
+            "Bão" -> warnings.filter { it.category == DisasterCategory.STORM }
+            "Lũ lụt" -> warnings.filter { it.category == DisasterCategory.FLOOD }
+            "Sạt lở" -> warnings.filter { it.category == DisasterCategory.LANDSLIDE }
+            else -> warnings
         }
     }
 
@@ -76,6 +79,13 @@ fun WarningListScreen(
                         onClick = { selectedFilter = filter }
                     )
                 }
+            }
+
+            if (filteredItems.isEmpty()) {
+                EmptyState(
+                    title = "Chưa có dữ liệu cảnh báo",
+                    subtitle = "Không có dữ liệu không đồng nghĩa không có nguy cơ."
+                )
             }
 
             // Warning Items List

@@ -1,0 +1,134 @@
+--------- beginning of main
+11-07 00:53:12.815 15267 15267 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10243
+11-07 00:53:12.815 15267 15267 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10243/pid_15267
+11-07 00:53:12.827 15267 15267 I Zygote  : Process 15267 created for com.example.bai1.p5e01.isolated
+11-07 00:53:12.828 15267 15267 I .p5e01.isolated: Using generational CollectorTypeCMC GC.
+11-07 00:53:12.828 15267 15267 W .p5e01.isolated: Unexpected CPU variant for x86: x86_64.
+11-07 00:53:12.828 15267 15267 W .p5e01.isolated: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-07 00:53:12.833 15267 15267 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-07 00:53:12.840 15267 15267 D CompatChangeReporter: Compat change id reported: 333566037; UID 10243; state: ENABLED
+11-07 00:53:12.843 15267 15267 W .p5e01.isolated: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/data/app/~~uiDbjiOpuWUDABRUMsdFfw==/com.example.bai1.p5e01.isolated.test-MIF05YLII8spFhNNWoQpFA==/base.apk*2841667447])
+11-07 00:53:12.844 15267 15267 D nativeloader: Configuring clns-9 for other apk /data/app/~~uiDbjiOpuWUDABRUMsdFfw==/com.example.bai1.p5e01.isolated.test-MIF05YLII8spFhNNWoQpFA==/base.apk:/data/app/~~usEU9zejwOSSJuQLLDd28A==/com.example.bai1.p5e01.isolated-jZz0XXlO1061o3EE0i-8pA==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~uiDbjiOpuWUDABRUMsdFfw==/com.example.bai1.p5e01.isolated.test-MIF05YLII8spFhNNWoQpFA==/lib/x86_64:/data/app/~~usEU9zejwOSSJuQLLDd28A==/com.example.bai1.p5e01.isolated-jZz0XXlO1061o3EE0i-8pA==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e01.isolated
+--------- beginning of system
+11-07 00:53:12.847 15267 15267 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.example.bai1.p5e01.isolated/cache
+11-07 00:53:12.848 15267 15267 V GraphicsEnvironment: Currently set values for:
+11-07 00:53:12.848 15267 15267 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-07 00:53:12.848 15267 15267 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-07 00:53:12.848 15267 15267 V GraphicsEnvironment: com.example.bai1.p5e01.isolated is not listed in per-application setting
+11-07 00:53:12.848 15267 15267 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-07 00:53:12.849 15267 15267 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-07 00:53:12.850 15267 15267 W .p5e01.isolated: ClassLoaderContext parent mismatch.  (PCL[] | PCL[];PCL[/data/app/~~uiDbjiOpuWUDABRUMsdFfw==/com.example.bai1.p5e01.isolated.test-MIF05YLII8spFhNNWoQpFA==/base.apk*2841667447:/data/app/~~usEU9zejwOSSJuQLLDd28A==/com.example.bai1.p5e01.isolated-jZz0XXlO1061o3EE0i-8pA==/base.apk*3315812219])
+11-07 00:53:12.852 15267 15267 W .p5e01.isolated: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/data/app/~~uiDbjiOpuWUDABRUMsdFfw==/com.example.bai1.p5e01.isolated.test-MIF05YLII8spFhNNWoQpFA==/base.apk*2841667447];PCL[/data/app/~~uiDbjiOpuWUDABRUMsdFfw==/com.example.bai1.p5e01.isolated.test-MIF05YLII8spFhNNWoQpFA==/base.apk*2841667447:/data/app/~~usEU9zejwOSSJuQLLDd28A==/com.example.bai1.p5e01.isolated-jZz0XXlO1061o3EE0i-8pA==/base.apk*3315812219])
+11-07 00:53:12.855 15267 15267 D CompatChangeReporter: Compat change id reported: 407952621; UID 10243; state: ENABLED
+11-07 00:53:12.855 15267 15267 D CompatChangeReporter: Compat change id reported: 419020719; UID 10243; state: ENABLED
+11-07 00:53:12.856 15267 15267 I MonitoringInstr: newApplication called!
+11-07 00:53:12.856 15267 15267 I MonitoringInstr: Instrumentation started!
+11-07 00:53:12.858 15267 15267 I AndroidJUnitRunner: onCreate Bundle[{hostFixturePort=39951, class=com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest, listener=com.example.bai1.fixture.DeviceXmlListener}]
+11-07 00:53:12.858 15267 15267 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-07 00:53:14.359 15267 15279 D AndroidJUnitRunner: onStart is called.
+11-07 00:53:14.359 15267 15267 I MonitoringInstr: No JSBridge.
+11-07 00:53:14.360 15267 15293 D CompatChangeReporter: Compat change id reported: 458413887; UID 10243; state: ENABLED
+11-07 00:53:14.361 15267 15279 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+11-07 00:53:14.362 15267 15279 D TestRequestBuilder: Skipping class path scanning and directly running [com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest]
+11-07 00:53:14.364 15267 15279 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-07 00:53:14.365 15267 15279 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+11-07 00:53:14.365 15267 15279 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+11-07 00:53:14.365 15267 15279 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+11-07 00:53:14.365 15267 15279 D TestExecutor: Adding listener androidx.test.internal.runner.listener.TraceRunListener
+11-07 00:53:14.365 15267 15279 D TestExecutor: Adding listener com.example.bai1.fixture.DeviceXmlListener
+11-07 00:53:14.365 15267 15279 I TestRunner: run started: 5 tests
+11-07 00:53:14.366 15267 15279 I TestRunner: started: isolatedNonDebuggableReleaseLikeRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.368 15267 15279 I TestRunner: finished: isolatedNonDebuggableReleaseLikeRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.369 15267 15279 I TestRunner: started: releaseNonLocalHostIsBlockedUsingControlledLoopbackDns(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.376 15267 15279 I TestRunner: finished: releaseNonLocalHostIsBlockedUsingControlledLoopbackDns(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.377 15267 15279 I TestRunner: started: releaseLikeActualSocketHttpBlockedBeforeAnyRequest(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.379 15267 15279 D CompatChangeReporter: Compat change id reported: 418924588; UID 10243; state: ENABLED
+11-07 00:53:14.381 15267 15279 E TestRunner: failed: releaseLikeActualSocketHttpBlockedBeforeAnyRequest(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.381 15267 15279 E TestRunner: ----- begin exception -----
+11-07 00:53:14.381 15267 15279 E TestRunner: java.lang.AssertionError: Expected cleartext refusal; actual=null; receivedRequests=1
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.Assert.fail(Assert.java:89)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.Assert.assertTrue(Assert.java:42)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest.releaseLikeActualSocketHttpBlockedBeforeAnyRequest(DeviceRuntimeTest.kt:318)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at com.example.bai1.fixture.IsolatedInstrumentationRunner.onStart(IsolatedInstrumentationRunner.kt:10)
+11-07 00:53:14.381 15267 15279 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2701)
+11-07 00:53:14.381 15267 15279 E TestRunner: ----- end exception -----
+11-07 00:53:14.381 15267 15279 I TestRunner: finished: releaseLikeActualSocketHttpBlockedBeforeAnyRequest(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.382 15267 15279 I TestRunner: started: productionRoutingClientRejectsHttpEvenWhenPlatformAllowsLoopback(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.389 15267 15279 I TestRunner: finished: productionRoutingClientRejectsHttpEvenWhenPlatformAllowsLoopback(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.390 15267 15279 I TestRunner: started: releasePolicyDeniesEveryDebugHostAtRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.391 15267 15279 E TestRunner: failed: releasePolicyDeniesEveryDebugHostAtRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.391 15267 15279 E TestRunner: ----- begin exception -----
+11-07 00:53:14.392 15267 15279 E TestRunner: java.lang.AssertionError: Release HTTP must be denied for 127.0.0.1
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.Assert.fail(Assert.java:89)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.Assert.assertTrue(Assert.java:42)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.Assert.assertFalse(Assert.java:65)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest.releasePolicyDeniesEveryDebugHostAtRuntime(DeviceRuntimeTest.kt:311)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:67)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:58)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:446)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at com.example.bai1.fixture.IsolatedInstrumentationRunner.onStart(IsolatedInstrumentationRunner.kt:10)
+11-07 00:53:14.392 15267 15279 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2701)
+11-07 00:53:14.392 15267 15279 E TestRunner: ----- end exception -----
+11-07 00:53:14.392 15267 15279 I TestRunner: finished: releasePolicyDeniesEveryDebugHostAtRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 00:53:14.393 15267 15279 I TestRunner: run finished: 5 tests, 2 failed, 0 ignored

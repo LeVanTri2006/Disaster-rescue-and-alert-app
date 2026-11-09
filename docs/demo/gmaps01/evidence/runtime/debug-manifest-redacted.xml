@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:ns0="http://schemas.android.com/apk/res/android" package="com.example.bai1.p5e10maps.demo" ns0:versionCode="1" ns0:versionName="M01-GOOGLE-MAPS">
+
+    <uses-sdk ns0:minSdkVersion="30" ns0:targetSdkVersion="37" />
+
+    <uses-permission ns0:name="android.permission.INTERNET" />
+    
+    <uses-permission ns0:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature ns0:glEsVersion="0x00020000" ns0:required="true" />
+
+    <queries>
+
+        
+        <package ns0:name="com.google.android.apps.maps" />
+    </queries>
+
+    <permission ns0:name="com.example.bai1.p5e10maps.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" ns0:protectionLevel="signature" />
+
+    <uses-permission ns0:name="com.example.bai1.p5e10maps.demo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application ns0:allowBackup="false" ns0:appComponentFactory="androidx.core.app.CoreComponentFactory" ns0:debuggable="true" ns0:extractNativeLibs="false" ns0:label="M01 Google Maps Demo" ns0:networkSecurityConfig="@xml/maps_network_security" ns0:theme="@android:style/Theme.Material.Light.NoActionBar" ns0:usesCleartextTraffic="false">
+        <meta-data ns0:name="com.google.android.geo.API_KEY" ns0:value="[REDACTED]" />
+
+        <activity ns0:name="com.example.bai1.gmaps01.MapsDemoActivity" ns0:exported="true">
+            <intent-filter>
+                <action ns0:name="android.intent.action.MAIN" />
+
+                <category ns0:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <uses-library ns0:name="org.apache.http.legacy" ns0:required="false" />
+
+        <activity ns0:name="com.google.android.gms.common.api.GoogleApiActivity" ns0:exported="false" ns0:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data ns0:name="com.google.android.gms.version" ns0:value="@integer/google_play_services_version" />
+
+        <uses-library ns0:name="androidx.window.extensions" ns0:required="false" />
+        <uses-library ns0:name="androidx.window.sidecar" ns0:required="false" />
+    </application>
+
+</manifest>

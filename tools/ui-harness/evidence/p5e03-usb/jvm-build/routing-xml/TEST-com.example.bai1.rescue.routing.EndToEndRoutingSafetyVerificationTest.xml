@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" tests="50" skipped="0" failures="0" errors="0" timestamp="2026-11-08T13:56:35.072Z" hostname="Dell-Latitude-5511" time="1.184">
+  <properties/>
+  <testcase name="45_failure_injection_manifest_denies_strict_routing_denied" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.03"/>
+  <testcase name="39_failure_injection_missing_or_blank_checksum_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="44_failure_injection_undelegated_via_way_denied" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.002"/>
+  <testcase name="29_live_hazard_blocked_edge_always_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.02"/>
+  <testcase name="32_live_hazard_flooded_untrusted_assessment_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.002"/>
+  <testcase name="46_failure_injection_graph_refresh_does_not_affect_active_context" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="30_live_hazard_unknown_edge_always_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="42_failure_injection_index_version_mismatch_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="40_failure_injection_checksum_mismatch_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="23_ucs_state_loop_route_allowed_with_distinct_state_key" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="01_test_seam_isolation_prevents_strict_routing_in_rescue_routing_context" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="43_failure_injection_delegation_id_mismatch_denied" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.006"/>
+  <testcase name="06_no_via_way_multiple_no_outputs_all_denied" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.002"/>
+  <testcase name="10_only_via_way_side_branch_blocked_during_active_obligation" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="02_production_dfa_and_empty_dfa_have_no_test_evaluator" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="48_failure_injection_clear_loaded_graph_preserves_caller_context" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="27_ucs_state_invalid_polled_state_fails_closed" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="19_combined_only_and_via_node_do_not_invalidate_each_other" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.002"/>
+  <testcase name="35_live_hazard_flooded_invalid_signature_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="15_only_via_way_wrong_continuation_from_same_node_is_denied" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="34_live_hazard_flooded_expired_assessment_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="08_no_via_way_reversed_directed_edge_does_not_trigger" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="33_live_hazard_flooded_mismatched_snapshot_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="25_ucs_state_internal_dfa_failure_aborts_search" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.002"/>
+  <testcase name="38_failure_injection_dfa_builder_failure_fails_closed" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="11_only_via_way_obligation_released_upon_completion" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="12_only_via_way_multiple_compatible_obligations_handled" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="49_failure_injection_empty_dfa_with_via_ways_cannot_bypass" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="17_combined_dfa_no_vetoes_edge_allowed_by_via_node" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="04_no_via_way_forbidden_sequence_never_appears_in_route" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.002"/>
+  <testcase name="26_ucs_state_allow_with_null_next_state_fails_closed" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="24_ucs_state_priority_queue_never_receives_rejected_edge" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="18_combined_via_node_no_vetoes_edge_allowed_by_dfa" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="21_ucs_state_each_find_route_starts_at_root" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="47_failure_injection_concurrent_routes_on_same_context_are_deterministic" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.033"/>
+  <testcase name="14_only_via_way_destination_in_middle_of_via_path_terminates_validly" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="36_live_hazard_flooded_valid_trusted_assessment_allowed" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="13_only_via_way_conflicting_obligations_create_safe_dead_end" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="28_live_hazard_clear_edge_traversed" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="16_combined_via_node_and_via_way_both_deny" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="31_live_hazard_flooded_without_assessment_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="20_ucs_state_different_restriction_states_not_merged" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <testcase name="50_performance_audit_production_danang_timings_and_synthetic_ucs_metrics" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.668"/>
+  <testcase name="05_no_via_way_valid_detour_is_found" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="37_live_hazard_dfa_turn_restriction_not_overridden_by_hazard_assessment" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="09_only_via_way_vehicle_must_follow_via_sequence" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="22_ucs_state_route_reconstruction_preserves_edge_order" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="03_production_danang_graph_loading_and_readiness_lock" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.379"/>
+  <testcase name="07_no_via_way_failure_transition_does_not_block_detour" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.001"/>
+  <testcase name="41_failure_injection_graph_version_mismatch_rejected" classname="com.example.bai1.rescue.routing.EndToEndRoutingSafetyVerificationTest" time="0.0"/>
+  <system-out><![CDATA[=== PRODUCTION GRAPH DA NANG AUDIT MEASUREMENTS ===
+Gzip SHA-256 verification time : 33.01 ms
+Streaming JSON parser duration : 619.55 ms
+ViaWay DFA build duration      : 5.10 ms
+TurnRestrictionIndex duration  : 4.40 ms
+Context assembly duration      : 0.05 ms
+Total Production Pipeline Time : 662.11 ms
+=== SYNTHETIC FIXTURE UCS METRICS ===
+UCS execution time             : 0.36 ms
+Nodes visited (polled)         : 5
+Turn restrictions skipped      : 1
+Physical route distance meters : 30.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,52 @@
+{
+  "releaseLike": {
+    "command": [
+      "python3",
+      "tools/emulator-harness/run_device_tests.py",
+      "--variant",
+      "releaseLike",
+      "--evidence-dir",
+      "/tmp/p5e01r-release"
+    ],
+    "exit_code": 0
+  },
+  "granted": {
+    "command": [
+      "python3",
+      "tools/emulator-harness/run_device_tests.py",
+      "--variant",
+      "debug",
+      "--permission-state",
+      "granted",
+      "--evidence-dir",
+      "/tmp/p5e01r-debug"
+    ],
+    "exit_code": 0
+  },
+  "denied": {
+    "command": [
+      "python3",
+      "tools/emulator-harness/run_device_tests.py",
+      "--variant",
+      "debug",
+      "--permission-state",
+      "denied",
+      "--evidence-dir",
+      "/tmp/p5e01r-denied"
+    ],
+    "exit_code": 0
+  },
+  "revoked": {
+    "command": [
+      "python3",
+      "tools/emulator-harness/run_device_tests.py",
+      "--variant",
+      "debug",
+      "--permission-state",
+      "revoked",
+      "--evidence-dir",
+      "/tmp/p5e01r-revoked"
+    ],
+    "exit_code": 0
+  }
+}

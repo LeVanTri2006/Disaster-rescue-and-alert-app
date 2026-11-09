@@ -32,7 +32,8 @@ class AuthRepositoryTest {
                 loginResult = AuthApiResult.Success(AuthTokens("access", "refresh")),
                 meResult = AuthApiResult.Success(user)
             ),
-            tokenStorage = storage
+            tokenStorage = storage,
+            invalidateRoutingSession = {}
         )
 
         repository.login("a@example.com", "password")
@@ -50,7 +51,8 @@ class AuthRepositoryTest {
                     AuthApiError(AuthApiErrorKind.UNAUTHORIZED, "HTTP 401")
                 )
             ),
-            tokenStorage = FakeTokenStorage()
+            tokenStorage = FakeTokenStorage(),
+            invalidateRoutingSession = {}
         )
 
         repository.login("a@example.com", "wrong")
@@ -70,7 +72,8 @@ class AuthRepositoryTest {
                     AuthApiError(AuthApiErrorKind.NO_INTERNET, "offline")
                 )
             ),
-            tokenStorage = storage
+            tokenStorage = storage,
+            invalidateRoutingSession = {}
         )
 
         repository.login("a@example.com", "password")
@@ -87,7 +90,7 @@ class AuthRepositoryTest {
             refreshResult = AuthApiResult.Success(AuthTokens("new-access", "new-refresh")),
             refreshedMeResult = AuthApiResult.Success(user)
         )
-        val repository = AuthRepository(api, storage)
+        val repository = AuthRepository(api, storage, invalidateRoutingSession = {})
 
         repository.restoreSession()
 
@@ -105,7 +108,8 @@ class AuthRepositoryTest {
                 meResult = AuthApiResult.Failure(AuthApiError(AuthApiErrorKind.UNAUTHORIZED, "expired")),
                 refreshResult = AuthApiResult.Failure(AuthApiError(AuthApiErrorKind.UNAUTHORIZED, "invalid refresh"))
             ),
-            storage
+            storage,
+            invalidateRoutingSession = {}
         )
 
         repository.restoreSession()

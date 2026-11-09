@@ -1,0 +1,173 @@
+[
+  {
+    "method": "GET",
+    "path": "/demo/info",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": null,
+    "actor": null
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "citizen"
+  },
+  {
+    "method": "POST",
+    "path": "/sos",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": "citizen",
+    "actor": "citizen",
+    "request": {
+      "adults": 1,
+      "children": 0,
+      "elderly": 0,
+      "neededItems": [],
+      "condition": "SYNTHETIC_TEST_DATA",
+      "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+      "latitude": 16.051,
+      "longitude": 108.203,
+      "urgency": "HIGH",
+      "timestamp": "2026-11-10T00:00:00Z"
+    },
+    "response_event_id": "ffdb8146-ff0e-46f1-a451-cf27ab8e4244",
+    "response": {
+      "adults": 1,
+      "children": 0,
+      "elderly": 0,
+      "neededItems": [],
+      "condition": "SYNTHETIC_TEST_DATA",
+      "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+      "latitude": 16.051,
+      "longitude": 108.203,
+      "urgency": "HIGH",
+      "timestamp": "2026-11-10T00:00:00Z",
+      "eventId": "ffdb8146-ff0e-46f1-a451-cf27ab8e4244",
+      "createdAt": 1794268800000,
+      "status": "ACTIVE",
+      "transportMode": "ONLINE"
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/demo/info",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": null,
+    "actor": null
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "citizen2"
+  },
+  {
+    "method": "POST",
+    "path": "/sos",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": "citizen",
+    "actor": "citizen2",
+    "request": {
+      "adults": 1,
+      "children": 0,
+      "elderly": 0,
+      "neededItems": [],
+      "condition": "SYNTHETIC_TEST_DATA",
+      "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+      "latitude": 16.051,
+      "longitude": 108.203,
+      "urgency": "HIGH",
+      "timestamp": "2026-11-10T00:00:00Z"
+    },
+    "response_event_id": "af3ebd53-1aa7-462b-92f1-806e3bcfa95f",
+    "response": {
+      "adults": 1,
+      "children": 0,
+      "elderly": 0,
+      "neededItems": [],
+      "condition": "SYNTHETIC_TEST_DATA",
+      "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+      "latitude": 16.051,
+      "longitude": 108.203,
+      "urgency": "HIGH",
+      "timestamp": "2026-11-10T00:00:00Z",
+      "eventId": "af3ebd53-1aa7-462b-92f1-806e3bcfa95f",
+      "createdAt": 1794268800000,
+      "status": "ACTIVE",
+      "transportMode": "ONLINE"
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/demo/info",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": null,
+    "actor": null
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "rescuer"
+  },
+  {
+    "method": "GET",
+    "path": "/sos/active",
+    "host": "127.0.0.1:44897",
+    "fault": "ok",
+    "role": "rescuer",
+    "actor": "rescuer",
+    "response_ids": [
+      "ffdb8146-ff0e-46f1-a451-cf27ab8e4244",
+      "af3ebd53-1aa7-462b-92f1-806e3bcfa95f"
+    ],
+    "response": [
+      {
+        "adults": 1,
+        "children": 0,
+        "elderly": 0,
+        "neededItems": [],
+        "condition": "SYNTHETIC_TEST_DATA",
+        "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+        "latitude": 16.051,
+        "longitude": 108.203,
+        "urgency": "HIGH",
+        "timestamp": "2026-11-10T00:00:00Z",
+        "eventId": "ffdb8146-ff0e-46f1-a451-cf27ab8e4244",
+        "createdAt": 1794268800000,
+        "status": "ACTIVE",
+        "transportMode": "ONLINE"
+      },
+      {
+        "adults": 1,
+        "children": 0,
+        "elderly": 0,
+        "neededItems": [],
+        "condition": "SYNTHETIC_TEST_DATA",
+        "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+        "latitude": 16.051,
+        "longitude": 108.203,
+        "urgency": "HIGH",
+        "timestamp": "2026-11-10T00:00:00Z",
+        "eventId": "af3ebd53-1aa7-462b-92f1-806e3bcfa95f",
+        "createdAt": 1794268800000,
+        "status": "ACTIVE",
+        "transportMode": "ONLINE"
+      }
+    ]
+  }
+]

@@ -1,0 +1,119 @@
+--------- beginning of main
+11-07 00:53:31.777 15619 15619 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10245
+11-07 00:53:31.777 15619 15619 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10245/pid_15619
+11-07 00:53:31.787 15619 15619 I Zygote  : Process 15619 created for com.example.bai1.p5e01.isolated
+11-07 00:53:31.787 15619 15619 I .p5e01.isolated: Late-enabling -Xcheck:jni
+11-07 00:53:31.801 15619 15619 I .p5e01.isolated: Using generational CollectorTypeCMC GC.
+11-07 00:53:31.802 15619 15619 W .p5e01.isolated: Unexpected CPU variant for x86: x86_64.
+11-07 00:53:31.802 15619 15619 W .p5e01.isolated: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-07 00:53:31.808 15619 15619 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-07 00:53:31.830 15619 15619 D CompatChangeReporter: Compat change id reported: 333566037; UID 10245; state: ENABLED
+11-07 00:53:31.885 15619 15619 D nativeloader: Configuring clns-9 for other apk /data/app/~~WeS2axvLCmvyPS1MkGk5CA==/com.example.bai1.p5e01.isolated.test-R5eQj-rnD7RD0aqJohP-_A==/base.apk:/data/app/~~VKla_GK4KhwRAGMPNYVxfw==/com.example.bai1.p5e01.isolated-uPS00SCMOFu9R-7ZwcNd8w==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~WeS2axvLCmvyPS1MkGk5CA==/com.example.bai1.p5e01.isolated.test-R5eQj-rnD7RD0aqJohP-_A==/lib/x86_64:/data/app/~~VKla_GK4KhwRAGMPNYVxfw==/com.example.bai1.p5e01.isolated-uPS00SCMOFu9R-7ZwcNd8w==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e01.isolated
+--------- beginning of system
+11-07 00:53:31.890 15619 15619 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.example.bai1.p5e01.isolated/cache
+11-07 00:53:31.891 15619 15619 V GraphicsEnvironment: Currently set values for:
+11-07 00:53:31.891 15619 15619 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-07 00:53:31.891 15619 15619 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-07 00:53:31.891 15619 15619 V GraphicsEnvironment: com.example.bai1.p5e01.isolated is not listed in per-application setting
+11-07 00:53:31.891 15619 15619 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-07 00:53:31.892 15619 15619 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-07 00:53:31.931 15619 15619 D CompatChangeReporter: Compat change id reported: 407952621; UID 10245; state: ENABLED
+11-07 00:53:31.931 15619 15619 D CompatChangeReporter: Compat change id reported: 419020719; UID 10245; state: ENABLED
+11-07 00:53:31.934 15619 15619 I MonitoringInstr: newApplication called!
+11-07 00:53:31.934 15619 15619 I MonitoringInstr: Instrumentation started!
+11-07 00:53:31.945 15619 15619 I AndroidJUnitRunner: onCreate Bundle[{hostFixturePort=37051, class=com.example.bai1.fixture.DebugDeviceRuntimeTest, listener=com.example.bai1.fixture.DeviceXmlListener}]
+11-07 00:53:31.946 15619 15619 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-07 00:53:33.447 15619 15639 D AndroidJUnitRunner: onStart is called.
+11-07 00:53:33.447 15619 15619 I MonitoringInstr: No JSBridge.
+11-07 00:53:33.448 15619 15643 D CompatChangeReporter: Compat change id reported: 458413887; UID 10245; state: ENABLED
+11-07 00:53:33.450 15619 15639 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+11-07 00:53:33.452 15619 15639 D TestRequestBuilder: Skipping class path scanning and directly running [com.example.bai1.fixture.DebugDeviceRuntimeTest]
+11-07 00:53:33.464 15619 15639 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-07 00:53:33.465 15619 15639 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+11-07 00:53:33.466 15619 15639 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+11-07 00:53:33.466 15619 15639 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+11-07 00:53:33.466 15619 15639 D TestExecutor: Adding listener androidx.test.internal.runner.listener.TraceRunListener
+11-07 00:53:33.466 15619 15639 D TestExecutor: Adding listener com.example.bai1.fixture.DeviceXmlListener
+11-07 00:53:33.468 15619 15639 I TestRunner: run started: 18 tests
+11-07 00:53:33.469 15619 15639 I TestRunner: started: offlineErrorCannotPublishReady(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.533 15619 15639 I TestRunner: finished: offlineErrorCannotPublishReady(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.534 15619 15639 I TestRunner: started: unverifiedGraphLoaderAndRouterRemainDisabled(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.544 15619 15644 D CompatChangeReporter: Compat change id reported: 418924588; UID 10245; state: ENABLED
+11-07 00:53:33.591 15619 15639 I TestRunner: finished: unverifiedGraphLoaderAndRouterRemainDisabled(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.592 15619 15639 I TestRunner: started: apiRedirectDoesNotForwardBearer(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.600 15619 15639 I TestRunner: finished: apiRedirectDoesNotForwardBearer(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.601 15619 15639 I TestRunner: started: cancellationAtPublicationBoundaryPreservesA(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.651 15619 15639 I TestRunner: finished: cancellationAtPublicationBoundaryPreservesA(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.652 15619 15639 I TestRunner: started: graphRedirectIsNotFollowedAndHasNoBearer(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.664 15619 15639 I TestRunner: finished: graphRedirectIsNotFollowedAndHasNoBearer(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.665 15619 15639 I TestRunner: started: contentFailurePreservesPublishedGeneration(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.699 15619 15639 I TestRunner: finished: contentFailurePreservesPublishedGeneration(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.700 15619 15639 I TestRunner: started: invalidationDuringRealHttpCannotReviveOldSession(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.713 15619 15639 I TestRunner: finished: invalidationDuringRealHttpCannotReviveOldSession(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.714 15619 15639 I TestRunner: started: localHarnessActivitySmokeOnly(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:33.736 15619 15659 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-07 00:53:33.740 15619 15619 D .p5e01.isolated: Initializing ProtoLog
+11-07 00:53:33.740 15619 15619 D ProtoLog: Initializing ProtoLog DataSource
+11-07 00:53:33.768 15619 15619 D LifecycleMonitor: Lifecycle status change: com.example.bai1.fixture.FixtureActivity@d2b98b2 in: PRE_ON_CREATE
+11-07 00:53:33.854 15619 15619 D LifecycleMonitor: Lifecycle status change: com.example.bai1.fixture.FixtureActivity@d2b98b2 in: CREATED
+11-07 00:53:33.856 15619 15619 D LifecycleMonitor: Lifecycle status change: com.example.bai1.fixture.FixtureActivity@d2b98b2 in: STARTED
+11-07 00:53:33.877 15619 15619 D LifecycleMonitor: Lifecycle status change: com.example.bai1.fixture.FixtureActivity@d2b98b2 in: RESUMED
+11-07 00:53:33.880 15619 15659 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+11-07 00:53:33.884 15619 15619 W HWUI    : Unknown dataspace 0
+11-07 00:53:33.886 15619 15659 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+11-07 00:53:33.891 15619 15659 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-07 00:53:33.900 15619 15659 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-07 00:53:33.912 15619 15663 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-07 00:53:34.045 15619 15619 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@8f41c0f
+11-07 00:53:34.047 15619 15676 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Activity$$ExternalSyntheticLambda0@8f41c0f
+11-07 00:53:34.054 15619 15619 D VRI[FixtureActivity]: WindowInsets changed: 1440x3120 statusBars:[0,145,0,0] navigationBars:[0,0,0,84] mandatorySystemGestures:[0,187,0,112] 
+11-07 00:53:34.058 15619 15619 I HWUI    : Using FreeType backend (prop=Auto)
+11-07 00:53:34.085 15619 15619 I Surface : Creating surface for consumer unnamed-15619-0 with slotExpansion=1 for 64 slots
+11-07 00:53:34.085 15619 15619 I Surface : Creating surface for consumer VRI[FixtureActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-07 00:53:34.610 15619 15623 I .p5e01.isolated: Compiler allocated 4522KB to compile void android.view.ViewRootImpl.performTraversals(long)
+11-07 00:53:34.669 15619 15619 I Choreographer: Skipped 36 frames!  The application may be doing too much work on its main thread.
+11-07 00:53:35.052 15619 15619 D InsetsController: hide(ime())
+11-07 00:53:35.053 15619 15619 I ImeTracker: com.example.bai1.p5e01.isolated:abe396de: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-07 00:53:35.493 15619 15639 I TestRunner: finished: localHarnessActivitySmokeOnly(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:35.507 15619 15619 D LifecycleMonitor: Lifecycle status change: com.example.bai1.fixture.FixtureActivity@d2b98b2 in: PAUSED
+11-07 00:53:35.530 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:35.584 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:35.635 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:35.685 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:35.738 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:35.790 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:35.845 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:35.907 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:35.962 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:36.038 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:36.116 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:36.171 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:36.235 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:36.286 15619 15639 I MonitoringInstr: Unstopped activity count: 1
+11-07 00:53:36.287 15619 15619 D VRI[FixtureActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-07 00:53:36.303 15619 15619 D LifecycleMonitor: Lifecycle status change: com.example.bai1.fixture.FixtureActivity@d2b98b2 in: STOPPED
+11-07 00:53:36.304 15619 15619 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-07 00:53:36.307 15619 15619 D LifecycleMonitor: Lifecycle status change: com.example.bai1.fixture.FixtureActivity@d2b98b2 in: DESTROYED
+11-07 00:53:36.338 15619 15639 I TestRunner: started: expiredLeaseMakesNoDeviceRequest(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:36.365 15619 15619 D ViewRootImpl: Skipping stats log for color mode
+11-07 00:53:36.392 15619 15639 I TestRunner: finished: expiredLeaseMakesNoDeviceRequest(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:36.394 15619 15639 I TestRunner: started: rawGzipHashAndProductionParserRunOnAndroid(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:36.445 15619 15639 I TestRunner: finished: rawGzipHashAndProductionParserRunOnAndroid(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:36.450 15619 15639 I TestRunner: started: hostEmulatorBridgeHttpFixtureActuallyConnects(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:37.007 15619 15639 I TestRunner: finished: hostEmulatorBridgeHttpFixtureActuallyConnects(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:37.008 15619 15639 I TestRunner: started: runnerApiAndIsolation(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:37.011 15619 15639 I TestRunner: finished: runnerApiAndIsolation(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:37.011 15619 15639 I TestRunner: started: actualSocketReadTimeoutRemainsFailClosed(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:51.544 15619 15624 W .p5e01.isolated: Cleared Reference was only reachable from finalizer (only reported once)
+11-07 00:53:53.028 15619 15639 I TestRunner: finished: actualSocketReadTimeoutRemainsFailClosed(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.029 15619 15639 I TestRunner: started: actualTransportRejectsNonAllowlistedHostWithoutInternet(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.035 15619 15639 I TestRunner: finished: actualTransportRejectsNonAllowlistedHostWithoutInternet(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.036 15619 15639 I TestRunner: started: androidDebugPolicyExactAllowlist(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.039 15619 15639 I TestRunner: finished: androidDebugPolicyExactAllowlist(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.040 15619 15639 I TestRunner: started: sharedClientCredentialsNeverReachDownloadSocket(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.068 15619 15639 I TestRunner: finished: sharedClientCredentialsNeverReachDownloadSocket(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.069 15619 15639 I TestRunner: started: truncatedSocketResponseNeverPublishesGraph(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.087 15619 15639 I TestRunner: finished: truncatedSocketResponseNeverPublishesGraph(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.088 15619 15639 I TestRunner: started: api37LocalNetworkPermissionIsGrantedOnlyToHarness(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.090 15619 15639 I TestRunner: finished: api37LocalNetworkPermissionIsGrantedOnlyToHarness(com.example.bai1.fixture.DebugDeviceRuntimeTest)
+11-07 00:53:53.091 15619 15639 I TestRunner: run finished: 18 tests, 0 failed, 0 ignored

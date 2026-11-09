@@ -34,7 +34,6 @@ class FirebaseSosRepository(
     }
 
     override suspend fun getActiveSos(): List<SosRescueInfo> {
-        android.util.Log.d("MAP_DEBUG", "FirebaseSosRepository.getActiveSos() called")
         val localActive = localRepository.getActiveSos()
         return merge(localActive, realtimeEvents.value.values.toList()).filter { it.isActive() }
     }
@@ -43,7 +42,6 @@ class FirebaseSosRepository(
         ensureRealtimeStarted()
         return combine(localRepository.observeSos(), realtimeEvents) { local, realtime ->
             val result = merge(local, realtime.values.toList())
-            android.util.Log.d("MAP_DEBUG", "OBSERVE_SOS_COUNT=${result.size}")
             result
         }
     }
@@ -80,7 +78,6 @@ class FirebaseSosRepository(
                         }
                         is FirebaseSosChange.Removed -> current - change.eventId
                     }
-                    android.util.Log.d("FirebaseRealtime", "RTDB_EVENT_COUNT=${newState.size}")
                     newState
                 }
             }
@@ -91,14 +88,12 @@ class FirebaseSosRepository(
         merge(localRepository.getMySos(), realtimeEvents.value.values.toList())
 
     private fun merge(local: List<SosRescueInfo>, realtime: List<SosRescueInfo>): List<SosRescueInfo> {
-        android.util.Log.d("MAP_DEBUG", "MERGE_BEFORE_DEDUPE=${local.size + realtime.size}")
         val now = System.currentTimeMillis()
         val merged = (local + realtime)
             .filter { !it.isExpiredAt(now) }
             .associateBy { it.eventId }
             .values
             .toList()
-        android.util.Log.d("MAP_DEBUG", "MERGE_AFTER_DEDUPE=${merged.size}")
         return merged
     }
 

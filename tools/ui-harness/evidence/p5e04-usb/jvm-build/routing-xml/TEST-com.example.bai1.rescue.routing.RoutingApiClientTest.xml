@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.rescue.routing.RoutingApiClientTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-08T14:27:31.807Z" hostname="Dell-Latitude-5511" time="0.024">
+  <properties/>
+  <testcase name="http 403 forbidden maps to FORBIDDEN error kind" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.007"/>
+  <testcase name="successful call returns parsed routing status and transmits authorization bearer header" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.003"/>
+  <testcase name="http 404 not found maps to NOT_FOUND error kind" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.002"/>
+  <testcase name="http 401 unauthorized maps to UNAUTHORIZED error kind" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.003"/>
+  <testcase name="malformed json response maps to PARSE_ERROR" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.002"/>
+  <testcase name="timeout maps to TIMEOUT error kind" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.002"/>
+  <testcase name="network io exception maps to NO_INTERNET error kind" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.002"/>
+  <testcase name="http 500 server error maps to SERVER error kind" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.002"/>
+  <testcase name="missing token fails immediately with NO_TOKEN without calling network" classname="com.example.bai1.rescue.routing.RoutingApiClientTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

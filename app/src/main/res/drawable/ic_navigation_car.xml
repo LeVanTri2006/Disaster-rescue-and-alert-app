@@ -1,0 +1,81 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Soft drop shadow underneath vehicle -->
+    <path
+        android:fillColor="#33000000"
+        android:pathData="M16,6 C16,4 32,4 32,6 C35,10 36,36 33,44 C31,46 17,46 15,44 C12,36 13,10 16,6 Z" />
+
+    <!-- Main Car Body (White modern sedan, top-down view) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#CBD5E1"
+        android:strokeWidth="1.2"
+        android:pathData="M17,6 C19,4.8 29,4.8 31,6 C33,8 34,16 34,24 C34,36 33,42 30,43.2 C28,43.8 20,43.8 18,43.2 C15,42 14,36 14,24 C14,16 15,8 17,6 Z" />
+
+    <!-- Left & Right Side Mirrors -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#CBD5E1"
+        android:strokeWidth="0.8"
+        android:pathData="M13.5,15 C11.5,15 11.5,18 13.5,18 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#CBD5E1"
+        android:strokeWidth="0.8"
+        android:pathData="M34.5,15 C36.5,15 36.5,18 34.5,18 Z" />
+
+    <!-- Front Headlights (Bright warm glow) -->
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M16.5,6.5 C17,5.5 19.5,5.5 20,7 L17,8 Z" />
+    <path
+        android:fillColor="#FEF08A"
+        android:pathData="M31.5,6.5 C31,5.5 28.5,5.5 28,7 L31,8 Z" />
+
+    <!-- Front Windshield (Dark tinted curved glass) -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M17.5,13.5 C20,12 28,12 30.5,13.5 C31.2,16.5 31.2,18.5 30.5,19 C28,18.2 20,18.2 17.5,19 C16.8,18.5 16.8,16.5 17.5,13.5 Z" />
+
+    <!-- Windshield Glare Reflection -->
+    <path
+        android:fillColor="#55FFFFFF"
+        android:pathData="M18.8,13.8 C21,12.8 25,12.8 26.5,13.5 L25,17.8 L19.5,17.8 Z" />
+
+    <!-- Side Windows -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M16.8,20 C16.5,23 16.5,27 16.8,29 L18,28.5 L18,20.5 Z" />
+    <path
+        android:fillColor="#334155"
+        android:pathData="M31.2,20 C31.5,23 31.5,27 31.2,29 L30,28.5 L30,20.5 Z" />
+
+    <!-- Roof Surface (Subtle silver-white finish) -->
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M18,19 C20,18.5 28,18.5 30,19 C30.8,23 30.8,28 30,29.5 C28,30 20,30 18,29.5 C17.2,28 17.2,23 18,19 Z" />
+
+    <!-- Sunroof Panel -->
+    <path
+        android:fillColor="#475569"
+        android:pathData="M20,21 C21.5,20.6 26.5,20.6 28,21 C28.4,22.8 28.4,24.8 28,25.5 C26.5,25.8 21.5,25.8 20,25.5 C19.6,24.8 19.6,22.8 20,21 Z" />
+
+    <!-- Rear Windshield -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M18,30.5 C20,30 28,30 30,30.5 C30.6,33.5 30.6,35 30,35.8 C28,35.2 20,35.2 18,35.8 C17.4,35 17.4,33.5 18,30.5 Z" />
+
+    <!-- Rear Taillights (Vibrant red LED glow) -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M16,41.5 C17,42.8 19,42.8 19.5,41.5 L16.5,40.5 Z" />
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M32,41.5 C31,42.8 29,42.8 28.5,41.5 L31.5,40.5 Z" />
+
+</vector>
+

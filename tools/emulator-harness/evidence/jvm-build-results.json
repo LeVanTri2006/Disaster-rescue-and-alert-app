@@ -1,0 +1,26 @@
+{
+  "full": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest",
+      "--rerun-tasks"
+    ],
+    "exit_code": 0,
+    "tests": 503,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 26
+  },
+  "apk": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:assembleDebug"
+    ],
+    "exit_code": 0
+  }
+}

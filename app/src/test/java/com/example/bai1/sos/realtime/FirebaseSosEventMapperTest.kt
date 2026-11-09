@@ -35,7 +35,7 @@ class FirebaseSosEventMapperTest {
         assertEquals(10.25, event.latitude ?: -1.0, 0.0001)
         assertEquals(106.7, event.longitude ?: -1.0, 0.0001)
         assertEquals(SosUrgency.CRITICAL, event.urgency)
-        assertEquals(SosStatus.SUBMITTED, event.status)
+        assertEquals(SosStatus.ACTIVE, event.status)
     }
 
     @Test
@@ -57,4 +57,15 @@ class FirebaseSosEventMapperTest {
         assertNull(FirebaseSosEventMapper.parse("bad-lon", mapOf("status" to "ACTIVE", "latitude" to 10, "longitude" to 181)))
         assertTrue(FirebaseSosEventMapper.parse("terminal", mapOf("status" to "RESOLVED")) is FirebaseSosChange.Removed)
     }
+    @Test
+    fun `terminal removal precedes coordinate validation and rejects blank identity`() {
+        assertEquals(FirebaseSosChange.Removed("terminal"), FirebaseSosEventMapper.parse("terminal",
+            mapOf("status" to "FALSE_ALARM", "latitude" to Double.NaN, "longitude" to 999)))
+        assertNull(FirebaseSosEventMapper.parse(" ", mapOf("status" to "RESOLVED")))
+        for (coordinate in listOf(Double.NaN, Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY)) {
+            assertNull(FirebaseSosEventMapper.parse("bad-coordinate", mapOf(
+                "status" to "ACTIVE", "latitude" to coordinate, "longitude" to 20)))
+        }
+    }
+
 }

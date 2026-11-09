@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bai1.p5e02.uiisolated"
+    android:versionCode="1"
+    android:versionName="p5e02" >
+
+    <uses-sdk
+        android:minSdkVersion="30"
+        android:targetSdkVersion="37" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK" />
+
+    <permission
+        android:name="com.example.bai1.p5e02.uiisolated.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.bai1.p5e02.uiisolated.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:name="com.example.bai1.uiisolated.GraphFixtureApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:label="P5-E02 production UI subset — isolated"
+        android:networkSecurityConfig="@xml/routing_network_security_config"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:usesCleartextTraffic="false" >
+        <activity
+            android:name="com.example.bai1.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bai1.uiisolated.IsolatedUiActivity"
+            android:exported="false" />
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+    </application>
+
+</manifest>

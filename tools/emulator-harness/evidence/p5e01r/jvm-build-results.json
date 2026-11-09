@@ -1,0 +1,75 @@
+{
+  "fresh": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest",
+      "--rerun-tasks",
+      "--tests",
+      "*RoutingNetworkSecurityTest",
+      "--tests",
+      "*GraphCacheSecurityTest",
+      "--tests",
+      "*GraphDownloaderTest",
+      "--tests",
+      "*P5A01ConsumerAuditTest"
+    ],
+    "exit_code": 0,
+    "tests": 90,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 4
+  },
+  "routing": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest",
+      "--tests",
+      "com.example.bai1.rescue.routing.*"
+    ],
+    "exit_code": 0,
+    "tests": 462,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 13
+  },
+  "full": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest"
+    ],
+    "exit_code": 0,
+    "tests": 503,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 26
+  },
+  "apk": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:assembleDebug"
+    ],
+    "exit_code": 0
+  },
+  "release-policy": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:generateReleaseBuildConfig",
+      ":app:processReleaseManifest",
+      ":app:processReleaseResources"
+    ],
+    "exit_code": 0
+  }
+}
