@@ -1,0 +1,11 @@
+PREINSTALL SECURITY PASS 39 exact sources; artifacts preserved
+citizenPostThenIndependentRescuerGetRendersClickableMarker failures 1
+multipleSosHaveSeparateResponseMarkersAndRefreshNeverPosts failures 1
+Traceback (most recent call last):
+  File "/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/run_demo_tests.py", line 120, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/run_demo_tests.py", line 119, in main
+    result['status']='PASS' if len(result['cases'])==len(names) and all(c['adb_exit']==0 and all(c[k]==0 for k in ['failures','errors','skipped']) for c in result['cases']) and not cleanup and not result['remaining_owned_packages'] and result['owned_reverse_removed'] else 'FAIL';(out/'results.json').write_text(json.dumps(result,indent=2));assert result['status']=='PASS';print('PHYSICAL DEMO PASS',len(names),'unique runtime cases',flush=True)
+                                                                                                                                                                                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

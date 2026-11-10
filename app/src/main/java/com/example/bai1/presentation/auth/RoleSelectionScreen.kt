@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -24,10 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.bai1.auth.RoleSelectionViewModel
 import com.example.bai1.auth.RoleSelectionState
-import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.bai1.auth.AuthAppDependencies
 import com.example.bai1.data.model.UserRole
-import com.example.bai1.data.repository.DisasterRepository
 import com.example.bai1.presentation.components.PrimaryButton
 import com.example.bai1.ui.theme.*
 
@@ -38,11 +36,9 @@ import com.example.bai1.R
 @Composable
 fun RoleSelectionScreen(
     onContinue: (UserRole) -> Unit,
-    viewModel: RoleSelectionViewModel = viewModel(
-        factory = RoleSelectionViewModel.factory(AuthAppDependencies.repository)
-    )
+    viewModel: RoleSelectionViewModel
 ) {
-    var selectedRole by remember { mutableStateOf(UserRole.RESCUER) }
+    var selectedRole by rememberSaveable { mutableStateOf(UserRole.RESCUER) }
     val uiState by viewModel.uiState.collectAsState()
     val scrollState = rememberScrollState()
 
@@ -104,7 +100,7 @@ fun RoleSelectionScreen(
                 iconColor = PrimaryBlue,
                 isSelected = selectedRole == UserRole.USER,
                 selectedBorderColor = PrimaryBlue,
-                onClick = { selectedRole = UserRole.USER }
+                onClick = { if (uiState !is RoleSelectionState.Loading) selectedRole = UserRole.USER }
             )
 
             Spacer(modifier = Modifier.height(18.dp))
@@ -117,7 +113,7 @@ fun RoleSelectionScreen(
                 iconColor = EmergencyRed,
                 isSelected = selectedRole == UserRole.RESCUER,
                 selectedBorderColor = EmergencyRed,
-                onClick = { selectedRole = UserRole.RESCUER }
+                onClick = { if (uiState !is RoleSelectionState.Loading) selectedRole = UserRole.RESCUER }
             )
 
             Spacer(modifier = Modifier.height(24.dp))

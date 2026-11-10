@@ -30,23 +30,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.ui.res.painterResource
 import com.example.bai1.R
 
-import android.util.Log
-import java.security.MessageDigest
-import java.util.UUID
-import androidx.credentials.exceptions.GetCredentialCancellationException
-import androidx.credentials.exceptions.NoCredentialException
-import androidx.credentials.exceptions.GetCredentialCustomException
-import androidx.compose.ui.platform.LocalContext
-import androidx.credentials.CredentialManager
-import androidx.credentials.CustomCredential
-import androidx.credentials.GetCredentialRequest
-import com.google.android.libraries.identity.googleid.GetGoogleIdOption
-import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
-import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.FirebaseAuth
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
-
 @Composable
 fun LoginScreen(
     onLoginSuccess: () -> Unit = {},
@@ -55,16 +38,13 @@ fun LoginScreen(
     onLogin: ((identifier: String, password: String) -> Unit)? = null,
     onGoogleLogin: ((idToken: String) -> Unit)? = null,
     isLoading: Boolean = false,
-    errorMessage: String? = null
+    errorMessage: String? = null,
+    onGoogleSignInClick: () -> Unit
 ) {
     var identifier by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
     var rememberMe by remember { mutableStateOf(true) }
-
-    val context = LocalContext.current
-    val coroutineScope = rememberCoroutineScope()
-    val credentialManager = remember { CredentialManager.create(context) }
 
     val scrollState = rememberScrollState()
 
@@ -224,80 +204,8 @@ fun LoginScreen(
                 horizontalArrangement = Arrangement.spacedBy(16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                SocialLoginButton(iconRes = R.drawable.google, iconSize = 28.dp, onClick = {
-                    coroutineScope.launch {
-                        Log.d("GOOGLE_STEP", "Credential request started")
-                        
-                        val rawNonce = UUID.randomUUID().toString()
-                        val bytes = rawNonce.toByteArray()
-                        val md = MessageDigest.getInstance("SHA-256")
-                        val digest = md.digest(bytes)
-                        val hashedNonce = digest.joinToString("") { "%02x".format(it) }
-
-                        val getGoogleIdOptionBuilder = GetGoogleIdOption.Builder()
-                            .setServerClientId(context.getString(R.string.default_web_client_id))
-                            .setNonce(hashedNonce)
-                            .setAutoSelectEnabled(false) // Never auto-select to allow switching accounts
-
-                        var credentialResponse: androidx.credentials.GetCredentialResponse? = null
-                        
-                        try {
-                            val googleIdOption = getGoogleIdOptionBuilder
-                                .setFilterByAuthorizedAccounts(false) // Show all accounts on the device
-                                .build()
-                                
-                            val request = GetCredentialRequest.Builder()
-                                .addCredentialOption(googleIdOption)
-                                .build()
-                            
-                            credentialResponse = credentialManager.getCredential(context, request)
-                        } catch (e: GetCredentialCancellationException) {
-                            Log.d("GOOGLE_STEP", "User cancelled during all accounts check")
-                            return@launch
-                        } catch (e: Exception) {
-                            Log.d("GOOGLE_STEP", "Exception during all accounts check: ${e.message}")
-                            e.printStackTrace()
-                            return@launch
-                        }
-
-                        if (credentialResponse == null) return@launch
-                        
-                        Log.d("GOOGLE_STEP", "Credential returned")
-                        val credential = credentialResponse.credential
-                        Log.d("GOOGLE_STEP", "Credential type: ${credential.type}")
-
-                        if (credential is CustomCredential && credential.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL) {
-                            try {
-                                val googleIdTokenCredential = GoogleIdTokenCredential.createFrom(credential.data)
-                                val idToken = googleIdTokenCredential.idToken
-                                Log.d("GOOGLE_STEP", "Google token obtained: YES")
-                                
-                                Log.d("GOOGLE_STEP", "Firebase sign-in started")
-                                val firebaseCredential = GoogleAuthProvider.getCredential(idToken, null)
-                                val authResult = FirebaseAuth.getInstance().signInWithCredential(firebaseCredential).await()
-                                
-                                if (authResult.user != null) {
-                                    Log.d("GOOGLE_STEP", "Firebase sign-in success")
-                                    val tokenResult = authResult.user!!.getIdToken(false).await()
-                                    val firebaseIdToken = tokenResult.token
-                                    if (firebaseIdToken != null) {
-                                        Log.d("GOOGLE_STEP", "Firebase ID token obtained: YES")
-                                        Log.d("GOOGLE_STEP", "Backend request started")
-                                        onGoogleLogin?.invoke(firebaseIdToken)
-                                    } else {
-                                        Log.d("GOOGLE_STEP", "Firebase ID token obtained: NO")
-                                    }
-                                } else {
-                                    Log.d("GOOGLE_STEP", "Firebase sign-in failure: User is null")
-                                }
-                            } catch (e: Exception) {
-                                Log.d("GOOGLE_STEP", "Firebase sign-in failure: ${e.message}")
-                                e.printStackTrace()
-                            }
-                        } else {
-                            Log.d("GOOGLE_STEP", "Unsupported credential type")
-                        }
-                    }
+                SocialLoginButton(iconRes = R.drawable.google, contentDescription = "Đăng nhập Google", iconSize = 28.dp, onClick = {
+                    onGoogleSignInClick()
                 })
                 SocialLoginButton(iconRes = R.drawable.facebook_logo, iconSize = 28.dp, onClick = {})
                 SocialLoginButton(iconRes = R.drawable.zalo_logo, iconSize = 46.dp, onClick = {})
@@ -329,6 +237,7 @@ fun LoginScreen(
 private fun SocialLoginButton(
     iconRes: Int,
     iconSize: androidx.compose.ui.unit.Dp = 24.dp,
+    contentDescription: String? = null,
     onClick: () -> Unit
 ) {
     Box(
@@ -341,7 +250,7 @@ private fun SocialLoginButton(
     ) {
         Image(
             painter = painterResource(id = iconRes),
-            contentDescription = null,
+            contentDescription = contentDescription,
             contentScale = androidx.compose.ui.layout.ContentScale.Fit,
             modifier = Modifier.size(iconSize)
         )

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" tests="31" skipped="0" failures="0" errors="0" timestamp="2026-11-08T13:56:39.140Z" hostname="Dell-Latitude-5511" time="0.01">
+  <properties/>
+  <testcase name="test 24 - multiple ONLY and NO on same incoming edge" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.002"/>
+  <testcase name="test 14 - testViaWayUnresolved_marksStrictRoutingIncompatible" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 17 - testTransitionLookup_doesNotMutateGraph" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 21 - two independent ONLY restrictions combined by INTERSECTION" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 2 - testNoLeftTurn_prohibitsSpecificTransition" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 28 - decision priority guarantees unresolved restriction is not masked by ONLY" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.001"/>
+  <testcase name="test 18 - testEmptyOrMalformedTransition_handledFailClosed" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 30 - undelegated via-way restriction remains in undelegatedViaWayRestrictionIds and unresolvedRestrictionIds" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 27 - index compatibility is distinct from overall graph strict routing readiness" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 23 - ONLY restriction combined with NO restriction on same incoming edge" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 13 - testConditionalUnresolved_notAutomaticallyAllowed" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.001"/>
+  <testcase name="test 4 - testNoUTurn_prohibitsSpecificTransition" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 16 - testConflictBetweenNoAndOnly_detectedAndMarksStrictIncompatible" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 8 - testMultipleFromToWays" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.001"/>
+  <testcase name="test 22 - two ONLY restrictions with empty intersection creates conflict and fails closed" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 9 - testIncomingEdgeMismatch_allowsTransition" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 20 - testHelperMethods_getProhibitedAndAllowedSets" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 25 - order of ONLY restrictions does not alter intersection result" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 3 - testNoRightTurn_prohibitsSpecificTransition" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 11 - testFailClosedUnresolved_isRecordedAndMarksStrictIncompatible" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 31 - mixed via-node and via-way relation is never delegated and remains unresolved" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 10 - testViaNodeMismatch_allowsTransition" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 15 - testExemption_appliesOnlyWhenConfirmed" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 7 - testMultipleRestrictionsOnSameIncomingEdge" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 12 - testUnverifiedWarning_isRecorded" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 19 - testStartNodeWithoutIncomingEdge_returnsAllowed" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.001"/>
+  <testcase name="test 29 - delegated via-way restriction is tracked in delegatedViaWayRestrictionIds and does not cause unresolved status" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 6 - testOnlyLeftTurn_prohibitsOtherOutgoingEdges" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 26 - contradictory exemption indicators creates conflict and fails closed" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.001"/>
+  <testcase name="test 5 - testOnlyStraightOn_allowsOnlySpecifiedTransition" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.0"/>
+  <testcase name="test 1 - testNoRestrictions_allowsTransition" classname="com.example.bai1.rescue.routing.TurnRestrictionIndexTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

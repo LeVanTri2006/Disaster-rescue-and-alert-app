@@ -1,0 +1,21 @@
+{
+  "same_case": "accountRoleRecreateRetainsUserSelection",
+  "before": {
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "driver_exit": 1,
+    "source_sha256": "d7590212496b226887e9024e11ef382cf56ea74fe34336ffde0d863c6762232c"
+  },
+  "after": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "driver_exit": 0,
+    "source_sha256": "59fcd066539992e357098945a1b1b18b51264e7a501fc0c3120eb59857aed1dd"
+  },
+  "cause": "remember resets selection to RESCUER after recreation; USER-only fixture rejects the changed request",
+  "remediation": "rememberSaveable selection; ignore changes while Loading"
+}

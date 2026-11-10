@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.auth.AuthLifecycleSafetyTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-11-08T14:56:51.306Z" hostname="Dell-Latitude-5511" time="0.115">
+  <properties/>
+  <testcase name="refreshRejectedCleansAdapterAndStorage" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.057"/>
+  <testcase name="nonCooperativeCancelledLoginCannotCommit" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.011"/>
+  <testcase name="staleFailureCannotOverwriteNewLoginSuccess" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.004"/>
+  <testcase name="accountSwitchRevokesPriorAdapterBeforeNewCredentials" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.001"/>
+  <testcase name="missingSavedTokenCleansOldAdapterSession" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.001"/>
+  <testcase name="refreshErrorsNeverRetainAdapterSession" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.015"/>
+  <testcase name="lateRestoreAfterLogoutCannotPublishUser" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.002"/>
+  <testcase name="pendingAdapterSignInCannotSurviveLogout" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.006"/>
+  <testcase name="cancelledOldRequestCannotClearNewSession" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.001"/>
+  <testcase name="oldRefreshCannotOverwriteNewLogin" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.002"/>
+  <testcase name="failedDurableStorageNeverExposesAuthenticated" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.0"/>
+  <testcase name="lateLoginAfterLogoutCannotSaveOrAuthenticate" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.001"/>
+  <testcase name="newestLoginWinsReverseCompletionOrder" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.003"/>
+  <testcase name="lateRefreshAfterLogoutCannotSave" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.002"/>
+  <testcase name="repeatedLogoutIsSafeAndRetriesCleanup" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.001"/>
+  <testcase name="logoutPublishesUnauthenticatedEvenWhenAdapterThrows" classname="com.example.bai1.auth.AuthLifecycleSafetyTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

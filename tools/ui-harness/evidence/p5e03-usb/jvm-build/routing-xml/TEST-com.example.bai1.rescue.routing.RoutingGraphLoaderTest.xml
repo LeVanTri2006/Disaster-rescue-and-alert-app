@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" tests="56" skipped="0" failures="0" errors="0" timestamp="2026-11-08T13:56:37.399Z" hostname="Dell-Latitude-5511" time="0.062">
+  <properties/>
+  <testcase name="test 49 - COMPILED and DFA accepted and Index delegated via-way is not counted as runtime unresolved" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 13 - clearLoadedGraph resets memory and sets state to Idle" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 41 - concurrent readers cannot alter shared graph or dfa state" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.003"/>
+  <testcase name="test 40 - dfa transition mappings and active obligations cannot be mutated" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 7 - parser failure transitions to Failed state" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 36 - context constructor requires verified sha without default fallback" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 11 - concurrent loadGraph requests do not duplicate download or parse" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.005"/>
+  <testcase name="test 3 - does not download when downloadAvailable is false" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 53 - via-way DFA accepted but index not delegated is rejected by context" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 16 - dfa build failure does not fallback to empty dfa and sets DFA_BUILD_FAILED reason" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 30 - clearLoadedGraph atomically clears snapshot and all delegate properties" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 55 - manifest disallowing strict routing keeps context denied even if all DFA patterns are accepted" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 38 - mutating source collection after passing to graph constructor does not affect graph" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 45 - mutable source edges list mutated after RoadGraph creation does not affect graph" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 54 - index delegated ID not in DFA is rejected by context" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 33 - context is created with actual verified checksum from downloader" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 20 - clearLoadedGraph atomically clears context, graph, manifest, and resets state to Idle" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 23 - context with unresolved restrictions denies strict permission" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 37 - refresh graph with new checksum replaces artifact identity and rejects old identity" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.005"/>
+  <testcase name="test 51 - UNRESOLVED sequence remains unresolved" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 25 - dfa build success alone does not unlock strict routing" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 32 - loader state is purely derived from snapshot without independent mutable state" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 4 - parser receives exact file returned by downloader" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 9 - parsed graph loaded into RAM but strict routing disabled (Danang Production Scenario)" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 8 - download failure does not call parser and sets Failed state" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 12 - manifest version change invalidates old graph and loads new version" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 21 - graph refresh atomically replaces context without mixing old and new resources" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 10 - contradictory readiness between backend and parsed graph rejects strict routing" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 44 - mutable source nodes map mutated after RoadGraph creation does not affect graph" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 6 - vehicle profile mismatch fails loader" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 22 - concurrent loadGraph calls share identical atomic context" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 47 - nested lists in TurnRestriction are isolated from source references" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 27 - legacy ready graph cannot supply production authority" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 24 - context with unverified edges denies strict permission" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 34 - downloader checksum mismatch prevents context creation and records failure" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 15 - routing context created atomically with graph, index, dfa, and manifest identity" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 14 - retry succeeds after initial repository failure" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 17 - graph with zero via-way patterns creates valid dfa with zero patterns" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 19 - strict routing remains locked when unresolved restrictions or unverified edges exist" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 31 - deep immutability audit confirms no public mutation path for graph, index, or dfa" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 1 - loadGraph reads legacy ready data but keeps strict routing disabled" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 39 - public graph collections cannot be mutated via cast to MutableCollection" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 43 - verified artifact passed to parser matches exact path and properties of download result" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 26 - caller cannot bypass readiness gate via constructor or copy" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 18 - graph with compiled and unresolved via-ways retains correct diagnostics" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 46 - mutable source turnRestrictions list mutated after RoadGraph creation does not affect graph" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 5 - graph version mismatch fails loader" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 42 - artifact graphVersion mismatch against manifest is rejected even if fromCache is true" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.003"/>
+  <testcase name="test 52 - conditional restriction remains unresolved" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 48 - nested maps and lists in RoadEdge are isolated from source references" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 28 - snapshot reader never observes new graph with old context or new manifest with old graph" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 50 - COMPILED via-way but DFA not accepted remains unresolved" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <testcase name="test 29 - in-flight reader holding previous snapshot is immune to subsequent graph refresh" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 2 - loadGraph uses valid cache" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.001"/>
+  <testcase name="test 35 - blank or missing verified checksum prevents context creation" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.002"/>
+  <testcase name="test 56 - production Da Nang remains strict routing disabled due to unmet conditions" classname="com.example.bai1.rescue.routing.RoutingGraphLoaderTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

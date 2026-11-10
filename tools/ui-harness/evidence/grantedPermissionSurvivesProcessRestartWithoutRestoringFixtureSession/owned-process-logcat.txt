@@ -1,0 +1,85 @@
+--------- beginning of main
+11-07 01:53:32.712 24588 24588 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10277/pid_24588
+11-07 01:53:32.724 24588 24588 I Zygote  : Process 24588 created for com.example.bai1.p5e02.uiisolated
+11-07 01:53:32.724 24588 24588 I 5e02.uiisolated: Late-enabling -Xcheck:jni
+11-07 01:53:32.738 24588 24588 I 5e02.uiisolated: Using generational CollectorTypeCMC GC.
+11-07 01:53:32.739 24588 24588 W 5e02.uiisolated: Unexpected CPU variant for x86: x86_64.
+11-07 01:53:32.739 24588 24588 W 5e02.uiisolated: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-07 01:53:32.744 24588 24588 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-07 01:53:32.762 24588 24588 D CompatChangeReporter: Compat change id reported: 333566037; UID 10277; state: ENABLED
+--------- beginning of system
+11-07 01:53:32.764 24588 24588 W ActivityThread: Package uses different ABI(s) than its instrumentation: package[com.example.bai1.p5e02.uiisolated]: x86_64, null instrumentation[com.example.bai1.p5e02.uiisolated.test]: null, null
+11-07 01:53:32.766 24588 24588 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
+11-07 01:53:32.766 24588 24588 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.sidecar.jar
+11-07 01:53:32.937 24588 24588 D nativeloader: Configuring clns-9 for other apk /data/app/~~mlMMp2tvYrLp2rk4sU5D6w==/com.example.bai1.p5e02.uiisolated.test-Z0i3pstS206gp2h2v13-NQ==/base.apk:/data/app/~~Y7A5tvVYrOQ6qTfkD4AgMA==/com.example.bai1.p5e02.uiisolated-rqPeekRmUw5O-03sePjTrw==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~mlMMp2tvYrLp2rk4sU5D6w==/com.example.bai1.p5e02.uiisolated.test-Z0i3pstS206gp2h2v13-NQ==/lib/x86_64:/data/app/~~Y7A5tvVYrOQ6qTfkD4AgMA==/com.example.bai1.p5e02.uiisolated-rqPeekRmUw5O-03sePjTrw==/lib/x86_64:/data/app/~~mlMMp2tvYrLp2rk4sU5D6w==/com.example.bai1.p5e02.uiisolated.test-Z0i3pstS206gp2h2v13-NQ==/base.apk!/lib/x86_64:/data/app/~~Y7A5tvVYrOQ6qTfkD4AgMA==/com.example.bai1.p5e02.uiisolated-rqPeekRmUw5O-03sePjTrw==/base.apk!/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e02.uiisolated
+11-07 01:53:32.941 24588 24588 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.example.bai1.p5e02.uiisolated/cache
+11-07 01:53:32.942 24588 24588 V GraphicsEnvironment: Currently set values for:
+11-07 01:53:32.942 24588 24588 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-07 01:53:32.942 24588 24588 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-07 01:53:32.942 24588 24588 V GraphicsEnvironment: com.example.bai1.p5e02.uiisolated is not listed in per-application setting
+11-07 01:53:32.942 24588 24588 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-07 01:53:32.942 24588 24588 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-07 01:53:33.101 24588 24588 D CompatChangeReporter: Compat change id reported: 407952621; UID 10277; state: ENABLED
+11-07 01:53:33.101 24588 24588 D CompatChangeReporter: Compat change id reported: 419020719; UID 10277; state: ENABLED
+11-07 01:53:33.103 24588 24588 I MonitoringInstr: newApplication called!
+11-07 01:53:33.103 24588 24588 I MonitoringInstr: Instrumentation started!
+11-07 01:53:33.125 24588 24588 I AndroidJUnitRunner: onCreate Bundle[{hostFixturePort=40795, class=com.example.bai1.fixture.ProductionSubsetUiTest#grantedPermissionSurvivesProcessRestartWithoutRestoringFixtureSession, listener=com.example.bai1.fixture.DeviceXmlListener}]
+11-07 01:53:33.126 24588 24588 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-07 01:53:34.627 24588 24608 D AndroidJUnitRunner: onStart is called.
+11-07 01:53:34.628 24588 24588 I MonitoringInstr: No JSBridge.
+11-07 01:53:34.630 24588 24627 D CompatChangeReporter: Compat change id reported: 458413887; UID 10277; state: ENABLED
+11-07 01:53:34.631 24588 24608 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+11-07 01:53:34.634 24588 24608 D TestRequestBuilder: Skipping class path scanning and directly running [com.example.bai1.fixture.ProductionSubsetUiTest]
+11-07 01:53:34.645 24588 24608 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-07 01:53:34.647 24588 24608 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+11-07 01:53:34.647 24588 24608 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+11-07 01:53:34.647 24588 24608 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+11-07 01:53:34.647 24588 24608 D TestExecutor: Adding listener androidx.test.internal.runner.listener.TraceRunListener
+11-07 01:53:34.647 24588 24608 D TestExecutor: Adding listener com.example.bai1.fixture.DeviceXmlListener
+11-07 01:53:34.651 24588 24608 I TestRunner: run started: 1 tests
+11-07 01:53:34.651 24588 24608 I TestRunner: started: grantedPermissionSurvivesProcessRestartWithoutRestoringFixtureSession(com.example.bai1.fixture.ProductionSubsetUiTest)
+11-07 01:53:34.659 24588 24608 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-07 01:53:34.685 24588 24628 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+11-07 01:53:34.699 24588 24588 D 5e02.uiisolated: Initializing ProtoLog
+11-07 01:53:34.699 24588 24588 D ProtoLog: Initializing ProtoLog DataSource
+11-07 01:53:34.734 24588 24628 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+11-07 01:53:34.734 24588 24628 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+11-07 01:53:34.744 24588 24628 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-07 01:53:34.760 24588 24628 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-07 01:53:34.774 24588 24588 D LifecycleMonitor: Lifecycle status change: com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89 in: PRE_ON_CREATE
+11-07 01:53:34.775 24588 24588 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-07 01:53:34.867 24588 24588 D LifecycleMonitor: Lifecycle status change: com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89 in: CREATED
+11-07 01:53:34.867 24588 24588 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89
+11-07 01:53:34.869 24588 24588 D LifecycleMonitor: Lifecycle status change: com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89 in: STARTED
+11-07 01:53:34.869 24588 24588 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89
+11-07 01:53:34.905 24588 24588 D LifecycleMonitor: Lifecycle status change: com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89 in: RESUMED
+11-07 01:53:34.906 24588 24588 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89
+11-07 01:53:34.909 24588 24588 D CompatChangeReporter: Compat change id reported: 418924588; UID 10277; state: ENABLED
+11-07 01:53:34.912 24588 24588 W HWUI    : Unknown dataspace 0
+11-07 01:53:34.946 24588 24588 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@8192e50
+11-07 01:53:34.958 24588 24634 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Activity$$ExternalSyntheticLambda0@8192e50
+11-07 01:53:34.978 24588 24632 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+11-07 01:53:35.421 24588 24588 I 5e02.uiisolated: hiddenapi: Accessing hidden method Landroid/os/SystemProperties;->addChangeCallback(Ljava/lang/Runnable;)V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/compose/ui/platform/AndroidComposeView$Companion; (domain=app, TargetSdkVersion=37) using reflection: allowed
+11-07 01:53:35.531 24588 24592 I 5e02.uiisolated: Compiler allocated 4529KB to compile void android.view.ViewRootImpl.performTraversals(long)
+11-07 01:53:35.727 24588 24588 I HWUI    : Using FreeType backend (prop=Auto)
+11-07 01:53:35.880 24588 24588 D VRI[IsolatedUiActivity]: WindowInsets changed: 1440x3120 statusBars:[0,145,0,0] navigationBars:[0,0,0,84] mandatorySystemGestures:[0,187,0,112] 
+11-07 01:53:35.946 24588 24588 I Surface : Creating surface for consumer unnamed-24588-0 with slotExpansion=1 for 64 slots
+11-07 01:53:35.947 24588 24588 I Surface : Creating surface for consumer VRI[IsolatedUiActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+11-07 01:53:36.824 24588 24588 I Choreographer: Skipped 101 frames!  The application may be doing too much work on its main thread.
+11-07 01:53:36.828 24588 24598 I HWUI    : Davey! duration=1866ms; Flags=1, FrameTimelineVsyncId=103970, IntendedVsync=7858682008972, Vsync=7858682008972, InputEventId=0, HandleInputStart=7858684056336, AnimationStart=7858684060977, PerformTraversalsStart=7858684064029, DrawStart=7859758344296, FrameDeadline=7858698675638, FrameStartTime=7858684027778, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=7858682008972, AnimationCounter=-1, SyncQueued=7859782182982, SyncStart=7859782389466, IssueDrawCommandsStart=7859782471966, SwapBuffers=7860421070222, FrameCompleted=7860548849317, DequeueBufferDuration=3705, QueueBufferDuration=193510, GpuCompleted=7860548849317, SwapBuffersCompleted=7860538201996, DisplayPresentTime=0, CommandSubmissionCompleted=7860421070222, 
+11-07 01:53:36.958 24588 24588 D InsetsController: hide(ime())
+11-07 01:53:36.959 24588 24588 I ImeTracker: com.example.bai1.p5e02.uiisolated:47ffa6a2: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+11-07 01:53:36.986 24588 24598 I HWUI    : Davey! duration=1762ms; Flags=0, FrameTimelineVsyncId=104101, IntendedVsync=7858882010803, Vsync=7860565343968, InputEventId=0, HandleInputStart=7860568462640, AnimationStart=7860568464137, PerformTraversalsStart=7860585109109, DrawStart=7860585210699, FrameDeadline=7860582008896, FrameStartTime=7860568214055, FrameInterval=16666665, WorkloadTarget=16666666, AnimationTime=7860565343968, AnimationCounter=-1, SyncQueued=7860595330947, SyncStart=7860595458470, IssueDrawCommandsStart=7860595901485, SwapBuffers=7860596662550, FrameCompleted=7860644463890, DequeueBufferDuration=4677, QueueBufferDuration=138394, GpuCompleted=7860644463890, SwapBuffersCompleted=7860636504597, DisplayPresentTime=0, CommandSubmissionCompleted=7860596662550, 
+11-07 01:53:37.442 24588 24608 I UiAutomation: Initialized for user 0 on display 0
+11-07 01:53:37.454 24588 24659 V UiAutomation: Init UiAutomation@410852a[id=27, displayId=0, flags=0]
+11-07 01:53:38.634 24588 24588 D LifecycleMonitor: Lifecycle status change: com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89 in: PAUSED
+11-07 01:53:38.634 24588 24588 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89
+11-07 01:53:39.001 24588 24588 D VRI[IsolatedUiActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-07 01:53:39.036 24588 24588 D LifecycleMonitor: Lifecycle status change: com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89 in: STOPPED
+11-07 01:53:39.036 24588 24588 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89
+11-07 01:53:39.253 24588 24588 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+11-07 01:53:39.253 24588 24588 D LifecycleMonitor: Lifecycle status change: com.example.bai1.uiisolated.IsolatedUiActivity@cd6a89 in: DESTROYED
+11-07 01:53:39.254 24588 24588 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-07 01:53:39.270 24588 24608 I TestRunner: finished: grantedPermissionSurvivesProcessRestartWithoutRestoringFixtureSession(com.example.bai1.fixture.ProductionSubsetUiTest)
+11-07 01:53:39.290 24588 24588 D ViewRootImpl: Skipping stats log for color mode
+11-07 01:53:39.340 24588 24608 I TestRunner: run finished: 1 tests, 0 failed, 0 ignored

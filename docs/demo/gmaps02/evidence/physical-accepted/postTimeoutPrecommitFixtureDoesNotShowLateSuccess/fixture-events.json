@@ -1,0 +1,66 @@
+[
+  {
+    "method": "GET",
+    "path": "/demo/info",
+    "host": "127.0.0.1:39473",
+    "fault": "ok",
+    "role": null,
+    "actor": null
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:39473",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "citizen"
+  },
+  {
+    "method": "POST",
+    "path": "/sos",
+    "host": "127.0.0.1:39473",
+    "fault": "timeout",
+    "role": "citizen",
+    "actor": "citizen",
+    "request": {
+      "adults": 1,
+      "children": 0,
+      "elderly": 0,
+      "neededItems": [],
+      "condition": "SYNTHETIC_TEST_DATA",
+      "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+      "latitude": 16.051,
+      "longitude": 108.203,
+      "urgency": "HIGH",
+      "timestamp": "2026-11-10T00:00:00Z"
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/demo/info",
+    "host": "127.0.0.1:39473",
+    "fault": "ok",
+    "role": null,
+    "actor": null
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:39473",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "rescuer"
+  },
+  {
+    "method": "GET",
+    "path": "/sos/active",
+    "host": "127.0.0.1:39473",
+    "fault": "ok",
+    "role": "rescuer",
+    "actor": "rescuer",
+    "response_ids": [],
+    "response": []
+  }
+]

@@ -1,0 +1,50 @@
+INSTRUMENTATION_STATUS: class=com.example.bai1.fixture.DemoPhoneTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.example.bai1.fixture.DemoPhoneTest:
+INSTRUMENTATION_STATUS: test=citizenPostThenIndependentRescuerGetRendersClickableMarker
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: p5e10aUi=null|null|scroll=false|Rect(0, 0 - 1080, 2400);null|null|scroll=false|Rect(0, 0 - 1080, 2352);null|null|scroll=false|Rect(0, 107 - 1080, 2352);null|null|scroll=false|Rect(0, 107 - 1080, 2352);null|null|scroll=false|Rect(0, 107 - 1080, 2352);null|null|scroll=false|Rect(0, 107 - 1080, 2352);SYNTHETIC_TEST_DATA — P5-E10A|null|scroll=false|Rect(30, 137 - 927, 200);Không SOS thật / GPS / dispatch. F06 OPEN|null|scroll=false|Rect(30, 200 - 905, 248);NAVIGATION ALLOWED = FALSE • STRICT_ROUTING_DISABLED|null|scroll=false|Rect(30, 248 - 1050, 341);Vai trò: rescuer|null|scroll=false|Rect(30, 341 - 753, 417);null|null|scroll=false|Rect(753, 341 - 1050, 485);Đăng xuất|null|scroll=false|Rect(789, 378 - 1014, 449);null|null|scroll=false|Rect(753, 353 - 1050, 473);null|null|scroll=false|Rect(30, 485 - 1050, 1175);null|null|scroll=false|Rect(815, 712 - 959, 856);null|SOS SYNTHETIC-E10A-1|scroll=false|Rect(827, 724 - 947, 844);1|null|scroll=false|Rect(872, 746 - 903, 822);null|null|scroll=false|Rect(827, 724 - 947, 844);Tím: SOS từ GET; trùng tọa độ xếp lệch 16dp|null|scroll=false|Rect(30, 1175 - 839, 1219);null|null|scroll=false|Rect(30, 1219 - 1050, 2322);null|null|scroll=false|Rect(30, 1219 - 455, 1363);Refresh SOS|null|scroll=false|Rect(102, 1256 - 383, 1327);null|null|scroll=false|Rect(30, 1231 - 455, 1351);GET_OK 1 SOS|null|scroll=false|Rect(30, 1363 - 376, 1439);null|null|scroll=false|Rect(30, 1439 - 309, 1583);HTTP OK|null|scroll=false|Rect(66, 1476 - 273, 1547);null|null|scroll=false|Rect(30, 1451 - 309, 1571);null|null|scroll=false|Rect(309, 1439 - 607, 1583);HTTP 403|null|scroll=false|Rect(345, 1476 - 571, 1547);null|null|scroll=false|Rect(309, 1451 - 607, 1571);null|null|scroll=false|Rect(607, 1439 - 905, 1583);HTTP 500|null|scroll=false|Rect(643, 1476 - 869, 1547);null|null|scroll=false|Rect(607, 1451 - 905, 1571);null|null|scroll=false|Rect(30, 1583 - 289, 1727);Timeout|null|scroll=false|Rect(66, 1620 - 253, 1691);null|null|scroll=false|Rect(30, 1595 - 289, 1715);null|null|scroll=false|Rect(289, 1583 - 509, 1727);Offline|null|scroll=false|Rect(325, 1620 - 473, 1691);null|null|scroll=false|Rect(289, 1595 - 509, 1715);Mode: ok|null|scroll=false|Rect(509, 1583 - 727, 1659);Marker từ GET /sos/active: 1|null|scroll=false|Rect(30, 1727 - 710, 1803);Graph diagnostic E09; không tính tuyến / nhận nhiệm vụ|null|scroll=false|Rect(30, 1803 - 1050, 1955);null|null|scroll=false|Rect(0, 0 - 1080, 107);null|null|scroll=false|Rect(0, 2352 - 1080, 2400)
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: p5e10aOutput={"role":"rescuer","message":"GET_OK 1 SOS","markers":[{"adults":2,"children":0,"condition":"SYNTHETIC_TEST_DATA","createdAt":1794268800000,"description":"SYNTHETIC_TEST_DATA cần hỗ trợ","elderly":0,"eventId":"SYNTHETIC-E10A-1","latitude":16.051,"longitude":108.203,"neededItems":[],"status":"ACTIVE","transportMode":"ONLINE","urgency":"HIGH"}],"selected":{"adults":2,"children":0,"condition":"SYNTHETIC_TEST_DATA","createdAt":1794268800000,"description":"SYNTHETIC_TEST_DATA cần hỗ trợ","elderly":0,"eventId":"SYNTHETIC-E10A-1","latitude":16.051,"longitude":108.203,"neededItems":[],"status":"ACTIVE","transportMode":"ONLINE","urgency":"HIGH"},"refreshes":1}
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: class=com.example.bai1.fixture.DemoPhoneTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Expected own UI ID: SYNTHETIC-E10A-1
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.example.bai1.fixture.DemoPhoneTest.waitFor(DemoPhoneTest.kt:25)
+	at com.example.bai1.fixture.DemoPhoneTest.expect(DemoPhoneTest.kt:54)
+	at com.example.bai1.fixture.DemoPhoneTest.citizenPostThenIndependentRescuerGetRendersClickableMarker(DemoPhoneTest.kt:73)
+
+INSTRUMENTATION_STATUS: stream=
+Error in citizenPostThenIndependentRescuerGetRendersClickableMarker(com.example.bai1.fixture.DemoPhoneTest):
+java.lang.AssertionError: Expected own UI ID: SYNTHETIC-E10A-1
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.example.bai1.fixture.DemoPhoneTest.waitFor(DemoPhoneTest.kt:25)
+	at com.example.bai1.fixture.DemoPhoneTest.expect(DemoPhoneTest.kt:54)
+	at com.example.bai1.fixture.DemoPhoneTest.citizenPostThenIndependentRescuerGetRendersClickableMarker(DemoPhoneTest.kt:73)
+
+INSTRUMENTATION_STATUS: test=citizenPostThenIndependentRescuerGetRendersClickableMarker
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: p5e01XmlBase64=PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnIHN0YW5kYWxvbmU9J3llcycgPz48dGVzdHN1aXRlIG5hbWU9IlA1RTAxRGV2aWNlUnVudGltZSIgdGVzdHM9IjEiIGZhaWx1cmVzPSIxIiBlcnJvcnM9IjAiIHNraXBwZWQ9IjAiIGp1bml0UnVuQ291bnQ9IjEiPjx0ZXN0Y2FzZSBjbGFzc25hbWU9ImNvbS5leGFtcGxlLmJhaTEuZml4dHVyZS5EZW1vUGhvbmVUZXN0IiBuYW1lPSJjaXRpemVuUG9zdFRoZW5JbmRlcGVuZGVudFJlc2N1ZXJHZXRSZW5kZXJzQ2xpY2thYmxlTWFya2VyIj48ZmFpbHVyZT5qYXZhLmxhbmcuQXNzZXJ0aW9uRXJyb3I6IEV4cGVjdGVkIG93biBVSSBJRDogU1lOVEhFVElDLUUxMEEtMQoJYXQgb3JnLmp1bml0LkFzc2VydC5mYWlsKEFzc2VydC5qYXZhOjg5KQoJYXQgY29tLmV4YW1wbGUuYmFpMS5maXh0dXJlLkRlbW9QaG9uZVRlc3Qud2FpdEZvcihEZW1vUGhvbmVUZXN0Lmt0OjI1KQoJYXQgY29tLmV4YW1wbGUuYmFpMS5maXh0dXJlLkRlbW9QaG9uZVRlc3QuZXhwZWN0KERlbW9QaG9uZVRlc3Qua3Q6NTQpCglhdCBjb20uZXhhbXBsZS5iYWkxLmZpeHR1cmUuRGVtb1Bob25lVGVzdC5jaXRpemVuUG9zdFRoZW5JbmRlcGVuZGVudFJlc2N1ZXJHZXRSZW5kZXJzQ2xpY2thYmxlTWFya2VyKERlbW9QaG9uZVRlc3Qua3Q6NzMpCglhdCBqYXZhLmxhbmcucmVmbGVjdC5NZXRob2QuaW52b2tlKE5hdGl2ZSBNZXRob2QpCglhdCBvcmcuanVuaXQucnVubmVycy5tb2RlbC5GcmFtZXdvcmtNZXRob2QkMS5ydW5SZWZsZWN0aXZlQ2FsbChGcmFtZXdvcmtNZXRob2QuamF2YTo1OSkKCWF0IG9yZy5qdW5pdC5pbnRlcm5hbC5ydW5uZXJzLm1vZGVsLlJlZmxlY3RpdmVDYWxsYWJsZS5ydW4oUmVmbGVjdGl2ZUNhbGxhYmxlLmphdmE6MTIpCglhdCBvcmcuanVuaXQucnVubmVycy5tb2RlbC5GcmFtZXdvcmtNZXRob2QuaW52b2tlRXhwbG9zaXZlbHkoRnJhbWV3b3JrTWV0aG9kLmphdmE6NTYpCglhdCBvcmcuanVuaXQuaW50ZXJuYWwucnVubmVycy5zdGF0ZW1lbnRzLkludm9rZU1ldGhvZC5ldmFsdWF0ZShJbnZva2VNZXRob2QuamF2YToxNykKCWF0IGFuZHJvaWR4LnRlc3QuaW50ZXJuYWwucnVubmVyLmp1bml0NC5zdGF0ZW1lbnQuUnVuQWZ0ZXJzLmV2YWx1YXRlKFJ1bkFmdGVycy5qYXZhOjYxKQoJYXQgb3JnLmp1bml0LnJ1bm5lcnMuUGFyZW50UnVubmVyJDMuZXZhbHVhdGUoUGFyZW50UnVubmVyLmphdmE6MzA2KQoJYXQgb3JnLmp1bml0LnJ1bm5lcnMuQmxvY2tKVW5pdDRDbGFzc1J1bm5lciQxLmV2YWx1YXRlKEJsb2NrSlVuaXQ0Q2xhc3NSdW5uZXIuamF2YToxMDApCglhdCBvcmcuanVuaXQucnVubmVycy5QYXJlbnRSdW5uZXIucnVuTGVhZihQYXJlbnRSdW5uZXIuamF2YTozNjYpCglhdCBvcmcuanVuaXQucnVubmVycy5CbG9ja0pVbml0NENsYXNzUnVubmVyLnJ1bkNoaWxkKEJsb2NrSlVuaXQ0Q2xhc3NSdW5uZXIuamF2YToxMDMpCglhdCBvcmcuanVuaXQucnVubmVycy5CbG9ja0pVbml0NENsYXNzUnVubmVyLnJ1bkNoaWxkKEJsb2NrSlVuaXQ0Q2xhc3NSdW5uZXIuamF2YTo2MykKCWF0IG9yZy5qdW5pdC5ydW5uZXJzLlBhcmVudFJ1bm5lciQ0LnJ1bihQYXJlbnRSdW5uZXIuamF2YTozMzEpCglhdCBvcmcuanVuaXQucnVubmVycy5QYXJlbnRSdW5uZXIkMS5zY2hlZHVsZShQYXJlbnRSdW5uZXIuamF2YTo3OSkKCWF0IG9yZy5qdW5pdC5ydW5uZXJzLlBhcmVudFJ1bm5lci5ydW5DaGlsZHJlbihQYXJlbnRSdW5uZXIuamF2YTozMjkpCglhdCBvcmcuanVuaXQucnVubmVycy5QYXJlbnRSdW5uZXIuYWNjZXNzJDEwMChQYXJlbnRSdW5uZXIuamF2YTo2NikKCWF0IG9yZy5qdW5pdC5ydW5uZXJzLlBhcmVudFJ1bm5lciQyLmV2YWx1YXRlKFBhcmVudFJ1bm5lci5qYXZhOjI5MykKCWF0IG9yZy5qdW5pdC5ydW5uZXJzLlBhcmVudFJ1bm5lciQzLmV2YWx1YXRlKFBhcmVudFJ1bm5lci5qYXZhOjMwNikKCWF0IG9yZy5qdW5pdC5ydW5uZXJzLlBhcmVudFJ1bm5lci5ydW4oUGFyZW50UnVubmVyLmphdmE6NDEzKQoJYXQgYW5kcm9pZHgudGVzdC5leHQuanVuaXQucnVubmVycy5BbmRyb2lkSlVuaXQ0LnJ1bihBbmRyb2lkSlVuaXQ0LmphdmE6MTYyKQoJYXQgb3JnLmp1bml0LnJ1bm5lcnMuU3VpdGUucnVuQ2hpbGQoU3VpdGUuamF2YToxMjgpCglhdCBvcmcuanVuaXQucnVubmVycy5TdWl0ZS5ydW5DaGlsZChTdWl0ZS5qYXZhOjI3KQoJYXQgb3JnLmp1bml0LnJ1bm5lcnMuUGFyZW50UnVubmVyJDQucnVuKFBhcmVudFJ1bm5lci5qYXZhOjMzMSkKCWF0IG9yZy5qdW5pdC5ydW5uZXJzLlBhcmVudFJ1bm5lciQxLnNjaGVkdWxlKFBhcmVudFJ1bm5lci5qYXZhOjc5KQoJYXQgb3JnLmp1bml0LnJ1bm5lcnMuUGFyZW50UnVubmVyLnJ1bkNoaWxkcmVuKFBhcmVudFJ1bm5lci5qYXZhOjMyOSkKCWF0IG9yZy5qdW5pdC5ydW5uZXJzLlBhcmVudFJ1bm5lci5hY2Nlc3MkMTAwKFBhcmVudFJ1bm5lci5qYXZhOjY2KQoJYXQgb3JnLmp1bml0LnJ1bm5lcnMuUGFyZW50UnVubmVyJDIuZXZhbHVhdGUoUGFyZW50UnVubmVyLmphdmE6MjkzKQoJYXQgb3JnLmp1bml0LnJ1bm5lcnMuUGFyZW50UnVubmVyJDMuZXZhbHVhdGUoUGFyZW50UnVubmVyLmphdmE6MzA2KQoJYXQgb3JnLmp1bml0LnJ1bm5lcnMuUGFyZW50UnVubmVyLnJ1bihQYXJlbnRSdW5uZXIuamF2YTo0MTMpCglhdCBvcmcuanVuaXQucnVubmVyLkpVbml0Q29yZS5ydW4oSlVuaXRDb3JlLmphdmE6MTM3KQoJYXQgb3JnLmp1bml0LnJ1bm5lci5KVW5pdENvcmUucnVuKEpVbml0Q29yZS5qYXZhOjExNSkKCWF0IGFuZHJvaWR4LnRlc3QuaW50ZXJuYWwucnVubmVyLlRlc3RFeGVjdXRvci5leGVjdXRlKFRlc3RFeGVjdXRvci5qYXZhOjY3KQoJYXQgYW5kcm9pZHgudGVzdC5pbnRlcm5hbC5ydW5uZXIuVGVzdEV4ZWN1dG9yLmV4ZWN1dGUoVGVzdEV4ZWN1dG9yLmphdmE6NTgpCglhdCBhbmRyb2lkeC50ZXN0LnJ1bm5lci5BbmRyb2lkSlVuaXRSdW5uZXIub25TdGFydChBbmRyb2lkSlVuaXRSdW5uZXIuamF2YTo0NDYpCglhdCBjb20uZXhhbXBsZS5iYWkxLmZpeHR1cmUuSXNvbGF0ZWRJbnN0cnVtZW50YXRpb25SdW5uZXIub25TdGFydChJc29sYXRlZEluc3RydW1lbnRhdGlvblJ1bm5lci5rdDoxMCkKCWF0IGFuZHJvaWQuYXBwLkluc3RydW1lbnRhdGlvbiRJbnN0cnVtZW50YXRpb25UaHJlYWQucnVuKEluc3RydW1lbnRhdGlvbi5qYXZhOjIzNDgpCjwvZmFpbHVyZT48L3Rlc3RjYXNlPjwvdGVzdHN1aXRlPg==
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 12,724
+There was 1 failure:
+1) citizenPostThenIndependentRescuerGetRendersClickableMarker(com.example.bai1.fixture.DemoPhoneTest)
+java.lang.AssertionError: Expected own UI ID: SYNTHETIC-E10A-1
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.example.bai1.fixture.DemoPhoneTest.waitFor(DemoPhoneTest.kt:25)
+	at com.example.bai1.fixture.DemoPhoneTest.expect(DemoPhoneTest.kt:54)
+	at com.example.bai1.fixture.DemoPhoneTest.citizenPostThenIndependentRescuerGetRendersClickableMarker(DemoPhoneTest.kt:73)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

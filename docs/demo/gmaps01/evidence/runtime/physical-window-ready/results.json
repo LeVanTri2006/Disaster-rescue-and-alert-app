@@ -1,0 +1,351 @@
+{
+  "serial": "REDACTED",
+  "model": "CPH2159",
+  "api": "33",
+  "status": "FAIL",
+  "cases": [
+    {
+      "name": "actualGoogleMapLoadsTilesAtSyntheticCamera",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.MapsPhoneTest#actualGoogleMapLoadsTilesAtSyntheticCamera",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10maps.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "23638",
+      "actual_outputs": [
+        {
+          "ready": true,
+          "loaded": true,
+          "callbacks": 1,
+          "state": "LOADED_CALLBACK",
+          "selected": "",
+          "latitude": 16.050500002718305,
+          "longitude": 108.20250000804663,
+          "zoom": 15.5,
+          "myLocation": false
+        }
+      ],
+      "screenshot": "tiles-loaded.png"
+    },
+    {
+      "name": "actualRescuerMarkerTapShowsCorrectInfo",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.MapsPhoneTest#actualRescuerMarkerTapShowsCorrectInfo",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10maps.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "24084",
+      "actual_outputs": [
+        {
+          "ready": true,
+          "loaded": true,
+          "callbacks": 1,
+          "state": "LOADED_CALLBACK",
+          "selected": "RESCUER TEST | 16.0500, 108.2020",
+          "latitude": 16.049999937571926,
+          "longitude": 108.20200011134148,
+          "zoom": 15.5,
+          "clickedLatitude": 16.05,
+          "clickedLongitude": 108.202,
+          "clickedTitle": "RESCUER TEST",
+          "myLocation": false
+        }
+      ],
+      "screenshot": "rescuer-info.png"
+    },
+    {
+      "name": "actualSosMarkerTapShowsCorrectInfo",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.MapsPhoneTest#actualSosMarkerTapShowsCorrectInfo",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10maps.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "24380",
+      "actual_outputs": [
+        {
+          "ready": true,
+          "loaded": true,
+          "callbacks": 1,
+          "state": "LOADED_CALLBACK",
+          "selected": "SOS TEST | 16.0510, 108.2030",
+          "latitude": 16.05100006660904,
+          "longitude": 108.20299990475178,
+          "zoom": 15.5,
+          "clickedLatitude": 16.051,
+          "clickedLongitude": 108.203,
+          "clickedTitle": "SOS TEST",
+          "myLocation": false
+        }
+      ],
+      "screenshot": "sos-info.png"
+    },
+    {
+      "name": "actualDoubleTapZoomAndDragPanChangeSdkCamera",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.MapsPhoneTest#actualDoubleTapZoomAndDragPanChangeSdkCamera",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10maps.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "24716",
+      "actual_outputs": [
+        {
+          "ready": true,
+          "loaded": true,
+          "callbacks": 1,
+          "state": "LOADED_CALLBACK",
+          "selected": "",
+          "latitude": 16.051727927979183,
+          "longitude": 108.20040352642536,
+          "zoom": 16.5,
+          "myLocation": false
+        }
+      ],
+      "screenshot": "zoom-pan.png"
+    },
+    {
+      "name": "actualActivityRecreationReloadsSdkWithoutCrash",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.MapsPhoneTest#actualActivityRecreationReloadsSdkWithoutCrash",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10maps.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "24969",
+      "actual_outputs": [
+        {
+          "ready": true,
+          "loaded": true,
+          "callbacks": 1,
+          "state": "LOADED_CALLBACK",
+          "selected": "",
+          "latitude": 16.050500002718305,
+          "longitude": 108.20250000804663,
+          "zoom": 15.5,
+          "myLocation": false
+        }
+      ]
+    },
+    {
+      "name": "noLocationPermissionsAndSdkMyLocationDisabled",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.MapsPhoneTest#noLocationPermissionsAndSdkMyLocationDisabled",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10maps.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "25146",
+      "actual_outputs": [
+        {
+          "ready": true,
+          "loaded": true,
+          "callbacks": 1,
+          "state": "LOADED_CALLBACK",
+          "selected": "",
+          "latitude": 16.050500002718305,
+          "longitude": 108.20250000804663,
+          "zoom": 15.5,
+          "myLocation": false
+        }
+      ]
+    },
+    {
+      "name": "isolatedDemoKeepsF06AndStrictDisabledBanner",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.MapsPhoneTest#isolatedDemoKeepsF06AndStrictDisabledBanner",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10maps.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "25459",
+      "actual_outputs": [
+        {
+          "ready": true,
+          "loaded": true,
+          "callbacks": 1,
+          "state": "LOADED_CALLBACK",
+          "selected": "",
+          "latitude": 16.050500002718305,
+          "longitude": 108.20250000804663,
+          "zoom": 15.5,
+          "myLocation": false
+        }
+      ]
+    }
+  ],
+  "installs": [
+    {
+      "package": "com.example.bai1.p5e10maps.demo",
+      "command": [
+        "adb",
+        "-s",
+        "REDACTED",
+        "install",
+        "-t",
+        "/home/vantri/AndroidStudioProjects/bai1/docs/demo/gmaps01/artifacts/gmaps01-debug.apk"
+      ],
+      "exit": 0,
+      "output": "Performing Streamed Install\nSuccess\n"
+    },
+    {
+      "package": "com.example.bai1.p5e10maps.demo.test",
+      "command": [
+        "adb",
+        "-s",
+        "REDACTED",
+        "install",
+        "-t",
+        "/home/vantri/AndroidStudioProjects/bai1/docs/demo/gmaps01/artifacts/gmaps01-debug-test.apk"
+      ],
+      "exit": 0,
+      "output": "Performing Streamed Install\nSuccess\n"
+    }
+  ],
+  "exception": "AssertionError: Actual physical case failed: isolatedDemoKeepsF06AndStrictDisabledBanner",
+  "cleanup_errors": [],
+  "device_authorized_after": true,
+  "remaining_owned_packages": []
+}

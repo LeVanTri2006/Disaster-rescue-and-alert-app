@@ -37,7 +37,7 @@ fun RescueMissionListScreen(
         factory = com.example.bai1.rescue.presentation.RescueMissionViewModelFactory()
     ),
     locationViewModel: com.example.bai1.presentation.location.CurrentLocationViewModel = androidx.lifecycle.viewmodel.compose.viewModel(
-        factory = com.example.bai1.presentation.location.CurrentLocationViewModel.factory(androidx.compose.ui.platform.LocalContext.current)
+        factory = com.example.bai1.presentation.location.CurrentLocationViewModelFactory(androidx.compose.ui.platform.LocalContext.current)
     ),
     onNavigateToDetail: (String) -> Unit,
     onNavigateToRequestDetail: (String) -> Unit,

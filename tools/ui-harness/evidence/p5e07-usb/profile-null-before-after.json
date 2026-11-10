@@ -1,0 +1,34 @@
+{
+  "same_case": "accountProfileEmptyNameUsesProductionFallback",
+  "before_device": {
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "source_sha256": "5cd17a05ce42009985e826f9efc8e9292666f4888a92b7ba202628ae75e17b20"
+  },
+  "after_device": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_sha256": "5d6205b7047ac4939ef697c6867d3b45798a25330a5aae65e9d2d33b7ba803ec"
+  },
+  "before_jvm": {
+    "command": [
+      "./gradlew",
+      "--offline",
+      "--no-daemon",
+      ":app:testDebugUnitTest",
+      "--tests",
+      "com.example.bai1.auth.network.AuthUserNullableFieldsTest"
+    ],
+    "exit_code": 0,
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cause": "Android JSONObject.optString stringifies JSON null; cached JVM org.json handles it differently",
+  "remediation": "Check isNull before converting optional user strings; preserve non-null/literal null string semantics"
+}

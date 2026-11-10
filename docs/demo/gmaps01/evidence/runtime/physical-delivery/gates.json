@@ -1,0 +1,52 @@
+[
+  {
+    "status": "PASS",
+    "variant": "debug",
+    "package": "com.example.bai1.p5e10maps.demo",
+    "key_metadata_present": true,
+    "key_matches_authorized_input": true,
+    "negative_key_is_synthetic": false,
+    "key_value": "REDACTED",
+    "signing_sha1": "E4:EA:13:1A:81:21:D3:34:86:B8:3B:EA:64:F1:A4:1C:68:F0:80:07",
+    "permissions": [
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "own AndroidX signature"
+    ],
+    "business_firebase_fused_location_matches": 0,
+    "gms_compatibility_exceptions": [
+      "Lcom/google/firebase/FirebaseApiNotAvailableException;",
+      "Lcom/google/firebase/FirebaseException;",
+      "Lcom/google/firebase/FirebaseExceptionMapper;"
+    ],
+    "artifacts": {
+      "gmaps01-debug.apk": "b00c4e64bba6e421e3bc6ac38679c4e4f31c3fffa25320eea2f84d7f948d7659",
+      "gmaps01-debug-test.apk": "454a490c730023f11a397d12d940bd24013c8c5d71d823a414bff51db255b3df"
+    }
+  },
+  {
+    "status": "PASS",
+    "variant": "negative",
+    "package": "com.example.bai1.p5e10maps.demo.negative",
+    "key_metadata_present": true,
+    "key_matches_authorized_input": false,
+    "negative_key_is_synthetic": true,
+    "key_value": "REDACTED",
+    "signing_sha1": "E4:EA:13:1A:81:21:D3:34:86:B8:3B:EA:64:F1:A4:1C:68:F0:80:07",
+    "permissions": [
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "own AndroidX signature"
+    ],
+    "business_firebase_fused_location_matches": 0,
+    "gms_compatibility_exceptions": [
+      "Lcom/google/firebase/FirebaseApiNotAvailableException;",
+      "Lcom/google/firebase/FirebaseException;",
+      "Lcom/google/firebase/FirebaseExceptionMapper;"
+    ],
+    "artifacts": {
+      "gmaps01-negative.apk": "12a39dfc9f6f4fa8c7aff970d26d47030a2952470f975b031099fd6ae2c0f5b9",
+      "gmaps01-negative-test.apk": "ffe9da148c53a83a8d20287c2c21d548097c43ab66d2ab9041e6f9277510319a"
+    }
+  }
+]

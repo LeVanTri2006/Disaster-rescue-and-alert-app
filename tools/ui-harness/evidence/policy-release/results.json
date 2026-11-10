@@ -1,0 +1,139 @@
+{
+  "variant": "releaseLike",
+  "device": "emulator-5554",
+  "commands": [
+    {
+      "command": [
+        "/home/vantri/AndroidStudioProjects/bai1/gradlew",
+        "-p",
+        "/home/vantri/AndroidStudioProjects/bai1/tools/emulator-harness",
+        "--offline",
+        "--no-daemon",
+        "-PpolicyVariant=releaseLike",
+        "assembleReleaseLike",
+        "assembleReleaseLikeAndroidTest"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "install",
+        "-t",
+        "/home/vantri/AndroidStudioProjects/bai1/tools/emulator-harness/build/outputs/apk/releaseLike/p5e01-isolated-harness-releaseLike.apk"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "install",
+        "-t",
+        "/home/vantri/AndroidStudioProjects/bai1/tools/emulator-harness/build/outputs/apk/androidTest/releaseLike/p5e01-isolated-harness-releaseLike-androidTest.apk"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "shell",
+        "pm",
+        "grant",
+        "com.example.bai1.p5e01.isolated",
+        "android.permission.ACCESS_LOCAL_NETWORK"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "42597",
+        "com.example.bai1.p5e01.isolated.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "uninstall",
+        "com.example.bai1.p5e01.isolated.test"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "emulator-5554",
+        "uninstall",
+        "com.example.bai1.p5e01.isolated"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "permission_state": "granted",
+  "compiled_policy_entry": "res/-x.xml",
+  "preinstall_isolation": "PASS",
+  "apk": {
+    "path": "/home/vantri/AndroidStudioProjects/bai1/tools/emulator-harness/build/outputs/apk/releaseLike/p5e01-isolated-harness-releaseLike.apk",
+    "bytes": 4640952,
+    "sha256": "cfc8655086f1ae7d74923a96c8efef4c41cc6ec30e7770e37bcd2a3532441f56"
+  },
+  "logcat_since_device_time": "11-07 01:51:45.000",
+  "host_health_requests": 0,
+  "logcat_pid": "23018",
+  "policy_observations": [
+    {
+      "10.0.2.2": false,
+      "127.0.0.1": false,
+      "localhost": false,
+      "outside.invalid": false,
+      "127.0.0.2": false,
+      "::1": false,
+      "ip6-localhost": false
+    }
+  ],
+  "tests": [
+    {
+      "name": "P5E01DeviceRuntime",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "junitRunCount": "6",
+      "cases": [
+        "isolatedNonDebuggableReleaseLikeRuntime",
+        "releaseNonLocalHostIsBlockedUsingControlledLoopbackDns",
+        "releaseLikeActualSocketHttpBlockedBeforeAnyRequest",
+        "productionRoutingClientRejectsHttpEvenWhenPlatformAllowsLoopback",
+        "releaseActualSocketsDenyIpv4Ipv6AndLocalhostNames",
+        "releasePolicyDeniesEveryDebugHostAtRuntime"
+      ]
+    }
+  ],
+  "owned_packages_remaining": [],
+  "device_assertions": "PASS"
+}

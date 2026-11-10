@@ -194,7 +194,8 @@ class OkHttpAuthApiClient(
                 val responseText = response.body?.string().orEmpty()
                 if (!response.isSuccessful) {
                     var serverMsg = "HTTP ${response.code}"
-                    runCatching {
+                    // Authentication failures must not retain arbitrary backend payloads.
+                    if (response.code != 401) runCatching {
                         val rootJson = JSONObject(responseText)
                         if (rootJson.has("error")) {
                             val errorObj = rootJson.getJSONObject("error")
@@ -237,13 +238,17 @@ class OkHttpAuthApiClient(
 
     private fun parseUser(data: JSONObject): AuthUser = AuthUser(
         id = data.getString("id"),
-        fullName = data.optString("fullName").takeIf { it.isNotBlank() },
-        email = data.optString("email").takeIf { it.isNotBlank() },
-        phone = data.optString("phone").takeIf { it.isNotBlank() },
-        role = data.optString("role").takeIf { it.isNotBlank() },
-        status = data.optString("status").takeIf { it.isNotBlank() },
-        verificationStatus = data.optJSONObject("rescueProfile")?.optString("verificationStatus")?.takeIf { it.isNotBlank() }
+        fullName = optionalString(data, "fullName"),
+        email = optionalString(data, "email"),
+        phone = optionalString(data, "phone"),
+        role = optionalString(data, "role"),
+        status = optionalString(data, "status"),
+        verificationStatus = data.optJSONObject("rescueProfile")?.let { optionalString(it, "verificationStatus") }
     )
+
+    // Android JSONObject.optString can stringify JSON null as "null". Check absence first.
+    private fun optionalString(data: JSONObject, key: String): String? =
+        if (data.isNull(key)) null else data.optString(key).takeIf { it.isNotBlank() }
 
     private fun errorKind(code: Int): AuthApiErrorKind = when (code) {
         400 -> AuthApiErrorKind.BAD_REQUEST

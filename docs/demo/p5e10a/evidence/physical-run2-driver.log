@@ -1,0 +1,16 @@
+PREINSTALL SECURITY PASS 39 exact sources; artifacts preserved
+citizenPostThenIndependentRescuerGetRendersClickableMarker failures 1
+multipleSosHaveSeparateResponseMarkersAndRefreshNeverPosts failures 1
+sameCoordinateSosRetainDifferentIds failures 1
+post403DoesNotStoreOrShowFalseSuccess failures 1
+post500DoesNotStoreOrShowFalseSuccess failures 1
+postTimeoutPrecommitFixtureDoesNotShowLateSuccess failures 0
+postOfflineDoesNotReachFixtureOrShowSuccess failures 1
+Traceback (most recent call last):
+  File "/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/run_demo_tests.py", line 120, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/vantri/AndroidStudioProjects/bai1/tools/sos-map-harness/run_demo_tests.py", line 85, in main
+    assert adb('shell','am','force-stop',PKG).returncode==0;time.sleep(.75)
+                                                            ~~~~~~~~~~^^^^^
+KeyboardInterrupt

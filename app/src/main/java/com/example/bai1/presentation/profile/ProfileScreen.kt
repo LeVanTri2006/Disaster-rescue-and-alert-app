@@ -24,11 +24,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.bai1.R
-import com.example.bai1.data.repository.DisasterRepository
+import com.example.bai1.data.model.UserRole
 import com.example.bai1.presentation.components.AppBottomNavigation
 import com.example.bai1.presentation.components.AppTopBar
 import com.example.bai1.ui.theme.*
-import com.example.bai1.auth.AuthAppDependencies
 import com.example.bai1.auth.session.AuthState
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -37,10 +36,10 @@ fun ProfileScreen(
     onNavigateToSettings: () -> Unit,
     onNavigateToVolunteerRegister: () -> Unit,
     onLogout: () -> Unit,
-    onBottomNavNavigate: (String) -> Unit
+    onBottomNavNavigate: (String) -> Unit,
+    authState: AuthState,
+    userRole: UserRole
 ) {
-    val userRole by DisasterRepository.currentUserRole.collectAsState()
-    val authState by AuthAppDependencies.repository.state.collectAsState()
     val authUser = (authState as? AuthState.Authenticated)?.user
 
     val isRescuer = authUser?.role == "RESCUER" || userRole.name == "RESCUER"

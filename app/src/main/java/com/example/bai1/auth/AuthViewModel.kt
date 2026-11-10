@@ -4,26 +4,40 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.CoroutineStart
+import kotlinx.coroutines.CoroutineScope
 
 class AuthViewModel(
     private val repository: AuthRepository
 ) : ViewModel() {
     val state = repository.state
+    private val operations = mutableSetOf<Job>()
+    private fun launchAuth(block: suspend CoroutineScope.() -> Unit) {
+        val job = viewModelScope.launch(start = CoroutineStart.LAZY, block = block)
+        synchronized(operations) { operations.add(job) }
+        job.invokeOnCompletion { synchronized(operations) { operations.remove(job) } }
+        job.start()
+    }
+    override fun onCleared() {
+        repository.cancelPendingOperations(synchronized(operations) { operations.toSet() })
+        super.onCleared()
+    }
 
     init {
         restoreSession()
     }
 
     fun googleLogin(firebaseIdToken: String) {
-        viewModelScope.launch { repository.googleLogin(firebaseIdToken) }
+        launchAuth { repository.googleLogin(firebaseIdToken) }
     }
 
     fun register(fullName: String, email: String, phone: String, password: String) {
-        viewModelScope.launch { repository.register(fullName, email, phone, password) }
+        launchAuth { repository.register(fullName, email, phone, password) }
     }
 
     fun login(identifier: String, password: String) {
-        viewModelScope.launch { repository.login(identifier, password) }
+        launchAuth { repository.login(identifier, password) }
     }
 
     suspend fun forgotPassword(identifier: String): Result<Unit> {
@@ -35,11 +49,11 @@ class AuthViewModel(
     }
 
     fun logout() {
-        viewModelScope.launch { repository.logout() }
+        launchAuth { repository.logout() }
     }
 
     private fun restoreSession() {
-        viewModelScope.launch { repository.restoreSession() }
+        launchAuth { repository.restoreSession() }
     }
 
     companion object {

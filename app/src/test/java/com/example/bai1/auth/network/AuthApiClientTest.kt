@@ -60,4 +60,22 @@ class AuthApiClientTest {
         assertEquals("HTTP 401", failure.error.technicalReason)
         assertEquals("Email/số điện thoại hoặc mật khẩu không đúng.", failure.error.userMessage())
     }
+    @Test
+    fun `401 nested or malformed payload cannot change diagnostics or user message`() = runTest {
+        for (payload in listOf(
+            """{"error":{"message":"secret already in use"}}""",
+            """{"message":"private token details"}""",
+            "not-json private details"
+        )) {
+            val client = OkHttpClient.Builder().addInterceptor { chain ->
+                Response.Builder().request(chain.request()).protocol(Protocol.HTTP_1_1)
+                    .code(401).message("Unauthorized").body(payload.toResponseBody()).build()
+            }.build()
+            val failure = OkHttpAuthApiClient("http://test", client).me("fixture-token") as AuthApiResult.Failure
+            assertEquals(AuthApiErrorKind.UNAUTHORIZED, failure.error.kind)
+            assertEquals("HTTP 401", failure.error.technicalReason)
+            assertEquals("Email/số điện thoại hoặc mật khẩu không đúng.", failure.error.userMessage())
+        }
+    }
+
 }

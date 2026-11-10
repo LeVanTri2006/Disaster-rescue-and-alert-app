@@ -1,0 +1,28 @@
+# P5-E10 — Audit giao diện production và tích hợp SOS
+
+09/11/2026. Audit trước implementation. Phạm vi thực thi được yêu cầu ở đoạn cuối task: chỉ SOS → fixture cô lập → production Google Maps. Mission/UCS/tracking/completion chỉ audit; không triển khai tiếp. M02 trước đó có21physical/5host PASS nhưng startup-smoke/report chưa hoàn tất khi người dùng chuyển ưu tiên; không dùng các số đó làm nghiệm thu production UI.
+
+| SCREEN | BUTTON | VIEWMODEL | REPOSITORY | API | STATUS | MISSING WIRING |
+|---|---|---|---|---|---|---|
+| MainActivity/AppNavGraph | Login/Home/Map/SOS/Profile logout | AuthViewModel | AuthRepository | auth/login,me,refresh | Có actual host seam MainAppHost/AppNavScreens | Production graph khởi tạo cloud theo destination; harness cũ không bind SOS/Map thật |
+| LoginScreen | Đăng nhập | AuthViewModel | AuthRepository | POST/auth/login + GET/auth/me | HTTP/UI có sẵn | Inject synthetic token store/backend; FirebaseAuthSession=null, không Credentials/GoogleSignIn |
+| SOSScreen | Nhấn giữ SOS | CurrentLocationViewModel | LocationProvider | Không POST ở nút hold; navigate SOS_RESCUE_REQUEST | Có UI/nút/callback thật | Tự tạo AndroidLocationProvider/xin location; cần injected VM và policy không xin quyền khi test |
+| SosRescueRequestScreen | Gửi yêu cầu/Cập nhật vị trí | SosRescueRequestViewModel | SosRepository→SosTransportManager→ApiSosTransport | POST/sos | Có UI/VM/serializer thật | ViewModelOverride vẫn auto xin GPS; default factory nối Firebase DI; media phải vô hiệu trong isolated test |
+| DisasterMapScreen | Marker/XEM CHI TIẾT/center | DisasterMapViewModel | SosRepository + DefaultRescueMissionRepository | GET/sos/active; GET/rescue-requests/nearby | Có actual GoogleMap/Marker | Inject location + VM, hiển thị GET errors; không dùng local POST optimistic làm proof; bỏ biến đổi geographic coords khi overlap |
+| SosDetailScreen | NHẬN NHIỆM VỤ | SosDetailViewModel | SosRepository + global RescueMissionAppDependencies/AuthAppDependencies | nearby match sosEventId rồi POST/rescue-missions/accept/requestId | Có HTTP wiring, chưa USB E2E | Global auth/DI; getSosById chỉ cache/realtime, Android SOS client chưa GET detail; không nhầm eventId/requestId |
+| RescueMissionListScreen | Request/mission card | RescueMissionViewModel | DefaultRescueMissionRepository | GET/rescue-missions/my, rescue-requests/nearby | Có UI/VM/client | AppNavGraph onNavigateToRequestDetail đang chuyển requestId vào Routes.sosDetail (sai loại ID); cần Routes.requestDetail ở giai đoạn mission |
+| RescueRequestDetailScreen | Chấp nhận | RescueMissionViewModel.acceptRequest | DefaultRescueMissionRepository | POST/rescue-missions/accept/{requestId} | Có wiring actual | Chưa test trùng/403/500/server reload USB; backend accept update request và tạo mission chưa cùng transaction |
+| MissionDetailScreen | Hoàn thành | RescueMissionViewModel.completeMission | DefaultRescueMissionRepository | PATCH/rescue-missions/{missionId} status COMPLETED | Có UI/HTTP | Dialog notes chưa gửi notes qua interface; chuyển trạng thái phải đúng server; chưa USB, không triển khai trong lượt này |
+| DisasterMap/mission route | Routing/polyline | Chưa có binding UCS vào map | RoutingAppDependencies graph repo | Graph HTTP, không Directions | BLOCKED cho navigation | Public UCS methods fail closed STRICT_ROUTING_DISABLED; kernel private, không API diagnostic an toàn; không reflection/bypass/route giả |
+| Tracking vị trí | My Location | AndroidLocationProvider/CurrentLocationVM | Không thấy mission-location-update repo trong luồng màn hình | Không có method location upload trong RescueMissionApiClient | Chưa integrated | Cần contract/backend test/synthetic provider riêng; không tự bật GPS/background upload |
+
+Backend source read-only: SOS POST tạo SOSEvent ACTIVE + RescueRequest PENDING trong transaction rồi publish Firebase; R2 photo presigned URL có network riêng. Vì vậy không chạy backend/database thật. Fixture RAM chỉ POST/auth/login, GET/auth/me, POST/sos, GET/sos/active và read-only nearby; không DB/publisher/push/dispatch/media. Đây là contract fixture, không chứng nhận Backend service/DB E2E.
+
+DTO: Android CreateSosRequest adults/children/elderly/neededItems/condition/description/lat/lon/accuracy/battery/urgency phù hợp CreateSosDto; timestamp ISO là trường Android bổ sung, DTO Backend không khai báo, cần kiểm ValidationPipe whitelist trong triển khai server thực. Server response UUID eventId, ACTIVE; requestId là UUID RescueRequest khác; missionId là UUID server tạo khác nữa. Mission accept dùng requestId, không eventId. Nearby GeoJSON coordinates=[lon,lat], client đảo đúng. Fixture không tự phát minh mission IDs.
+
+Các lỗi audit trực tiếp: InMemorySosRepository.getActiveSos nuốt GET failure và merge memory nên giữ dữ liệu cũ; Map poll bỏ qua empty result, log200 dù không biết HTTP thật; map dịch cả latitude/longitude để tránh overlap. Chưa có onMapLoaded/native map test hook; UI mặc định cho MyLocation/SDK toolbar. Thiếu seam cô lập production Composables/VM factories.
+
+Kế hoạch implementation sau audit: tách platform constructors/factories khỏi core VM; inject VM/location vào đúng Composables hiện có, production bindings giữ Android provider. Dùng actual Auth/SOS transport/client và production HTTP-only repository không optimistic/realtime cho isolated variant. Tái sử dụng Maps dependency/key wiring/redaction và owned fixture từ M01/E10A/M02, không lấy UI test-only từ chúng để thay UI production. Test bằng package mới, synthetic data/location, default Application, không Firebase SDK/DI hay location permissions. Giữ nguyên F06 OPEN/STRICT_ROUTING_DISABLED; không UCS/Polyline/mission action.
+
+IMPLEMENTATION_STATUS = IN_PROGRESS
+PHYSICAL_PRODUCTION_UI = NOT_YET_VERIFIED

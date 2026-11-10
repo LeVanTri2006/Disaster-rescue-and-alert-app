@@ -1,0 +1,24 @@
+{
+  "focused": {
+    "command": [
+      "python3",
+      "tools/ui-harness/run_ui_tests.py",
+      "--physical-usb",
+      "--evidence-dir",
+      "/home/vantri/AndroidStudioProjects/bai1/tools/ui-harness/evidence/p5e08-usb/focused",
+      "--tests",
+      "authLoginCancellationCannotRestoreSessionAfterClose,authNavigationUsesActualScreensInSubsetHost,warningFloodSelectedTemplateAndBackUseActualCallbacks"
+    ],
+    "exit_code": 0
+  },
+  "physical-final": {
+    "command": [
+      "python3",
+      "tools/ui-harness/run_ui_tests.py",
+      "--physical-usb",
+      "--evidence-dir",
+      "/home/vantri/AndroidStudioProjects/bai1/tools/ui-harness/evidence/p5e08-usb/physical-final"
+    ],
+    "exit_code": 0
+  }
+}

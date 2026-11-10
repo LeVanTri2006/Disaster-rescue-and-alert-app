@@ -1,0 +1,135 @@
+[
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:37357",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "citizen"
+  },
+  {
+    "method": "GET",
+    "path": "/auth/me",
+    "host": "127.0.0.1:37357",
+    "fault": "ok",
+    "role": "citizen",
+    "actor": "citizen"
+  },
+  {
+    "method": "POST",
+    "path": "/sos",
+    "host": "127.0.0.1:37357",
+    "fault": "ok",
+    "role": "citizen",
+    "actor": "citizen",
+    "request": {
+      "adults": 1,
+      "children": 0,
+      "elderly": 0,
+      "neededItems": [],
+      "condition": "K\u1eb9t trong nh\u00e0",
+      "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+      "latitude": 16.051,
+      "longitude": 108.203,
+      "accuracyMeters": 0,
+      "urgency": "HIGH",
+      "timestamp": "2026-11-09T09:44:12.601Z"
+    },
+    "response_event_id": "0b2b8c63-1263-48fe-8227-1a4c2d8ad8fa",
+    "response": {
+      "adults": 1,
+      "children": 0,
+      "elderly": 0,
+      "neededItems": [],
+      "condition": "K\u1eb9t trong nh\u00e0",
+      "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+      "latitude": 16.051,
+      "longitude": 108.203,
+      "accuracyMeters": 0,
+      "urgency": "HIGH",
+      "timestamp": "2026-11-09T09:44:12.601Z",
+      "eventId": "0b2b8c63-1263-48fe-8227-1a4c2d8ad8fa",
+      "createdAt": 1794268800000,
+      "status": "ACTIVE",
+      "transportMode": "ONLINE"
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/sos/active",
+    "host": "127.0.0.1:37357",
+    "fault": "ok",
+    "role": "citizen",
+    "actor": "citizen",
+    "response_ids": [
+      "0b2b8c63-1263-48fe-8227-1a4c2d8ad8fa"
+    ],
+    "response": [
+      {
+        "adults": 1,
+        "children": 0,
+        "elderly": 0,
+        "neededItems": [],
+        "condition": "K\u1eb9t trong nh\u00e0",
+        "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+        "latitude": 16.051,
+        "longitude": 108.203,
+        "accuracyMeters": 0,
+        "urgency": "HIGH",
+        "timestamp": "2026-11-09T09:44:12.601Z",
+        "eventId": "0b2b8c63-1263-48fe-8227-1a4c2d8ad8fa",
+        "createdAt": 1794268800000,
+        "status": "ACTIVE",
+        "transportMode": "ONLINE"
+      }
+    ]
+  },
+  {
+    "method": "POST",
+    "path": "/auth/login",
+    "host": "127.0.0.1:37357",
+    "fault": "ok",
+    "role": null,
+    "actor": null,
+    "synthetic_account_role": "rescuer"
+  },
+  {
+    "method": "GET",
+    "path": "/auth/me",
+    "host": "127.0.0.1:37357",
+    "fault": "ok",
+    "role": "rescuer",
+    "actor": "rescuer"
+  },
+  {
+    "method": "GET",
+    "path": "/sos/active",
+    "host": "127.0.0.1:37357",
+    "fault": "ok",
+    "role": "rescuer",
+    "actor": "rescuer",
+    "response_ids": [
+      "0b2b8c63-1263-48fe-8227-1a4c2d8ad8fa"
+    ],
+    "response": [
+      {
+        "adults": 1,
+        "children": 0,
+        "elderly": 0,
+        "neededItems": [],
+        "condition": "K\u1eb9t trong nh\u00e0",
+        "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+        "latitude": 16.051,
+        "longitude": 108.203,
+        "accuracyMeters": 0,
+        "urgency": "HIGH",
+        "timestamp": "2026-11-09T09:44:12.601Z",
+        "eventId": "0b2b8c63-1263-48fe-8227-1a4c2d8ad8fa",
+        "createdAt": 1794268800000,
+        "status": "ACTIVE",
+        "transportMode": "ONLINE"
+      }
+    ]
+  }
+]

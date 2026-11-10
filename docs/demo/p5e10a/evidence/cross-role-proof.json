@@ -1,0 +1,107 @@
+[
+  {
+    "case": "citizenPostThenIndependentRescuerGetRendersClickableMarker",
+    "server_rows": 1,
+    "committed_posts": 1,
+    "markers": 1,
+    "status": "PASS"
+  },
+  {
+    "case": "multipleSosHaveSeparateResponseMarkersAndRefreshNeverPosts",
+    "server_rows": 2,
+    "committed_posts": 2,
+    "markers": 2,
+    "status": "PASS"
+  },
+  {
+    "case": "sameCoordinateSosRetainDifferentIds",
+    "server_rows": 2,
+    "committed_posts": 2,
+    "markers": 2,
+    "status": "PASS"
+  },
+  {
+    "case": "duplicateActiveSosForSameCitizenReturns409",
+    "server_rows": 1,
+    "committed_posts": 1,
+    "markers": 1,
+    "status": "PASS"
+  },
+  {
+    "case": "post403DoesNotStoreOrShowFalseSuccess",
+    "server_rows": 0,
+    "committed_posts": 0,
+    "markers": 0,
+    "status": "PASS"
+  },
+  {
+    "case": "post500DoesNotStoreOrShowFalseSuccess",
+    "server_rows": 0,
+    "committed_posts": 0,
+    "markers": 0,
+    "status": "PASS"
+  },
+  {
+    "case": "postTimeoutPrecommitFixtureDoesNotShowLateSuccess",
+    "server_rows": 0,
+    "committed_posts": 0,
+    "markers": 0,
+    "status": "PASS"
+  },
+  {
+    "case": "postOfflineDoesNotReachFixtureOrShowSuccess",
+    "server_rows": 0,
+    "committed_posts": 0,
+    "markers": 0,
+    "status": "PASS"
+  },
+  {
+    "case": "failedGetRemovesStaleMarkersAndReportsFailure",
+    "server_rows": 1,
+    "committed_posts": 1,
+    "markers": 1,
+    "status": "PASS"
+  },
+  {
+    "case": "get403TimeoutAndOfflineNeverInventMarkers",
+    "server_rows": 0,
+    "committed_posts": 0,
+    "markers": 0,
+    "status": "PASS"
+  },
+  {
+    "case": "activityRecreationRequiresLoginAndReloadsSameServerIds",
+    "server_rows": 1,
+    "committed_posts": 1,
+    "markers": 1,
+    "status": "PASS"
+  },
+  {
+    "case": "logoutClearsSessionFormSelectionAndRetainsOnlyServerData",
+    "server_rows": 1,
+    "committed_posts": 1,
+    "markers": 1,
+    "status": "PASS"
+  },
+  {
+    "case": "logoutDuringPendingGetCannotRestoreMarkersOrSession",
+    "server_rows": 1,
+    "committed_posts": 1,
+    "markers": 0,
+    "status": "PASS"
+  },
+  {
+    "case": "logoutDuringPendingPostCannotRestoreSuccess",
+    "server_rows": 0,
+    "committed_posts": 0,
+    "markers": 0,
+    "status": "PASS"
+  },
+  {
+    "case": "rescuerHasNoCreationOrMissionActionAndStrictGateStaysClosed",
+    "server_rows": 0,
+    "committed_posts": 0,
+    "markers": 0,
+    "status": "PASS"
+  }
+]

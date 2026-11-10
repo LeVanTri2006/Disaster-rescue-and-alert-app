@@ -1,11 +1,8 @@
 package com.example.bai1.presentation.sos
 
-import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.bai1.presentation.location.AndroidLocationProvider
 import com.example.bai1.presentation.location.LocationError
 import com.example.bai1.presentation.location.LocationProvider
 import com.example.bai1.presentation.location.LocationResult
@@ -15,8 +12,6 @@ import com.example.bai1.sos.domain.SosUrgency
 import com.example.bai1.sos.presentation.SosFormData
 import com.example.bai1.sos.presentation.LocationUiState
 import com.example.bai1.sos.presentation.SosUiState
-import com.example.bai1.sos.SosAppDependencies
-import com.example.bai1.sos.provider.AndroidBatteryInfoProvider
 import com.example.bai1.sos.provider.BatteryInfoProvider
 import com.example.bai1.sos.repository.SosRepository
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -309,6 +304,15 @@ class SosRescueRequestViewModel(
 
             val result = repository.submitSos(sos)
 
+            if (result is SosSubmissionResult.Success || result is SosSubmissionResult.Queued) {
+                com.example.bai1.presentation.map.DisasterMapSharedState.citizenTrackingEventId = sos.eventId
+                com.example.bai1.presentation.map.DisasterMapSharedState.citizenActiveSos = sos
+                if (sos.latitude != null && sos.longitude != null) {
+                    com.example.bai1.presentation.map.DisasterMapSharedState.lastKnownVictimLocation =
+                        com.google.android.gms.maps.model.LatLng(sos.latitude, sos.longitude)
+                }
+            }
+
             _uiState.value = when (result) {
                 is SosSubmissionResult.Success -> SosUiState.Submitted(result)
                 is SosSubmissionResult.Queued  -> SosUiState.Queued(result)
@@ -381,18 +385,7 @@ class SosRescueRequestViewModel(
             latitude != null && longitude != null && latitude.isFinite() && longitude.isFinite() &&
                 latitude in -90.0..90.0 && longitude in -180.0..180.0
 
-        fun factory(context: Context): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
-            @Suppress("UNCHECKED_CAST")
-            override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                SosAppDependencies.initialize(context.applicationContext)
-                return SosRescueRequestViewModel(
-                    repository = SosAppDependencies.sosRepository,
-                    locationProvider = AndroidLocationProvider(context.applicationContext),
-                    batteryProvider = AndroidBatteryInfoProvider(context.applicationContext),
-                    photoUploader = com.example.bai1.sos.repository.R2SosPhotoUploader(context.applicationContext, SosAppDependencies.apiClient)
-                ) as T
-            }
-        }
+
     }
 }
 

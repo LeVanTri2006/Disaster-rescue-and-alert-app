@@ -1,0 +1,15 @@
+PREINSTALL ISOLATION PASS: actual MainActivity/AppNavGraph, no cloud/providers
+accountRoleRecreateRetainsUserSelection tests 1 failures 0
+accountRoleUserSuccessClearsRoleHistory tests 1 failures 0
+accountRoleLoadingAndRecreateDuringHttpRetainSubmittedRole tests 1 failures 0
+accountProfileRendersSyntheticUserAndUserRole tests 1 failures 0
+accountSettingsRendersLocalStateAndSafeToggles tests 1 failures 1
+accountSettingsAboutBackAndActualLogout tests 1 failures 0
+Traceback (most recent call last):
+  File "/home/vantri/AndroidStudioProjects/bai1/tools/ui-harness/run_ui_tests.py", line 225, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/vantri/AndroidStudioProjects/bai1/tools/ui-harness/run_ui_tests.py", line 222, in main
+    assert not result['owned_packages_remaining'] and result['device_assertions']=='PASS','Real UI assertions failed'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Real UI assertions failed

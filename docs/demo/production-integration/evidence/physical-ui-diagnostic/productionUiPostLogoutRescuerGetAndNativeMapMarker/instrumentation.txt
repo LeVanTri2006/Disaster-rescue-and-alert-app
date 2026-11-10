@@ -1,0 +1,89 @@
+INSTRUMENTATION_STATUS: class=com.example.bai1.fixture.DemoPhoneTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.example.bai1.fixture.DemoPhoneTest:
+INSTRUMENTATION_STATUS: test=productionUiPostLogoutRescuerGetAndNativeMapMarker
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: productionUiTree=
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: p5e10aOutput={"route":"sos_rescue_request","role":"USER","nativeClicks":[],"callbacks":0,"rootPackage":"com.android.launcher","ownWindowFocused":false}
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_STATUS: class=com.example.bai1.fixture.DemoPhoneTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: Window doesn't have a backing surface!
+	at android.view.PixelCopy.request(PixelCopy.java:278)
+	at android.view.PixelCopy.request(PixelCopy.java:223)
+	at com.example.bai1.fixture.DemoPhoneTest.captureOwnWindow$lambda$5(DemoPhoneTest.kt:33)
+	at com.example.bai1.fixture.DemoPhoneTest$$ExternalSyntheticLambda12.invoke(D8$$SyntheticClass:0)
+	at com.example.bai1.fixture.DemoPhoneTest.main$lambda$0(DemoPhoneTest.kt:29)
+	at com.example.bai1.fixture.DemoPhoneTest$$ExternalSyntheticLambda13.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2366)
+	at android.os.Handler.handleCallback(Handler.java:942)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loopOnce(Looper.java:240)
+	at android.os.Looper.loop(Looper.java:351)
+	at android.app.ActivityThread.main(ActivityThread.java:8377)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:584)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1013)
+
+INSTRUMENTATION_STATUS: stream=
+Error in productionUiPostLogoutRescuerGetAndNativeMapMarker(com.example.bai1.fixture.DemoPhoneTest):
+java.lang.IllegalArgumentException: Window doesn't have a backing surface!
+	at android.view.PixelCopy.request(PixelCopy.java:278)
+	at android.view.PixelCopy.request(PixelCopy.java:223)
+	at com.example.bai1.fixture.DemoPhoneTest.captureOwnWindow$lambda$5(DemoPhoneTest.kt:33)
+	at com.example.bai1.fixture.DemoPhoneTest$$ExternalSyntheticLambda12.invoke(D8$$SyntheticClass:0)
+	at com.example.bai1.fixture.DemoPhoneTest.main$lambda$0(DemoPhoneTest.kt:29)
+	at com.example.bai1.fixture.DemoPhoneTest$$ExternalSyntheticLambda13.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2366)
+	at android.os.Handler.handleCallback(Handler.java:942)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loopOnce(Looper.java:240)
+	at android.os.Looper.loop(Looper.java:351)
+	at android.app.ActivityThread.main(ActivityThread.java:8377)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:584)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1013)
+
+INSTRUMENTATION_STATUS: test=productionUiPostLogoutRescuerGetAndNativeMapMarker
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: p5e01XmlBase64=PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnIHN0YW5kYWxvbmU9J3llcycgPz48dGVzdHN1aXRlIG5hbWU9Ik0wMkdvb2dsZU1hcHNTb3NEZXZpY2VSdW50aW1lIiB0ZXN0cz0iMSIgZmFpbHVyZXM9IjEiIGVycm9ycz0iMCIgc2tpcHBlZD0iMCIganVuaXRSdW5Db3VudD0iMSI+PHRlc3RjYXNlIGNsYXNzbmFtZT0iY29tLmV4YW1wbGUuYmFpMS5maXh0dXJlLkRlbW9QaG9uZVRlc3QiIG5hbWU9InByb2R1Y3Rpb25VaVBvc3RMb2dvdXRSZXNjdWVyR2V0QW5kTmF0aXZlTWFwTWFya2VyIj48ZmFpbHVyZT5qYXZhLmxhbmcuSWxsZWdhbEFyZ3VtZW50RXhjZXB0aW9uOiBXaW5kb3cgZG9lc24ndCBoYXZlIGEgYmFja2luZyBzdXJmYWNlIQoJYXQgYW5kcm9pZC52aWV3LlBpeGVsQ29weS5yZXF1ZXN0KFBpeGVsQ29weS5qYXZhOjI3OCkKCWF0IGFuZHJvaWQudmlldy5QaXhlbENvcHkucmVxdWVzdChQaXhlbENvcHkuamF2YToyMjMpCglhdCBjb20uZXhhbXBsZS5iYWkxLmZpeHR1cmUuRGVtb1Bob25lVGVzdC5jYXB0dXJlT3duV2luZG93JGxhbWJkYSQ1KERlbW9QaG9uZVRlc3Qua3Q6MzMpCglhdCBjb20uZXhhbXBsZS5iYWkxLmZpeHR1cmUuRGVtb1Bob25lVGVzdCQkRXh0ZXJuYWxTeW50aGV0aWNMYW1iZGExMi5pbnZva2UoRDgkJFN5bnRoZXRpY0NsYXNzOjApCglhdCBjb20uZXhhbXBsZS5iYWkxLmZpeHR1cmUuRGVtb1Bob25lVGVzdC5tYWluJGxhbWJkYSQwKERlbW9QaG9uZVRlc3Qua3Q6MjkpCglhdCBjb20uZXhhbXBsZS5iYWkxLmZpeHR1cmUuRGVtb1Bob25lVGVzdCQkRXh0ZXJuYWxTeW50aGV0aWNMYW1iZGExMy5ydW4oRDgkJFN5bnRoZXRpY0NsYXNzOjApCglhdCBqYXZhLnV0aWwuY29uY3VycmVudC5FeGVjdXRvcnMkUnVubmFibGVBZGFwdGVyLmNhbGwoRXhlY3V0b3JzLmphdmE6NTIwKQoJYXQgamF2YS51dGlsLmNvbmN1cnJlbnQuRnV0dXJlVGFzay5ydW4oRnV0dXJlVGFzay5qYXZhOjMyOCkKCWF0IGFuZHJvaWQuYXBwLkluc3RydW1lbnRhdGlvbiRTeW5jUnVubmFibGUucnVuKEluc3RydW1lbnRhdGlvbi5qYXZhOjIzNjYpCglhdCBhbmRyb2lkLm9zLkhhbmRsZXIuaGFuZGxlQ2FsbGJhY2soSGFuZGxlci5qYXZhOjk0MikKCWF0IGFuZHJvaWQub3MuSGFuZGxlci5kaXNwYXRjaE1lc3NhZ2UoSGFuZGxlci5qYXZhOjk5KQoJYXQgYW5kcm9pZC5vcy5Mb29wZXIubG9vcE9uY2UoTG9vcGVyLmphdmE6MjQwKQoJYXQgYW5kcm9pZC5vcy5Mb29wZXIubG9vcChMb29wZXIuamF2YTozNTEpCglhdCBhbmRyb2lkLmFwcC5BY3Rpdml0eVRocmVhZC5tYWluKEFjdGl2aXR5VGhyZWFkLmphdmE6ODM3NykKCWF0IGphdmEubGFuZy5yZWZsZWN0Lk1ldGhvZC5pbnZva2UoTmF0aXZlIE1ldGhvZCkKCWF0IGNvbS5hbmRyb2lkLmludGVybmFsLm9zLlJ1bnRpbWVJbml0JE1ldGhvZEFuZEFyZ3NDYWxsZXIucnVuKFJ1bnRpbWVJbml0LmphdmE6NTg0KQoJYXQgY29tLmFuZHJvaWQuaW50ZXJuYWwub3MuWnlnb3RlSW5pdC5tYWluKFp5Z290ZUluaXQuamF2YToxMDEzKQo8L2ZhaWx1cmU+PC90ZXN0Y2FzZT48L3Rlc3RzdWl0ZT4=
+INSTRUMENTATION_STATUS_CODE: 2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 27,615
+There was 1 failure:
+1) productionUiPostLogoutRescuerGetAndNativeMapMarker(com.example.bai1.fixture.DemoPhoneTest)
+java.lang.IllegalArgumentException: Window doesn't have a backing surface!
+	at android.view.PixelCopy.request(PixelCopy.java:278)
+	at android.view.PixelCopy.request(PixelCopy.java:223)
+	at com.example.bai1.fixture.DemoPhoneTest.captureOwnWindow$lambda$5(DemoPhoneTest.kt:33)
+	at com.example.bai1.fixture.DemoPhoneTest$$ExternalSyntheticLambda12.invoke(D8$$SyntheticClass:0)
+	at com.example.bai1.fixture.DemoPhoneTest.main$lambda$0(DemoPhoneTest.kt:29)
+	at com.example.bai1.fixture.DemoPhoneTest$$ExternalSyntheticLambda13.run(D8$$SyntheticClass:0)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2366)
+	at android.os.Handler.handleCallback(Handler.java:942)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loopOnce(Looper.java:240)
+	at android.os.Looper.loop(Looper.java:351)
+	at android.app.ActivityThread.main(ActivityThread.java:8377)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:584)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1013)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

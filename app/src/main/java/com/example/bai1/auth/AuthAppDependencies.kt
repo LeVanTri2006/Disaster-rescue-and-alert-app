@@ -17,7 +17,8 @@ object AuthAppDependencies {
         repository = AuthRepository(
             apiClient = OkHttpAuthApiClient(BuildConfig.SOS_API_BASE_URL),
             tokenStorage = tokenStorage,
-            firebaseAuthSession = AndroidFirebaseAuthSession()
+            firebaseAuthSession = AndroidFirebaseAuthSession(),
+            invalidateRoutingSession = com.example.bai1.rescue.routing.RoutingAppDependencies::invalidateRoutingSession
         )
     }
 }

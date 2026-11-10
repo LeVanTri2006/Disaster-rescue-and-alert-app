@@ -1,6 +1,5 @@
 package com.example.bai1.sos.repository
 
-import android.util.Log
 import com.example.bai1.sos.domain.SosRescueInfo
 import com.example.bai1.sos.domain.SosStatus
 import com.example.bai1.sos.domain.SosSubmissionResult
@@ -29,10 +28,12 @@ import kotlinx.coroutines.flow.update
  */
 class InMemorySosRepository(
     private val transportManager: SosTransportManager,
-    private val apiClient: SosApiClient? = null
+    private val apiClient: SosApiClient? = null,
+    private val serverOnlyActiveReads: Boolean = false
 ) : SosRepository {
 
     /** In-memory store; observed by the Disaster Map. */
+    private val remoteEvents = MutableStateFlow<List<SosRescueInfo>>(emptyList())
     private val _sosEvents = MutableStateFlow<List<SosRescueInfo>>(emptyList())
 
     private fun removeExpiredSosEvents() {
@@ -43,6 +44,7 @@ class InMemorySosRepository(
     }
 
     override fun observeSos(): Flow<List<SosRescueInfo>> {
+        if (serverOnlyActiveReads) return remoteEvents.asStateFlow()
         removeExpiredSosEvents()
         return _sosEvents.asStateFlow().map { list ->
             val now = System.currentTimeMillis()
@@ -88,12 +90,22 @@ class InMemorySosRepository(
 
     override suspend fun getActiveSos(): List<SosRescueInfo> {
         removeExpiredSosEvents()
+        if (serverOnlyActiveReads) {
+            val client = requireNotNull(apiClient) { "Server-only reads require an API client" }
+            return when (val result = client.getActiveSos()) {
+                is SosApiResultList.Success -> result.events.map { it.toDomain() }
+                    .filter { !it.isExpired && it.status == SosStatus.ACTIVE }
+                    .distinctBy { it.eventId }.also { remoteEvents.value = it }
+                is SosApiResultList.Failure -> {
+                    remoteEvents.value = emptyList()
+                    throw java.io.IOException("SOS GET failed: ${result.error.kind}")
+                }
+            }
+        }
         if (apiClient != null) {
             when (val result = apiClient.getActiveSos()) {
                 is SosApiResultList.Success -> {
                     val events = result.events.map { it.toDomain() }
-                    Log.d("MAP_DEBUG", "REST_API_RAW_COUNT=${result.events.size}, MAPPED_COUNT=${events.size}")
-                    events.forEach { Log.d("MAP_DEBUG", "  REST_EVENT: id=${it.eventId} status=${it.status} lat=${it.latitude} lng=${it.longitude}") }
                     val now = System.currentTimeMillis()
                     val validEvents = events.filter { !it.isExpiredAt(now) }
                     _sosEvents.update { current -> 
@@ -112,7 +124,6 @@ class InMemorySosRepository(
         val filtered = all.filter {
             it.status == SosStatus.PENDING || it.status == SosStatus.QUEUED || it.status == SosStatus.SUBMITTED || it.status == SosStatus.ACTIVE
         }
-        Log.d("MAP_DEBUG", "INMEMORY_ALL=${all.size}, INMEMORY_FILTERED=${filtered.size}")
         return filtered
     }
 
@@ -123,6 +134,6 @@ class InMemorySosRepository(
 
     override suspend fun getSosById(eventId: String): SosRescueInfo? {
         removeExpiredSosEvents()
-        return _sosEvents.value.find { it.eventId == eventId }
+        return (if (serverOnlyActiveReads) remoteEvents.value else _sosEvents.value).find { it.eventId == eventId }
     }
 }

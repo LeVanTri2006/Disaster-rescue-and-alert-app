@@ -1,0 +1,52 @@
+--------- beginning of main
+11-07 01:09:34.018 25562 25562 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10255
+11-07 01:09:34.018 25562 25562 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10255/pid_25562
+11-07 01:09:34.027 25562 25562 I Zygote  : Process 25562 created for com.example.bai1.p5e01.isolated
+11-07 01:09:34.027 25562 25562 I .p5e01.isolated: Using generational CollectorTypeCMC GC.
+11-07 01:09:34.027 25562 25562 W .p5e01.isolated: Unexpected CPU variant for x86: x86_64.
+11-07 01:09:34.027 25562 25562 W .p5e01.isolated: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+11-07 01:09:34.031 25562 25562 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-07 01:09:34.038 25562 25562 D CompatChangeReporter: Compat change id reported: 333566037; UID 10255; state: ENABLED
+11-07 01:09:34.041 25562 25562 W .p5e01.isolated: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/data/app/~~ZsXXUpT8LESdmBUIGpzKPg==/com.example.bai1.p5e01.isolated.test-KJI7_2AQ_r42W-JPBuC-0Q==/base.apk*3565368229])
+11-07 01:09:34.042 25562 25562 D nativeloader: Configuring clns-9 for other apk /data/app/~~ZsXXUpT8LESdmBUIGpzKPg==/com.example.bai1.p5e01.isolated.test-KJI7_2AQ_r42W-JPBuC-0Q==/base.apk:/data/app/~~25d6xCXlinFVWPsBcyQwVw==/com.example.bai1.p5e01.isolated-SDYQge_8vJwxy_hgWGWV7Q==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~ZsXXUpT8LESdmBUIGpzKPg==/com.example.bai1.p5e01.isolated.test-KJI7_2AQ_r42W-JPBuC-0Q==/lib/x86_64:/data/app/~~25d6xCXlinFVWPsBcyQwVw==/com.example.bai1.p5e01.isolated-SDYQge_8vJwxy_hgWGWV7Q==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.bai1.p5e01.isolated
+--------- beginning of system
+11-07 01:09:34.043 25562 25562 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.example.bai1.p5e01.isolated/cache
+11-07 01:09:34.044 25562 25562 V GraphicsEnvironment: Currently set values for:
+11-07 01:09:34.044 25562 25562 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-07 01:09:34.044 25562 25562 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-07 01:09:34.044 25562 25562 V GraphicsEnvironment: com.example.bai1.p5e01.isolated is not listed in per-application setting
+11-07 01:09:34.045 25562 25562 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+11-07 01:09:34.045 25562 25562 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-07 01:09:34.047 25562 25562 W .p5e01.isolated: ClassLoaderContext parent mismatch.  (PCL[] | PCL[];PCL[/data/app/~~ZsXXUpT8LESdmBUIGpzKPg==/com.example.bai1.p5e01.isolated.test-KJI7_2AQ_r42W-JPBuC-0Q==/base.apk*3565368229:/data/app/~~25d6xCXlinFVWPsBcyQwVw==/com.example.bai1.p5e01.isolated-SDYQge_8vJwxy_hgWGWV7Q==/base.apk*3315812219])
+11-07 01:09:34.048 25562 25562 W .p5e01.isolated: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/data/app/~~ZsXXUpT8LESdmBUIGpzKPg==/com.example.bai1.p5e01.isolated.test-KJI7_2AQ_r42W-JPBuC-0Q==/base.apk*3565368229];PCL[/data/app/~~ZsXXUpT8LESdmBUIGpzKPg==/com.example.bai1.p5e01.isolated.test-KJI7_2AQ_r42W-JPBuC-0Q==/base.apk*3565368229:/data/app/~~25d6xCXlinFVWPsBcyQwVw==/com.example.bai1.p5e01.isolated-SDYQge_8vJwxy_hgWGWV7Q==/base.apk*3315812219])
+11-07 01:09:34.050 25562 25562 D CompatChangeReporter: Compat change id reported: 407952621; UID 10255; state: ENABLED
+11-07 01:09:34.050 25562 25562 D CompatChangeReporter: Compat change id reported: 419020719; UID 10255; state: ENABLED
+11-07 01:09:34.050 25562 25562 I MonitoringInstr: newApplication called!
+11-07 01:09:34.051 25562 25562 I MonitoringInstr: Instrumentation started!
+11-07 01:09:34.052 25562 25562 I AndroidJUnitRunner: onCreate Bundle[{hostFixturePort=36421, class=com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest, listener=com.example.bai1.fixture.DeviceXmlListener}]
+11-07 01:09:34.053 25562 25562 V TestEventClient: No service name argument was given (testDiscoveryService, testRunEventService or orchestratorService)
+11-07 01:09:35.553 25562 25576 D AndroidJUnitRunner: onStart is called.
+11-07 01:09:35.554 25562 25562 I MonitoringInstr: No JSBridge.
+11-07 01:09:35.554 25562 25585 D CompatChangeReporter: Compat change id reported: 458413887; UID 10255; state: ENABLED
+11-07 01:09:35.555 25562 25576 I InstrConnection: Could not send broadcast or register receiver (isolatedProcess?)
+11-07 01:09:35.556 25562 25576 D TestRequestBuilder: Skipping class path scanning and directly running [com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest]
+11-07 01:09:35.558 25562 25576 D AndroidJUnitRunner: Use the raw file system for managing file I/O.
+11-07 01:09:35.559 25562 25576 D TestExecutor: Adding listener androidx.test.internal.runner.listener.LogRunListener
+11-07 01:09:35.559 25562 25576 D TestExecutor: Adding listener androidx.test.internal.runner.listener.InstrumentationResultPrinter
+11-07 01:09:35.559 25562 25576 D TestExecutor: Adding listener androidx.test.internal.runner.listener.ActivityFinisherRunListener
+11-07 01:09:35.559 25562 25576 D TestExecutor: Adding listener androidx.test.internal.runner.listener.TraceRunListener
+11-07 01:09:35.559 25562 25576 D TestExecutor: Adding listener com.example.bai1.fixture.DeviceXmlListener
+11-07 01:09:35.559 25562 25576 I TestRunner: run started: 6 tests
+11-07 01:09:35.559 25562 25576 I TestRunner: started: isolatedNonDebuggableReleaseLikeRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.562 25562 25576 I TestRunner: finished: isolatedNonDebuggableReleaseLikeRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.562 25562 25576 I TestRunner: started: releaseNonLocalHostIsBlockedUsingControlledLoopbackDns(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.569 25562 25576 I TestRunner: finished: releaseNonLocalHostIsBlockedUsingControlledLoopbackDns(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.570 25562 25576 I TestRunner: started: releaseLikeActualSocketHttpBlockedBeforeAnyRequest(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.572 25562 25576 I TestRunner: finished: releaseLikeActualSocketHttpBlockedBeforeAnyRequest(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.573 25562 25576 I TestRunner: started: productionRoutingClientRejectsHttpEvenWhenPlatformAllowsLoopback(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.578 25562 25576 I TestRunner: finished: productionRoutingClientRejectsHttpEvenWhenPlatformAllowsLoopback(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.579 25562 25576 I TestRunner: started: releaseActualSocketsDenyIpv4Ipv6AndLocalhostNames(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.590 25562 25576 I TestRunner: finished: releaseActualSocketsDenyIpv4Ipv6AndLocalhostNames(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.590 25562 25576 I TestRunner: started: releasePolicyDeniesEveryDebugHostAtRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.591 25562 25576 I TestRunner: finished: releasePolicyDeniesEveryDebugHostAtRuntime(com.example.bai1.fixture.ReleasePolicyDeviceRuntimeTest)
+11-07 01:09:35.592 25562 25576 I TestRunner: run finished: 6 tests, 0 failed, 0 ignored

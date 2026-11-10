@@ -1,0 +1,24 @@
+{
+  "releaseLike": {
+    "command": [
+      "python3",
+      "tools/emulator-harness/run_device_tests.py",
+      "--variant",
+      "releaseLike",
+      "--evidence-dir",
+      "/tmp/p5e02-policy-release"
+    ],
+    "exit_code": 0
+  },
+  "debug": {
+    "command": [
+      "python3",
+      "tools/emulator-harness/run_device_tests.py",
+      "--variant",
+      "debug",
+      "--evidence-dir",
+      "/tmp/p5e02-policy-debug"
+    ],
+    "exit_code": 0
+  }
+}

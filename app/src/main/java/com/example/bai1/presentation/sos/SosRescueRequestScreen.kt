@@ -57,10 +57,12 @@ import kotlinx.coroutines.withContext
 fun SosRescueRequestScreen(
     onNavigateBack: () -> Unit,
     onNavigateToMap: () -> Unit,
-    viewModelOverride: SosRescueRequestViewModel? = null
+    viewModelOverride: SosRescueRequestViewModel,
+    requestDeviceLocation: Boolean = true,
+    mediaEnabled: Boolean = true
 ) {
     val context = LocalContext.current
-    val viewModel = viewModelOverride ?: composeViewModel(factory = SosRescueRequestViewModel.factory(context.applicationContext))
+    val viewModel = viewModelOverride
     val formData by viewModel.formData.collectAsState()
     val selectedConditions by viewModel.selectedConditions.collectAsState()
     val uiState  by viewModel.uiState.collectAsState()
@@ -79,7 +81,7 @@ fun SosRescueRequestScreen(
     }
 
     LaunchedEffect(Unit) {
-        if (hasLocationPermission(context)) viewModel.refreshLocation()
+        if (!requestDeviceLocation || hasLocationPermission(context)) viewModel.refreshLocation()
         else {
             locationPermissionRequested = true
             locationPermissionLauncher.launch(
@@ -110,6 +112,8 @@ fun SosRescueRequestScreen(
             SosQueuedState(
                 eventId = state.result.eventId,
                 message = state.result.message,
+                latitude = formData.latitude,
+                longitude = formData.longitude,
                 onNavigateToMap = onNavigateToMap
             )
             return
@@ -196,7 +200,7 @@ fun SosRescueRequestScreen(
         // Form content
         Column(
             modifier = Modifier
-                .fillMaxSize()
+                .weight(1f)
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -248,7 +252,7 @@ fun SosRescueRequestScreen(
                     Spacer(modifier = Modifier.width(8.dp))
                     OutlinedButton(
                         onClick = {
-                            if (hasLocationPermission(context)) viewModel.refreshLocation()
+                            if (!requestDeviceLocation || hasLocationPermission(context)) viewModel.refreshLocation()
                             else if (locationPermissionRequested && isPermissionPermanentlyDenied(context, Manifest.permission.ACCESS_FINE_LOCATION)) {
                                 openAppSettings(context)
                             }
@@ -429,7 +433,7 @@ fun SosRescueRequestScreen(
 
             // 6. Photo
             FormSectionCard(icon = Icons.Default.CameraAlt, title = "Hình ảnh") {
-                PhotoSelector(
+                if (mediaEnabled) PhotoSelector(
                     photoUris = formData.photoUris,
                     onAddPhoto = { viewModel.addPhoto(it) },
                     onRemovePhoto = { viewModel.removePhoto(it) },
@@ -530,7 +534,15 @@ fun SosSuccessState(
         }
         Spacer(modifier = Modifier.height(32.dp))
         Button(
-            onClick = onNavigateToMap,
+            onClick = {
+                com.example.bai1.presentation.map.DisasterMapSharedState.isCitizenTrackingMode = true
+                com.example.bai1.presentation.map.DisasterMapSharedState.citizenTrackingEventId = eventId
+                if (latitude != null && longitude != null) {
+                    com.example.bai1.presentation.map.DisasterMapSharedState.lastKnownVictimLocation =
+                        com.google.android.gms.maps.model.LatLng(latitude, longitude)
+                }
+                onNavigateToMap()
+            },
             modifier = Modifier.fillMaxWidth().height(56.dp),
             shape = RoundedCornerShape(28.dp),
             colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue)
@@ -548,6 +560,8 @@ fun SosSuccessState(
 fun SosQueuedState(
     eventId: String,
     message: String,
+    latitude: Double? = null,
+    longitude: Double? = null,
     onNavigateToMap: () -> Unit
 ) {
     Column(
@@ -575,7 +589,15 @@ fun SosQueuedState(
         Text("Mã sự kiện: ${eventId.take(8)}...", fontSize = 12.sp, color = Color.LightGray)
         Spacer(modifier = Modifier.height(32.dp))
         Button(
-            onClick = onNavigateToMap,
+            onClick = {
+                com.example.bai1.presentation.map.DisasterMapSharedState.isCitizenTrackingMode = true
+                com.example.bai1.presentation.map.DisasterMapSharedState.citizenTrackingEventId = eventId
+                if (latitude != null && longitude != null) {
+                    com.example.bai1.presentation.map.DisasterMapSharedState.lastKnownVictimLocation =
+                        com.google.android.gms.maps.model.LatLng(latitude, longitude)
+                }
+                onNavigateToMap()
+            },
             modifier = Modifier.fillMaxWidth().height(56.dp),
             shape = RoundedCornerShape(28.dp),
             colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue)

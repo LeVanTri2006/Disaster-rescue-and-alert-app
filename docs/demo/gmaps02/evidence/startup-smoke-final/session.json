@@ -1,0 +1,50 @@
+{
+  "package": "com.example.bai1.p5e10m02.demo",
+  "apk_sha256": "798327a52938951ec5d814adfa6713bfac428fe680ebf3e59fe336436e2a255a",
+  "installed_new": false,
+  "keep_demo": true,
+  "serial": "REDACTED",
+  "fixture_port": 36229,
+  "status": "PASS",
+  "start_command": [
+    "adb",
+    "-s",
+    "REDACTED",
+    "shell",
+    "am",
+    "start",
+    "-W",
+    "-n",
+    "com.example.bai1.p5e10m02.demo/com.example.bai1.gmaps02.DemoActivity",
+    "--ei",
+    "fixturePort",
+    "36229"
+  ],
+  "start_exit": 0,
+  "start_output": "Starting: Intent { cmp=com.example.bai1.p5e10m02.demo/com.example.bai1.gmaps02.DemoActivity (has extras) }\nStatus: ok\nLaunchState: COLD\nActivity: com.example.bai1.p5e10m02.demo/com.example.bai1.gmaps02.DemoActivity\nTotalTime: 1070\nWaitTime: 1084\nComplete\n",
+  "pid": "8217",
+  "ended_by": "Ctrl+C",
+  "fixture_events": [
+    {
+      "method": "GET",
+      "path": "/demo/info",
+      "host": "127.0.0.1:36229",
+      "fault": "ok",
+      "role": null,
+      "actor": null
+    },
+    {
+      "method": "POST",
+      "path": "/auth/login",
+      "host": "127.0.0.1:36229",
+      "fault": "ok",
+      "role": null,
+      "actor": null,
+      "synthetic_account_role": "rescuer"
+    }
+  ],
+  "shared_store": {},
+  "reverse_remove_exit": 0,
+  "device_authorized_after": true,
+  "owned_reverse_removed": true
+}

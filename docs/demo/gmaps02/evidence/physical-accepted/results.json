@@ -1,0 +1,3279 @@
+{
+  "serial": "REDACTED",
+  "model": "CPH2159",
+  "api": "33",
+  "status": "PASS",
+  "cases": [
+    {
+      "name": "citizenPostThenIndependentRescuerGetRendersClickableMarker",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#citizenPostThenIndependentRescuerGetRendersClickableMarker",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "28553",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 2,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "f4683758-dd46-49ba-a278-db11cd89ffc3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "selected": {
+            "adults": 2,
+            "children": 0,
+            "condition": "SYNTHETIC_TEST_DATA",
+            "createdAt": 1794268800000,
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "elderly": 0,
+            "eventId": "f4683758-dd46-49ba-a278-db11cd89ffc3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "neededItems": [],
+            "status": "ACTIVE",
+            "transportMode": "ONLINE",
+            "urgency": "HIGH"
+          },
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [
+            {
+              "eventId": "f4683758-dd46-49ba-a278-db11cd89ffc3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "title": "SOS f4683758-dd46-49ba-a278-db11cd89ffc3",
+              "snippet": "ACTIVE | 2 ng\u01b0\u1eddi | SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3 | 16.051, 108.203",
+              "infoWindowShown": true
+            }
+          ],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20299990475178), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 2,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "f4683758-dd46-49ba-a278-db11cd89ffc3",
+          "response": {
+            "adults": 2,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "f4683758-dd46-49ba-a278-db11cd89ffc3",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "f4683758-dd46-49ba-a278-db11cd89ffc3"
+          ],
+          "response": [
+            {
+              "adults": 2,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "f4683758-dd46-49ba-a278-db11cd89ffc3",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ],
+      "screenshot": "dynamic-sos.png"
+    },
+    {
+      "name": "multipleSosHaveSeparateResponseMarkersAndRefreshNeverPosts",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#multipleSosHaveSeparateResponseMarkersAndRefreshNeverPosts",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "29491",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 2 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "920f1e49-824b-45d2-9f77-efd25c5a7024",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            },
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+              "latitude": 16.052,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "refreshes": 4,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [
+            {
+              "eventId": "920f1e49-824b-45d2-9f77-efd25c5a7024",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "title": "SOS 920f1e49-824b-45d2-9f77-efd25c5a7024",
+              "snippet": "ACTIVE | 1 ng\u01b0\u1eddi | SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3 | 16.051, 108.203",
+              "infoWindowShown": true
+            },
+            {
+              "eventId": "5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+              "latitude": 16.052,
+              "longitude": 108.203,
+              "title": "SOS 5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+              "snippet": "ACTIVE | 1 ng\u01b0\u1eddi | SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3 | 16.052, 108.203",
+              "infoWindowShown": true
+            }
+          ],
+          "camera": "CameraPosition{target=lat/lng: (16.051999868419323,108.20299990475178), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "920f1e49-824b-45d2-9f77-efd25c5a7024",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "920f1e49-824b-45d2-9f77-efd25c5a7024",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen2"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen2",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.052,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.052,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "920f1e49-824b-45d2-9f77-efd25c5a7024",
+            "5a038ebd-69ef-449f-a2d5-673dfffed5aa"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "920f1e49-824b-45d2-9f77-efd25c5a7024",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            },
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.052,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "920f1e49-824b-45d2-9f77-efd25c5a7024",
+            "5a038ebd-69ef-449f-a2d5-673dfffed5aa"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "920f1e49-824b-45d2-9f77-efd25c5a7024",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            },
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.052,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "920f1e49-824b-45d2-9f77-efd25c5a7024",
+            "5a038ebd-69ef-449f-a2d5-673dfffed5aa"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "920f1e49-824b-45d2-9f77-efd25c5a7024",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            },
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.052,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "920f1e49-824b-45d2-9f77-efd25c5a7024",
+            "5a038ebd-69ef-449f-a2d5-673dfffed5aa"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "920f1e49-824b-45d2-9f77-efd25c5a7024",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            },
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.052,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "5a038ebd-69ef-449f-a2d5-673dfffed5aa",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ],
+      "screenshot": "two-sos.png"
+    },
+    {
+      "name": "sameCoordinateSosRetainDifferentIds",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#sameCoordinateSosRetainDifferentIds",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "29856",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 2 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "ce4535e4-57cd-4547-8997-5c203984d72c",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            },
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "4bfceca5-4b21-4804-bd27-d6b6de3e9265",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "selected": {
+            "adults": 1,
+            "children": 0,
+            "condition": "SYNTHETIC_TEST_DATA",
+            "createdAt": 1794268800000,
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "elderly": 0,
+            "eventId": "4bfceca5-4b21-4804-bd27-d6b6de3e9265",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "neededItems": [],
+            "status": "ACTIVE",
+            "transportMode": "ONLINE",
+            "urgency": "HIGH"
+          },
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "ce4535e4-57cd-4547-8997-5c203984d72c",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "ce4535e4-57cd-4547-8997-5c203984d72c",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen2"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen2",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "4bfceca5-4b21-4804-bd27-d6b6de3e9265",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "4bfceca5-4b21-4804-bd27-d6b6de3e9265",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "ce4535e4-57cd-4547-8997-5c203984d72c",
+            "4bfceca5-4b21-4804-bd27-d6b6de3e9265"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "ce4535e4-57cd-4547-8997-5c203984d72c",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            },
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "4bfceca5-4b21-4804-bd27-d6b6de3e9265",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "duplicateActiveSosForSameCitizenReturns409",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#duplicateActiveSosForSameCitizenReturns409",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "30196",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "01cd062c-f5ad-4d30-9cf3-d76e17880df7",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "01cd062c-f5ad-4d30-9cf3-d76e17880df7",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "01cd062c-f5ad-4d30-9cf3-d76e17880df7",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "01cd062c-f5ad-4d30-9cf3-d76e17880df7"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "01cd062c-f5ad-4d30-9cf3-d76e17880df7",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "post403DoesNotStoreOrShowFalseSuccess",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#post403DoesNotStoreOrShowFalseSuccess",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "30442",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 0 SOS",
+          "markers": [],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "403",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "post500DoesNotStoreOrShowFalseSuccess",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#post500DoesNotStoreOrShowFalseSuccess",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "30870",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 0 SOS",
+          "markers": [],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "500",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "postTimeoutPrecommitFixtureDoesNotShowLateSuccess",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#postTimeoutPrecommitFixtureDoesNotShowLateSuccess",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "31265",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 0 SOS",
+          "markers": [],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "timeout",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "postOfflineDoesNotReachFixtureOrShowSuccess",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#postOfflineDoesNotReachFixtureOrShowSuccess",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "31567",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 0 SOS",
+          "markers": [],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "failedGetRemovesStaleMarkersAndReportsFailure",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#failedGetRemovesStaleMarkersAndReportsFailure",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "32296",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "0d6625d3-bf69-4dd5-bec0-c68c4ef73fd3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "refreshes": 3,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "0d6625d3-bf69-4dd5-bec0-c68c4ef73fd3",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "0d6625d3-bf69-4dd5-bec0-c68c4ef73fd3",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "0d6625d3-bf69-4dd5-bec0-c68c4ef73fd3"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "0d6625d3-bf69-4dd5-bec0-c68c4ef73fd3",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "500",
+          "role": "rescuer",
+          "actor": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "0d6625d3-bf69-4dd5-bec0-c68c4ef73fd3"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "0d6625d3-bf69-4dd5-bec0-c68c4ef73fd3",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "get403TimeoutAndOfflineNeverInventMarkers",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#get403TimeoutAndOfflineNeverInventMarkers",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "32616",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_ERROR NO_INTERNET",
+          "markers": [],
+          "refreshes": 3,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "403",
+          "role": "rescuer",
+          "actor": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "timeout",
+          "role": "rescuer",
+          "actor": "rescuer"
+        }
+      ]
+    },
+    {
+      "name": "activityRecreationRequiresLoginAndReloadsSameServerIds",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#activityRecreationRequiresLoginAndReloadsSameServerIds",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "664",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "b88a8af8-16e9-45f9-b948-d4e084691c02",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "b88a8af8-16e9-45f9-b948-d4e084691c02",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "b88a8af8-16e9-45f9-b948-d4e084691c02",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "b88a8af8-16e9-45f9-b948-d4e084691c02"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "b88a8af8-16e9-45f9-b948-d4e084691c02",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "b88a8af8-16e9-45f9-b948-d4e084691c02"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "b88a8af8-16e9-45f9-b948-d4e084691c02",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "logoutClearsSessionFormSelectionAndRetainsOnlyServerData",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#logoutClearsSessionFormSelectionAndRetainsOnlyServerData",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "1141",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 2,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "bd9aac6d-341a-4460-ac57-35273a344a83",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 2,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "bd9aac6d-341a-4460-ac57-35273a344a83",
+          "response": {
+            "adults": 2,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "bd9aac6d-341a-4460-ac57-35273a344a83",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "bd9aac6d-341a-4460-ac57-35273a344a83"
+          ],
+          "response": [
+            {
+              "adults": 2,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "bd9aac6d-341a-4460-ac57-35273a344a83",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "bd9aac6d-341a-4460-ac57-35273a344a83"
+          ],
+          "response": [
+            {
+              "adults": 2,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "bd9aac6d-341a-4460-ac57-35273a344a83",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "logoutDuringPendingGetCannotRestoreMarkersOrSession",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#logoutDuringPendingGetCannotRestoreMarkersOrSession",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "1620",
+      "actual_outputs": [
+        {
+          "role": "",
+          "message": "\u0110\u00e3 x\u00f3a phi\u00ean demo",
+          "markers": [],
+          "refreshes": 0,
+          "loaded": false,
+          "callbacks": 0,
+          "nativeClicks": []
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "fb33c1d8-2403-41c4-9966-d1ff3ffa90e3",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "fb33c1d8-2403-41c4-9966-d1ff3ffa90e3",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "timeout",
+          "role": "rescuer",
+          "actor": "rescuer"
+        }
+      ]
+    },
+    {
+      "name": "logoutDuringPendingPostCannotRestoreSuccess",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#logoutDuringPendingPostCannotRestoreSuccess",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "2336",
+      "actual_outputs": [
+        {
+          "role": "",
+          "message": "\u0110\u00e3 x\u00f3a phi\u00ean demo",
+          "markers": [],
+          "refreshes": 0,
+          "loaded": false,
+          "callbacks": 0,
+          "nativeClicks": []
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "timeout",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "name": "rescuerHasNoCreationOrMissionActionAndStrictGateStaysClosed",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#rescuerHasNoCreationOrMissionActionAndStrictGateStaysClosed",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "2770",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "Phi\u00ean rescuer synthetic",
+          "markers": [],
+          "refreshes": 0,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        }
+      ]
+    },
+    {
+      "name": "emptyGetHasRealTilesButNoSosMarkers",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#emptyGetHasRealTilesButNoSosMarkers",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "3460",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 0 SOS",
+          "markers": [],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [],
+          "response": []
+        }
+      ],
+      "screenshot": "empty-tiles.png"
+    },
+    {
+      "name": "committedPostTimeoutHasUnknownOutcomeAndNeverAutoRetries",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#committedPostTimeoutHasUnknownOutcomeAndNeverAutoRetries",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "3762",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "cd212d4b-6186-42df-bdab-303fa3f251d7",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "selected": {
+            "adults": 1,
+            "children": 0,
+            "condition": "SYNTHETIC_TEST_DATA",
+            "createdAt": 1794268800000,
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "elderly": 0,
+            "eventId": "cd212d4b-6186-42df-bdab-303fa3f251d7",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "neededItems": [],
+            "status": "ACTIVE",
+            "transportMode": "ONLINE",
+            "urgency": "HIGH"
+          },
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [
+            {
+              "eventId": "cd212d4b-6186-42df-bdab-303fa3f251d7",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "title": "SOS cd212d4b-6186-42df-bdab-303fa3f251d7",
+              "snippet": "ACTIVE | 1 ng\u01b0\u1eddi | SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3 | 16.051, 108.203",
+              "infoWindowShown": true
+            }
+          ],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20291172713041), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "commit_timeout",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "cd212d4b-6186-42df-bdab-303fa3f251d7",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "cd212d4b-6186-42df-bdab-303fa3f251d7",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "cd212d4b-6186-42df-bdab-303fa3f251d7"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "cd212d4b-6186-42df-bdab-303fa3f251d7",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "actualZoomPanPreservesGetSosState",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#actualZoomPanPreservesGetSosState",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "4439",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "0981e958-55d2-4015-b541-ed4d2ad82b7e",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.051897085287134,108.19955997169018), zoom=16.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "0981e958-55d2-4015-b541-ed4d2ad82b7e",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "0981e958-55d2-4015-b541-ed4d2ad82b7e",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "0981e958-55d2-4015-b541-ed4d2ad82b7e"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "0981e958-55d2-4015-b541-ed4d2ad82b7e",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ],
+      "screenshot": "zoom-pan.png"
+    },
+    {
+      "name": "noLocationPermissionsOrSdkLocationLayer",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#noLocationPermissionsOrSdkLocationLayer",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "4954",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "Phi\u00ean rescuer synthetic",
+          "markers": [],
+          "refreshes": 0,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        }
+      ]
+    },
+    {
+      "name": "demoPrepareForProcessRestart",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#demoPrepareForProcessRestart",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "5178",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20250000804663), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "citizen"
+        },
+        {
+          "method": "POST",
+          "path": "/sos",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "citizen",
+          "actor": "citizen",
+          "request": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z"
+          },
+          "response_event_id": "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+          "response": {
+            "adults": 1,
+            "children": 0,
+            "elderly": 0,
+            "neededItems": [],
+            "condition": "SYNTHETIC_TEST_DATA",
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "urgency": "HIGH",
+            "timestamp": "2026-11-10T00:00:00Z",
+            "eventId": "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+            "createdAt": 1794268800000,
+            "status": "ACTIVE",
+            "transportMode": "ONLINE"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "demoRestartUsesOwnPortButNoAuthSession",
+      "variant": "debug",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": [
+        "/home/vantri/Android/Sdk/platform-tools/adb",
+        "-s",
+        "REDACTED",
+        "shell",
+        "am",
+        "instrument",
+        "-w",
+        "-r",
+        "-e",
+        "class",
+        "com.example.bai1.fixture.DemoPhoneTest#demoRestartUsesOwnPortButNoAuthSession",
+        "-e",
+        "listener",
+        "com.example.bai1.fixture.DeviceXmlListener",
+        "-e",
+        "hostFixturePort",
+        "39473",
+        "-e",
+        "physicalUsb",
+        "true",
+        "com.example.bai1.p5e10m02.demo.test/com.example.bai1.fixture.IsolatedInstrumentationRunner"
+      ],
+      "adb_exit": 0,
+      "pid": "5450",
+      "actual_outputs": [
+        {
+          "role": "rescuer",
+          "message": "GET_OK 1 SOS",
+          "markers": [
+            {
+              "adults": 1,
+              "children": 0,
+              "condition": "SYNTHETIC_TEST_DATA",
+              "createdAt": 1794268800000,
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "elderly": 0,
+              "eventId": "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "neededItems": [],
+              "status": "ACTIVE",
+              "transportMode": "ONLINE",
+              "urgency": "HIGH"
+            }
+          ],
+          "selected": {
+            "adults": 1,
+            "children": 0,
+            "condition": "SYNTHETIC_TEST_DATA",
+            "createdAt": 1794268800000,
+            "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+            "elderly": 0,
+            "eventId": "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+            "latitude": 16.051,
+            "longitude": 108.203,
+            "neededItems": [],
+            "status": "ACTIVE",
+            "transportMode": "ONLINE",
+            "urgency": "HIGH"
+          },
+          "refreshes": 1,
+          "loaded": true,
+          "callbacks": 1,
+          "nativeClicks": [
+            {
+              "eventId": "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "title": "SOS a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+              "snippet": "ACTIVE | 1 ng\u01b0\u1eddi | SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3 | 16.051, 108.203",
+              "infoWindowShown": true
+            }
+          ],
+          "camera": "CameraPosition{target=lat/lng: (16.05100006660904,108.20293720811605), zoom=15.0, tilt=0.0, bearing=0.0}",
+          "myLocation": false
+        }
+      ],
+      "fixture_events": [
+        {
+          "method": "GET",
+          "path": "/demo/info",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": null,
+          "actor": null,
+          "synthetic_account_role": "rescuer"
+        },
+        {
+          "method": "GET",
+          "path": "/sos/active",
+          "host": "127.0.0.1:39473",
+          "fault": "ok",
+          "role": "rescuer",
+          "actor": "rescuer",
+          "response_ids": [
+            "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf"
+          ],
+          "response": [
+            {
+              "adults": 1,
+              "children": 0,
+              "elderly": 0,
+              "neededItems": [],
+              "condition": "SYNTHETIC_TEST_DATA",
+              "description": "SYNTHETIC_TEST_DATA c\u1ea7n h\u1ed7 tr\u1ee3",
+              "latitude": 16.051,
+              "longitude": 108.203,
+              "urgency": "HIGH",
+              "timestamp": "2026-11-10T00:00:00Z",
+              "eventId": "a81f501e-7fc4-4f7c-a694-c7f25dbda7cf",
+              "createdAt": 1794268800000,
+              "status": "ACTIVE",
+              "transportMode": "ONLINE"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "installs": [
+    {
+      "package": "com.example.bai1.p5e10m02.demo",
+      "command": [
+        "adb",
+        "-s",
+        "REDACTED",
+        "install",
+        "-t",
+        "/home/vantri/AndroidStudioProjects/bai1/docs/demo/gmaps02/artifacts/gmaps02-debug.apk"
+      ],
+      "exit": 0,
+      "output": "Performing Streamed Install\nSuccess\n"
+    },
+    {
+      "package": "com.example.bai1.p5e10m02.demo.test",
+      "command": [
+        "adb",
+        "-s",
+        "REDACTED",
+        "install",
+        "-t",
+        "/home/vantri/AndroidStudioProjects/bai1/docs/demo/gmaps02/artifacts/gmaps02-debug-test.apk"
+      ],
+      "exit": 0,
+      "output": "Performing Streamed Install\nSuccess\n"
+    }
+  ],
+  "fixture_port": 39473,
+  "cleanup_errors": [],
+  "device_authorized_after": true,
+  "remaining_owned_packages": []
+}

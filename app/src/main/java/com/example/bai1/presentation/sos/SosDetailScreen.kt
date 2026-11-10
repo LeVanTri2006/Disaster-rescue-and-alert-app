@@ -54,6 +54,7 @@ val DividerColor = Color(0xFFE2E8F0)
 fun SosDetailScreen(
     eventId: String,
     onNavigateBack: () -> Unit,
+    onNavigateToDirections: ((String) -> Unit)? = null,
     viewModel: SosDetailViewModel = viewModel(
         factory = SosDetailViewModelFactory(SosAppDependencies.sosRepository, eventId)
     )
@@ -65,6 +66,28 @@ fun SosDetailScreen(
     val showNotImplementedSnackbar: () -> Unit = {
         coroutineScope.launch {
             snackbarHostState.showSnackbar("Chức năng đang được phát triển")
+        }
+    }
+
+    val handleDirections: () -> Unit = {
+        if (onNavigateToDirections != null) {
+            onNavigateToDirections(eventId)
+        } else {
+            val success = state as? SosDetailState.Success
+            val lat = success?.sos?.latitude
+            val lon = success?.sos?.longitude
+            if (lat != null && lon != null && lat != 0.0 && lon != 0.0) {
+                com.example.bai1.presentation.map.DisasterMapSharedState.targetDestination =
+                    com.example.bai1.presentation.map.DisasterMapSharedState.TargetDestination(
+                        latitude = lat,
+                        longitude = lon,
+                        title = success.sos.description.takeIf { it.isNotBlank() } ?: "Vị trí cứu hộ SOS",
+                        urgency = success.sos.urgency.name,
+                        eventId = eventId
+                    )
+            }
+            com.example.bai1.presentation.map.DisasterMapSharedState.targetEventId = eventId
+            onNavigateBack()
         }
     }
 
@@ -102,6 +125,7 @@ fun SosDetailScreen(
                 ActionBottomBar(
                     state = state as SosDetailState.Success,
                     onClick = showNotImplementedSnackbar,
+                    onDirections = handleDirections,
                     onAccept = { viewModel.acceptMission() }
                 )
             }
@@ -548,7 +572,12 @@ fun SingleImage(url: String) {
 }
 
 @Composable
-fun ActionBottomBar(state: SosDetailState.Success, onClick: () -> Unit, onAccept: () -> Unit) {
+fun ActionBottomBar(
+    state: SosDetailState.Success,
+    onClick: () -> Unit,
+    onDirections: () -> Unit,
+    onAccept: () -> Unit
+) {
     Surface(
         color = Color.White,
         shadowElevation = 16.dp,
@@ -587,19 +616,20 @@ fun ActionBottomBar(state: SosDetailState.Success, onClick: () -> Unit, onAccept
                     Text("Nhiệm vụ đang được thực hiện hoặc đã hoàn thành.", color = SuccessGreen, fontSize = 14.sp, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
                     Spacer(modifier = Modifier.height(12.dp))
                 }
-            } else {
-                Button(
-                    onClick = onClick,
-                    modifier = Modifier.fillMaxWidth().height(48.dp),
-                    shape = RoundedCornerShape(8.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue)
-                ) {
-                    Icon(Icons.Filled.Navigation, contentDescription = null, tint = Color.White, modifier = Modifier.size(20.dp))
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("CHỈ ĐƯỜNG", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                }
-                Spacer(modifier = Modifier.height(12.dp))
             }
+
+            // Nút Chỉ đường (UCS) luôn hiển thị cho cả cứu hộ viên và người dân
+            Button(
+                onClick = onDirections,
+                modifier = Modifier.fillMaxWidth().height(48.dp),
+                shape = RoundedCornerShape(8.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = WarningOrange)
+            ) {
+                Icon(Icons.Filled.Navigation, contentDescription = null, tint = Color.White, modifier = Modifier.size(20.dp))
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("CHỈ ĐƯỜNG (UCS)", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+            }
+            Spacer(modifier = Modifier.height(12.dp))
             
             Row(
                 modifier = Modifier.fillMaxWidth(),

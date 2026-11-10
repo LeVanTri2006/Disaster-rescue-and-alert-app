@@ -1,0 +1,41 @@
+{
+  "original_graph_sha256": "5c6223d1030cd3ce35aa4277a4914305f287dc85c4d52954cc711700a0300ed3",
+  "actual_graph_sha256": "a5c75fab7628fc446e9474c87ae520da374ec471f39ac7e28e28e04bcbb2aa3a",
+  "route_order_equal": true,
+  "registered_routes": [
+    "SPLASH",
+    "ONBOARDING",
+    "LOGIN",
+    "REGISTER",
+    "ROLE_SELECTION",
+    "HOME",
+    "MAP",
+    "WARNING_LIST",
+    "STORM_DETAIL",
+    "FLOOD_DETAIL",
+    "VOLUNTEER_REGISTER",
+    "MISSION_LIST",
+    "REQUEST_DETAIL",
+    "SOS_DETAIL",
+    "MISSION_DETAIL",
+    "RESCUE_CHAT",
+    "GROUP_LIST",
+    "GROUP_CHAT",
+    "SOS",
+    "SOS_RESCUE_REQUEST",
+    "NOTIFICATION",
+    "PROFILE",
+    "SETTINGS",
+    "FORGOT_PASSWORD",
+    "OTP_VERIFICATION",
+    "RESET_PASSWORD",
+    "ABOUT_APP"
+  ],
+  "construction_methods": 23,
+  "protected_route_guards": 19,
+  "intentional_navigation_remediation": [
+    "Revoked/error session leaves protected route for Login; history cleared",
+    "Protected factory suppressed during unresolved/unauthenticated restore",
+    "Role continue pops role selection entry itself"
+  ]
+}

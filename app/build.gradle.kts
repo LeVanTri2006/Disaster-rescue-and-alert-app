@@ -12,6 +12,12 @@ android {
         version = release(37)
     }
 
+    val localProperties = Properties()
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localProperties.load(localPropertiesFile.inputStream())
+    }
+
     defaultConfig {
         applicationId = "com.example.bai1"
         minSdk = 30
@@ -21,11 +27,6 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         
-        val localProperties = Properties()
-        val localPropertiesFile = rootProject.file("local.properties")
-        if (localPropertiesFile.exists()) {
-            localProperties.load(localPropertiesFile.inputStream())
-        }
         val mapsApiKey = localProperties.getProperty("MAPS_API_KEY") ?: "PLACEHOLDER"
         manifestPlaceholders["MAPS_API_KEY"] = mapsApiKey
     }
@@ -41,13 +42,21 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    androidResources {
+        noCompress += "gz"
+    }
     buildFeatures {
         compose = true
         buildConfig = true
     }
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
     buildTypes {
         debug {
-            val sosApiBaseUrl = project.findProperty("sosApiBaseUrl")?.toString() ?: "http://192.168.2.228:3000"
+            val sosApiBaseUrl = project.findProperty("sosApiBaseUrl")?.toString()
+                ?: localProperties.getProperty("sosApiBaseUrl")
+                ?: "http://192.168.2.228:3000"
             buildConfigField("String", "SOS_API_BASE_URL", "\"$sosApiBaseUrl\"")
             buildConfigField("String", "FIREBASE_DATABASE_URL", "\"https://canhbao-34075-default-rtdb.asia-southeast1.firebasedatabase.app\"")
         }
@@ -83,8 +92,10 @@ dependencies {
     implementation(libs.play.services.location)
     implementation(libs.navigation.compose)
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.google.code.gson:gson:2.10.1")
     testImplementation(libs.junit)
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation("org.json:json:20240303")
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)

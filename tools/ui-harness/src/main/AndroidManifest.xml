@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK" />
+    <application android:name="com.example.bai1.uiisolated.GraphFixtureApplication" android:allowBackup="false"
+        android:label="P5-E02 production UI subset — isolated" android:usesCleartextTraffic="false"
+        android:networkSecurityConfig="@xml/routing_network_security_config"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <provider android:name="androidx.startup.InitializationProvider" android:authorities="${applicationId}.androidx-startup" tools:node="remove" />
+        <receiver android:name="androidx.profileinstaller.ProfileInstallReceiver" tools:node="remove" />
+        <activity android:name="com.example.bai1.MainActivity" android:exported="false" />
+        <activity android:name="com.example.bai1.uiisolated.IsolatedUiActivity" android:exported="false" />
+    </application>
+</manifest>
